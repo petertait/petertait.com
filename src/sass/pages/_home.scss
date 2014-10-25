@@ -1,0 +1,229 @@
+//===============================================================================
+// HOME
+//===============================================================================
+.home {
+	width: 1750px;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+}
+
+.cv-block-item {
+  border-bottom: 4px solid darken($light-grey, 5);
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+
+  &:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.col-1-1, .col-2-3 {
+  padding-left: 0;
+}
+
+.home-intro-block {
+	background: $teal;
+  color: $paper;
+  width: 500px;
+  padding-right: 50px;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  &::-webkit-scrollbar:horizontal  {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: darken($teal, 7);
+    -webkit-border-radius: 0;
+  }
+  &::-webkit-scrollbar-thumb:vertical, &::-webkit-scrollbar-thumb:horizontal {
+    background-color: darken($teal, 15);
+    -webkit-border-radius: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding-right: 0;
+    padding-top: 60px;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    font-size: $beta;
+  }
+
+  p {
+    color: rgba($paper, 0.8);
+    line-height: 1.4;
+  }
+
+  a {
+    margin-top: 60px;
+    display: table;
+  }
+}
+
+.home-cv-block {
+  background-color: $light-grey;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  &::-webkit-scrollbar:horizontal  {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: darken($light-grey, 10);
+    -webkit-border-radius: 0;
+  }
+  &::-webkit-scrollbar-thumb:vertical, &::-webkit-scrollbar-thumb:horizontal {
+    background-color: darken($light-grey, 30);
+    -webkit-border-radius: 0;
+  }
+
+  .col-1-3 {
+    padding-right: 10px;
+    padding-left: 30px;
+
+    @media screen and (max-width: 500px) {
+      padding-left: 0;
+    }
+
+    &:first-of-type {
+      padding-left: 0;
+      padding-right: 30px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 60px;
+    color: $primary;
+
+    @media screen and (max-width: 500px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    margin-bottom: 5px;
+  }
+
+  h5 {
+    color: $grey;
+    margin-bottom: 5px;
+
+    span {
+      color: lighten($grey, 30);
+      display: block;
+    }
+  }
+
+  h6 {
+    color: $primary;
+    margin-bottom: 2px;
+  }
+
+  p {
+    color: $grey;
+    font-size: 12px;
+    word-break: break-all;
+    word-break: break-word;
+    hyphens: auto;
+    line-height: 1.5;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.cv-work-item {
+  @include clearfix;
+  padding-bottom: 40px;
+  display: block;
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}
+
+.home-contact-block {
+  background-color: $paper;
+  width: 450px;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  &::-webkit-scrollbar:horizontal  {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: darken($light-grey, 5);
+    -webkit-border-radius: 0;
+  }
+  &::-webkit-scrollbar-thumb:vertical, &::-webkit-scrollbar-thumb:horizontal {
+    background-color: darken($light-grey, 35);
+    -webkit-border-radius: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding-bottom: 0px;
+  }
+
+  .block-inner {
+    @media screen and (max-width: 500px) {
+      padding-bottom: 30px;
+    }
+  }
+
+  h2 {
+    color: $primary;
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 500px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.home-contact-list-item {
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 500px) {
+    margin-bottom: 20px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  h5 {
+    margin-bottom: 0;
+    color: lighten($grey, 10);
+  }
+
+  a {
+    font-size: $beta;
+
+    @media screen and (max-width: 500px) {
+      font-size: 16px;
+    }
+  }
+}

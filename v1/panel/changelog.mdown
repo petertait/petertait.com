@@ -1,0 +1,104 @@
+#Kirby Panel Changelog
+
+## 0.92
+
+- fixed a bug in the changeNum method which broke sorting
+- improved the css for textareas
+- language updates for german, english and dutch
+
+## 0.91
+
+- fixed the z-index for the logout link
+- fixed a bug in the check class, which didn't recognize site info files with different extensions than txt. (Thanks to Sven Hanssen for the fix)
+- missing titles for pages don't break the sidebar layout anymore
+- fixed a bug in the pages settings
+
+## 0.9
+
+- fixed a broken link in the panel warning dialog
+- first responsive version draft
+- configurable thumb root
+- improved thumb plugin 
+- fixed a compatibility issue with Apache on Win where : as param separator in URLs is not allowed
+- fixed a bug in the uri class
+- fixed a link in the default account config file
+- fixed static bugs in PHP 5.4
+- added multi-language label support for checkbox fields
+- fixed a bug in the upload plugin
+- added a panel.check config var, which makes it possible to hide the panel error message on the homepage
+
+## 0.8
+
+- omitted all ?> 
+- updated hungarian translation
+- fixed a problem with filenames in urls
+- added some fixes for the french translation
+- portuguese translation
+- finish translation
+- added full support for the latest multi-language preview
+- fixed a stupid bug, which broke blueprints
+- changed the default config for the panel. 
+- added auto subfolder detection
+- moved htaccess rules to the main kirby htaccess file
+- added multi-language form labels
+- added current language indicators to form labels
+- improved the upgrade dialog 
+- fixed a sorting bug for translated pages
+
+## 0.7
+
+- fixed a bug in form buttons with multiple textareas per page
+- you can now define multiple templates for subpages in blueprints
+- new checkbox field by Luzi Humm: https://github.com/lulezi
+- new multicheckbox
+- file meta data is now editable from the Panel
+- touch support for sortable lists on iOS devices. 
+
+## 0.6
+
+- added dutch translation
+- added turkish translation 
+- added french translation
+- fixed html bugs in form fields
+- fixed 0px values in css files
+- fixed the min kirby version in the readme
+- fixed a bug in select and radio form fields
+- added format buttons for textareas
+- added spanish translation
+- fixed a few display bugs in ie8
+- prepared the panel for multi language support
+- improved the input validation for urls
+- fixed a bug with flipped pages on the homepage
+- removed the cancel button from the edit info form
+- made it possible to run the panel without mod_rewrite
+- added hungarian translation
+- required fields and field validation
+- fixed a bug in the account checker
+- added italian translation
+- fixed a bug with type="url" in the options.php template
+
+## 0.5
+
+- complete redesign
+
+## 0.4
+
+- custom field implementation. 
+- new mime types for allowed uploads
+- removed the spyc class, because it's in the core now. 
+- min requirement for kirby core is no 1.0.8
+
+## 0.3
+
+- entirely new navigation and bug fixes
+- implemented readable template/blueprint names in the add page dropdown 
+
+## 0.2
+
+- loads of bug fixes and style fixes
+- additional features
+- improved installation and system health checks
+
+## 0.1
+
+First version

@@ -1,0 +1,53 @@
+body{
+	width: 5500px;
+}
+.metrik .hero-wrap{
+	background-color: #00c800; 
+}
+.metrik .about-wrap{
+	color: #fff;
+	background: #000 url(../../../assets/img/intro-bg-wh-2.svg);
+	background-repeat: repeat;
+	-webkit-background-size: 100px;
+	-moz-background-size: 100px;
+	-o-background-size: 100px;
+	background-size: 100px;
+}
+.metrik-abc{
+	background: url(metrik-abc.png) center no-repeat;
+	background-image: url(metrik-abc.svg),none;
+	height: 460px;
+}
+.metrik-text-wrap{
+	background: #00c800 url(../../../assets/img/intro-bg-wh-2.svg);
+	width: 800px;
+}
+.metrik-text{
+	background: url(metrik-text.png) left no-repeat;
+	background-image: url(metrik-text.svg),none;
+	min-height: 480px;
+}
+.metrik-shapes-wrap{
+	background: #fff;
+	background: url(metrik-shapes.png) center no-repeat;
+	background-image: url(metrik-shapes.svg),none;
+	background-attachment: scroll;
+}
+.safari .metrik-shapes-wrap{
+	background-attachment: fixed;
+}
+.next-wrap .img-wrap-content h1 a{
+	text-decoration: none;
+	color: #fff;
+}
+.next-wrap .img-wrap-content h1 a:hover{
+	color: rgba(255,255,255,0.8);
+}
+
+/* ========= iPhone Styles ========= */
+@media screen and (max-width: 650px) {
+	.metrik-text{
+		min-height: 0;
+		height: 300px;
+	}
+}

@@ -1,0 +1,72 @@
+//===============================================================================
+// ELEMENTS
+//===============================================================================
+// Buttons
+button {
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+
+.btn {
+  padding-bottom: 4px;
+  border-bottom: 2px solid;
+  transition: 0.1s;
+
+  &:hover {
+    padding-bottom: 7px;
+    color: $pink;
+  }
+}
+
+// Forms
+input, textarea {
+  padding: 10px;
+  display: block;
+  -webkit-appearance: none;
+  border-radius: 0;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+
+// Blocks
+.block {
+	height: 100%;
+	display: block;
+	float: left;
+	min-height: 100%;
+	position: relative;
+	overflow: auto;
+	background: #fff;
+	z-index: 2;
+  width: 800px;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    float: none;
+    display: block;
+  }
+
+}
+
+.block-inner {
+	overflow: auto;
+	min-height: 100%;
+	width: 100%;
+	bottom: 0;
+	top: 0;
+  padding: 140px 25px 60px;
+
+  @media screen and (max-width: 500px) {
+    height: 100%;
+    min-height: 0;
+    overflow: visible;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}

@@ -1,0 +1,97 @@
+body{
+	width: 5100px;
+}
+.hero-wrap{
+	background: #ea2916 url(../../../assets/img/intro-bg-bk-2.svg);
+	background-attachment: scroll;
+	color: #000;
+}
+.safari .hero-wrap{
+	background-attachment: fixed;
+}
+.hero-wrap .grid{
+	overflow-x: hidden;
+}
+.about-wrap img{
+	margin-top: 70px;
+	padding-left: 30px;
+}
+.iucn-illy-wrap{
+	width: 1000px;
+	background: #2cb7ce url(../../../assets/img/intro-bg-wh-2.svg);
+}
+.iucn-illy-wrap .one-of-three{
+	color: #fff;
+}
+.iucn-illy-wrap .two-of-three{
+	background: url(iucn-illy.png) no-repeat 90% 0;
+	background-image: url(iucn-illy.svg), none;
+	-webkit-background-size: 90%;
+	-moz-background-size: 90%;
+	-o-background-size: 90%;
+	background-size: 90%;
+	height: 440px;
+}
+.iucn-slider-wrap{
+	padding-bottom: 0;
+	width: 800px;
+}
+.slider ul li {
+  width: 800px;
+  height: 500px;
+}
+.iucn-slider-wrap .container{
+	padding: 0 0 90px;
+}
+.iucn-slider-wrap h4{
+	padding: 0 35px;
+}
+.iucn-slider-wrap .slider{
+	height: 500px;
+	margin-right: 0;
+	margin-top: 20px;
+}
+.iucn-slider-wrap .slider a.control_prev:hover, .univents-slider-wrap .slider a.control_next:hover{
+	opacity: 1;
+	-webkit-animation: none;
+	-moz-animation: none;
+	-animation: none;
+}
+.iucn-slider-wrap .slider a.control_prev{
+	margin: 10px;
+}
+.iucn-slider-wrap .slider a.control_next{
+	margin: 10px 5px 10px 10px;
+}
+.iucn-slider-wrap .slider li{
+	height: 600px;
+}
+.iucn-slider-wrap .slider img{
+	height: 100%;
+}
+
+/* ========= iPhone Styles ========= */
+@media screen and (max-width: 650px) {
+	#main-nav a.active{
+		color: #fff;
+	}
+	.hero-wrap .btn{
+		display: none;
+	}
+	.about-wrap img{
+		padding-left: 0;
+		margin: 30px 0 20px;
+	}
+	.iucn-illy-wrap .two-of-three{
+		background: url(iucn-illy.png) no-repeat center;
+		background-image: url(iucn-illy.svg), none;
+		-webkit-background-size: 100%;
+		-moz-background-size: 100%;
+		-o-background-size: 100%;
+		background-size: 100%;
+		height: 400px;
+	}
+	.iucn-slider-wrap{
+		display: none!important;
+	}
+}

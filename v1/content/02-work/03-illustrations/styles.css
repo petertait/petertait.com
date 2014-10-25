@@ -1,0 +1,95 @@
+body{
+	width: 8200px;
+}
+.illy .hero-wrap{
+	background: #00b2aa url(../../../assets/img/intro-bg-wh-2.svg);
+	background-attachment: scroll;
+}
+.safari .illy .hero-wrap{
+	background-attachment: fixed;
+}
+.illy .hero-wrap .grid{
+	overflow-x: hidden;
+}
+.illy .about-wrap img{
+	margin-top: 30px;
+	padding-left: 30px;
+}
+.illy .illy-1-wrap{
+	background: #e4eef1 url(../../../assets/img/intro-bg-bk-2.svg);
+	background-attachment: scroll;
+	width: 2000px;
+}
+.safari .illy .illy-1-wrap{
+	background-attachment: fixed;
+}
+.illy .illy-1-wrap .container{
+	padding: 0;
+}
+.illy-1-wrap .illy-wide-wrap{
+	background: url(illy-2.png) no-repeat left 60px;
+	height: 350px;
+	width: 100%;
+	-webkit-background-size: 2100px;
+	-moz-background-size: 2100px;
+	-o-background-size: 2100px;
+	background-size: 2100px;
+}
+.illy-1-wrap h4{
+	padding-left: 35px;
+}
+.illy-2-wrap{
+	width: 900px;
+}
+.illy-2-wrap .one-of-two{
+	padding: 290px 50px 0;
+	text-align: center;
+}
+.illy-3{
+	background: url(illy-3.png) center top no-repeat;
+	-webkit-background-size: 280px;
+	-moz-background-size: 280px;
+	-o-background-size: 280px;
+	background-size: 280px;
+}
+.illy-4{
+	background: url(illy-4.png) center 50px no-repeat;
+	-webkit-background-size: 400px;
+	-moz-background-size: 400px;
+	-o-background-size: 400px;
+	background-size: 400px;
+}
+.illy-3-wrap{
+	width: 2000px;
+	background: #e3f4fb url(illy-5.jpg) bottom no-repeat;
+	padding-bottom: 0;
+	-webkit-background-size: 400px;
+	-moz-background-size: 400px;
+	-o-background-size: 400px;
+	background-size: 100%;
+}
+
+/* ========= iPhone Styles ========= */
+@media screen and (max-width: 650px) {
+	.illy .hero-wrap h1{
+		font-size: 4em!important;
+	}
+	.illy .about-wrap img{
+		padding: 0;
+	}
+	.illy .illy-1-wrap, .illy .illy-3-wrap.wrap{
+		display: none;
+	}
+	.illy-2-wrap .one-of-two.illy-3{
+		padding: 280px 20px 0;
+		margin-bottom: 40px;
+	}
+	.illy-2-wrap .one-of-two.illy-4{
+		padding: 200px 20px 0;
+		-webkit-background-size: 300px;
+		-moz-background-size: 300px;
+		-o-background-size: 300px;
+		background-size: 300px;
+		margin-bottom: 40px;
+	}
+}

@@ -1,0 +1,18 @@
+Title: ISTD: Typographic Specimens
+----
+Subtitle: The ISTD brief was to create a new way of specifying a typeface. This project looked at how to bridge the gap between print and web specimens, whilst adding an immersive element of interaction for users.
+----
+Client: Personal Project
+----
+Date: 01.01.2014
+----
+Type: Type Specimen Website
+----
+Text: 
+
+Interaction with the typeface leads to better understanding of it’s characteristics and capabilities
+
+ISTD set the brief of creating a new way of specifying type. This immediately led to the questions of how designers use type and how do they decide on typefaces when designing.
+
+Before making purchases the user will want to know what the possibilities are. The specimens created looked at letter users experiment and play with the typeface. This was possible by creating an interactive website that acts as an inspiration tool with different sections showing the typeface in a range of possible ways it could be used.
+

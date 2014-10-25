@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://petertait.com/</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://petertait.com/work</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://petertait.com/info</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://petertait.com/blog</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://petertait.com/work/metrik</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://petertait.com/work/univents</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://petertait.com/work/type-specimen</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://petertait.com/blog/dribbble-mino</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://petertait.com/blog/object-place-scenario</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://petertait.com/blog/matisse-drawing-with-scissors</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://petertait.com/blog/data-data-more-data</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://petertait.com/work/mino</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://petertait.com/work/illustrations</loc>
+  <changefreq>monthly</changefreq>
+</url>
+</urlset>

@@ -1,0 +1,17 @@
+﻿Title: Peter Tait
+
+----
+
+Author: Peter Tait
+
+----
+
+Description: Peter is a user interface and experience designer based in Bath and London, UK. He has experience ranging from global corporations to family firms.
+
+----
+
+Keywords: peter, tait, peter tait, graphic design, web design, design, designer, bath, uk, london, ui, ux, app, html, css, javascript
+
+----
+
+Copyright: © (date: Year) (link: http://petertait.com text: Peter Tait)

@@ -1,0 +1,19 @@
+/* ======= IE Styles ======= */
+.archive-work-wrap .archive-work li, .archive-work-wrap .btn-more, .archive-blog-wrap .btn-more, .project-images-wrap li:last-child, .metrik-text, .about-wrap .one-of-three, .mino-compared-wrap .mino-grid, .typespec-horizontal-wrap .btn, .univents-home-wrap .btn, .next-wrap .btn {
+	margin-bottom: 75px;
+}
+.archive-blog-list-wrap ul, .cv-wrap .cv-education, .typespec-inspire-wrap .two-of-three, .univents-details-wrap .grid, .next-wrap .grid {
+	padding-bottom: 75px;
+}
+.mino .hero-wrap h2, .metrik .hero-wrap h2{
+	margin-bottom: 120px;
+}
+.wrap .grid{
+	overflow: hidden;
+}
+.hero-wrap .grid{
+	overflow: auto;
+}
+body.univents{
+	width: 5670px;
+}

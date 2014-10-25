@@ -1,0 +1,4 @@
+Title: Info
+----
+Description: Peter is a graphic designer specialising in the design of interfaces, print, web and branding.
+---- 

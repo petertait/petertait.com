@@ -1,0 +1,108 @@
+//===============================================================================
+// TYPOGRAPHY
+//===============================================================================
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, dl, blockquote, pre, button {
+  margin: 0 0 18px 0;
+}
+
+// Fonts
+.tera    { font-size: $tera; }
+.giga    { font-size: $giga; }
+.mega    { font-size: $mega; }
+.alpha   { font-size: $alpha; }
+.beta    { font-size: $beta; }
+.gamma   { font-size: $gamma; }
+.delta   { font-size: $delta; }
+.epsilon { font-size: $epsilon; }
+.zeta    { font-size: $zeta; }
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $body-weight;
+}
+
+h1, h2, h3 {
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: $mega;
+}
+
+h2 {
+  font-size: $beta;
+}
+
+h3 {
+  font-size: $gamma;
+}
+
+h4 {
+  font-size: $delta;
+}
+
+h5 {
+  font-size: $epsilon;
+}
+
+h6 {
+  font-size: $zeta;
+}
+
+strong {
+  font-weight: 600;
+}
+
+
+// Lists
+ol {
+  padding-left: 1.4em;
+
+  ol, ol ol {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+
+  ul, ul ul {
+    margin-bottom: 0;
+  }
+
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 1.4em;
+}
+
+// Images
+img {
+  max-width: 100%;
+}
+
+// Links
+a {
+  color: $ink;
+  text-decoration: none;
+
+  &:hover, &.hover {
+    cursor: pointer;
+    color: lighten($primary, 10);
+  }
+
+  &:active, &.active {
+    color: darken($primary, 10);
+  }
+
+  // &:visited,
+  &.visited {
+    color: darken($ink, 15);
+  }
+}

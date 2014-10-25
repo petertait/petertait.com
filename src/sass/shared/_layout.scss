@@ -1,0 +1,38 @@
+//===============================================================================
+// LAYOUT
+//===============================================================================
+*,
+*::before,
+*:after{
+  box-sizing: border-box;
+  font-family: $sans-serif;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+body {
+  background-color: $paper;
+  font-weight: $body-weight;
+  line-height: 1.4;
+  color: $ink;
+  font-size: $base-font-size;
+}
+
+::selection {
+  background: rgba($grey, 0.2);
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}

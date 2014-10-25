@@ -1,0 +1,34 @@
+//===============================================================================
+// MIXINS
+//===============================================================================
+// CLEAR FIX
+// @include clearfix;
+@mixin clearfix {
+  clear: both;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// HIDE TEXT
+// @include hide-text;
+@mixin hide-text {
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+  }
+}
+
+// MARGIN AUTO
+// @include margin-auto;
+@mixin margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
