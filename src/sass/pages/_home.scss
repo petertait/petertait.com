@@ -98,11 +98,16 @@
 
     @media screen and (max-width: 500px) {
       padding-left: 0;
+      padding-right: 0;
     }
 
     &:first-of-type {
       padding-left: 0;
       padding-right: 30px;
+
+      @media screen and (max-width: 500px) {
+        padding-right: 0;
+      }
     }
   }
 
@@ -136,6 +141,10 @@
 
   h4 {
     margin-bottom: 5px;
+
+    @media screen and (max-width: 500px) {
+      margin-bottom: 2px;
+    }
   }
 
   h5 {
@@ -151,6 +160,12 @@
   h6 {
     color: $primary;
     margin-bottom: 2px;
+
+    @media screen and (max-width: 500px) {
+      &:last-of-type {
+        margin-bottom: 15px;
+      }
+    }
   }
 
   p {
@@ -160,6 +175,10 @@
     word-break: break-word;
     hyphens: auto;
     line-height: 1.5;
+
+    @media screen and (max-width: 500px) {
+      font-size: 14px;
+    }
 
     &:last-of-type {
       margin-bottom: 0;
@@ -174,6 +193,11 @@
 
   &:last-of-type {
     padding-bottom: 0;
+  }
+  @media screen and (max-width: 500px) {
+    [class*='col-'] {
+      padding-right: 0;
+    }
   }
 }
 

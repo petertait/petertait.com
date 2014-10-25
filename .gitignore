@@ -42,3 +42,6 @@ Icon
 
 # Dist folder
 /dist/
+
+# Kirby v1
+/v1/

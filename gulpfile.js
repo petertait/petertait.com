@@ -45,7 +45,7 @@ gulp.task( 'jshint', function() {
 gulp.task( 'sass', function() {
   gulp.src( path.sass )
     .pipe( sass({
-      outputStyle: [ 'expanded' ],
+      outputStyle: [ 'compressed' ],
       sourceComments: 'normal',
       errLogToConsole: true
     }))

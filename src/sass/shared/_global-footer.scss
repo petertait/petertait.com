@@ -14,17 +14,16 @@
   @media screen and (max-width: 500px) {
     position: relative;
   }
+
+  .btn {
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
-.gbl-foot-nav-item {
-  font-weight: 400;
-  margin-left: 20px;
-  opacity: 0.6;
-  padding-bottom: 3px;
-  transition: 0.1s;
-
-  &:hover {
-    padding-bottom: 5px;
-    opacity: 1;
-  }
+.gbl-foot-legal {
+  margin-right: 20px;
 }
