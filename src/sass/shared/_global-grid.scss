@@ -3,8 +3,7 @@
 //===============================================================================
 
 $large: 1000px;
-$medium: 700px;
-$small: 480px;
+$small: 500px;
 
 $gutter: 20px;
 
@@ -36,7 +35,7 @@ $gutter: 20px;
 .col-1-4 { width: 25%; }
 .col-1-8 { width: 12.5%; }
 
-@media screen and ( max-width: $medium ) {
+@media screen and ( max-width: $small ) {
   [class*='col-'] { 
     width: 100%; 
     float: none;
@@ -50,8 +49,4 @@ $gutter: 20px;
   .mobile-col-1-2 { width: 50%; }
   .mobile-col-1-4 { width: 25%; }
   .mobile-col-1-8 { width: 12.5%; }
-}
-
-@media screen and ( max-width: $small ) {
-  [class*='mobile-col-'] { width: 100%; }
 }

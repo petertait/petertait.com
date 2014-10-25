@@ -94,7 +94,7 @@ a {
 
   &:hover, &.hover {
     cursor: pointer;
-    color: lighten($primary, 10);
+    color: $primary;
   }
 
   &:active, &.active {

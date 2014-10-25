@@ -26,7 +26,8 @@
 }
 
 .home-intro-block {
-	background: $teal;
+	background: $orange;
+  background-color: $teal;
   color: $paper;
   width: 500px;
   padding-right: 50px;
@@ -102,6 +103,21 @@
     &:first-of-type {
       padding-left: 0;
       padding-right: 30px;
+    }
+  }
+
+  .cv-edu-item {
+
+    .col-1-3 {
+      padding-left: 0;
+
+      @media screen and (max-width: 500px) {
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
