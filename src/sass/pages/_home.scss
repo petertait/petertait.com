@@ -26,11 +26,15 @@
 }
 
 .home-intro-block {
-	background: $orange;
-  background-color: $teal;
+  background: $teal;
+  box-shadow: inset -3px 0 7px -2px darken($teal, 10);
   color: $paper;
   width: 500px;
   padding-right: 50px;
+
+  @media screen and (max-width: 500px) {
+    box-shadow: inset 0 -5px 3px -3px darken($teal, 10);
+  }
 
   &::-webkit-scrollbar {
     width: 3px;
@@ -47,6 +51,32 @@
   &::-webkit-scrollbar-thumb:vertical, &::-webkit-scrollbar-thumb:horizontal {
     background-color: darken($teal, 15);
     -webkit-border-radius: 0;
+  }
+
+  .block-inner {
+    position: fixed;
+    width: 450px;
+    z-index: 1;
+
+    @media screen and (max-width: 500px) {
+      position: relative;
+      width: auto;
+    }
+  }
+
+  .home-intro-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 600px;
+
+    @media screen and (max-width: 500px) {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   @media screen and (max-width: 500px) {
@@ -113,6 +143,10 @@
 
   .cv-edu-item {
 
+    @media screen and (max-width: 500px) {
+      margin-bottom: 0;
+    }
+
     .col-1-3 {
       padding-left: 0;
 
@@ -121,6 +155,10 @@
 
         &:last-child {
           margin-bottom: 0;
+
+          h6 {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -162,6 +200,7 @@
     margin-bottom: 2px;
 
     @media screen and (max-width: 500px) {
+
       &:last-of-type {
         margin-bottom: 15px;
       }
@@ -171,9 +210,6 @@
   p {
     color: $grey;
     font-size: 12px;
-    word-break: break-all;
-    word-break: break-word;
-    hyphens: auto;
     line-height: 1.5;
 
     @media screen and (max-width: 500px) {

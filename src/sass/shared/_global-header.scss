@@ -7,6 +7,10 @@
 	left: 25px;
 	z-index: 10;
 
+  @media screen and (max-width: 500px) {
+    left: 20px;
+  }
+
 	img {
 		height: 35px;
 	}
