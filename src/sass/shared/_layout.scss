@@ -23,6 +23,22 @@ body {
   line-height: 1.4;
   color: $ink;
   font-size: $base-font-size;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: darken($grey, 10);
+    -webkit-border-radius: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: lighten($grey, 10);
+    border: 3px solid darken($grey, 10);
+    -webkit-border-radius: 10px;
+  }
 }
 
 ::selection {
