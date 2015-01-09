@@ -14,11 +14,11 @@
 
 // Shared components and styles
 //===============================================================================
-// Grid: Global grid styles and variables
-@import "shared/_global-grid.scss";
-
 // Layout: Global base layout
 @import "shared/_layout.scss";
+
+// Grid: Global grid styles and variables
+@import "shared/_global-grid.scss";
 
 // Typography: Headings, hierachy etc. 
 @import "shared/_typography.scss";
