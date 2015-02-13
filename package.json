@@ -1,7 +1,7 @@
 {
-  "name": "barebones-gulp-project",
+  "name": "petertait.com",
   "version": "0.0.1",
-  "author": "Mark Durrant < @M6_D6 >",
+  "author": "Peter Tait",
   "description": "gulp, localhost, livereload, sass, jshint",
   "repository": {
     "type": "git",
