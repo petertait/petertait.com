@@ -91,7 +91,6 @@
   h2 {
     margin-bottom: 30px;
     letter-spacing: -0.5px;
-    font-size: $beta;
     line-height: 1.2;
   }
 
@@ -201,6 +200,10 @@
   h6 {
     color: $primary;
     margin-bottom: 2px;
+
+    small {
+      visibility: hidden;
+    }
 
     @media screen and (max-width: 500px) {
 
