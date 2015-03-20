@@ -2,20 +2,16 @@
 // IMPORTS
 //===============================================================================
 
-// normalize.css v3.0.0 | MIT License | git.io/normalize
-@import "_normalize.scss";
-
-// Global Variables: Colours, type sizes etc.
-@import "_global-variables.scss";
-
-// Mixins: Fixes, recurring blocks of styling etc.
-@import "_mixins.scss";
-
-
 // Shared components and styles
 //===============================================================================
-// Grid: Global grid styles and variables
-@import "shared/_global-grid.scss";
+// Global Variables: Colours, type sizes etc.
+@import "shared/_variables.scss";
+
+// Mixins: Fixes, recurring blocks of styling etc.
+@import "shared/_mixins.scss";
+
+// normalize.css v3.0.0 | MIT License | git.io/normalize
+@import "shared/_normalize.scss";
 
 // Layout: Global base layout
 @import "shared/_layout.scss";
@@ -25,13 +21,6 @@
 
 // Elements: Forms, buttons, lists etc.
 @import "shared/_elements.scss";
-
-// Global Header: Header visible globally
-@import "shared/_global-header.scss";
-
-// Global Footer: Footer visible globally
-@import "shared/_global-footer.scss";
-
 
 // Page layouts
 //===============================================================================
