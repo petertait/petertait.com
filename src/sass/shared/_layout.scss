@@ -39,12 +39,12 @@ body {
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: $grey;
+      background-color: lighten($grey, 5);
       border: 3px solid $ink;
       -webkit-border-radius: 0;
 
       &:hover {
-        background-color: lighten($grey, 10);
+        background-color: lighten($grey, 20);
       }
     }
   }
