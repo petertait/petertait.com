@@ -1,6 +1,7 @@
-//===============================================================================
-// ELEMENTS
-//===============================================================================
+a {
+  transition: 0.2s;
+}
+
 // Buttons
 button {
   border: none;
@@ -11,11 +12,7 @@ button {
 .btn {
   padding-bottom: 4px;
   border-bottom: 2px solid;
-  transition: 0.1s;
-
-  &:hover {
-    padding-bottom: 7px;
-  }
+  transition: 0.2s;
 }
 
 // Forms
@@ -57,17 +54,17 @@ input, textarea {
   }
 
   &::-webkit-scrollbar-track {
-    background-color: $light-grey;
+    background-color: $light-blue;
     -webkit-border-radius: 0;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: darken($light-grey, 10);
-    border: 3px solid $light-grey;
+    background-color: $primary;
+    border: 3px solid $light-blue;
     -webkit-border-radius: 0;
 
     &:hover {
-      background-color: darken($light-grey, 20);
+      background-color: darken($primary, 10);
     }
   }
 }
@@ -90,11 +87,16 @@ input, textarea {
 }
 
 // Global Logo
-.gbl-logo {
+.logo {
   position: fixed;
   top: 30px;
   left: 25px;
   z-index: 10;
+  color: transparent;
+  font-size: 1px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0zMCAtNi42IDEwMCA1My4xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC0zMCAtNi42IDEwMCA1My4xIj48cGF0aCBkPSJNMzYuNSAyLjljMS4zIDAgMi40LS41IDMuMy0xLjQuOS0uOSAxLjQtMiAxLjQtMy4zcy0uNS0yLjQtMS40LTMuM2MtLjktLjktMi0xLjQtMy4zLTEuNHMtMi40LjUtMy4zIDEuNGMtLjkuOS0xLjQgMi0xLjQgMy4zIDAgMS4zLjUgMi40IDEuNCAzLjMuOS45IDIgMS40IDMuMyAxLjR6bTMyLjMgMzQuN2MtLjQgMi0xLjIgMy44LTIuNCA1LjQtMS4zIDEuNi0zIDIuMy01IDIuMy0uNiAwLTEuMi0uMS0xLjgtLjMtLjYtLjItMS4yLS42LTEuNy0xLjEtLjUtLjYtMS0xLjQtMS4zLTIuNS0uMy0xLjEtLjUtMi41LS41LTQuMlY3LjNoMTIuNlY2SDU1LjlWLTYuNmMtLjYuNS0xLjIuOC0xLjkgMS4xLS43LjItMS40LjMtMi4zLjMtMSAwLTEuNy0uMS0yLjEtLjItLjQtLjEtLjktLjMtMS4zLS41VjZIMjQuNnYxLjNoOC4xdjM3LjloLTQuOWMtMSAwLTEuOC0uNy0yLjMtMS4zLS41LS42LS44LTEuNy0uOC0zLjVWMTguM2MwLTEuNi0uMi0zLjEtLjctNC42LS41LTEuNS0xLjMtMi44LTIuNC0zLjlDMjAuNCA4LjYgMTguOSA3LjcgMTcgN2MtMS44LS43LTQuMS0xLTYuOC0xLTIuMiAwLTQuMi4zLTYgLjhDMi41IDcuMyAxIDgtLjEgOXMtMiAyLTIuNiAzLjJjLS42IDEuMi0uOSAyLjQtLjkgMy43IDAgMS4xLjIgMiAuNyAyLjguNS43IDEuNyAxLjEgMy42IDEuMSAxLjEgMCAyLS4zIDIuNi0uOC42LS42LjktMS4zLjktMi4xIDAtLjUtLjEtMS4yLS4zLTIuMi0uMi0xLS4zLTItLjMtMyAwLTEuNS42LTIuNyAxLjktMy4zIDEuMy0uNyAyLjktMSA0LjgtMSAxLjUgMCAyLjcuMiAzLjUuNi45LjQgMS42IDEgMiAxLjguNS44LjggMS44IDEgMi45LjIgMS4xLjMgMi40LjMgMy44IDAgMS44LS4xIDMuMi0uNCA0LjItLjMgMS0uOCAxLjktMS41IDIuNi0uNy43LTEuNyAxLjMtMyAxLjctMS4zLjUtMi45IDEtNC44IDEuNy0xLjcuNS0zLjMgMS00LjkgMS41Uy0uNiAyOS4zLTEuOSAzMGMtMS4zLjctMi40IDEuNy0zLjIgMy0uOCAxLjItMS4yIDIuOS0xLjIgNSAwIC45LjEgMS45LjQgMi45LjMgMSAuOCAxLjkgMS41IDIuNy0xLjIgMS4yLTIuNyAxLjgtNC41IDEuOC0uNiAwLTEuMi0uMS0xLjgtLjMtLjYtLjItMS4zLS42LTEuOS0xLjEtLjUtLjYtMS0xLjQtMS4zLTIuNS0uMy0xLjEtLjUtMi41LS41LTQuMnYtMzBoMTIuN1Y2aC0xMi43Vi02LjVjLS42LjUtMS4yLjgtMS45IDEuMS0uNy4yLTEuNC4zLTIuMy4zLTEgMC0xLjctLjEtMi4xLS4yLS40LS4xLS45LS4zLTEuMy0uNVY2aC04djEuM2g4LjF2MjkuMWMwIDMuMi45IDUuNyAyLjYgNy41IDEuNyAxLjggNSAyLjcgOS40IDIuNyAxLjggMCAzLjMtLjMgNC40LS45LjgtLjQgMS41LS44IDIuMS0xLjQuNy41IDEuNiAxIDIuNiAxLjQgMS41LjYgMy41LjggNS45LjggMi4yIDAgNC0uMyA1LjQtLjggMS40LS41IDIuNi0xLjEgMy40LTEuOS45LS43IDIuNC0yLjYgMy4xLTQuMy41IDIuMiAxLjMgMy45IDIuNiA1LjEgMS4zIDEuMiAzLjMgMS44IDYuMiAxLjhoMjIuNXYtMS4zaC04VjcuM2g4djI5LjFjMCAzLjIuOSA1LjcgMi42IDcuNSAxLjcgMS44IDQuOCAyLjcgOS4zIDIuNyAxLjggMCAzLjMtLjMgNC40LS45IDEuMi0uNiAyLjEtMS4zIDIuOS0yLjIuNy0uOSAxLjMtMS44IDEuNi0yLjguNC0xIC42LTEuOS44LTIuN2wtMS4xLS40ek0xNyAzMi40YzAgMS4yLS4xIDIuNS0uMyA0LS4yIDEuNS0uNiAyLjgtMS4yIDQtLjYgMS4yLTEuNSAyLjMtMi43IDMuMS0xLjIuOC0yLjggMS4yLTQuNyAxLjItMS40IDAtMi41LS4yLTMuMy0uNy0uOS0uNS0xLjUtMS4xLTItMS44cy0uOC0xLjYtMS0yLjVjLS4yLS45LS4zLTEuOS0uMy0yLjggMC0yLjEuNS0zLjggMS41LTUuMiAxLTEuNCAyLjUtMi41IDQuMy0zLjJsNi43LTIuN2MxLjgtLjggMy0xLjUgMy4xLTIuM2wtLjEgOC45eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==);
+  width: 66px;
+  height: 35px;
 
   @media screen and (max-width: 500px) {
     left: 20px;
@@ -106,14 +108,13 @@ input, textarea {
 }
 
 // Global Footer
-.gbl-foot {
+.foot {
   padding: 20px 25px;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 10;
-  font-size: 12px;
-  color: rgba($ink, 0.6);
+  color: white;
 
   @media screen and (max-width: 500px) {
     position: relative;

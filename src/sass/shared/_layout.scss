@@ -1,16 +1,12 @@
-//===============================================================================
-// LAYOUT
-//===============================================================================
 *,
 *::before,
 *:after {
   box-sizing: border-box;
-  font-family: $sans-serif;
-  text-rendering: optimizeLegibility;
+  font-family: $sans;
+  text-rendering: optimizeSpeed;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  user-select: none;
 }
 
 body,
@@ -21,37 +17,38 @@ html {
 }
 
 body {
-  background-color: $paper;
+  background-color: white;
   font-weight: $body-weight;
   line-height: 1.4;
   color: $ink;
-  font-size: $base-font-size;
+  font-size: $base-font-size + 2px;
 
-  @media screen and (min-width: $small) {
+  @media screen and ( min-width: $small ) {
+    font-size: $base-font-size;
+
     &::-webkit-scrollbar {
-      width: 10px;
-      height: 10px;
+      width: 7px;
+      height: 7px;
     }
 
     &::-webkit-scrollbar-track {
-      background-color: $ink;
+      background-color: darken($light-blue, 3);
       -webkit-border-radius: 0;
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: lighten($grey, 5);
-      border: 3px solid $ink;
+      background-color: darken($primary, 10);
       -webkit-border-radius: 0;
 
       &:hover {
-        background-color: lighten($grey, 20);
+        background-color: darken($primary, 20);
       }
     }
   }
 }
 
 ::selection {
-  background: rgba($grey, 0.2);
+  background: rgba(darken($light-blue, 10), 0.3);
 }
 
 

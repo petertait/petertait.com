@@ -1,28 +1,10 @@
-//===============================================================================
-// IMPORTS
-//===============================================================================
-
-// Shared components and styles
-//===============================================================================
-// Global Variables: Colours, type sizes etc.
+// Shared
 @import "shared/_variables.scss";
-
-// Mixins: Fixes, recurring blocks of styling etc.
 @import "shared/_mixins.scss";
-
-// normalize.css v3.0.0 | MIT License | git.io/normalize
 @import "shared/_normalize.scss";
-
-// Layout: Global base layout
 @import "shared/_layout.scss";
-
-// Typography: Headings, hierachy etc. 
 @import "shared/_typography.scss";
-
-// Elements: Forms, buttons, lists etc.
 @import "shared/_elements.scss";
 
-// Page layouts
-//===============================================================================
-// Home: homepage styles
+// Pages
 @import "pages/_home.scss";

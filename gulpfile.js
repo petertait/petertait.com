@@ -20,7 +20,7 @@ var path = {
 };
 
 // ports
-var localPort =  4000,
+var localPort =  5000,
        lrPort = 35729;
 
 // start local server
