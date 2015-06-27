@@ -16,7 +16,7 @@ var path = {
        html: 'src/**/*.html',
          js: 'src/js/*.js',
        sass: 'src/sass/**/*.scss',
-        css: 'src/css/',
+        css: 'src/',
 };
 
 // ports

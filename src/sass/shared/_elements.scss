@@ -114,6 +114,7 @@ input, textarea {
 
   @media screen and (max-width: $small) {
     position: relative;
+    color: rgba($primary, 0.5);
     padding: 20px;
     font-size: 14px;
   }
