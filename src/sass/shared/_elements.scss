@@ -101,10 +101,6 @@ input, textarea {
   @media screen and (max-width: $small) {
     left: 20px;
   }
-
-  img {
-    height: 35px;
-  }
 }
 
 // Global Footer
@@ -121,16 +117,4 @@ input, textarea {
     padding: 20px;
     font-size: 14px;
   }
-
-  .btn {
-    opacity: 0.6;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-
-.gbl-foot-legal {
-  margin-right: 20px;
 }
