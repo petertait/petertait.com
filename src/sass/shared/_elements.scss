@@ -29,14 +29,14 @@ input, textarea {
 
 // Blocks
 .block {
-	height: 100%;
-	display: block;
-	float: left;
-	min-height: 100%;
-	position: relative;
-	overflow: auto;
-	background: #fff;
-	z-index: 2;
+  height: 100%;
+  display: block;
+  float: left;
+  min-height: 100%;
+  position: relative;
+  overflow: auto;
+  background: #fff;
+  z-index: 2;
   width: 800px;
   -webkit-overflow-scrolling: touch;
 
@@ -70,12 +70,12 @@ input, textarea {
 }
 
 .block-inner {
-	overflow: auto;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
-	min-height: 100%;
-	width: 100%;
-	bottom: 0;
-	top: 0;
+  min-height: 100%;
+  width: 100%;
+  bottom: 0;
+  top: 0;
   padding: 140px 25px 60px;
 
   @media screen and (max-width: $small) {
