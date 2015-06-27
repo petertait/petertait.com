@@ -23,7 +23,7 @@ body {
   color: $ink;
   font-size: $base-font-size + 2px;
 
-  @media screen and ( min-width: $small ) {
+  @media screen and (min-width: $small) {
     font-size: $base-font-size;
 
     &::-webkit-scrollbar {
@@ -81,7 +81,7 @@ body {
 .col-1-4 { width: 25%; }
 .col-1-8 { width: 12.5%; }
 
-@media screen and ( max-width: $small ) {
+@media screen and (max-width: $small) {
   [class*='col-'] { 
     width: 100%; 
     float: none;

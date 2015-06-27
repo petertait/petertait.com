@@ -40,7 +40,7 @@ input, textarea {
   width: 800px;
   -webkit-overflow-scrolling: touch;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: $small) {
     width: 100%;
     min-height: 0;
     height: auto;
@@ -78,7 +78,7 @@ input, textarea {
 	top: 0;
   padding: 140px 25px 60px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: $small) {
     height: 100%;
     min-height: 0;
     overflow: visible;
@@ -98,7 +98,7 @@ input, textarea {
   width: 66px;
   height: 35px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: $small) {
     left: 20px;
   }
 
@@ -116,7 +116,7 @@ input, textarea {
   z-index: 10;
   color: white;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: $small) {
     position: relative;
     padding: 20px;
     font-size: 14px;
