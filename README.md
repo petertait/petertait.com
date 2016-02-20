@@ -1,17 +1,10 @@
-# petertait.com
+To work on the boilerplate, run the following:
 
-Personal website of designer Peter Tait.
+```console
+cd boilerplate
+ln -sf ../docs/package.json
+ln -sf ../docs/node_modules node_modules
+npm start
+```
 
-### getting started
-
-Install [node](http://nodejs.org/) & [gulp](http://gulpjs.com/)
-
-`brew install node`, `npm install -g gulp`
-
-Install packages
-
-`npm i`
-
-Run Gulp
-
-`gulp`
+It just use "docs/node_modules" and config. Which should be good.
