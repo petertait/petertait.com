@@ -23,7 +23,7 @@ export default class Layout extends Component {
     } = this.context.metadata
 
     return (
-      <div className={ styles.layout }>
+      <div className={ styles.container }>
         <Helmet
           meta={ [
             { property: "og:site_name", content: pkg.name },

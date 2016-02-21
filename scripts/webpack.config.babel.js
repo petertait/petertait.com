@@ -63,8 +63,11 @@ export default {
   postcss: () => [
     require("stylelint")(),
     require("postcss-cssnext")({ browsers: "last 2 versions" }),
-    require("postcss-browser-reporter")(),
-    require("postcss-reporter")(),
+    require('precss'),
+    require("postcss-browser-reporter"),
+    require('postcss-pxtorem'),
+    require("postcss-reporter"),
+    require('postcss-quantity-queries'),
   ],
 
   markdownIt: (
