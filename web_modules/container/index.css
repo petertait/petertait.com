@@ -1,11 +1,5 @@
-~type: "../app/constants.js";
-~color: "../app/constants.js";
-
 body {
-  background-color: ~color.blue;
-  font-size: ~type.delta;
-  font-weight: ~type.regular;
-  font-family: ~type.sans;
+  background-color: var(--blue);
   line-height: 1.3;
   margin: 0;
 }

@@ -61,10 +61,11 @@ export default {
   },
 
   postcss: () => [
-    require("stylelint"),
-    require("postcss-constants"),
     require("postcss-cssnext")({
-      browsers: "last 2 versions"
+      browsers: "last 2 versions",
+      variables: {
+        blue: "#000",
+      }
     }),
     require("precss"),
     require("postcss-pxtorem")({
