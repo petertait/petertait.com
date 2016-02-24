@@ -6,9 +6,9 @@ import clientWebpackConfig from "./webpack.config.client.js"
 
 import store from '../web_modules/app/store'
 const exports = {
-  layouts: require.resolve('../web_modules/layouts'),
-  metadata: require.resolve('../web_modules/app/metadata'),
-  routes: require.resolve('../web_modules/app/routes')
+  layouts: require.resolve('../web_modules/Layouts'),
+  metadata: require.resolve('../web_modules/App/metadata'),
+  routes: require.resolve('../web_modules/App/routes')
 }
 
 builder({
