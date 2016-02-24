@@ -1,4 +1,4 @@
-body {
+:global(body) {
   color: white;
   background-color: var(--blue);
   font-family: var(--sans);

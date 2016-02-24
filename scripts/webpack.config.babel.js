@@ -67,8 +67,10 @@ export default {
         customProperties: {
           variables: {
             sans: 'Karla, sans-serif',
+
             regular: '400',
             bold: '600',
+
             tera: '86px',
             giga: '60px',
             mega: '48px',
@@ -78,6 +80,7 @@ export default {
             delta: '16px',
             epsilon: '14px',
             zeta: '12px',
+
             blue: '#0327D0'
           },
         }

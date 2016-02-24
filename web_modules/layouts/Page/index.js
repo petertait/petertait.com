@@ -45,10 +45,10 @@ export default class Page extends Component {
       { property: "og:title", content: metaTitle },
       { property: "og:url", content: __url },
       { property: "og:description", content: head.description },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: metaTitle },
-      { name: "twitter:creator", content: `@${pkg.config.twitter}` },
-      { name: "twitter:description", content: head.description },
+      // { name: "twitter:card", content: "summary" },
+      // { name: "twitter:title", content: metaTitle },
+      // { name: "twitter:creator", content: `@${pkg.config.twitter}` },
+      // { name: "twitter:description", content: head.description },
       { name: "description", content: head.description }
     ]
 
