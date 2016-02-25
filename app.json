@@ -1,19 +1,15 @@
 {
-  "name": "react-redux-universal-hot-example",
-  "description": "Example of an isomorphic (universal) webapp using react redux and hot reloading",
-  "repository": "https://github.com/erikras/react-redux-universal-hot-example",
-  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "name": "Essential React",
+  "description": "A minimal skeleton for building testable React apps using ES6",
   "keywords": [
     "react",
-    "isomorphic",
-    "universal",
-    "webpack",
-    "express",
-    "hot reloading",
-    "react-hot-reloader",
-    "redux",
-    "starter",
-    "boilerplate",
-    "babel"
-  ]
+    "es6",
+    "starter"
+  ],
+  "repository": "https://github.com/pheuter/essential-react",
+  "logo": "https://dl.dropboxusercontent.com/u/1803181/essential-react-logo.png",
+  "env": {
+    "PRODUCTION": "true",
+    "NPM_CONFIG_PRODUCTION": "false"
+  }
 }
