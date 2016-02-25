@@ -2,15 +2,7 @@ var express = require('express');
 var app = express();
 
 
-/************************************************************
- *
- * Express routes for:
- *   - app.js
- *   - style.css
- *   - index.html
- *
- ************************************************************/
-
+// Express routes
 // Serve application file depending on environment
 app.get('/app.js', function(req, res) {
   if (process.env.PRODUCTION) {
@@ -35,14 +27,7 @@ app.get('*', function(req, res) {
 });
 
 
-/*************************************************************
- *
- * Webpack Dev Server
- *
- * See: http://webpack.github.io/docs/webpack-dev-server.html
- *
- *************************************************************/
-
+// Webpack Dev Server
 if (!process.env.PRODUCTION) {
   var webpack = require('webpack');
   var WebpackDevServer = require('webpack-dev-server');
@@ -61,12 +46,7 @@ if (!process.env.PRODUCTION) {
 }
 
 
-/******************
- *
- * Express server
- *
- *****************/
-
+// Express server
 var port = process.env.PORT || 8080;
 var server = app.listen(port, function () {
   var host = server.address().address;
