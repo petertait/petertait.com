@@ -1,5 +1,4 @@
 var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
@@ -10,7 +9,7 @@ module.exports = {
   entry:  [
     "webpack-dev-server/client?http://localhost:9090",
     "webpack/hot/only-dev-server",
-    "./src/main"
+    "./src/app"
   ],
 
   // This will not actually create a bundle.js file in ./build. It is used
@@ -24,15 +23,23 @@ module.exports = {
   // Necessary plugins for hot load
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('style.css', { allChunks: true })
+    new webpack.NoErrorsPlugin()
   ],
 
   // Transform source code using Babel and React Hot Loader
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ["react-hot", "babel-loader"] },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader') }
+      { test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loaders: ["react-hot", "babel-loader"]
+      },
+      { test: /\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+          'postcss-loader'
+        ]
+      }
     ]
   },
 
@@ -43,7 +50,7 @@ module.exports = {
 
   // Additional plugins for CSS post processing using postcss-loader
   postcss: [
-    require('autoprefixer'), // Automatically include vendor prefixes
-    require('postcss-nested') // Enable nested rules, like in Sass
+    require('autoprefixer'),
+    require('postcss-nested')
   ]
 }

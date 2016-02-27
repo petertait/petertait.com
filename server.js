@@ -47,10 +47,8 @@ if (!process.env.PRODUCTION) {
 
 
 // Express server
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8000;
 var server = app.listen(port, function () {
-  var host = server.address().address;
   var port = server.address().port;
-
-  console.log('Essential React listening at http://%s:%s', host, port);
+  console.log('Listening at http://localhost:',port);
 });

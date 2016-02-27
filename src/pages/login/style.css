@@ -1,5 +1,6 @@
 .content {
   margin-top: 50px;
+  background-color: black;
 }
 
 .heading {
@@ -19,7 +20,7 @@
   font-size: 2vw;
 
   background-color: #4B9DA3;
-  color: #f3f3f3;
+  color: black;
 
   cursor: pointer;
   border-radius: 2px;
