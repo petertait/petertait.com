@@ -49,7 +49,12 @@ module.exports = {
 
   // PostCSS Plugins
   postcss: [
+    require('postcss-mixins'),
+    require('postcss-for'),
+    require('postcss-conditionals'),
     require('postcss-cssnext'),
-    require('precss')
+    require('postcss-advanced-variables')({
+      variables: require('./src/vars')
+    })
   ]
 }

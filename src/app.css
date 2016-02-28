@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: $sans;
   line-height: 1.3;
 }
 

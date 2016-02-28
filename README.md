@@ -9,7 +9,6 @@ Peter has experience working with a range of clients from global corporations to
 
 <br>
 
-
 ## Tech used:
 
 - Babel 6
