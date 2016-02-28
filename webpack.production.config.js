@@ -25,7 +25,6 @@ module.exports = {
   },
 
   postcss: [
-    require('postcss-mixins'),
     require('postcss-for'),
     require('postcss-conditionals'),
     require('postcss-grid')({
