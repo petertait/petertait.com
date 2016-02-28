@@ -50,7 +50,7 @@ module.exports = {
 
   // Additional plugins for CSS post processing using postcss-loader
   postcss: [
-    require('autoprefixer'),
-    require('postcss-nested')
+    require('postcss-cssnext'),
+    require('precss')
   ]
 }

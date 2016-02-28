@@ -16,7 +16,7 @@ Peter has experience working with a range of clients from global corporations to
 - Webpack
 - Postcss (CSS Modules)
 - React.js
-- [Essential Starter](https://github.com/pheuter/essential-react#getting-started)
+- [Essential Starter](https://github.com/petertait/react-starter)
 
 <br>
 
@@ -32,7 +32,7 @@ Start the local dev server:
 $ npm run server
 ```
 
-Navigate to **http://localhost:8080/** to view the app.
+Navigate to **http://localhost:8000/** to view the app.
 
 <br>
 
@@ -42,7 +42,7 @@ Navigate to **http://localhost:8080/** to view the app.
 $ npm run build
 ```
 
-**Input:** `src/main.jsx`
+**Input:** `src/app.js`
 
 **Output:** `build/app.js`
 
@@ -54,7 +54,7 @@ $ npm run build
 $ npm test
 ```
 
-**Input:** `test/main.js`
+**Input:** `test/app.js`
 
 **Output:** `coverage/`
 

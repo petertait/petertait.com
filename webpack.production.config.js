@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: "./src/main",
+  entry: "./src/app",
 
   output: {
     path: __dirname + "/build/",
@@ -25,7 +25,7 @@ module.exports = {
   },
 
   postcss: [
-    require('autoprefixer'),
-    require('postcss-nested')
+    require('postcss-cssnext'),
+    require('precss')
   ]
 }

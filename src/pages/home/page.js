@@ -1,13 +1,19 @@
 import React from "react";
+import { browserHistory } from "react-router";
 import styles from "./style.css";
 
+export default class Home extends React.Component {
 
-export default class HomePage extends React.Component {
+  about() {
+    browserHistory.push("/about");
+  }
+
   render() {
     return (
       <div className={styles.content}>
-        <h1>Home Page</h1>
-        <p className={styles.welcomeText}>Thanks for joining!</p>
+        <h1 className={styles.headingOne}>Hello world</h1>
+        <p>Welcome to React Starter.</p>
+        <button onClick={this.about}>About</button>
       </div>
     );
   }
