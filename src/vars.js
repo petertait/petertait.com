@@ -1,9 +1,7 @@
 module.exports = {
   // Colours
   blue: '#0327d0',
-  light-blue: '#e6e8fa',
-  primary: 'blue',
-  ink: 'blue',
+  lightBlue: '#e6e8fa',
 
   // Typography
   tera: '72px',
@@ -16,12 +14,12 @@ module.exports = {
   epsilon: '14px',
   zeta: '12px',
 
-  regular: '400',
-  bold: '700',
-  sans: '"Karla", Helvetica, sans-serif',
+  fontRegular: '400',
+  fontBold: '700',
+  fontSans: 'Karla, Helvetica, sans-serif',
 
-  bodySize: delta,
-  bodyWeight: regular,
+  bodySize: '16px',
+  bodyWeight: '400',
 
   // Layout
   large: '1000px',
