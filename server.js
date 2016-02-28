@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 
-
 // Express routes
 // Serve application file depending on environment
 app.get('/app.js', function(req, res) {

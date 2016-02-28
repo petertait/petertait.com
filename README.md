@@ -28,7 +28,7 @@ $ npm install
 Start the local dev server:
 
 ```sh
-$ npm start
+$ npm run server
 ```
 
 Navigate to **http://localhost:8000/** to view the app.
