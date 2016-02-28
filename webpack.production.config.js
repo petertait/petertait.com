@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: "./src/app",
+  entry: "./src/index",
 
   output: {
     path: __dirname + "/build/",
@@ -10,7 +10,7 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('style.css', { allChunks: true })
+    new ExtractTextPlugin('styles.css', { allChunks: true })
   ],
 
   module: {
@@ -28,6 +28,12 @@ module.exports = {
     require('postcss-mixins'),
     require('postcss-for'),
     require('postcss-conditionals'),
+    require('postcss-grid')({
+      columns: 10,
+      maxWidth: 800,
+      gutter: 20
+    }),
+    require('rucksack-css'),
     require('postcss-cssnext'),
     require('postcss-advanced-variables')({
       variables: require('./src/vars')

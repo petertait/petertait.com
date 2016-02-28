@@ -9,7 +9,7 @@ module.exports = {
   entry:  [
     "webpack-dev-server/client?http://localhost:9090",
     "webpack/hot/only-dev-server",
-    "./src/app"
+    "./src/index"
   ],
 
   // Only used by the dev server for dynamic hotreloading.
@@ -52,6 +52,12 @@ module.exports = {
     require('postcss-mixins'),
     require('postcss-for'),
     require('postcss-conditionals'),
+    require('postcss-grid')({
+      columns: 10,
+      maxWidth: 800,
+      gutter: 20
+    }),
+    require('rucksack-css'),
     require('postcss-cssnext'),
     require('postcss-advanced-variables')({
       variables: require('./src/vars')

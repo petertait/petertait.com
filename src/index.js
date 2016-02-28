@@ -4,9 +4,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Router, browserHistory } from "react-router";
 
-import Routes from './components/routes';
+import Routes from './routes';
 
-import "./app.css";
+import "./global.css";
 
 const DOM_APP_EL_ID = "app";
 

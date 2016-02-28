@@ -1,8 +1,9 @@
 .content {
   margin: 50px;
-  padding: 50px;
+  padding: 50px 50px 0;
 }
 
-.headingOne {
+.header,
+.description {
   color: $blue;
 }
