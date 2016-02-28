@@ -1,6 +1,6 @@
 import React from "react";
 import { browserHistory } from "react-router";
-import styles from "./style.css";
+import styles from "./styles.css";
 
 export default class Home extends React.Component {
 

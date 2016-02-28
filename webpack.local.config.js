@@ -5,22 +5,21 @@ module.exports = {
   // Efficiently evaluate modules with source maps
   devtool: "eval",
 
-  // Set entry point to ./src/main and include necessary files for hot load
+  // Include files for hotreload
   entry:  [
     "webpack-dev-server/client?http://localhost:9090",
     "webpack/hot/only-dev-server",
     "./src/app"
   ],
 
-  // This will not actually create a bundle.js file in ./build. It is used
-  // by the dev server for dynamic hot loading.
+  // Only used by the dev server for dynamic hotreloading.
   output: {
     path: __dirname + "/build/",
     filename: "app.js",
     publicPath: "http://localhost:9090/build/"
   },
 
-  // Necessary plugins for hot load
+  // Plugins for hotreload
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
@@ -43,12 +42,12 @@ module.exports = {
     ]
   },
 
-  // Automatically transform files with these extensions
+  // Auto transform files with these extensions
   resolve: {
     extensions: ['', '.js', '.jsx', '.css']
   },
 
-  // Additional plugins for CSS post processing using postcss-loader
+  // PostCSS Plugins
   postcss: [
     require('postcss-cssnext'),
     require('precss')

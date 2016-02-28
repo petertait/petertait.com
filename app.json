@@ -1,13 +1,13 @@
 {
-  "name": "Essential React",
-  "description": "A minimal skeleton for building testable React apps using ES6",
+  "name": "react-starter",
+  "description": "React starter using ES6 – includes hot reloading for React and PostCSS",
   "keywords": [
     "react",
     "es6",
+    "postcss",
     "starter"
   ],
-  "repository": "https://github.com/pheuter/essential-react",
-  "logo": "https://dl.dropboxusercontent.com/u/1803181/essential-react-logo.png",
+  "repository": "https://github.com/petertait/react-starter",
   "env": {
     "PRODUCTION": "true",
     "NPM_CONFIG_PRODUCTION": "false"
