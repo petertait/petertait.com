@@ -3,20 +3,20 @@ var webpack = require('webpack');
 module.exports = {
 
   // Efficiently evaluate modules with source maps
-  devtool: "eval",
+  devtool: 'eval',
 
   // Include files for hotreload
   entry:  [
-    "webpack-dev-server/client?http://localhost:9090",
-    "webpack/hot/only-dev-server",
-    "./src/index"
+    'webpack-dev-server/client?http://localhost:9090',
+    'webpack/hot/only-dev-server',
+    './src/index'
   ],
 
   // Only used by the dev server for dynamic hotreloading.
   output: {
-    path: __dirname + "/build/",
-    filename: "app.js",
-    publicPath: "http://localhost:9090/build/"
+    path: __dirname + '/build/',
+    filename: 'app.js',
+    publicPath: 'http://localhost:9090/build/'
   },
 
   // Plugins for hotreload
@@ -30,7 +30,7 @@ module.exports = {
     loaders: [
       { test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ["react-hot", "babel-loader"]
+        loaders: ['react-hot', 'babel-loader']
       },
       { test: /\.css$/,
         loaders: [

@@ -7,8 +7,6 @@
     "postinstall": "npm run build",
     "server": "node server.js",
     "build": "webpack -p --progress --config webpack.production.config.js",
-    "test": "nyc ava --fail-fast --verbose --require babel-register",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "clean": "rm build/index.js"
   },
   "repository": {
@@ -50,6 +48,8 @@
     "react-addons-test-utils": "^0.14.6",
     "react-css-modules": "^3.7.5",
     "react-hot-loader": "^1.3.0",
+    "react-side-effect": "^1.0.2",
+    "react-document-title": "^2.0.1",
     "rucksack-css": "^0.8.5",
     "sinon": "^1.17.2",
     "style-loader": "^0.13.0",
@@ -60,6 +60,7 @@
     "babel-core": "^6.4.5",
     "babel-polyfill": "^6.3.14",
     "babel-runtime": "^6.3.19",
+    "body-style": "^0.2.1",
     "express": "^4.12.3",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",

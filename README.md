@@ -47,28 +47,6 @@ $ npm run build
 
 <br>
 
-## Testing
-
-```sh
-$ npm test
-```
-
-**Input:** `test/app.js`
-
-**Output:** `coverage/`
-
-<br>
-
-## Test Coveralls
-
-```sh
-$ npm run coveralls
-```
-
-**Input:** `coverage/lcov.info`
-
-<br>
-
 ## Clean
 
 ```sh

@@ -7,7 +7,7 @@
     "postcss",
     "starter"
   ],
-  "repository": "https://github.com/petertait/react-starter",
+  "repository": "https://github.com/petertait/petertait.com",
   "env": {
     "PRODUCTION": "true",
     "NPM_CONFIG_PRODUCTION": "false"
