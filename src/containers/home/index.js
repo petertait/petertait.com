@@ -13,13 +13,12 @@ class Home extends Component {
   render() {
     return (
       <section>
-        <BodyStyle style={{ backgroundColor: '#000' }} className='home' />
+        <BodyStyle style={{ backgroundColor: '#ffab10' }} className='home' />
         <Header/>
-        <Hero/>
         <div className='container' styleName='content'>
-          <h1 styleName='header'>Hello world</h1>
-          <p styleName='description'>Welcome to React Starter.</p>
-          <ButtonLink to='/blog' styleName='button'>Go to blog</ButtonLink>
+          <h1 styleName='headline'>Peter is a user interface and experience designer at pebble code.</h1>
+          <p styleName='description'>Currently based in London, Peter's aim is to design and build solutions to complex business problems.</p>
+          <p styleName='description'>Peter has experience working with a range of clients from global corporations to family firms including: Intel, AstraZeneca, Pearson, HSBC, National Grid, Lloyds Banking Group, IUCN, National Express, EDF, The World Bank, NG Bailey and APM Technologies.</p>
         </div>
       </section>
     );

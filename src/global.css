@@ -13,7 +13,7 @@ body {
 
 :global(.container) {
   clear: fix;
-  max-width: $large;
+  max-width: $maxWidth;
   margin: auto;
   padding-left: $gutter;
   padding-right: $gutter;

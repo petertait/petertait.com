@@ -1,12 +1,25 @@
 .content {
-  padding-top: 60px;
+  padding-top: 140px;
+  padding-bottom: 50px;
+  color: black;
 }
 
-.header,
+.headline {
+  font-size: $giga;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
 .description {
-  color: $blue;
+  font-size: $beta;
+  margin-bottom: 30px;
 }
 
 .button {
   margin: 60px 0 30px;
+  color: black;
+
+  &:hover {
+    color: white;
+  }
 }
