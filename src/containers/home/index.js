@@ -13,7 +13,7 @@ class Home extends Component {
   render() {
     return (
       <section>
-        <BodyStyle style={{ backgroundColor: '#000' }} />
+        <BodyStyle style={{ backgroundColor: '#000' }} className='home' />
         <Header/>
         <Hero/>
         <div className='container' styleName='content'>
