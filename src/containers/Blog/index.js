@@ -3,25 +3,23 @@ import { Link } from "react-router";
 import CSSModules from "react-css-modules";
 
 import Header from "../../components/Header";
-import Hero from "../../components/Hero";
 import ButtonLink from "../../components/ButtonLink";
 
 import styles from "./styles.css";
 
-class Home extends Component {
+class Blog extends Component {
   render() {
     return (
       <section>
         <Header/>
-        <Hero/>
         <div className="container" styleName="content">
-          <h1 styleName="header">Hello world</h1>
-          <p styleName="description">Welcome to React Starter.</p>
-          <ButtonLink to="/blog" styleName="button">Go to blog</ButtonLink>
+          <h1 styleName="header">About</h1>
+          <p styleName="description">React starter using ES6 – includes hot reloading for React and PostCSS</p>
+          <ButtonLink to="/">Return home</ButtonLink>
         </div>
       </section>
     );
   }
 }
 
-export default (CSSModules(Home, styles));
+export default (CSSModules(Blog, styles));

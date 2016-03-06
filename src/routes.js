@@ -1,13 +1,12 @@
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import React from "react";
+import { Route, IndexRoute } from "react-router";
 
-import App from './containers/app/index';
-import Home from './containers/home/index';
-import About from './containers/about/index';
+import Home from "./containers/Home/index";
+import Blog from "./containers/Blog/index";
 
 export default (
-  <Route path="/" component={App}>
+  <Route path="/">
     <IndexRoute component={Home} />
-    <Route path="about" component={About} />
+    <Route path="Blog" component={Blog} />
   </Route>
 );
