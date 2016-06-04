@@ -14,8 +14,7 @@ Peter has experience working with a range of clients from global corporations to
 - Babel 6
 - Webpack
 - Postcss (CSS Modules)
-- React.js
-- [Essential Starter](https://github.com/petertait/react-starter)
+- React
 
 <br>
 

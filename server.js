@@ -29,7 +29,7 @@ app.get('*', function(req, res) {
 if (!process.env.PRODUCTION) {
   var webpack = require('webpack');
   var WebpackDevServer = require('webpack-dev-server');
-  var config = require('./webpack.local.config');
+  var config = require('./webpack.config');
 
   new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
