@@ -5,7 +5,7 @@ const yellow = '#ffdf00';
 const blue = '#0327d0';
 const lightBlue = '#e6e8fa';
 const cyan = '#00e3f9';
-const primary = blue;
+const primary = '#000';
 
 
 // Typography
@@ -21,7 +21,7 @@ const zeta = '12px';
 
 const fontRegular = '400';
 const fontBold = '700';
-const fontSans = 'Apercu, Karla, Helvetica, sans-serif';
+const fontSans = 'Karla, Helvetica, sans-serif';
 
 const bodySize = gamma;
 const bodyWeight = fontRegular;
