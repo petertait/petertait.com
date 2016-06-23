@@ -10,7 +10,7 @@ import styles from './styles.css';
 class Header extends Component {
   render() {
     return (
-      <header styleName='header'>
+      <header {...this.props} styleName='header'>
         <div className='container'>
           <Link to='/' styleName='logo'>
             <Logo/>

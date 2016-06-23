@@ -1,11 +1,9 @@
 // Colours
-const blood = '#f24800';
-const clementine = '#ffcf00';
-const yellow = '#ffdf00';
-const blue = '#0327d0';
+const black = '#0b0c12'
+const blue = '#18147c';
 const lightBlue = '#e6e8fa';
 const cyan = '#00e3f9';
-const primary = '#000';
+const primary = blue;
 
 
 // Typography
@@ -21,23 +19,20 @@ const zeta = '12px';
 
 const fontRegular = '400';
 const fontBold = '700';
-const fontSans = 'Karla, Helvetica, sans-serif';
+const fontSans = 'Maison Neue, Helvetica, sans-serif';
 
 const bodySize = gamma;
 const bodyWeight = fontRegular;
 
 
 // Layout
-const large = '800px';
-const small = '500px';
+const large = '1000px';
+const small = '600px';
 const gutter = '20px';
 const maxWidth = large;
 
 
 module.exports = {
-  blood,
-  clementine,
-  yellow,
   blue,
   lightBlue,
   cyan,

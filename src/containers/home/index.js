@@ -4,6 +4,7 @@ import CSSModules from 'react-css-modules';
 import BodyStyle from 'body-style';
 
 import Header from '../../components/Header';
+import Logo from '../../components/Logo';
 import Hero from '../../components/Hero';
 import ButtonLink from '../../components/ButtonLink';
 
@@ -14,7 +15,7 @@ class Home extends Component {
     return (
       <section>
         <BodyStyle style={{ backgroundColor: '#0f0f0f' }} className='home' />
-        <Header/>
+        <Header styleName="header"/>
         <div className='container' styleName='content'>
           <h1 styleName='headline'>User interface and experience designer.</h1>
           <ButtonLink to='/' styleName='button'>Curriculum Vitae</ButtonLink>
