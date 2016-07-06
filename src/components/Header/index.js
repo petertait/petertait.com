@@ -1,25 +1,27 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import CSSModules from 'react-css-modules';
+import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router'
+import CSSModules from 'react-css-modules'
 
-import Logo from '../Logo';
-import Nav from '../Nav';
-
-import styles from './styles.css';
+import Styles from './styles.css'
 
 class Header extends Component {
+
   render() {
     return (
-      <header {...this.props} styleName='header'>
-        <div className='container'>
-          <Link to='/' styleName='logo'>
-            <Logo/>
-          </Link>
-          <Nav/>
+      <header styleName='header'>
+        <div styleName='inner'>
+          <h1 styleName='logo'>Flowby</h1>
+          <nav styleName='nav'>
+            <Link to="/">Login</Link>
+          </nav>
         </div>
       </header>
-    );
+    )
   }
 }
 
-export default CSSModules(Header, styles);
+Header.propTypes = {
+  children: PropTypes.node
+}
+
+export default CSSModules(Header, Styles)

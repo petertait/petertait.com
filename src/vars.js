@@ -5,7 +5,6 @@ const lightBlue = '#e6e8fa';
 const cyan = '#00e3f9';
 const primary = blue;
 
-
 // Typography
 const tera = '72px';
 const giga = '60px';
@@ -24,13 +23,11 @@ const fontSans = 'Maison Neue, Helvetica, sans-serif';
 const bodySize = gamma;
 const bodyWeight = fontRegular;
 
-
 // Layout
 const large = '1000px';
 const small = '600px';
 const gutter = '20px';
 const maxWidth = large;
-
 
 module.exports = {
   blue,

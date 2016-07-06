@@ -1,11 +1,7 @@
-# petertait.com
-#### Freelance website for designer, [Peter Tait](petertait.com).
+# Freelance website for Peter Tait
+#### Multifunctional designer/developer based in Bath. Traditionally trained designer that codes.
 
-Peter is a user interface and experience designer at pebble {code}.
-
-Currently based in London, Peter's aim is to design and build solutions to complex business problems.
-
-Peter has experience working with a range of clients from global corporations to family firms including: Intel, AstraZeneca, Pearson, HSBC, National Grid, Lloyds Banking Group, IUCN, National Express, EDF, The World Bank, NG Bailey and APM Technologies.
+Visit the site at http://petertait.com
 
 <br>
 
@@ -13,8 +9,8 @@ Peter has experience working with a range of clients from global corporations to
 
 - Babel 6
 - Webpack
-- Postcss (CSS Modules)
 - React
+- Postcss (React CSS Modules)
 
 <br>
 
@@ -27,7 +23,7 @@ $ npm install
 Start the local dev server:
 
 ```sh
-$ npm run server
+$ npm start
 ```
 
 Navigate to **http://localhost:8000/** to view the app.

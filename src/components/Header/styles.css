@@ -1,13 +1,24 @@
 .header {
   position: fixed;
   width: 100%;
-  padding-top: 20px;
+  top: 0;
+  padding: 10px 0;
+}
+
+.inner {
+  position: relative;
+  margin: auto;
+  max-width: $maxWidth;
+  padding-left: $gutter;
+  padding-right: $gutter;
 }
 
 .logo {
-  float: left;
-  display: block;
-  border: none;
-  width: 66px;
-  height: 35px;
+
+}
+
+.nav {
+  position: absolute;
+  top: 10px;
+  right: 0;
 }

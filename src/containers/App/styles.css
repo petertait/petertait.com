@@ -1,0 +1,5 @@
+.container {
+  max-width: $maxWidth;
+  margin: auto;
+  padding: 100px $gutter;
+}
