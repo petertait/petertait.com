@@ -34,14 +34,14 @@ let config = {
         ]
       },
       {
-        test: /\.scss$/,
+        test: /\.(jpg|jpeg|gif|png)$/,
         exclude: /node_modules/,
-        loaders: ['style', 'css']
+        loader:'url-loader?limit=1024&name=images/[name].[ext]'
       },
       {
-        test: /\.(jpg|png|ttf|eot|woff|woff2|svg)$/,
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
         exclude: /node_modules/,
-        loader: 'url?limit=100000'
+        loader: 'url-loader?limit=1024&name=fonts/[name].[ext]'
       }
     ]
   },
