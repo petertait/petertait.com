@@ -7,7 +7,7 @@ import styles from './styles.css';
 class Logo extends Component {
   render() {
     return (
-      <Isvg src='../images/logo.svg' styleName="logo" />
+      <Isvg src='../images/logo.svg' styleName={this.props.color || '' } />
     );
   }
 }

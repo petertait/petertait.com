@@ -10,9 +10,9 @@ class Header extends Component {
 
   render() {
     return (
-      <header styleName='header'>
+      <header styleName={this.props.color || '' }>
         <div styleName='inner'>
-          <Logo/>
+          <Logo />
           <nav styleName='nav'>
             <Link to="/">Login</Link>
           </nav>
@@ -20,10 +20,6 @@ class Header extends Component {
       </header>
     )
   }
-}
-
-Header.propTypes = {
-  children: PropTypes.node
 }
 
 export default CSSModules(Header, Styles)
