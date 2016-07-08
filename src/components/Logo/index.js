@@ -5,6 +5,7 @@ import Isvg from 'react-inlinesvg'
 import styles from './styles.css';
 
 class Logo extends Component {
+
   render() {
     return (
       <Isvg src='../images/logo.svg' styleName={this.props.color || '' } />

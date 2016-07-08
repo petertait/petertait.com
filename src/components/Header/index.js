@@ -10,13 +10,12 @@ class Header extends Component {
 
   render() {
     return (
-      <header styleName={this.props.color || '' }>
-        <div styleName='inner'>
-          <Logo />
-          <nav styleName='nav'>
-            <Link to="/">Login</Link>
-          </nav>
-        </div>
+      <header className='container' styleName={this.props.color}>
+        <Logo color={this.props.color}/>
+        <nav styleName='nav'>
+          <Link to="/">Profile</Link>
+          <Link to="/">Work</Link>
+        </nav>
       </header>
     )
   }

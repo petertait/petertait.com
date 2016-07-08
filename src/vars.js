@@ -1,9 +1,7 @@
 // Colours
-const black = '#0b0c12'
-const blue = '#18147c';
-const lightBlue = '#e6e8fa';
-const cyan = '#00e3f9';
-const primary = blue;
+const purple = '#393a85';
+const peach = '#ff807f';
+const primary = purple;
 
 // Typography
 const tera = '72px';
@@ -18,7 +16,8 @@ const zeta = '12px';
 
 const fontRegular = '400';
 const fontBold = '700';
-const fontSans = 'Maison Neue, Helvetica, sans-serif';
+const fontMono = 'Iosevka, monospace';
+const fontSerif = 'Tiempos Headline Black, serif';
 
 const bodySize = gamma;
 const bodyWeight = fontRegular;
@@ -30,9 +29,8 @@ const gutter = '20px';
 const maxWidth = large;
 
 module.exports = {
-  blue,
-  lightBlue,
-  cyan,
+  purple,
+  peach,
   primary,
 
   tera,
@@ -47,7 +45,8 @@ module.exports = {
 
   fontRegular,
   fontBold,
-  fontSans,
+  fontMono,
+  fontSerif,
 
   bodySize,
   bodyWeight,

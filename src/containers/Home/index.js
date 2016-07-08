@@ -7,7 +7,7 @@ import Header from '../../components/Header'
 import Vars from '../../vars'
 import Styles from './styles.css'
 
-class App extends Component {
+class Home extends Component {
   constructor() {
     super();
 
@@ -18,17 +18,21 @@ class App extends Component {
   }
 
   componentWillMount() {
+    this.setState({
+      primaryColor : 'purple',
+      secondaryColor : 'peach'
+    });
+
     document.body.style.backgroundColor = Vars.purple
   }
 
   render() {
     return (
       <div styleName='container'>
-        <Header color={this.state.primaryColor}/>
-        <Home />
+        <Header color={this.state.secondaryColor}/>
       </div>
     )
   }
 }
 
-export default CSSModules(App, Styles)
+export default CSSModules(Home, Styles)

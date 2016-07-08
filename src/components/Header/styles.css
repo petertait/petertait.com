@@ -1,20 +1,19 @@
-.header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  padding: 10px 0;
+header {
+
 }
 
-.inner {
-  position: relative;
-  margin: auto;
-  max-width: $maxWidth;
-  padding-left: $gutter;
-  padding-right: $gutter;
+.peach {
+  color: $peach;
+
+  Link {
+    color: $peach;
+  }
 }
 
 .nav {
   position: absolute;
   top: 10px;
   right: 0;
+
+  color: $peach;
 }
