@@ -1,19 +1,15 @@
-header {
+[class*='header'] {
 
 }
 
-.peach {
-  color: $peach;
-
-  Link {
-    color: $peach;
-  }
+.header-peach {
+  background-color: $peach;
 }
 
-.nav {
-  position: absolute;
-  top: 10px;
-  right: 0;
+.header-purple {
+  background-color: $purple;
+}
 
-  color: $peach;
+.header-teal {
+  background-color: $teal;
 }

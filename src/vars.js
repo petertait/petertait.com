@@ -1,7 +1,7 @@
 // Colours
 const purple = '#393a85';
 const peach = '#ff807f';
-const primary = purple;
+const teal = '#8dffe5';
 
 // Typography
 const tera = '72px';
@@ -31,7 +31,7 @@ const maxWidth = large;
 module.exports = {
   purple,
   peach,
-  primary,
+  teal,
 
   tera,
   giga,

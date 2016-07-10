@@ -1,3 +1,7 @@
 .peach path {
   fill: $peach;
 }
+
+.teal path {
+  fill: $teal;
+}

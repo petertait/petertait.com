@@ -4,35 +4,29 @@ import CSSModules from 'react-css-modules'
 
 import Header from '../../components/Header'
 
-import Vars from '../../vars'
-import Styles from './styles.css'
+import vars from '../../vars'
+import styles from './styles.css'
 
 class Home extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      primaryColor : {},
-      secondaryColor : {}
-    }
-  }
-
   componentWillMount() {
-    this.setState({
-      primaryColor : 'purple',
-      secondaryColor : 'peach'
-    });
+    this.state = {
+      theme : {
+        primary: 'purple',
+        secondary: 'teal'
+      }
+    }
 
-    document.body.style.backgroundColor = Vars.purple
+    document.body.style.backgroundColor = vars.purple
   }
 
   render() {
     return (
       <div styleName='container'>
-        <Header color={this.state.secondaryColor}/>
+
+
       </div>
     )
   }
 }
 
-export default CSSModules(Home, Styles)
+export default CSSModules(Home, styles)

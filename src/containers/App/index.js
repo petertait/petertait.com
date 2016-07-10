@@ -2,33 +2,33 @@ import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import CSSModules from 'react-css-modules'
 
+import Home from '../../containers/Home'
 import Header from '../../components/Header'
 
-import Vars from '../../vars'
-import Styles from './styles.css'
+import vars from '../../vars'
+import styles from './styles.css'
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      primaryColor : {},
-      secondaryColor : {}
+      theme : {
+        primary: 'purple',
+        secondary: 'teal'
+      }
     }
-  }
-
-  componentWillMount() {
-    document.body.style.backgroundColor = Vars.purple
   }
 
   render() {
     return (
       <div styleName='container'>
-        <Header color={this.state.primaryColor}/>
-        <Home />
+        <Header primary={this.state.theme.primary} secondary={this.state.theme.secondary}/>
+        <Home primary={this.state.theme.primary} secondary={this.state.theme.secondary}/>
+
       </div>
     )
   }
 }
 
-export default CSSModules(App, Styles)
+export default CSSModules(App, styles)
