@@ -8,7 +8,7 @@ class Logo extends Component {
 
   render() {
     return (
-      <Isvg src='../images/logo.svg' styleName={this.props.secondary} />
+      <Isvg src='../images/logo.svg'/>
     );
   }
 }

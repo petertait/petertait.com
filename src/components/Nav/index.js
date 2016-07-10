@@ -8,7 +8,7 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav styleName={'nav-' + this.props.secondary}>
+      <nav>
         <Link to="/">Profile</Link>
         <Link to="/">Work</Link>
       </nav>

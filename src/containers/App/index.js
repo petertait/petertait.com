@@ -23,9 +23,8 @@ class App extends Component {
   render() {
     return (
       <div styleName='container'>
-        <Header primary={this.state.theme.primary} secondary={this.state.theme.secondary}/>
-        <Home primary={this.state.theme.primary} secondary={this.state.theme.secondary}/>
-
+        <Header logoColor={this.state.secondary}/>
+        <Home/>
       </div>
     )
   }
