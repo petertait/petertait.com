@@ -18,17 +18,15 @@ class Home extends Component {
     var primary = this.state.theme.primary
     var secondary = this.state.theme.secondary
 
-    console.log(secondary);
-
     document.body.style.backgroundColor = primary
     document.body.style.color = secondary
   }
 
   render() {
     return (
-      <div styleName='container'></div>
+      <div></div>
     )
   }
 }
 
-export default Radium(Home)
+module.exports = Radium(Home)

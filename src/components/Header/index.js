@@ -13,10 +13,7 @@ class Header extends Component {
         style={[
           styles.header
         ]}>
-        <Logo style={[
-          styles.logo,
-          styles[this.props.logoColor]
-        ]}/>
+        <Logo color={this.props.secondaryColor}/>
         <Nav/>
       </header>
     )
@@ -25,14 +22,8 @@ class Header extends Component {
 
 var styles = {
   header: {
-    backgroundColor: '#fff',
-  },
-  logo: {
-
-  },
-  peach: {
-    
+    backgroundColor: '#fff'
   }
 }
 
-module.exports = Radium(Header);
+module.exports = Radium(Header)
