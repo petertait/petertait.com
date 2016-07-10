@@ -11,12 +11,18 @@ class Home extends Component {
   componentWillMount() {
     this.state = {
       theme : {
-        primary: 'purple',
-        secondary: 'teal'
+        primary: vars.purple,
+        secondary: vars.teal
       }
     }
 
-    document.body.style.backgroundColor = vars.purple
+    var primary = this.state.theme.primary
+    var secondary = this.state.theme.secondary
+
+    console.log(secondary);
+
+    document.body.style.backgroundColor = primary
+    document.body.style.color = secondary
   }
 
   render() {
