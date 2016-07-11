@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import Radium, {StyleRoot} from 'radium'
+import Radium from 'radium'
 
 import Styles from '../../styles'
 
@@ -11,17 +11,17 @@ class App extends Component {
     super();
 
     this.state = {
-      theme : {}
+      theme: {}
     }
   }
 
   render() {
     return (
-      <StyleRoot>
+      <div>
         <Styles/>
         <Header color={this.state.theme.secondary}/>
         {this.props.children}
-      </StyleRoot>
+      </div>
     )
   }
 }

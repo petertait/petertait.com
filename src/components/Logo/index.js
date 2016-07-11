@@ -1,18 +1,21 @@
 import React, { Component, PropTypes } from 'react';
+import { Link, IndexLink } from 'react-router'
 import Radium from 'radium'
 import Isvg from 'react-inlinesvg'
 
 class Logo extends Component {
   render() {
     return (
-      <Isvg src='../images/logo.svg' style={styles.logo} />
+      <IndexLink style={styles.logo} to="/">
+        <Isvg src='../images/logo.svg'/>
+      </IndexLink>
     );
   }
 }
 
 var styles = {
   logo: {
-
+    border: 'none'
   }
 }
 

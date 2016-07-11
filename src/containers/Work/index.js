@@ -7,17 +7,14 @@ import vars from '../../vars'
 class Work extends Component {
   componentWillMount() {
     this.state = {
-      theme : {
-        primary: vars.teal,
-        secondary: vars.peach
+      theme: {
+        primary: vars.peach,
+        secondary: vars.purple
       }
     }
 
-    var primary = this.state.theme.primary
-    var secondary = this.state.theme.secondary
-
-    document.body.style.backgroundColor = primary
-    document.body.style.color = secondary
+    document.body.style.backgroundColor = this.state.theme.primary
+    document.body.style.color = this.state.theme.secondary
   }
 
   render() {
