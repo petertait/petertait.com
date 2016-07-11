@@ -2,8 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import Radium from 'radium'
 
-import Header from '../../components/Header'
-
 import vars from '../../vars'
 
 class Home extends Component {

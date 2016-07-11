@@ -5,22 +5,16 @@ import Isvg from 'react-inlinesvg'
 import vars from '../../vars'
 
 class Logo extends Component {
-
   render() {
     return (
-      <Isvg src='../images/logo.svg'
-        color={[
-        styles.logo,
-        styles[this.props.secondaryColor]
-      ]}/>
+      <Isvg src='../images/logo.svg' style={styles.logo} />
     );
   }
 }
 
 var styles = {
-  logo: {},
-  teal: {
-    color: vars.teal
+  logo: {
+
   }
 }
 

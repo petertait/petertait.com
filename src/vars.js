@@ -1,5 +1,5 @@
 // Colours
-const purple = '#393a85';
+const purple = '#6B4ECE';
 const peach = '#ff807f';
 const teal = '#8dffe5';
 
@@ -14,7 +14,7 @@ const delta = '16px';
 const epsilon = '14px';
 const zeta = '12px';
 
-const fontRegular = '400';
+const fontRegular = '300';
 const fontBold = '700';
 const fontMono = 'Iosevka, monospace';
 const fontSerif = 'Tiempos Headline Black, serif';

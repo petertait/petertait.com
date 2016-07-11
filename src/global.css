@@ -1,5 +1,9 @@
-*, *::before, *::after {
+html {
   box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
   text-rendering: optimizeSpeed;
   padding: 0;
   margin: 0;
@@ -7,7 +11,8 @@
 
 body {
   font-family: $fontMono;
-  line-height: 1.3;
+  font-weight: $fontRegular;
+  line-height: 1.4;
 }
 
 :global .container {
@@ -24,4 +29,8 @@ a {
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 2px solid;
+}
+
+svg path {
+  fill: currentColor;
 }

@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import { Link } from 'react-router'
 import Radium from 'radium'
 
 import Logo from '../../components/Logo'
@@ -8,12 +7,8 @@ import Nav from '../../components/Nav'
 class Header extends Component {
   render() {
     return (
-      <header
-        className='container'
-        style={[
-          styles.header
-        ]}>
-        <Logo color={this.props.secondaryColor}/>
+      <header className='container' style={styles.header}>
+        <Logo/>
         <Nav/>
       </header>
     )
@@ -22,7 +17,11 @@ class Header extends Component {
 
 var styles = {
   header: {
-    backgroundColor: '#fff'
+    paddingTop: '30px',
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   }
 }
 

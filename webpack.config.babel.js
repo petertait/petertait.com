@@ -46,16 +46,11 @@ let config = {
   },
 
   postcss: [
-    require('postcss-for'),
-    require('postcss-conditionals'),
-    require('postcss-color-function'),
-    require('postcss-nesting'),
     require('postcss-grid')({
       columns: 10,
       maxWidth: 800,
       gutter: 20
     }),
-    require('rucksack-css'),
     require('postcss-advanced-variables')({
       variables: require('./src/vars')
     })
