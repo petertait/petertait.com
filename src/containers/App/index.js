@@ -1,4 +1,7 @@
 import React, { Component, PropTypes } from 'react'
+import Radium, {StyleRoot} from 'radium'
+
+import Styles from '../../styles'
 
 import Header from '../../components/Header'
 import Home from '../../containers/Home'
@@ -8,21 +11,19 @@ class App extends Component {
     super();
 
     this.state = {
-      theme : {
-        primary: 'purple',
-        secondary: 'teal'
-      }
+      theme : {}
     }
   }
 
   render() {
     return (
-      <div>
+      <StyleRoot>
+        <Styles/>
         <Header color={this.state.theme.secondary}/>
-        <Home/>
-      </div>
+        {this.props.children}
+      </StyleRoot>
     )
   }
 }
 
-export default App
+module.exports = Radium(App)

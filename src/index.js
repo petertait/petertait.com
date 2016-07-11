@@ -1,13 +1,16 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, browserHistory } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 import App from './containers/App'
-
-import './global.css'
+import Home from './containers/Home'
+import Work from './containers/Work'
 
 render((
   <Router history={browserHistory}>
-    <Route component={App} path="/" />
+    <Route path={'/'} component={App}>
+      <IndexRoute component={Home} />
+      <Route path='work' component={Work} />
+    </Route>
   </Router>
 ), document.getElementById('app'))

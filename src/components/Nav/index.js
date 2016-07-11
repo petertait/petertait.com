@@ -7,7 +7,7 @@ class Nav extends Component {
     return (
       <nav style={styles.nav}>
         <Link style={styles.link} to="/">Profile</Link>
-        <Link style={styles.link} to="/">Work</Link>
+        <Link style={styles.link} to="/work">Work</Link>
       </nav>
     )
   }
