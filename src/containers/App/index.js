@@ -4,6 +4,7 @@ import Radium from 'radium'
 import Styles from '../../styles'
 
 import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import Home from '../../containers/Home'
 
 class App extends Component {
@@ -19,8 +20,9 @@ class App extends Component {
     return (
       <div>
         <Styles/>
-        <Header color={this.state.theme.secondary}/>
+        <Header/>
         {this.props.children}
+        <Footer/>
       </div>
     )
   }
