@@ -1,7 +1,12 @@
 // Colours
-const purple = '#6B4ECE'
+const purple = '#8645dd'
 const peach = '#ff807f'
 const teal = '#8dffe5'
+const aqua = '#45c4df'
+const orange = '#ffb100'
+const red = '#ff495a'
+const blue = '#2e6aff'
+const sky = '#e5eeff'
 
 // Typography
 const tera = '72px'
@@ -33,6 +38,11 @@ module.exports = {
   purple,
   peach,
   teal,
+  aqua,
+  orange,
+  red,
+  blue,
+  sky,
 
   tera,
   giga,
