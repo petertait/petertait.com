@@ -17,8 +17,10 @@ class Styles extends Component {
           margin: 0
         },
         body: {
+          transition: '0.1s',
           fontFamily: vars.fontMono,
           fontWeight: vars.fontRegular,
+          fontSize: vars.bodySize,
           lineHeight: '1.4'
         },
         '.container': {
@@ -28,6 +30,12 @@ class Styles extends Component {
           maxWidth: vars.maxWidth,
           paddingLeft: vars.gutter,
           paddingRight: vars.gutter
+        },
+        h1: {
+          '-webkit-font-smoothing': 'antialiased',
+          fontFamily: vars.fontSans,
+          lineHeight: '1.1',
+          letterSpacing: '-1px'
         },
         a: {
           color: 'inherit',

@@ -4,6 +4,8 @@ import Radium from 'radium'
 
 import vars from '../../vars'
 
+import Hero from '../../components/Hero'
+
 class Work extends Component {
   componentWillMount() {
     this.state = {
@@ -19,8 +21,8 @@ class Work extends Component {
 
   render() {
     return (
-      <div>
-        Hey!
+      <div className='container'>
+        <Hero headline='I am Peter'/>
       </div>
     )
   }

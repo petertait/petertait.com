@@ -18,12 +18,13 @@ const fontRegular = '300'
 const fontBold = '700'
 const fontMono = 'Iosevka, monospace'
 const fontSerif = 'Tiempos Headline Black, serif'
+const fontSans = 'apercu, greycliff cf, sans-serif'
 
 const bodySize = gamma
 const bodyWeight = fontRegular
 
 // Layout
-const large = '1000px'
+const large = '1100px'
 const small = '600px'
 const gutter = '20px'
 const maxWidth = large
@@ -47,6 +48,7 @@ module.exports = {
   fontBold,
   fontMono,
   fontSerif,
+  fontSans,
 
   bodySize,
   bodyWeight,

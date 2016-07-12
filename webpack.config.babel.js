@@ -24,15 +24,6 @@ let config = {
         loader: 'babel'
       },
       {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        loaders: [
-          'style-loader',
-          'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-          'postcss-loader'
-        ]
-      },
-      {
         test: /\.(jpg|jpeg|gif|png)$/,
         exclude: /node_modules/,
         loader:'url-loader?limit=1024&name=images/[name].[ext]'
@@ -43,18 +34,7 @@ let config = {
         loader: 'url-loader?limit=1024&name=fonts/[name].[ext]'
       }
     ]
-  },
-
-  postcss: [
-    require('postcss-grid')({
-      columns: 10,
-      maxWidth: 800,
-      gutter: 20
-    }),
-    require('postcss-advanced-variables')({
-      variables: require('./src/vars')
-    })
-  ]
+  }
 }
 
 if (process.env.NODE_ENV === 'production') {
