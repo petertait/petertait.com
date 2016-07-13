@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react'
-import { Link } from 'react-router'
-import Radium from 'radium'
+import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
+import Radium from 'radium';
 
 class Nav extends Component {
   render() {
@@ -15,7 +15,7 @@ class Nav extends Component {
 
 var styles = {
   nav: {
-
+    justifyContent: 'flex-end'
   },
   link: {
     marginLeft: '50px',
@@ -23,4 +23,4 @@ var styles = {
   }
 }
 
-module.exports = Radium(Nav)
+module.exports = Radium(Nav);

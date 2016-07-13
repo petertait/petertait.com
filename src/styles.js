@@ -1,14 +1,15 @@
-import React, { Component, PropTypes } from 'react'
-import Radium, { Style } from 'radium'
+import React, { Component, PropTypes } from 'react';
+import Radium, { Style } from 'radium';
 
-import vars from './vars'
+import vars from './vars';
 
 class Styles extends Component {
   render() {
     return (
       <Style rules={{
         html: {
-          boxSizing: 'border-box'
+          boxSizing: 'border-box',
+          fontSize: vars.bodySize,
         },
         '*, *::before, *::after': {
           boxSizing: 'inherit',
@@ -20,7 +21,6 @@ class Styles extends Component {
           transition: '0.1s',
           fontFamily: vars.fontMono,
           fontWeight: vars.fontRegular,
-          fontSize: vars.bodySize,
           lineHeight: '1.4'
         },
         '.container': {
@@ -40,8 +40,15 @@ class Styles extends Component {
         a: {
           color: 'inherit',
           textDecoration: 'none',
-          paddingBottom: '2px',
-          borderBottom: '2px solid'
+          paddingBottom: '1px',
+          borderBottom: '1px solid',
+          transition: '0.2s opacity'
+        },
+        'a:hover': {
+          opacity: '0.7'
+        },
+        li: {
+          listStyle: 'none'
         },
         'svg path': {
           fill: 'currentColor'
@@ -51,4 +58,4 @@ class Styles extends Component {
   }
 }
 
-module.exports = Radium(Styles)
+module.exports = Radium(Styles);

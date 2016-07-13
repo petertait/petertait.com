@@ -1,12 +1,10 @@
-import React, { Component, PropTypes } from 'react'
-import Radium from 'radium'
+import React, { Component, PropTypes } from 'react';
+import Radium from 'radium';
 
 class Footer extends Component {
   render() {
     return (
-      <footer className='container' style={styles.footer}>
-        2016 Peter Tait
-      </footer>
+      <footer className='container' style={styles.footer}>{this.props.legal}</footer>
     )
   }
 }
@@ -16,4 +14,4 @@ var styles = {
   }
 }
 
-module.exports = Radium(Footer)
+module.exports = Radium(Footer);

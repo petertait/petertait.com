@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react'
-import { Link } from 'react-router'
-import Radium from 'radium'
+import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
+import Radium from 'radium';
 
-import vars from '../../vars'
+import vars from '../../vars';
 
-import Hero from '../../components/Hero'
+import Hero from '../../components/Hero';
 
 class Work extends Component {
   componentWillMount() {
@@ -15,8 +15,8 @@ class Work extends Component {
       }
     }
 
-    document.body.style.backgroundColor = this.state.theme.primary
-    document.body.style.color = this.state.theme.secondary
+    document.body.style.backgroundColor = this.state.theme.primary;
+    document.body.style.color = this.state.theme.secondary;
   }
 
   render() {
@@ -28,4 +28,4 @@ class Work extends Component {
   }
 }
 
-module.exports = Radium(Work)
+module.exports = Radium(Work);
