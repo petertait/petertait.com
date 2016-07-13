@@ -10,8 +10,8 @@ class Work extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: vars.blue,
-        secondary: vars.sky
+        primary: vars.boy,
+        secondary: vars.purple
       }
     }
 
@@ -22,7 +22,7 @@ class Work extends Component {
   render() {
     return (
       <div className='container'>
-        <Hero headline='Work' link='/work' linkText='Discover more about me'/>
+        <Hero headline='Work' link='/about' linkText='Discover more about me'/>
       </div>
     )
   }

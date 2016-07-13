@@ -11,8 +11,8 @@ class Home extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: vars.aqua,
-        secondary: vars.boy
+        primary: vars.blue,
+        secondary: vars.teal
       }
     }
 
@@ -23,7 +23,7 @@ class Home extends Component {
   render() {
     return (
       <div className='container'>
-        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/work' linkText='Discover more about me'/>
+        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/about' LinkText='Discover more about me'/>
       </div>
     )
   }

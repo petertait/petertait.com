@@ -9,7 +9,7 @@ class Hero extends Component {
     return (
       <div style={styles.hero}>
         <h1 style={styles.h1}>{this.props.headline}</h1>
-        <Link to={this.props.link}>{this.props.linkText}</Link>
+        <Link to={this.props.link}>{this.props.LinkText}</Link>
       </div>
     )
   }

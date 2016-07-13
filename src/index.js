@@ -4,13 +4,14 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './containers/App';
 import Home from './containers/Home';
-import Work from './containers/Work';
+import About from './containers/About';
 
 render((
   <Router history={browserHistory}>
     <Route path={'/'} component={App}>
       <IndexRoute component={Home} />
-      <Route path='work' component={Work} />
+      <Route path='about' component={About} />
+      <Route path='*' component={Home} />
     </Route>
   </Router>
 ), document.getElementById('app'));

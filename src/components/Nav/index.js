@@ -8,8 +8,7 @@ class Nav extends Component {
   render() {
     return (
       <nav style={styles.nav}>
-        <Link style={styles.link} to="/">Profile</Link>
-        <Link style={styles.link} to="/work">Work</Link>
+        <Link style={styles.link} to="/about">About</Link>
       </nav>
     )
   }

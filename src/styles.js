@@ -18,7 +18,7 @@ class Styles extends Component {
           margin: 0
         },
         body: {
-          transition: '0.1s',
+          transition: '0.2s',
           fontFamily: vars.fontMono,
           fontWeight: vars.fontRegular,
           lineHeight: '1.4'
