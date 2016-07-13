@@ -1,48 +1,22 @@
-# Node.js
-lib-cov
-*.seed
-*.log
-*.dat
-*.out
-*.pid
-*.gz
+# Build
+build/app.js
+build/styles.css
 
-pids
+# Logs
 logs
+*.log
 
-npm-debug.log
-/node_modules
+# Coverage directory used by tools like nyc
+.nyc_output
+coverage
 
-# SublimeText project files
-*.sublime-workspace
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
 
-# Textmate
-*.tmproj
-*.tmproject
-tmtags
+# Dependency directory
+node_modules
 
-# OSX
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
+# Users Environment Variables
+.lock-wscript
 
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-# Sass
-.sass-cache
-
-# Dev CSS
-/src/css/
-
-# Dist folder
-/dist/
-
-# Kirby v1
-/v1/
-src/styles.css
+.idea

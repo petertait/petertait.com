@@ -1,17 +1,51 @@
-# petertait.com
+# Freelance website for Peter Tait
+#### Multifunctional designer/developer based in Bath. Traditionally trained designer that codes.
 
-Personal website of designer Peter Tait.
+Visit the site at http://petertait.com
 
-### getting started
+<br>
 
-Install [node](http://nodejs.org/) & [gulp](http://gulpjs.com/)
+## Tech used:
 
-`brew install node`, `npm install -g gulp`
+- Babel 6
+- Webpack
+- React
+- Postcss (React CSS Modules)
 
-Install packages
+<br>
 
-`npm i`
+## Getting Started
 
-Run Gulp
+```sh
+$ npm install
+```
 
-`gulp`
+Start the local dev server:
+
+```sh
+$ npm start
+```
+
+Navigate to **http://localhost:8000/** to view the app.
+
+<br>
+
+## Build for Production
+
+```sh
+$ npm run build
+```
+
+**Input:** `src/app.js`
+
+**Output:** `build/app.js`
+
+<br>
+
+## Clean
+
+```sh
+$ npm run clean
+```
+
+**Input:** `build/app.js`
