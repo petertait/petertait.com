@@ -11,7 +11,7 @@ class Work extends Component {
     this.state = {
       theme: {
         primary: vars.boy,
-        secondary: vars.purple
+        secondary: vars.black
       }
     }
 
@@ -22,7 +22,7 @@ class Work extends Component {
   render() {
     return (
       <div className='container'>
-        <Hero headline='Work' link='/about' linkText='Discover more about me'/>
+        <Hero headline='User interface + experience designer at pebble {code}.' link='/about' linkText='Discover more about me'/>
       </div>
     )
   }

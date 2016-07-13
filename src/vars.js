@@ -1,4 +1,5 @@
 // Colours
+const black = '#151820'
 const white = '#fff'
 const purple = '#6B4ECE'
 const peach = '#ff807f'
@@ -39,6 +40,7 @@ const gutter = '40px'
 const maxWidth = large
 
 module.exports = {
+  black,
   white,
   purple,
   peach,

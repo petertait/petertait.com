@@ -11,8 +11,8 @@ class Home extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: vars.blue,
-        secondary: vars.teal
+        primary: vars.black,
+        secondary: vars.boy
       }
     }
 

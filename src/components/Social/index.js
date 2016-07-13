@@ -2,12 +2,14 @@ import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import Radium from 'radium';
 
-class Nav extends Component {
+class Social extends Component {
   render() {
     const active = { borderBottom: '1px solid' }
     return (
       <nav style={styles.nav}>
-        <Link style={styles.link} to="/about" activeStyle={active}>About</Link>
+        <a style={styles.link} href='mailto:contact@petertait.com'>Email</a>
+        <a style={styles.link} href='http://github.com/petertait'>Github</a>
+        <a style={styles.link} href='http://twitter.com/peter_tait'>Twitter</a>
       </nav>
     )
   }
@@ -23,4 +25,4 @@ var styles = {
   }
 }
 
-module.exports = Radium(Nav);
+module.exports = Radium(Social);

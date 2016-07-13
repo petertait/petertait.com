@@ -21,7 +21,6 @@ var styles = {
     paddingBottom: '60px',
     display: 'flex',
     justifyContent: 'space-between',
-    flexFlow: 'row wrap',
     alignItems: 'center'
   }
 }
