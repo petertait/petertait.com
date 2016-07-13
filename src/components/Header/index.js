@@ -3,7 +3,6 @@ import Radium from 'radium';
 
 import Logo from '../../components/Logo';
 import Nav from '../../components/Nav';
-import Subheader from '../../components/Subheader';
 
 class Header extends Component {
   render() {
@@ -11,7 +10,6 @@ class Header extends Component {
       <header className='container' style={styles.header}>
         <Logo/>
         <Nav/>
-        <Subheader/>
       </header>
     )
   }
@@ -19,8 +17,10 @@ class Header extends Component {
 
 var styles = {
   header: {
-    paddingTop: '30px',
+    paddingTop: '50px',
+    paddingBottom: '60px',
     display: 'flex',
+    justifyContent: 'space-between',
     flexFlow: 'row wrap',
     alignItems: 'center'
   }

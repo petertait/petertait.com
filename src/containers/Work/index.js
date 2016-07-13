@@ -22,7 +22,7 @@ class Work extends Component {
   render() {
     return (
       <div className='container'>
-        <Hero headline='I am Peter'/>
+        <Hero headline='Work' link='/work' linkText='Discover more about me'/>
       </div>
     )
   }

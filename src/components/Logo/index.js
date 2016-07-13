@@ -15,7 +15,7 @@ class Logo extends Component {
 
 var styles = {
   logo: {
-    flex: '1 auto',
+    
     border: 'none'
   }
 }

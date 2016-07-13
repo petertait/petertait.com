@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import Radium from 'radium';
 
+import Button from '../../components/Button';
+
 class Nav extends Component {
   render() {
     return (
@@ -20,6 +22,11 @@ var styles = {
   link: {
     marginLeft: '50px',
     border: 'none'
+  },
+  active: {
+    padding: '10px 15px 12px',
+    border: 'none',
+    backgroundColor: 'rgba(0,0,0,0.08)'
   }
 }
 

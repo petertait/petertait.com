@@ -2,8 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import Radium from 'radium';
 
-import HireBtn from '../../components/HireBtn';
-
 class Header extends Component {
   render() {
     return (
@@ -13,7 +11,6 @@ class Header extends Component {
           <li style={styles.contact}><Link to="tel:+4407598276618">+44 07598 276618</Link></li>
           <li style={styles.contact}><Link to="mailto:contact@petertait.com">contact@petertait.com</Link></li>
         </ul>
-        <HireBtn/>
       </header>
     )
   }

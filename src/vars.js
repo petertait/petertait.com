@@ -35,7 +35,7 @@ const bodyWeight = fontRegular
 // Layout
 const large = '1100px'
 const small = '600px'
-const gutter = '20px'
+const gutter = '40px'
 const maxWidth = large
 
 module.exports = {

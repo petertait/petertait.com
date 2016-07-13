@@ -4,6 +4,7 @@ import Radium from 'radium';
 
 import vars from '../../vars';
 
+import Subheader from '../../components/Subheader';
 import Hero from '../../components/Hero';
 
 class Home extends Component {
@@ -22,7 +23,7 @@ class Home extends Component {
   render() {
     return (
       <div className='container'>
-        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/about' linkText='Discover more about me'/>
+        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/work' linkText='Discover more about me'/>
       </div>
     )
   }
