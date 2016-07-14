@@ -40,7 +40,7 @@ var styles = {
   },
   inner: {
     textAlign: 'center',
-    border: '1px solid rgba(255,255,255, 0.1)',
+    border: '1px solid white',
     padding: '60px 40px 30px'
   },
   image: {

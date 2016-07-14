@@ -1,15 +1,14 @@
 // Colours
 const black = '#151820'
 const white = '#fff'
-const purple = '#6B4ECE'
+const purple = '#723cf7'
 const peach = '#ff807f'
-const teal = '#8dffe5'
+const teal = '#00d785'
 const aqua = '#00c1dd'
 const yellow = '#fdca00'
 const orange = '#ffb100'
 const red = '#ff495a'
 const blue = '#0032D2'
-const boy = '#e6f0fe'
 const sky = '#e5eeff'
 const sunset = '#f6b3c1'
 
@@ -24,7 +23,7 @@ const delta = '16px'
 const epsilon = '14px'
 const zeta = '12px'
 
-const fontRegular = '300'
+const fontRegular = '400'
 const fontBold = '700'
 const fontMono = 'Iosevka, monospace'
 const fontSerif = 'Tiempos Headline Black, serif'
@@ -50,7 +49,6 @@ module.exports = {
   orange,
   red,
   blue,
-  boy,
   sky,
   sunset,
 

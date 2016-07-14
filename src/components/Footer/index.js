@@ -8,9 +8,11 @@ class Footer extends Component {
     var today = new Date();
     var year = today.getFullYear();
     return (
-      <footer className='container' style={styles.footer}>
-        <span>{year + ' © Peter Tait'}</span>
-        <Social />
+      <footer style={styles.footer}>
+        <div className='container' style={styles.inner}>
+          <span>{year + ' © Peter Tait Ltd.'}</span>
+          <Social />
+        </div>
       </footer>
     )
   }
@@ -18,11 +20,14 @@ class Footer extends Component {
 
 var styles = {
   footer: {
+    // borderTop: '1px solid white'
+  },
+  inner: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingTop: '30px',
-    paddingBottom: '10px'
+    paddingBottom: '100px'
   }
 }
 

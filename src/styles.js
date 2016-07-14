@@ -41,7 +41,6 @@ class Styles extends Component {
           }
         },
         h1: {
-          '-webkit-font-smoothing': 'antialiased',
           fontFamily: vars.fontSans,
           lineHeight: '1.1',
           letterSpacing: '-1px'

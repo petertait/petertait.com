@@ -10,8 +10,8 @@ class Work extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: vars.boy,
-        secondary: vars.blue
+        primary: vars.sky,
+        secondary: vars.purple
       }
     }
 

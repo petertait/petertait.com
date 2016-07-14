@@ -16,16 +16,16 @@ class Services extends Component {
             <Service
               image='images/eye.svg'
               title='Print, branding &amp; graphic design'
-              summary='Modern graphic design with the theory of a traditional print design.' />
+              summary='Modern design mixed with the theory of traditional graphic design.' />
             <Service
               nthChild='odd'
               image='images/design.svg'
               title='Application &amp; website Design'
-              summary='User-centered website and application design. Using agile methods to product quick and effect results.' />
+              summary='User-centered website and application design. Using Agile methods to produce quick and effective results.' />
             <Service
               image='images/code.svg'
               title='Front-end development'
-              summary='The entire process from rapid prototyping, visual concepts to a fully functional live website.' />
+              summary='The entire process from rapid prototyping, visual concepts to a fully functional live product.' />
           </ul>
         </div>
       </section>
@@ -35,7 +35,8 @@ class Services extends Component {
 
 var styles = {
   container: {
-    backgroundColor: 'rgba(0,0,0,0.08)',
+    // backgroundColor: 'rgba(255,255,255, 0.25)',
+    borderTop: '1px solid white',
     marginTop: '50px',
     padding: '40px 0 50px',
 
