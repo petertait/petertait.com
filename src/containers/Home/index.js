@@ -7,16 +7,16 @@ import vars from '../../vars';
 import Subheader from '../../components/Subheader';
 import Hero from '../../components/Hero';
 import Services from '../../components/Services';
+import Works from '../../components/Works';
 
 class Home extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: vars.boy,
-        secondary: vars.purple
+        primary: vars.blue,
+        secondary: vars.boy
       }
     }
-
     document.body.style.backgroundColor = this.state.theme.primary;
     document.body.style.color = this.state.theme.secondary;
   }
@@ -29,6 +29,7 @@ class Home extends Component {
           <Link to='/about'>Discover more about me</Link>
         </section>
         <Services/>
+        <Works/>
       </div>
     )
   }

@@ -8,6 +8,7 @@ class Nav extends Component {
     return (
       <nav style={styles.nav}>
         <Link style={styles.link} to="/about" activeStyle={active}>About</Link>
+        <a style={styles.link} href='mailto:contact@petertait.com'>Contact</a>
       </nav>
     )
   }
@@ -18,7 +19,7 @@ var styles = {
     justifyContent: 'flex-end'
   },
   link: {
-    marginLeft: '30px',
+    marginLeft: '40px',
     borderBottom: 'none'
   }
 }

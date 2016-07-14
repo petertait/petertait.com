@@ -35,12 +35,18 @@ class Services extends Component {
 
 var styles = {
   container: {
-    borderTop: '1px solid white',
-    margin: '80px 0',
-    padding: '50px 0'
+    backgroundColor: 'rgba(0,0,0,0.08)',
+    marginTop: '50px',
+    padding: '40px 0 50px',
+
+    '@media screen and (min-width: 800px)': {
+      marginTop: '80px',
+      padding: '60px 0',
+    }
   },
   services: {
-    display: 'flex'
+    display: 'flex',
+    flexWrap: 'wrap'
   },
   h3: {
     fontWeight: vars.fontRegular,

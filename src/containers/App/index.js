@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import Radium from 'radium';
+import Radium, { StyleRoot } from 'radium';
 
 import Styles from '../../styles';
 
@@ -17,16 +17,13 @@ class App extends Component {
   }
 
   render() {
-    var today = new Date();
-    var year = today.getFullYear();
-
     return (
-      <div>
+      <StyleRoot>
         <Styles/>
         <Header/>
         {this.props.children}
-        <Footer legal={year + ' © Peter Tait'}/>
-      </div>
+        <Footer />
+      </StyleRoot>
     )
   }
 }

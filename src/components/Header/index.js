@@ -17,11 +17,15 @@ class Header extends Component {
 
 var styles = {
   header: {
-    paddingTop: '50px',
-    paddingBottom: '60px',
+    paddingTop: '40px',
+    paddingBottom: '20px',
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+
+    '@media screen and (min-width: 800px)': {
+      paddingBottom: '60px',
+    }
   }
 }
 

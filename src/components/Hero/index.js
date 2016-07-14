@@ -14,13 +14,24 @@ class Hero extends Component {
   }
 }
 
-var styles = {
+const styles = {
   hero: {
-    margin: '20px 0 60px'
+    margin: '20px 0 40px',
+
+    '@media screen and (min-width: 800px)': {
+      marginBottom: '60px',
+    }
   },
   h1: {
-    fontSize: vars.giga,
-    maxWidth: '1000px'
+    fontSize: vars.alpha,
+    maxWidth: '1000px',
+
+    '@media screen and (min-width: 600px)': {
+      fontSize: vars.mega
+    },
+    '@media screen and (min-width: 800px)': {
+      fontSize: vars.giga
+    }
   }
 }
 

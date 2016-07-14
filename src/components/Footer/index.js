@@ -5,9 +5,11 @@ import Social from '../../components/Social';
 
 class Footer extends Component {
   render() {
+    var today = new Date();
+    var year = today.getFullYear();
     return (
       <footer className='container' style={styles.footer}>
-        <span>{this.props.legal}</span>
+        <span>{year + ' © Peter Tait'}</span>
         <Social />
       </footer>
     )

@@ -23,17 +23,24 @@ class Service extends Component {
 
 var styles = {
   service: {
-    display: 'flex',
-    width: '33%',
+    display: 'block',
+    width: '100%',
 
+    '@media screen and (min-width: 900px)': {
+      display: 'flex',
+      width: 'calc(33% - 5px)',
+    }
   },
   odd: {
-    marginLeft: '10px',
-    marginRight: '10px'
+    margin: '20px 0',
+
+    '@media screen and (min-width: 900px)': {
+      margin: '0 10px'
+    }
   },
   inner: {
     textAlign: 'center',
-    border: '1px solid white',
+    border: '1px solid rgba(255,255,255, 0.1)',
     padding: '60px 40px 30px'
   },
   image: {

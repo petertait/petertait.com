@@ -14,6 +14,7 @@ class Styles extends Component {
         '*, *::before, *::after': {
           boxSizing: 'inherit',
           textRendering: 'optimizeSpeed',
+          '-webkit-font-smoothing': 'antialiased',
           padding: 0,
           margin: 0
         },
@@ -28,8 +29,16 @@ class Styles extends Component {
           margin: 'auto',
           width: '100%',
           maxWidth: vars.maxWidth,
-          paddingLeft: vars.gutter,
-          paddingRight: vars.gutter
+          paddingLeft: '20px',
+          paddingRight: '20px'
+        },
+        mediaQueries: {
+          '(min-width: 600px)': {
+            '.container':  {
+              paddingLeft: vars.gutter,
+              paddingRight: vars.gutter,
+            }
+          }
         },
         h1: {
           '-webkit-font-smoothing': 'antialiased',

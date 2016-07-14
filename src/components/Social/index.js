@@ -8,8 +8,8 @@ class Social extends Component {
     return (
       <nav style={styles.nav}>
         <a style={styles.link} href='mailto:contact@petertait.com'>Email</a>
-        <a style={styles.link} href='http://github.com/petertait'>Github</a>
-        <a style={styles.link} href='http://twitter.com/peter_tait'>Twitter</a>
+        <a style={styles.link} href='http://github.com/petertait' target='_blank'>Github</a>
+        <a style={styles.link} href='http://twitter.com/peter_tait' target='_blank'>Twitter</a>
       </nav>
     )
   }
@@ -20,7 +20,7 @@ var styles = {
     justifyContent: 'flex-end'
   },
   link: {
-    marginLeft: '30px',
+    marginLeft: '40px',
     borderBottom: 'none'
   }
 }
