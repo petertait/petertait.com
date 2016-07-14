@@ -35,8 +35,8 @@ class Services extends Component {
 
 var styles = {
   container: {
-    borderTop: '1px solid white',
-    borderBottom: '1px solid white',
+    borderTop: '1px solid rgba(255,255,255,0.2)',
+    borderBottom: '1px solid rgba(255,255,255,0.2)',
     marginTop: '70px',
     padding: '40px 0 50px',
 
