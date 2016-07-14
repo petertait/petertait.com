@@ -9,7 +9,6 @@ class Hero extends Component {
     return (
       <div style={styles.hero}>
         <h1 style={styles.h1}>{this.props.headline}</h1>
-        <Link to={this.props.link}>{this.props.LinkText}</Link>
       </div>
     )
   }
@@ -17,11 +16,10 @@ class Hero extends Component {
 
 var styles = {
   hero: {
-    margin: '20px 0 100px'
+    margin: '20px 0 60px'
   },
   h1: {
     fontSize: vars.giga,
-    marginBottom: '60px',
     maxWidth: '1000px'
   }
 }

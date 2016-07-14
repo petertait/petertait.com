@@ -6,13 +6,14 @@ import vars from '../../vars';
 
 import Subheader from '../../components/Subheader';
 import Hero from '../../components/Hero';
+import Services from '../../components/Services';
 
 class Home extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: vars.black,
-        secondary: vars.boy
+        primary: vars.boy,
+        secondary: vars.purple
       }
     }
 
@@ -22,8 +23,12 @@ class Home extends Component {
 
   render() {
     return (
-      <div className='container'>
-        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/about' LinkText='Discover more about me'/>
+      <div>
+        <section className='container'>
+          <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.'/>
+          <Link to='/about'>Discover more about me</Link>
+        </section>
+        <Services/>
       </div>
     )
   }

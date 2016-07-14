@@ -10,8 +10,8 @@ class Work extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: vars.boy,
-        secondary: vars.black
+        primary: vars.blue,
+        secondary: vars.boy
       }
     }
 
@@ -22,7 +22,7 @@ class Work extends Component {
   render() {
     return (
       <div className='container'>
-        <Hero headline='User interface + experience designer at pebble {code}.' link='/about' linkText='Discover more about me'/>
+        <Hero headline='User interface + experience designer at pebble {code}.'/>
       </div>
     )
   }

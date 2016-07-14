@@ -7,7 +7,7 @@ class Logo extends Component {
   render() {
     return (
       <IndexLink style={styles.logo} to="/">
-        <Isvg src='../images/logo.svg'/>
+        <Isvg src='../images/logo.svg' />
       </IndexLink>
     );
   }
@@ -15,7 +15,7 @@ class Logo extends Component {
 
 var styles = {
   logo: {
-    
+
     border: 'none'
   }
 }

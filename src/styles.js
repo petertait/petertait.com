@@ -23,9 +23,6 @@ class Styles extends Component {
           fontWeight: vars.fontRegular,
           lineHeight: '1.4'
         },
-        '::selection': {
-          backgroundColor: 'rgba(60,60,60,0.1)'
-        },
         '.container': {
           position: 'relative',
           margin: 'auto',
