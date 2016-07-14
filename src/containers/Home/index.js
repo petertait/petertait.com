@@ -29,7 +29,9 @@ class Home extends Component {
           <Link to='/about'>Discover more about me</Link>
         </section>
         <Services/>
-        <Works/>
+        <section className='container'>
+          <Works/>
+        </section>
       </div>
     )
   }

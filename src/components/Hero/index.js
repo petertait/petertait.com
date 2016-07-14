@@ -16,7 +16,7 @@ class Hero extends Component {
 
 const styles = {
   hero: {
-    margin: '20px 0 40px',
+    margin: '40px 0 50px',
 
     '@media screen and (min-width: 800px)': {
       marginBottom: '60px',

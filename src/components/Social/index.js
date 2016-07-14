@@ -20,8 +20,12 @@ var styles = {
     justifyContent: 'flex-end'
   },
   link: {
-    marginLeft: '40px',
-    borderBottom: 'none'
+    margin: '0 40px 0 0',
+    borderBottom: 'none',
+
+    '@media screen and (min-width: 900px)': {
+      margin: '0 0 0 40px'
+    }
   }
 }
 

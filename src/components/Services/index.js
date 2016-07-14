@@ -11,7 +11,7 @@ class Services extends Component {
     return (
       <section style={styles.container}>
         <div className='container'>
-          <h3 style={styles.h3}>Services</h3>
+          <h3>Services</h3>
           <ul style={styles.services}>
             <Service
               image='images/eye.svg'
@@ -35,24 +35,19 @@ class Services extends Component {
 
 var styles = {
   container: {
-    // backgroundColor: 'rgba(255,255,255, 0.25)',
     borderTop: '1px solid white',
-    marginTop: '50px',
+    borderBottom: '1px solid white',
+    marginTop: '70px',
     padding: '40px 0 50px',
 
     '@media screen and (min-width: 800px)': {
-      marginTop: '80px',
-      padding: '60px 0',
+      marginTop: '120px',
+      padding: '60px 0 70px',
     }
   },
   services: {
     display: 'flex',
     flexWrap: 'wrap'
-  },
-  h3: {
-    fontWeight: vars.fontRegular,
-    fontSize: vars.bodySize,
-    marginBottom: '40px'
   }
 }
 

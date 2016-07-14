@@ -45,6 +45,11 @@ class Styles extends Component {
           lineHeight: '1.1',
           letterSpacing: '-1px'
         },
+        h3: {
+          fontWeight: vars.fontRegular,
+          fontSize: vars.bodySize,
+          marginBottom: '40px'
+        },
         a: {
           color: 'inherit',
           textDecoration: 'none',
