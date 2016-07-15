@@ -39,10 +39,6 @@
   },
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --host 0.0.0.0 --hot --inline --progress",
-    "prebuild": "npm run clean",
-    "build": "NODE_ENV=production webpack -p",
-    "postbuild": "npm run copy",
-    "clean": "rimraf build",
-    "copy": "cp -r build/* build"
+    "build": "NODE_ENV=production webpack -p"
   }
 }

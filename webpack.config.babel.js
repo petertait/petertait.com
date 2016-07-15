@@ -46,7 +46,6 @@ let config = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  config.devtool = 'source-map'
   config.devServer = {}
   config.plugins = [
     new webpack.DefinePlugin({
@@ -57,4 +56,4 @@ if (process.env.NODE_ENV === 'production') {
   ]
 }
 
-export default config
+export default config;
