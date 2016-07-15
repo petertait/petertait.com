@@ -20,7 +20,7 @@ class Work extends Component {
 var styles = {
   work: {
     borderBottom: 'none',
-    marginBottom: '30px',
+    marginBottom: '35px',
     display: 'block',
     cursor: 'not-allowed'
   },
@@ -29,7 +29,7 @@ var styles = {
     fontFamily: vars.fontSans,
     fontSize: vars.beta,
     lineHeight: '1.2',
-    marginBottom: '5px',
+    marginBottom: '8px',
     display: 'table'
   }
 }

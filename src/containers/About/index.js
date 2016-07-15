@@ -21,9 +21,7 @@ class Work extends Component {
 
   render() {
     return (
-      <div className='container'>
-        <Hero headline='User interface + experience designer at pebble {code}.'/>
-      </div>
+      <Hero headline='User interface + experience designer at pebble {code}.'/>
     )
   }
 }

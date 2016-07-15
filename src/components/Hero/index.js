@@ -7,19 +7,23 @@ import vars from '../../vars';
 class Hero extends Component {
   render() {
     return (
-      <div style={styles.hero}>
-        <h1 style={styles.h1}>{this.props.headline}</h1>
-      </div>
+      <section className='container'>
+        <div style={styles.hero}>
+          <h1 style={styles.h1}>{this.props.headline}</h1>
+          {this.props.link && <Link to={this.props.link} style={styles.button}>{this.props.linkText}</Link>}
+        </div>
+      </section>
     )
   }
 }
 
 const styles = {
   hero: {
-    margin: '40px 0 50px',
+    paddingTop: '40px',
+    paddingBottom: '60px',
 
     '@media screen and (min-width: 800px)': {
-      marginBottom: '60px',
+      paddingBottom: '110px'
     }
   },
   h1: {
@@ -31,7 +35,11 @@ const styles = {
     },
     '@media screen and (min-width: 800px)': {
       fontSize: vars.giga
-    }
+    },
+  },
+  button: {
+    display: 'table',
+    marginTop: '50px'
   }
 }
 

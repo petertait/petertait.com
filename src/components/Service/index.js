@@ -14,7 +14,7 @@ class Service extends Component {
             <Isvg src={this.props.image} />
           </span>
           <h2 style={styles.title}>{this.props.title}</h2>
-          <p style={styles.summary}>{this.props.summary}</p>
+          <p>{this.props.summary}</p>
         </div>
       </div>
     )
@@ -41,20 +41,17 @@ var styles = {
   inner: {
     textAlign: 'center',
     backgroundColor: 'rgba(0,0,0,0.06)',
-    padding: '60px 40px 30px'
+    padding: '60px 30px 30px'
   },
   image: {
-    display: 'block',
-    marginBottom: '50px'
+    display: 'block'
   },
   title: {
     fontFamily: vars.fontSans,
     fontSize: vars.beta,
     lineHeight: '1.2',
+    marginTop: '50px',
     marginBottom: '15px'
-  },
-  summary: {
-    fontSize: vars.delta
   }
 }
 

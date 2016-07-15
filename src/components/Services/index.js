@@ -40,7 +40,7 @@ var styles = {
     padding: '40px 0 50px',
 
     '@media screen and (min-width: 800px)': {
-      padding: '60px 0 70px'
+      padding: '50px 0 70px'
     }
   },
   services: {
