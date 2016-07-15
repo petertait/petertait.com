@@ -12,7 +12,6 @@ class Styles extends Component {
           fontSize: vars.bodySize
         },
         '*, *::before, *::after': {
-          '-webkit-font-smoothing': 'antialiased',
           boxSizing: 'inherit',
           textRendering: 'optimizeSpeed',
           padding: 0,
@@ -22,7 +21,7 @@ class Styles extends Component {
           transition: '0.2s',
           fontFamily: vars.fontMono,
           fontWeight: vars.fontRegular,
-          lineHeight: '1.4'
+          lineHeight: '1.5'
         },
         '.container': {
           position: 'relative',
@@ -45,10 +44,19 @@ class Styles extends Component {
           lineHeight: '1.1',
           letterSpacing: '-1px'
         },
+        h2: {
+          '-webkit-font-smoothing': 'antialiased',
+          fontFamily: vars.fontSans,
+          fontSize: vars.beta,
+          lineHeight: '1.2'
+        },
         h3: {
           fontWeight: vars.fontRegular,
           fontSize: vars.bodySize,
           marginBottom: '40px'
+        },
+        p: {
+          marginBottom: '20px'
         },
         a: {
           color: 'inherit',

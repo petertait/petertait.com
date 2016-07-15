@@ -5,6 +5,9 @@ import Radium from 'radium';
 import vars from '../../vars';
 
 import Hero from '../../components/Hero';
+import Content from '../../components/Content';
+
+import ContentFile from './content.md';
 
 class Work extends Component {
   componentWillMount() {
@@ -21,7 +24,10 @@ class Work extends Component {
 
   render() {
     return (
-      <Hero headline='User interface + experience designer at pebble {code}.'/>
+      <div>
+        <Hero headline='User interface + experience designer at pebble {code}.' />
+        <Content title='About' source={ContentFile} />
+      </div>
     )
   }
 }

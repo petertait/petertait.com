@@ -1,5 +1,5 @@
-import path from 'path'
-import webpack from 'webpack'
+import path from 'path';
+import webpack from 'webpack';
 
 let config = {
   context: path.join(__dirname, 'src'),
@@ -22,6 +22,14 @@ let config = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
+      },
+      {
+        test: /\.md$/,
+        loader: 'raw'
       },
       {
         test: /\.(jpg|jpeg|gif|png)$/,

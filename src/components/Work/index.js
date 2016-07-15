@@ -18,15 +18,12 @@ class Work extends Component {
 var styles = {
   work: {
     borderBottom: 'none',
-    marginBottom: '35px',
-    display: 'block',
+    marginBottom: '15px',
+    display: 'table',
     cursor: 'not-allowed'
   },
   title: {
     borderBottom: '1px solid',
-    fontFamily: vars.fontSans,
-    fontSize: vars.beta,
-    lineHeight: '1.2',
     marginBottom: '8px',
     display: 'table'
   }

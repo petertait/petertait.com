@@ -23,7 +23,7 @@ const styles = {
     paddingBottom: '60px',
 
     '@media screen and (min-width: 800px)': {
-      paddingBottom: '110px'
+      paddingBottom: '100px'
     }
   },
   h1: {
