@@ -1,10 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
 import Radium from 'radium';
 
 import vars from '../../vars';
 
-import Subheader from '../../components/Subheader';
 import Hero from '../../components/Hero';
 import Services from '../../components/Services';
 import Works from '../../components/Works';
@@ -24,14 +22,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <section className='container' style={styles.hero}>
-          <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.'/>
-          <Link to='/about'>Discover more about me</Link>
-        </section>
-        <Services/>
-        <section className='container'>
-          <Works/>
-        </section>
+        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/about' linkText='Discover more about me' />
+        <Services />
+        <Works />
       </div>
     )
   }

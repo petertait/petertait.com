@@ -9,7 +9,7 @@ import Work from '../../components/Work';
 class Works extends Component {
   render() {
     return (
-      <div style={styles.container}>
+      <div className='container' style={styles.container}>
         <h3>Works <span style={styles.label}>– case studies coming soon</span></h3>
         <ul style={styles.works}>
           <Work title='Global Intranet' summary='Lead design of a global intranet spanning over 10 languages and 80 thousand daily users.' />
@@ -28,7 +28,8 @@ var styles = {
     paddingTop: '40px',
 
     '@media screen and (min-width: 900px)': {
-      padding: '60px 0 40px'
+      paddingTop: '60px',
+      paddingBottom: '40px'
     }
   },
   works: {

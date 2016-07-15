@@ -25,7 +25,7 @@ const zeta = '12px'
 
 const fontRegular = '400'
 const fontBold = '700'
-const fontMono = 'test, monospace'
+const fontMono = 'Iosevka, monospace'
 const fontSans = 'apercu, sans-serif'
 
 const bodySize = gamma
