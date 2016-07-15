@@ -9,12 +9,12 @@ class Styles extends Component {
       <Style rules={{
         html: {
           boxSizing: 'border-box',
-          fontSize: vars.bodySize,
+          fontSize: vars.bodySize
         },
         '*, *::before, *::after': {
+          '-webkit-font-smoothing': 'antialiased',
           boxSizing: 'inherit',
           textRendering: 'optimizeSpeed',
-          '-webkit-font-smoothing': 'antialiased',
           padding: 0,
           margin: 0
         },

@@ -37,12 +37,10 @@ var styles = {
   container: {
     borderTop: '1px solid rgba(255,255,255,0.2)',
     borderBottom: '1px solid rgba(255,255,255,0.2)',
-    marginTop: '70px',
     padding: '40px 0 50px',
 
     '@media screen and (min-width: 800px)': {
-      marginTop: '120px',
-      padding: '60px 0 70px',
+      padding: '60px 0 70px'
     }
   },
   services: {

@@ -24,7 +24,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <section className='container'>
+        <section className='container' style={styles.hero}>
           <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.'/>
           <Link to='/about'>Discover more about me</Link>
         </section>
@@ -34,6 +34,16 @@ class Home extends Component {
         </section>
       </div>
     )
+  }
+}
+
+var styles = {
+  hero: {
+    marginBottom: '70px',
+
+    '@media screen and (min-width: 800px)': {
+      marginBottom: '120px'
+    }
   }
 }
 

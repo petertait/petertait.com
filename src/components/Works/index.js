@@ -4,7 +4,7 @@ import Radium from 'radium';
 
 import vars from '../../vars';
 
-import Service from '../../components/Service';
+import Work from '../../components/Work';
 
 class Works extends Component {
   render() {
@@ -12,37 +12,11 @@ class Works extends Component {
       <div style={styles.container}>
         <h3>Works <span style={styles.label}>– case studies coming soon</span></h3>
         <ul style={styles.works}>
-          <li>
-            <a style={styles.work}>
-              <h2 style={styles.title}>Global Intranet</h2>
-              <p>Design of a global intranet spanning over 10 languages and 80 thousand users.</p>
-            </a>
-          </li>
-          <li>
-            <a style={styles.work}>
-              <h2 style={styles.title}>Remote Education Course</h2>
-              <p>Creation of a new way in educating a workforce remotely.</p>
-            </a>
-          </li>
-          <li>
-            <a style={styles.work}>
-              <h2 style={styles.title}>Metrik</h2>
-              <p>A geometric display typeface built for unique brands.</p>
-            </a>
-          </li>
-          <li>
-            <a style={styles.work}>
-              <h2 style={styles.title}>Global People Search</h2>
-              <p>An iOS app for searching colleagues within a global corporation.</p>
-            </a>
-          </li>
-          <li>
-            <a style={styles.work}>
-              <h2 style={styles.title}>
-              Agile Transformation Brand</h2>
-              <p>Rebrand for an innovative digital transformation</p>
-            </a>
-          </li>
+          <Work title='Global Intranet' summary='Lead design of a global intranet spanning over 10 languages and 80 thousand daily users.' />
+          <Work title='Remote Education Course' summary='Creation of a new way in educating a workforce remotely.' />
+          <Work title='Metrik' summary='A geometric display typeface built for unique brands.' />
+          <Work title='Global People Search' summary='An iOS app for searching colleagues within a global corporation.' />
+          <Work title='Agile Transformation Brand' summary='Rebrand for an innovative digital transformation' />
         </ul>
       </div>
     )
@@ -67,20 +41,6 @@ var styles = {
   },
   label: {
     opacity: '0.3'
-  },
-  work: {
-    borderBottom: 'none',
-    marginBottom: '30px',
-    display: 'block',
-    cursor: 'not-allowed'
-  },
-  title: {
-    borderBottom: '1px solid',
-    fontFamily: vars.fontSans,
-    fontSize: vars.beta,
-    lineHeight: '1.2',
-    marginBottom: '5px',
-    display: 'table'
   }
 }
 

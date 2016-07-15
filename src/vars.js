@@ -25,9 +25,8 @@ const zeta = '12px'
 
 const fontRegular = '400'
 const fontBold = '700'
-const fontMono = 'Iosevka, monospace'
-const fontSerif = 'Tiempos Headline Black, serif'
-const fontSans = 'apercu, greycliff cf, sans-serif'
+const fontMono = 'test, monospace'
+const fontSans = 'apercu, sans-serif'
 
 const bodySize = gamma
 const bodyWeight = fontRegular
@@ -65,7 +64,6 @@ module.exports = {
   fontRegular,
   fontBold,
   fontMono,
-  fontSerif,
   fontSans,
 
   bodySize,
