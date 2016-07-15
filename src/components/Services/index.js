@@ -12,7 +12,7 @@ class Services extends Component {
       <section style={styles.container}>
         <div className='container'>
           <h3>Services</h3>
-          <ul style={styles.services}>
+          <div style={styles.services}>
             <Service
               image='images/eye.svg'
               title='Print, branding &amp; graphic design'
@@ -20,13 +20,13 @@ class Services extends Component {
             <Service
               nthChild='odd'
               image='images/design.svg'
-              title='Application &amp; website Design'
+              title='Application &amp; website design'
               summary='User-centered website and application design. Using Agile methods to produce quick and effective results.' />
             <Service
               image='images/code.svg'
               title='Front-end development'
               summary='The entire process from rapid prototyping, visual concepts to a fully functional live product.' />
-          </ul>
+          </div>
         </div>
       </section>
     )
@@ -40,7 +40,7 @@ var styles = {
     padding: '40px 0 50px',
 
     '@media screen and (min-width: 800px)': {
-      padding: '50px 0 70px'
+      padding: '50px 0 60px'
     }
   },
   services: {

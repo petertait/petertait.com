@@ -7,12 +7,10 @@ import vars from '../../vars';
 class Work extends Component {
   render() {
     return (
-      <li>
-        <a style={styles.work}>
-          <h2 style={styles.title}>{this.props.title}</h2>
-          <p>{this.props.summary}</p>
-        </a>
-      </li>
+      <Link to={this.props.link} style={styles.work}>
+        <h2 style={styles.title}>{this.props.title}</h2>
+        <p>{this.props.summary}</p>
+      </Link>
     )
   }
 }
