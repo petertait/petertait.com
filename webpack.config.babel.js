@@ -16,6 +16,11 @@ let config = {
     contentBase: 'build',
     historyApiFallback: true
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      reactCxs: 'react-cxs'
+    })
+  ],
   module: {
     loaders: [
       {

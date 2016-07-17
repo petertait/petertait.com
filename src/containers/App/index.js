@@ -22,7 +22,7 @@ class App extends Component {
         <Styles/>
         <Header/>
         {this.props.children}
-        <Footer />
+        <Footer/>
       </StyleRoot>
     )
   }

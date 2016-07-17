@@ -2,15 +2,9 @@
 const black = '#151820'
 const white = '#fff'
 const purple = '#723cf7'
-const peach = '#ff807f'
 const teal = '#00d785'
 const aqua = '#00c1dd'
-const yellow = '#fdca00'
-const orange = '#ffb100'
-const red = '#ff495a'
-const blue = '#0032D2'
 const sky = '#e5eeff'
-const sunset = '#f6b3c1'
 
 // Typography
 const tera = '72px'
@@ -31,6 +25,10 @@ const fontSans = 'apercu, sans-serif'
 const bodySize = gamma
 const bodyWeight = fontRegular
 
+const bpLarge = '@media screen and (min-width: 1100px)'
+const bpMedium = '@media screen and (min-width: 800px)'
+const bpSmall = '@media screen and (min-width: 600px)'
+
 // Layout
 const large = '1100px'
 const small = '600px'
@@ -41,15 +39,9 @@ module.exports = {
   black,
   white,
   purple,
-  peach,
   teal,
   aqua,
-  yellow,
-  orange,
-  red,
-  blue,
   sky,
-  sunset,
 
   tera,
   giga,
