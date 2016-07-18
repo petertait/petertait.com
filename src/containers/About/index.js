@@ -15,7 +15,6 @@ class Work extends Component {
         secondary: color.purple
       }
     }
-
     document.body.style.backgroundColor = this.state.theme.primary;
     document.body.style.color = this.state.theme.secondary;
   }

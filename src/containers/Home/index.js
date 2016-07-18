@@ -1,5 +1,4 @@
-import React, { Component, PropTypes } from 'react'
-import Radium from 'radium'
+import { Component } from 'react'
 
 import { color } from '../../vars'
 
@@ -30,14 +29,4 @@ class Home extends Component {
   }
 }
 
-var styles = {
-  hero: {
-    marginBottom: '70px',
-
-    '@media screen and (min-width: 800px)': {
-      marginBottom: '120px'
-    }
-  }
-}
-
-module.exports = Radium(Home);
+export default Home

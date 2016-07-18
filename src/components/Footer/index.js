@@ -1,39 +1,37 @@
-import React, { Component, PropTypes } from 'react'
-import Radium from 'radium'
+import { breakpoint } from '../../vars'
 
 import Social from '../../components/Social'
 
-class Footer extends Component {
-  render() {
-    var today = new Date();
-    var year = today.getFullYear();
-    return (
-      <footer className='container' style={styles.footer}>
-        <div style={styles.legal}>{year + ' © Peter Tait Ltd.'}</div>
-        <Social/>
-      </footer>
-    )
-  }
-}
+const Footer = () => {
+  const cx = {
+    footer: {
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      paddingBottom: '30px',
+      display: 'block',
 
-var styles = {
-  footer: {
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingBottom: '30px',
-    display: 'block',
-
-    '@media screen and (min-width: 900px)': {
-      paddingBottom: '100px',
-      paddingTop: '30px',
-      display: 'flex'
-    }
-  },
-  legal: {
-    '@media screen and (max-width: 900px)': {
-      marginBottom: '20px'
+      [breakpoint.medium]: {
+        paddingBottom: '100px',
+        paddingTop: '30px',
+        display: 'flex'
+      }
+    },
+    legal: {
+      [breakpoint.medium]: {
+        marginBottom: '20px'
+      }
     }
   }
+
+  var today = new Date();
+  var year = today.getFullYear();
+
+  return (
+    <footer className={cx.footer}>
+      <div className={cx.legal}>{year + ' © Peter Tait Ltd.'}</div>
+      <Social/>
+    </footer>
+  )
 }
 
-module.exports = Radium(Footer);
+export default Footer

@@ -1,50 +1,44 @@
-import React, { Component, PropTypes } from 'react'
-import { Link } from 'react-router'
-import Radium from 'radium'
-
 import Service from '../../components/Service'
 
-class Services extends Component {
-  render() {
-    return (
-      <section style={styles.container}>
-        <div className='container'>
-          <h3>Services</h3>
-          <div style={styles.services}>
-            <Service
-              image='images/eye.svg'
-              title='Print, branding &amp; graphic design'
-              summary='Modern design mixed with the theory of traditional graphic design.' />
-            <Service
-              nthChild='odd'
-              image='images/design.svg'
-              title='Application &amp; website design'
-              summary='User-centered website and application design. Using Agile methods to produce quick and effective results.' />
-            <Service
-              image='images/code.svg'
-              title='Front-end development'
-              summary='The entire process from rapid prototyping, visual concepts to a fully functional live product.' />
-          </div>
-        </div>
-      </section>
-    )
-  }
-}
+import { breakpoint } from '../../vars'
 
-var styles = {
-  container: {
-    borderTop: '1px solid rgba(255,255,255,0.2)',
-    borderBottom: '1px solid rgba(255,255,255,0.2)',
-    padding: '40px 0 50px',
+const Services = () => {
+  const cx = {
+    container: {
+      borderTop: '1px solid rgba(255,255,255,0.2)',
+      borderBottom: '1px solid rgba(255,255,255,0.2)',
+      padding: '40px 0 50px',
 
-    '@media screen and (min-width: 800px)': {
-      padding: '50px 0 60px'
+      [breakpoint.medium]: {
+        padding: '50px 0 60px'
+      }
+    },
+    services: {
+      display: 'flex',
+      flexWrap: 'wrap'
     }
-  },
-  services: {
-    display: 'flex',
-    flexWrap: 'wrap'
   }
+
+  return (
+    <section className={cx.container}>
+      <h3>Services</h3>
+      <div className={cx.services}>
+        <Service
+          image='images/eye.svg'
+          title='Print, branding &amp; graphic design'
+          summary='Modern design mixed with the theory of traditional graphic design.' />
+        <Service
+          nthChild='odd'
+          image='images/design.svg'
+          title='Application &amp; website design'
+          summary='User-centered website and application design. Using Agile methods to produce quick and effective results.' />
+        <Service
+          image='images/code.svg'
+          title='Front-end development'
+          summary='The entire process from rapid prototyping, visual concepts to a fully functional live product.' />
+      </div>
+    </section>
+  )
 }
 
-module.exports = Radium(Services);
+export default Services

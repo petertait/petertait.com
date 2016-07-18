@@ -1,22 +1,14 @@
-import React, { Component, PropTypes } from 'react'
-import { Link, IndexLink } from 'react-router'
-import Radium from 'radium'
+import { IndexLink } from 'react-router'
 import Isvg from 'react-inlinesvg'
 
-class Logo extends Component {
-  render() {
-    return (
-      <IndexLink style={styles.logo} to="/">
-        <Isvg src='../images/logo.svg' />
-      </IndexLink>
-    );
-  }
+const Logo = () => {
+  const logo = { border: 'none' }
+
+  return (
+    <IndexLink className={logo} to="/">
+      <Isvg src='../images/logo.svg' />
+    </IndexLink>
+  )
 }
 
-var styles = {
-  logo: {
-    border: 'none'
-  }
-}
-
-module.exports = Radium(Logo);
+export default Logo

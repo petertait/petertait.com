@@ -1,27 +1,29 @@
-import Styles from '../../styles'
+import { breakpoint, layout } from '../../vars'
 
 import Logo from '../../components/Logo'
 import Nav from '../../components/Nav'
 
 const Header = () => {
   const header = {
-    paddingTop: '40px',
-    paddingBottom: '20px',
+    position: 'relative',
+    margin: 'auto',
+    maxWidth: layout.maxWidth,
+    padding: '40px 20px 20px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
 
     [breakpoint.medium]: {
-      paddingBottom: '60px',
+      paddingLeft: layout.gutter,
+      paddingRight: layout.gutter,
+      paddingBottom: '60px'
     }
   }
 
   return (
-    <header className={gbl.container}>
-      <div className={header}>
-        <Logo/>
-        <Nav/>
-      </div>
+    <header className={header}>
+      <Logo/>
+      <Nav/>
     </header>
   )
 }

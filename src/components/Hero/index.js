@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 
-import { type, breakpoint } from '../../vars'
+import { type, breakpoint, layout } from '../../vars'
 import Styles from '../../styles'
 
 const Hero = ({
@@ -9,6 +9,18 @@ const Hero = ({
   linkText
 }) => {
   const cx = {
+    container: {
+      position: 'relative',
+      margin: 'auto',
+      maxWidth: layout.maxWidth,
+      paddingRight: '20px',
+      paddingLeft: '20px',
+
+      [breakpoint.medium]: {
+        paddingLeft: layout.gutter,
+        paddingRight: layout.gutter,
+      }
+    },
     hero: {
       paddingTop: '40px',
       paddingBottom: '60px',
@@ -34,7 +46,7 @@ const Hero = ({
   }
 
   return (
-    <section className={gbl.container}>
+    <section className={cx.container}>
       <div style={cx.hero}>
         <h1 style={cx.h1}>{headline}</h1>
         {link && <Link to={link} style={cx.button}>{linkText}</Link>}
