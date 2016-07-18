@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Radium from 'radium';
+import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router'
+import Radium from 'radium'
 
 class Nav extends Component {
   render() {

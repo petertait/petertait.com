@@ -1,9 +1,7 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Radium from 'radium';
-import Isvg from 'react-inlinesvg';
-
-import vars from '../../vars';
+import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router'
+import Radium from 'radium'
+import Isvg from 'react-inlinesvg'
 
 class Service extends Component {
   render() {

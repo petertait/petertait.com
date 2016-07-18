@@ -1,25 +1,25 @@
-import React, { Component, PropTypes } from 'react';
-import ReactMarkdown from 'react-markdown';
+import { type, breakpoint } from '../../vars'
 
 const Content = ({
   title,
-  source
+  source,
+  html
 }) => {
   const cx = {
     container: {
       justifyContent: 'space-between',
       paddingBottom: '50px',
 
-      '@media screen and (min-width: 800px)': {
+      [breakpoint.medium]: {
         display: 'flex'
       }
     },
     column: {
-      '@media screen and (min-width: 800px)': {
+      [breakpoint.medium]: {
         width: '50%',
         marginRight: '20px',
 
-        ':nth-child(even)': {
+        ':nthChild(even)': {
           marginRight: '20px',
           marginLeft: 0
         }
@@ -33,7 +33,7 @@ const Content = ({
         <h3>{title}</h3>
       </div>
       <div className={cx.column}>
-        <ReactMarkdown source={source} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </div>
   )

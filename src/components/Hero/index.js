@@ -1,46 +1,46 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Radium from 'radium';
+import { Link } from 'react-router'
 
-import vars from '../../vars';
+import { type, breakpoint } from '../../vars'
+import Styles from '../../styles'
 
-class Hero extends Component {
-  render() {
-    return (
-      <section className='container'>
-        <div style={styles.hero}>
-          <h1 style={styles.h1}>{this.props.headline}</h1>
-          {this.props.link && <Link to={this.props.link} style={styles.button}>{this.props.linkText}</Link>}
-        </div>
-      </section>
-    )
-  }
-}
+const Hero = ({
+  headline,
+  link,
+  linkText
+}) => {
+  const cx = {
+    hero: {
+      paddingTop: '40px',
+      paddingBottom: '60px',
 
-const styles = {
-  hero: {
-    paddingTop: '40px',
-    paddingBottom: '60px',
+      [breakpoint.medium]: {
+        paddingBottom: '100px'
+      }
+    },
+    h1: {
+      fontSize: type.alpha,
+      maxWidth: '1000px',
 
-    '@media screen and (min-width: 800px)': {
-      paddingBottom: '100px'
+      [breakpoint.small]: {
+        fontSize: type.mega
+      },
+      [breakpoint.medium]: {
+        fontSize: type.giga
+      }
+    },
+    button: {
+
     }
-  },
-  h1: {
-    fontSize: vars.alpha,
-    maxWidth: '1000px',
-
-    '@media screen and (min-width: 600px)': {
-      fontSize: vars.mega
-    },
-    '@media screen and (min-width: 800px)': {
-      fontSize: vars.giga
-    },
-  },
-  button: {
-    display: 'table',
-    marginTop: '50px'
   }
+
+  return (
+    <section className={gbl.container}>
+      <div style={cx.hero}>
+        <h1 style={cx.h1}>{headline}</h1>
+        {link && <Link to={link} style={cx.button}>{linkText}</Link>}
+      </div>
+    </section>
+  )
 }
 
-module.exports = Radium(Hero);
+export default Hero

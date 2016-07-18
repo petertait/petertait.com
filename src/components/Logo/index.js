@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react';
-import { Link, IndexLink } from 'react-router';
-import Radium from 'radium';
-import Isvg from 'react-inlinesvg';
+import React, { Component, PropTypes } from 'react'
+import { Link, IndexLink } from 'react-router'
+import Radium from 'radium'
+import Isvg from 'react-inlinesvg'
 
 class Logo extends Component {
   render() {

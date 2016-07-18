@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Radium from 'radium';
+import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router'
+import Radium from 'radium'
 
-import vars from '../../vars';
+import vars from '../../vars'
 
-import Work from '../../components/Work';
+import Work from '../../components/Work'
 
 class Works extends Component {
   render() {

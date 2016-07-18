@@ -1,20 +1,18 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Radium from 'radium';
+import { Component } from 'react'
 
-import vars from '../../vars';
+import { color } from '../../vars'
 
-import Hero from '../../components/Hero';
-import Content from '../../components/Content';
+import Hero from '../../components/Hero'
+import Content from '../../components/Content'
 
-import ContentFile from './content.md';
+import ContentFile from './content.md'
 
 class Work extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: vars.sky,
-        secondary: vars.purple
+        primary: color.sky,
+        secondary: color.purple
       }
     }
 
@@ -26,10 +24,12 @@ class Work extends Component {
     return (
       <div>
         <Hero headline='User interface + experience designer at pebble {code}.' />
-        <Content title='About' source={ContentFile} />
+        <div className='container'>
+          <Content title='About' html={ContentFile} />
+        </div>
       </div>
     )
   }
 }
 
-module.exports = Radium(Work);
+export default Work;

@@ -1,11 +1,8 @@
-import React, { Component, PropTypes } from 'react';
-import Radium, { StyleRoot } from 'radium';
+import React, { Component, PropTypes } from 'react'
 
-import Styles from '../../styles';
-
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import Home from '../../containers/Home';
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import Home from '../../containers/Home'
 
 class App extends Component {
   constructor() {
@@ -18,14 +15,13 @@ class App extends Component {
 
   render() {
     return (
-      <StyleRoot>
-        <Styles/>
+      <div>
         <Header/>
         {this.props.children}
         <Footer/>
-      </StyleRoot>
+      </div>
     )
   }
 }
 
-module.exports = Radium(App);
+export default App

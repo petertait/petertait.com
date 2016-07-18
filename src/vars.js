@@ -1,68 +1,57 @@
 // Colours
-const black = '#151820'
-const white = '#fff'
-const purple = '#723cf7'
-const teal = '#00d785'
-const aqua = '#00c1dd'
-const sky = '#e5eeff'
+import Color from 'color'
+
+export const darken = (c, d) => Color(c).darken(d).rgbString()
+export const opacity = (c, a) => Color(c).alpha(a).rgbString()
+
+export const color = {
+  black: '#151820',
+  white: '#fff',
+  purple: '#723cf7',
+  teal: '#00d785',
+  aqua: '#00c1dd',
+  sky: '#e5eeff'
+}
 
 // Typography
-const tera = '72px'
-const giga = '62px'
-const mega = '48px'
-const alpha = '38px'
-const beta = '24px'
-const gamma = '18px'
-const delta = '16px'
-const epsilon = '14px'
-const zeta = '12px'
+export const type = {
+  tera: '72px',
+  giga: '62px',
+  mega: '48px',
+  alpha: '38px',
+  beta: '24px',
+  gamma: '18px',
+  delta: '16px',
+  epsilon: '14px',
+  zeta: '12px',
 
-const fontRegular = '400'
-const fontBold = '700'
-const fontMono = 'Iosevka, monospace'
-const fontSans = 'apercu, sans-serif'
+  fontRegular: '400',
+  fontBold: '700',
+  fontMono: 'Iosevka, monospace',
+  fontSans: 'apercu, sans-serif',
 
-const bodySize = gamma
-const bodyWeight = fontRegular
-
-const bpLarge = '@media screen and (min-width: 1100px)'
-const bpMedium = '@media screen and (min-width: 800px)'
-const bpSmall = '@media screen and (min-width: 600px)'
+  bodySize: '18px',
+  bodyWeight: '400'
+}
 
 // Layout
-const large = '1100px'
-const small = '600px'
-const gutter = '40px'
-const maxWidth = large
-
-module.exports = {
-  black,
-  white,
-  purple,
-  teal,
-  aqua,
-  sky,
-
-  tera,
-  giga,
-  mega,
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-
-  fontRegular,
-  fontBold,
-  fontMono,
-  fontSans,
-
-  bodySize,
-  bodyWeight,
-
-  large,
-  small,
-  gutter,
-  maxWidth
+export const layout = {
+  gutter: '40px',
+  maxWidth: '1100px'
 }
+
+// Breakpoints
+export const breakpoint = {
+  large: '@media screen and (min-width: 1100px)',
+  medium: '@media screen and (min-width: 800px)',
+  small: '@media screen and (min-width: 600px)'
+}
+
+const vars = {
+  color,
+  type,
+  layout,
+  breakpoint
+}
+
+export default vars

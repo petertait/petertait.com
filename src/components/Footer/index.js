@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react';
-import Radium from 'radium';
+import React, { Component, PropTypes } from 'react'
+import Radium from 'radium'
 
-import Social from '../../components/Social';
+import Social from '../../components/Social'
 
 class Footer extends Component {
   render() {

@@ -1,10 +1,8 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Radium from 'radium';
+import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router'
+import Radium from 'radium'
 
-import vars from '../../vars';
-
-import Service from '../../components/Service';
+import Service from '../../components/Service'
 
 class Services extends Component {
   render() {

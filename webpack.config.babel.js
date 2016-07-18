@@ -33,8 +33,9 @@ let config = {
         loader: 'json'
       },
       {
-        test: /\.md$/,
-        loader: 'raw'
+        test: /\.md/,
+        exclude: /node_modules/,
+        loader: 'html!markdown'
       },
       {
         test: /\.(jpg|jpeg|gif|png)$/,

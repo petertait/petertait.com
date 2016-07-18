@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import Styles from '../../styles'
 
-import Logo from '../../components/Logo';
-import Nav from '../../components/Nav';
+import Logo from '../../components/Logo'
+import Nav from '../../components/Nav'
 
 const Header = () => {
   const header = {
@@ -11,13 +11,13 @@ const Header = () => {
     justifyContent: 'space-between',
     alignItems: 'center',
 
-    '@media screen and (min-width: 800px)': {
+    [breakpoint.medium]: {
       paddingBottom: '60px',
     }
   }
 
   return (
-    <header className='container'>
+    <header className={gbl.container}>
       <div className={header}>
         <Logo/>
         <Nav/>
