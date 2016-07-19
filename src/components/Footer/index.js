@@ -8,22 +8,19 @@ const Footer = () => {
       margin: 'auto',
       maxWidth: layout.maxWidth,
       padding: '40px 20px 30px',
-      display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
 
       [breakpoint.medium]: {
+        display: 'flex',
         paddingLeft: layout.gutter,
         paddingRight: layout.gutter,
         paddingBottom: '100px',
         paddingTop: '30px',
-        display: 'flex'
       }
     },
     legal: {
-      [breakpoint.medium]: {
-        marginBottom: '20px'
-      }
+      marginBottom: '20px'
     }
   }
 
