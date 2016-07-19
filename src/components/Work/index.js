@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 
-import vars from '../../vars'
+import { type } from '../../vars'
 
 const Work = ({
   link,
@@ -15,6 +15,10 @@ const Work = ({
       cursor: 'not-allowed'
     },
     title: {
+      '-webkit-font-smoothing': 'antialiased',
+      fontFamily: type.fontSans,
+      fontSize: type.beta,
+      lineHeight: '1.2',
       borderBottom: '1px solid',
       marginBottom: '8px',
       display: 'table'

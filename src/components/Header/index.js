@@ -5,7 +5,6 @@ import Nav from '../../components/Nav'
 
 const Header = () => {
   const header = {
-    position: 'relative',
     margin: 'auto',
     maxWidth: layout.maxWidth,
     padding: '40px 20px 20px',

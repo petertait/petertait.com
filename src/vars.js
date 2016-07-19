@@ -44,7 +44,7 @@ export const layout = {
 export const breakpoint = {
   large: '@media screen and (min-width: 1100px)',
   medium: '@media screen and (min-width: 800px)',
-  small: '@media screen and (min-width: 600px)'
+  small: '@media screen and (min-width: 600px)',
 }
 
 const vars = {

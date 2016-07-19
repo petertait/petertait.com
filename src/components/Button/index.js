@@ -1,4 +1,4 @@
-const Footer = () => {
+const Button = () => {
   const button = {
     padding: '10px 15px 12px',
     border: 'none',

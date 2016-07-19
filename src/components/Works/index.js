@@ -1,16 +1,25 @@
-import { breakpoint } from '../../vars'
+import { breakpoint, layout, type } from '../../vars'
 
 import Work from '../../components/Work'
 
 const Works = () => {
   const cx = {
     container: {
-      paddingTop: '40px',
+      margin: 'auto',
+      maxWidth: layout.maxWidth,
+      padding: '40px 20px 0',
 
       [breakpoint.medium]: {
-        paddingTop: '60px',
+        paddingLeft: layout.gutter,
+        paddingRight: layout.gutter,
+        paddingTop: '70px',
         paddingBottom: '40px'
       }
+    },
+    title: {
+      fontWeight: type.fontRegular,
+      fontSize: type.bodySize,
+      marginBottom: '40px'
     },
     works: {
       paddingBottom: '40px',
@@ -26,7 +35,7 @@ const Works = () => {
   }
   return (
     <div className={cx.container}>
-      <h3>Selected Work <span className={cx.label}>– case studies coming soon</span></h3>
+      <h3 className={cx.title}>Selected Work <span className={cx.label}>– case studies coming soon</span></h3>
       <div className={cx.works}>
         <Work title='Global Intranet' summary='Lead design of a global intranet spanning over 10 languages and 80 thousand daily users.' link='/' />
         <Work title='Remote Education Course' summary='Creation of a new way in educating a workforce remotely.' link='/' />

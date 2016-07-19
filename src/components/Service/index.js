@@ -1,5 +1,7 @@
 import Isvg from 'react-inlinesvg'
 
+import { type, breakpoint, layout } from '../../vars'
+
 const Service = ({
   title,
   summary,
@@ -8,22 +10,22 @@ const Service = ({
   const cx = {
     service: {
       display: 'block',
-      width: '100%',
+      textAlign: 'center',
 
-      '@media screen and (min-width: 900px)': {
+      [breakpoint.medium]: {
         display: 'flex',
         width: 'calc(33% - 5px)',
-      }
-    },
-    odd: {
-      margin: '20px 0',
+      },
 
-      '@media screen and (min-width: 900px)': {
-        margin: '0 10px'
+      ':nth-of-type(even)': {
+        margin: '20px 0',
+
+        [breakpoint.medium]: {
+          margin: '0 10px'
+        }
       }
     },
     inner: {
-      textAlign: 'center',
       backgroundColor: 'rgba(0,0,0,0.06)',
       padding: '60px 30px 10px'
     },
@@ -31,11 +33,15 @@ const Service = ({
       display: 'block'
     },
     title: {
+      '-webkit-font-smoothing': 'antialiased',
+      fontFamily: type.fontSans,
+      fontSize: type.beta,
+      lineHeight: '1.2',
       marginTop: '50px',
       marginBottom: '15px'
     }
   }
-  
+
   return (
     <div className={cx.service}>
       <div className={cx.inner}>

@@ -1,16 +1,20 @@
-import { breakpoint } from '../../vars'
+import { breakpoint, layout } from '../../vars'
 
 import Social from '../../components/Social'
 
 const Footer = () => {
   const cx = {
     footer: {
+      margin: 'auto',
+      maxWidth: layout.maxWidth,
+      padding: '40px 20px 30px',
+      display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      paddingBottom: '30px',
-      display: 'block',
 
       [breakpoint.medium]: {
+        paddingLeft: layout.gutter,
+        paddingRight: layout.gutter,
         paddingBottom: '100px',
         paddingTop: '30px',
         display: 'flex'
