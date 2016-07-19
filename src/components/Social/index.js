@@ -1,3 +1,5 @@
+import reactCxs from 'react-cxs'
+
 import { breakpoint } from '../../vars'
 
 const Social = () => {

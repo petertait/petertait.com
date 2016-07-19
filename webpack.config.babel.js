@@ -1,5 +1,5 @@
-import path from 'path';
-import webpack from 'webpack';
+import path from 'path'
+import webpack from 'webpack'
 
 let config = {
   context: path.join(__dirname, 'src'),
@@ -16,11 +16,6 @@ let config = {
     contentBase: 'build',
     historyApiFallback: true
   },
-  plugins: [
-    new webpack.ProvidePlugin({
-      reactCxs: 'react-cxs'
-    })
-  ],
   module: {
     loaders: [
       {
@@ -36,16 +31,6 @@ let config = {
         test: /\.md/,
         exclude: /node_modules/,
         loader: 'html!markdown'
-      },
-      {
-        test: /\.(jpg|jpeg|gif|png)$/,
-        exclude: /node_modules/,
-        loader:'url-loader?limit=1024&name=images/[name].[ext]'
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|svg)$/,
-        exclude: /node_modules/,
-        loader: 'url-loader?limit=1024&name=fonts/[name].[ext]'
       }
     ]
   }
@@ -62,4 +47,4 @@ if (process.env.NODE_ENV === 'production') {
   ]
 }
 
-export default config;
+export default config

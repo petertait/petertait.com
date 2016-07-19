@@ -1,10 +1,10 @@
 import { Component } from 'react'
+import reactCxs from 'react-cxs'
 
 import { color } from '../../vars'
 
 import Hero from '../../components/Hero'
 import Content from '../../components/Content'
-
 import ContentFile from './content.md'
 
 class Work extends Component {
@@ -31,4 +31,4 @@ class Work extends Component {
   }
 }
 
-export default Work;
+export default Work

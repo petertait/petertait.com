@@ -1,3 +1,5 @@
+import reactCxs from 'react-cxs'
+
 import { type, breakpoint, layout } from '../../vars'
 
 const Content = ({

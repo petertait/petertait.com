@@ -1,9 +1,4 @@
 // Colours
-import Color from 'color'
-
-export const darken = (c, d) => Color(c).darken(d).rgbString()
-export const opacity = (c, a) => Color(c).alpha(a).rgbString()
-
 export const color = {
   black: '#151820',
   white: '#fff',

@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import reactCxs from 'react-cxs'
 
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
