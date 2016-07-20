@@ -1,5 +1,7 @@
-import { Link } from 'react-router'
+import React, { Component, PropTypes } from 'react'
 import reactCxs from 'react-cxs'
+
+import { Link } from 'react-router'
 
 const Nav = () => {
   const cx = {

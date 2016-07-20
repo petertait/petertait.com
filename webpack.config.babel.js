@@ -1,7 +1,7 @@
 import path from 'path'
 import webpack from 'webpack'
 
-let config = {
+const config = {
   context: path.join(__dirname, 'src'),
   entry: [
     './index.js'
@@ -18,25 +18,20 @@ let config = {
   },
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel'
-      },
-      {
-        test: /\.json$/,
-        loader: 'json'
-      },
-      {
-        test: /\.md/,
-        exclude: /node_modules/,
-        loader: 'html!markdown'
-      }
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
+      { test: /\.json$/, loader: 'json' },
+      { test: /\.md/, exclude: /node_modules/, loader: 'html!markdown' }
     ]
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      reactCxs: '../src/index.js'
+    })
+  ]
 }
 
 if (process.env.NODE_ENV === 'production') {
+  config.devtool = 'source-map'
   config.devServer = {}
   config.plugins = [
     new webpack.DefinePlugin({

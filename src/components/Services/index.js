@@ -1,4 +1,6 @@
+import React, { Component, PropTypes } from 'react'
 import reactCxs from 'react-cxs'
+
 
 import Service from '../../components/Service'
 import { breakpoint, layout, type } from '../../vars'

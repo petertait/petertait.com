@@ -1,4 +1,6 @@
+import React, { Component, PropTypes } from 'react'
 import reactCxs from 'react-cxs'
+
 import Isvg from 'react-inlinesvg'
 
 import { type, breakpoint, layout } from '../../vars'
