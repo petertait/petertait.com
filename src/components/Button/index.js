@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import reactCxs from 'react-cxs'
 
-
 const Button = () => {
   const button = {
     padding: '10px 15px 12px',

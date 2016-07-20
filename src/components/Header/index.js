@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import reactCxs from 'react-cxs'
 
-
 import { breakpoint, layout } from '../../vars'
 
 import Logo from '../../components/Logo'

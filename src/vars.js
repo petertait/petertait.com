@@ -3,6 +3,7 @@ export const color = {
   black: '#151820',
   white: '#fff',
   purple: '#723cf7',
+  blue: '#0433ff',
   teal: '#00d785',
   aqua: '#00c1dd',
   sky: '#e5eeff'

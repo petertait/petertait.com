@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import reactCxs from 'react-cxs'
 
-
 import { breakpoint } from '../../vars'
 
 const Social = () => {

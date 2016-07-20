@@ -12,7 +12,7 @@ class Work extends Component {
     this.state = {
       theme: {
         primary: color.sky,
-        secondary: color.purple
+        secondary: color.blue
       }
     }
     document.body.style.backgroundColor = this.state.theme.primary;

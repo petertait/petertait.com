@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import reactCxs from 'react-cxs'
 
-
 import { color } from '../../vars'
 
 import Hero from '../../components/Hero'
@@ -12,7 +11,7 @@ class Home extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: color.purple,
+        primary: color.blue,
         secondary: color.sky
       }
     }
