@@ -1,13 +1,15 @@
-import React, { Component, PropTypes } from 'react';
-import Radium from 'radium';
+import React, { Component, PropTypes } from 'react'
+import Radium from 'radium'
+import { breakpoint, layout } from '../../vars'
 
-import Logo from '../../components/Logo';
-import Nav from '../../components/Nav';
+import Logo from '../../components/Logo'
+import Nav from '../../components/Nav'
 
+@Radium
 class Header extends Component {
   render() {
     return (
-      <header className='container' style={styles.header}>
+      <header style={styles.header}>
         <Logo/>
         <Nav/>
       </header>
@@ -15,18 +17,21 @@ class Header extends Component {
   }
 }
 
-var styles = {
+const styles = {
   header: {
-    paddingTop: '40px',
-    paddingBottom: '20px',
+    margin: 'auto',
+    maxWidth: layout.maxWidth,
+    padding: '40px 20px 20px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
 
-    '@media screen and (min-width: 800px)': {
-      paddingBottom: '60px',
+    [breakpoint.medium]: {
+      paddingLeft: layout.gutter,
+      paddingRight: layout.gutter,
+      paddingBottom: '60px'
     }
   }
 }
 
-module.exports = Radium(Header);
+export default Header

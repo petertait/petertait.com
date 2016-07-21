@@ -1,8 +1,10 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Radium from 'radium';
+import React, { Component, PropTypes } from 'react'
+import Radium from 'radium'
 
-class Header extends Component {
+import { Link } from 'react-router'
+
+@Radium
+class Subheader extends Component {
   render() {
     return (
       <header style={styles.subheader}>
@@ -16,7 +18,7 @@ class Header extends Component {
   }
 }
 
-var styles = {
+const styles = {
   subheader: {
     display: 'flex',
     flex: '1 100%',
@@ -33,4 +35,4 @@ var styles = {
   }
 }
 
-module.exports = Radium(Header);
+export default Subheader

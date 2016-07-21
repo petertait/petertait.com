@@ -1,14 +1,14 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Radium from 'radium';
-import Isvg from 'react-inlinesvg';
+import React, { Component, PropTypes } from 'react'
+import Radium from 'radium'
+import Isvg from 'react-inlinesvg'
 
-import vars from '../../vars';
+import { type, breakpoint, layout } from '../../vars'
 
+@Radium
 class Service extends Component {
   render() {
     return (
-      <div style={[styles.service, styles[this.props.nthChild]]}>
+      <div style={styles.service}>
         <div style={styles.inner}>
           <span style={styles.image}>
             <Isvg src={this.props.image} />
@@ -21,25 +21,24 @@ class Service extends Component {
   }
 }
 
-var styles = {
+const styles = {
   service: {
     display: 'block',
-    width: '100%',
+    textAlign: 'center',
 
-    '@media screen and (min-width: 900px)': {
+    [breakpoint.medium]: {
       display: 'flex',
       width: 'calc(33% - 5px)',
-    }
+    },
   },
   odd: {
     margin: '20px 0',
 
-    '@media screen and (min-width: 900px)': {
+    [breakpoint.medium]: {
       margin: '0 10px'
     }
   },
   inner: {
-    textAlign: 'center',
     backgroundColor: 'rgba(0,0,0,0.06)',
     padding: '60px 30px 10px'
   },
@@ -47,9 +46,14 @@ var styles = {
     display: 'block'
   },
   title: {
+    WebkitFontSmoothing: 'antialiased',
+    fontFamily: type.fontSans,
+    fontSize: type.beta,
+    lineHeight: '1.2',
     marginTop: '50px',
     marginBottom: '15px'
   }
 }
 
-module.exports = Radium(Service);
+
+export default Service

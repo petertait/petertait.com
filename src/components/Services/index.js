@@ -1,17 +1,15 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Radium from 'radium';
+import React, { Component, PropTypes } from 'react'
+import Radium from 'radium'
+import Service from '../../components/Service'
+import { breakpoint, layout, type } from '../../vars'
 
-import vars from '../../vars';
-
-import Service from '../../components/Service';
-
+@Radium
 class Services extends Component {
   render() {
     return (
       <section style={styles.container}>
-        <div className='container'>
-          <h3>Services</h3>
+        <div style={styles.inner}>
+          <h3 style={styles.title}>Services</h3>
           <div style={styles.services}>
             <Service
               image='images/eye.svg'
@@ -33,15 +31,31 @@ class Services extends Component {
   }
 }
 
-var styles = {
+const styles = {
   container: {
     borderTop: '1px solid rgba(255,255,255,0.2)',
     borderBottom: '1px solid rgba(255,255,255,0.2)',
     padding: '40px 0 50px',
 
-    '@media screen and (min-width: 800px)': {
+    [breakpoint.medium]: {
       padding: '50px 0 60px'
     }
+  },
+  inner: {
+    margin: 'auto',
+    maxWidth: layout.maxWidth,
+    paddingLeft: '20px',
+    paddingRight: '20px',
+
+    [breakpoint.medium]: {
+      paddingLeft: layout.gutter,
+      paddingRight: layout.gutter,
+    }
+  },
+  title: {
+    fontWeight: type.fontRegular,
+    fontSize: type.bodySize,
+    marginBottom: '40px'
   },
   services: {
     display: 'flex',
@@ -49,4 +63,4 @@ var styles = {
   }
 }
 
-module.exports = Radium(Services);
+export default Services

@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Radium from 'radium';
+import React, { Component, PropTypes } from 'react'
+import Radium from 'radium'
+import { breakpoint } from '../../vars'
 
+@Radium
 class Social extends Component {
   render() {
-    const active = { borderBottom: '1px solid' }
     return (
       <nav style={styles.nav}>
         <a style={styles.link} href='mailto:contact@petertait.com'>Email</a>
@@ -15,7 +15,7 @@ class Social extends Component {
   }
 }
 
-var styles = {
+const styles = {
   nav: {
     justifyContent: 'flex-end'
   },
@@ -23,10 +23,10 @@ var styles = {
     margin: '0 40px 0 0',
     borderBottom: 'none',
 
-    '@media screen and (min-width: 900px)': {
+    [breakpoint.medium]: {
       margin: '0 0 0 40px'
     }
   }
 }
 
-module.exports = Radium(Social);
+export default Social

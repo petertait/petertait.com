@@ -1,7 +1,8 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Radium from 'radium';
+import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router'
+import Radium from 'radium'
 
+@Radium
 class Nav extends Component {
   render() {
     const active = { borderBottom: '1px solid' }
@@ -14,7 +15,7 @@ class Nav extends Component {
   }
 }
 
-var styles = {
+const styles = {
   nav: {
     justifyContent: 'flex-end'
   },
@@ -24,4 +25,4 @@ var styles = {
   }
 }
 
-module.exports = Radium(Nav);
+export default Nav

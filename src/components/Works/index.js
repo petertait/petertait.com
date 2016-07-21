@@ -1,16 +1,15 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Radium from 'radium';
+import React, { Component, PropTypes } from 'react'
+import Radium from 'radium'
 
-import vars from '../../vars';
+import { breakpoint, layout, type } from '../../vars'
+import Work from '../../components/Work'
 
-import Work from '../../components/Work';
-
+@Radium
 class Works extends Component {
   render() {
     return (
-      <div className='container' style={styles.container}>
-        <h3>Selected Work <span style={styles.label}>– case studies coming soon</span></h3>
+      <div style={styles.container}>
+        <h3 style={styles.title}>Selected Work <span style={styles.label}>– case studies coming soon</span></h3>
         <div style={styles.works}>
           <Work title='Global Intranet' summary='Lead design of a global intranet spanning over 10 languages and 80 thousand daily users.' link='/' />
           <Work title='Remote Education Course' summary='Creation of a new way in educating a workforce remotely.' link='/' />
@@ -23,19 +22,28 @@ class Works extends Component {
   }
 }
 
-var styles = {
+const styles = {
   container: {
-    paddingTop: '40px',
+    margin: 'auto',
+    maxWidth: layout.maxWidth,
+    padding: '40px 20px 0',
 
-    '@media screen and (min-width: 900px)': {
-      paddingTop: '60px',
+    [breakpoint.medium]: {
+      paddingLeft: layout.gutter,
+      paddingRight: layout.gutter,
+      paddingTop: '70px',
       paddingBottom: '40px'
     }
+  },
+  title: {
+    fontWeight: type.fontRegular,
+    fontSize: type.bodySize,
+    marginBottom: '40px'
   },
   works: {
     paddingBottom: '40px',
 
-    '@media screen and (min-width: 900px)': {
+    [breakpoint.medium]: {
       paddingTop: '20px',
       paddingBottom: '0'
     }
@@ -45,4 +53,4 @@ var styles = {
   }
 }
 
-module.exports = Radium(Works);
+export default Works

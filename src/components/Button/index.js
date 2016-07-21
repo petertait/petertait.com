@@ -1,18 +1,16 @@
-import React, { Component, PropTypes } from 'react';
-import Radium from 'radium';
-import { Link } from 'react-router';
+import React, { Component, PropTypes } from 'react'
+import Radium from 'radium'
 
+@Radium
 class Button extends Component {
   render() {
     return (
-      <Link style={styles.button} to={this.props.link}>
-        {this.props.content}
-      </Link>
+      <Button {...props} className={button} />
     )
   }
 }
 
-var styles = {
+const styles = {
   button: {
     padding: '10px 15px 12px',
     border: 'none',
@@ -20,4 +18,4 @@ var styles = {
   }
 }
 
-module.exports = Radium(Button);
+export default Button

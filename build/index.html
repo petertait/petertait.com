@@ -7,20 +7,48 @@
     <link rel='icon' href='images/favicon.png' type='image/x-icon'>
     <title>Peter Tait - Designer/Developer</title>
     <style>
-      @font-face: {
+      @font-face {
         font-family: 'iosevka';
-        src: url('fonts/iosevka/iosevka-light.woff2') format('woff2'),
-             url('fonts/iosevka/iosevka-light.woff') format('woff');
+        src: url('../fonts/iosevka/iosevka-light.woff2') format('woff2'),
+             url('../fonts/iosevka/iosevka-light.woff') format('woff');
         font-weight: 400;
         font-style: normal;
-      };
-      @font-face: {
+      }
+      @font-face {
         font-family: 'apercu';
-        src: url('fonts/apercu/apercu-bold.woff2') format('woff2'),
-             url('fonts/apercu/apercu-bold.woff') format('woff');
+        src: url('../fonts/apercu/apercu-bold.woff2') format('woff2'),
+             url('../fonts/apercu/apercu-bold.woff') format('woff');
         font-weight: 700;
         font-style: normal;
-      };
+      }
+      html {
+        box-sizing: border-box;
+        font-size: 18px;
+      }
+      *, *::before, *::after {
+        box-sizing: inherit;
+        text-rendering: optimizeSpeed;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        transition: 0.2s;
+        font-family: 'iosevka', monospace;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      p {  margin-bottom: 20px; }
+      a {
+        color: inherit;
+        text-decoration: none;
+        padding-bottom: 1px;
+        border-bottom: 1px solid;
+        transition: 0.2s opacity;
+      }
+      a:hover { opacity: 0.7; }
+      li { list-style: none; }
+      svg path { fill: currentColor; }
     </style>
   </head>
   <body>
