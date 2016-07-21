@@ -1,17 +1,23 @@
 import React, { Component, PropTypes } from 'react'
-import reactCxs from 'react-cxs'
-
 import { IndexLink } from 'react-router'
+import Radium from 'radium'
 import Isvg from 'react-inlinesvg'
 
-const Logo = () => {
-  const logo = { border: 'none' }
+@Radium
+class Logo extends Component {
+  render() {
+    return (
+      <IndexLink style={styles.logo} to="/">
+        <Isvg src='../images/logo.svg' />
+      </IndexLink>
+    )
+  }
+}
 
-  return (
-    <IndexLink className={logo} to="/">
-      <Isvg src='../images/logo.svg' />
-    </IndexLink>
-  )
+const styles = {
+  logo: {
+    border: 'none'
+  }
 }
 
 export default Logo

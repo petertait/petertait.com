@@ -1,39 +1,37 @@
 import React, { Component, PropTypes } from 'react'
-import reactCxs from 'react-cxs'
-
 import { Link } from 'react-router'
+import Radium from 'radium'
 
 import { type } from '../../vars'
 
-const Work = ({
-  link,
-  title,
-  summary
-}) => {
-  const cx = {
-    work: {
-      borderBottom: 'none',
-      marginBottom: '15px',
-      display: 'table',
-      cursor: 'not-allowed'
-    },
-    title: {
-      '-webkit-font-smoothing': 'antialiased',
-      fontFamily: type.fontSans,
-      fontSize: type.beta,
-      lineHeight: '1.2',
-      borderBottom: '1px solid',
-      marginBottom: '8px',
-      display: 'table'
-    }
+@Radium
+class Work extends Component {
+  render() {
+    return (
+      <Link to={this.props.link} style={styles.work}>
+        <h2 style={styles.title}>{this.props.title}</h2>
+        <p>{this.props.summary}</p>
+      </Link>
+    )
   }
+}
 
-  return (
-    <Link to={link} style={cx.work}>
-      <h2 className={cx.title}>{title}</h2>
-      <p>{summary}</p>
-    </Link>
-  )
+const styles = {
+  work: {
+    borderBottom: 'none',
+    marginBottom: '15px',
+    display: 'table',
+    cursor: 'not-allowed'
+  },
+  title: {
+    WebkitFontSmoothing: 'antialiased',
+    fontFamily: type.fontSans,
+    fontSize: type.beta,
+    lineHeight: '1.2',
+    borderBottom: '1px solid',
+    marginBottom: '8px',
+    display: 'table'
+  }
 }
 
 export default Work

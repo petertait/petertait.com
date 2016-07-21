@@ -1,13 +1,24 @@
 import React, { Component, PropTypes } from 'react'
-import reactCxs from 'react-cxs'
-
+import Radium from 'radium'
 import { breakpoint, layout } from '../../vars'
 
 import Logo from '../../components/Logo'
 import Nav from '../../components/Nav'
 
-const Header = () => {
-  const header = {
+@Radium
+class Header extends Component {
+  render() {
+    return (
+      <header style={styles.header}>
+        <Logo/>
+        <Nav/>
+      </header>
+    )
+  }
+}
+
+const styles = {
+  header: {
     margin: 'auto',
     maxWidth: layout.maxWidth,
     padding: '40px 20px 20px',
@@ -21,13 +32,6 @@ const Header = () => {
       paddingBottom: '60px'
     }
   }
-
-  return (
-    <header className={header}>
-      <Logo/>
-      <Nav/>
-    </header>
-  )
 }
 
 export default Header

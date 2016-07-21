@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import reactCxs from 'react-cxs'
 
 import { color } from '../../vars'
 

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import reactCxs from 'react-cxs'
+import {StyleRoot} from 'radium';
 
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
@@ -16,11 +16,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <StyleRoot>
         <Header/>
         {this.props.children}
         <Footer/>
-      </div>
+      </StyleRoot>
     )
   }
 }
