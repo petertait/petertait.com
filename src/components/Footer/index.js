@@ -10,7 +10,7 @@ class Footer extends Component {
     var today = new Date();
     var year = today.getFullYear();
     return (
-      <footer style={styles.footer}>
+      <footer className='container' style={styles.footer}>
         <div style={styles.legal}>{year + ' © Peter Tait Ltd.'}</div>
         <Social/>
       </footer>
@@ -22,14 +22,13 @@ const styles = {
   footer: {
     margin: 'auto',
     maxWidth: layout.maxWidth,
-    padding: '40px 20px 30px',
+    paddingTop: '40px',
+    paddingBottom: '30px',
     justifyContent: 'space-between',
     alignItems: 'center',
 
     [breakpoint.medium]: {
       display: 'flex',
-      paddingLeft: layout.gutter,
-      paddingRight: layout.gutter,
       paddingBottom: '100px',
       paddingTop: '30px',
     }

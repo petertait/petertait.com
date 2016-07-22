@@ -4,7 +4,7 @@ import Radium, { Style } from 'radium';
 import { type, breakpoint, layout } from './vars'
 
 @Radium
-class GlobalStyles extends Component {
+class Styles extends Component {
   render() {
     return (
       <Style rules={{
@@ -90,4 +90,4 @@ class GlobalStyles extends Component {
   }
 }
 
-export default GlobalStyles
+export default Styles

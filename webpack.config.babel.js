@@ -22,12 +22,7 @@ const config = {
       { test: /\.json$/, loader: 'json' },
       { test: /\.md/, exclude: /node_modules/, loader: 'html!markdown' }
     ]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      reactCxs: '../src/index.js'
-    })
-  ]
+  }
 }
 
 if (process.env.NODE_ENV === 'production') {

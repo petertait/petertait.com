@@ -37,7 +37,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --host 0.0.0.0 --hot --inline --progress",
+    "clean": "rm -rf build/scripts",
     "build": "NODE_ENV=production webpack -p",
-    "publish": "surge build"
+    "publish": "NODE_ENV=production webpack -p; surge build"
   }
 }

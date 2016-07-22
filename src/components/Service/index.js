@@ -25,6 +25,7 @@ const styles = {
   service: {
     display: 'block',
     textAlign: 'center',
+    width: '100%',
 
     [breakpoint.medium]: {
       display: 'flex',
