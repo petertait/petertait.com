@@ -2,14 +2,15 @@ import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
 import { breakpoint, layout, type } from '../../vars'
+import GlobalStyles from '../../styles'
 import Work from '../../components/Work'
 
 @Radium
 class Works extends Component {
   render() {
     return (
-      <div style={styles.container}>
-        <h3 style={styles.title}>Selected Work <span style={styles.label}>– case studies coming soon</span></h3>
+      <div className='container' style={styles.container}>
+        <h3>Selected Work <span style={styles.label}>– case studies coming soon</span></h3>
         <div style={styles.works}>
           <Work title='Global Intranet' summary='Lead design of a global intranet spanning over 10 languages and 80 thousand daily users.' link='/' />
           <Work title='Remote Education Course' summary='Creation of a new way in educating a workforce remotely.' link='/' />
@@ -24,21 +25,12 @@ class Works extends Component {
 
 const styles = {
   container: {
-    margin: 'auto',
-    maxWidth: layout.maxWidth,
-    padding: '40px 20px 0',
+    paddingTop: '40px',
 
     [breakpoint.medium]: {
-      paddingLeft: layout.gutter,
-      paddingRight: layout.gutter,
       paddingTop: '70px',
       paddingBottom: '40px'
     }
-  },
-  title: {
-    fontWeight: type.fontRegular,
-    fontSize: type.bodySize,
-    marginBottom: '40px'
   },
   works: {
     paddingBottom: '40px',

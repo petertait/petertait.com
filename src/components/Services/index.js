@@ -8,8 +8,8 @@ class Services extends Component {
   render() {
     return (
       <section style={styles.container}>
-        <div style={styles.inner}>
-          <h3 style={styles.title}>Services</h3>
+        <div className='container'>
+          <h3>Services</h3>
           <div style={styles.services}>
             <Service
               image='images/eye.svg'
@@ -40,22 +40,6 @@ const styles = {
     [breakpoint.medium]: {
       padding: '50px 0 60px'
     }
-  },
-  inner: {
-    margin: 'auto',
-    maxWidth: layout.maxWidth,
-    paddingLeft: '20px',
-    paddingRight: '20px',
-
-    [breakpoint.medium]: {
-      paddingLeft: layout.gutter,
-      paddingRight: layout.gutter,
-    }
-  },
-  title: {
-    fontWeight: type.fontRegular,
-    fontSize: type.bodySize,
-    marginBottom: '40px'
   },
   services: {
     display: 'flex',
