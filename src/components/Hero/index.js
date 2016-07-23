@@ -8,9 +8,9 @@ import { type, breakpoint, layout } from '../../vars'
 class Hero extends Component {
   render() {
     return (
-      <section style={styles.container}>
+      <section className='container'>
         <div style={styles.hero}>
-          <h1 style={styles.h1}>{this.props.headline}</h1>
+          <h1>{this.props.headline}</h1>
           {this.props.link && <Link to={this.props.link} style={styles.button}>{this.props.linkText}</Link>}
         </div>
       </section>
@@ -19,37 +19,12 @@ class Hero extends Component {
 }
 
 const styles = {
-  container: {
-    margin: 'auto',
-    maxWidth: layout.maxWidth,
-    paddingRight: '20px',
-    paddingLeft: '20px',
-
-    [breakpoint.medium]: {
-      paddingLeft: layout.gutter,
-      paddingRight: layout.gutter
-    }
-  },
   hero: {
     paddingTop: '40px',
     paddingBottom: '60px',
 
     [breakpoint.medium]: {
       paddingBottom: '100px'
-    }
-  },
-  h1: {
-    fontFamily: type.fontSans,
-    fontSize: type.alpha,
-    lineHeight: '1.1',
-    letterSpacing: '-1px',
-    maxWidth: '1000px',
-
-    [breakpoint.small]: {
-      fontSize: type.mega
-    },
-    [breakpoint.medium]: {
-      fontSize: type.giga
     }
   },
   button: {

@@ -8,7 +8,7 @@ import { type, breakpoint, layout } from '../../vars'
 class Service extends Component {
   render() {
     return (
-      <div style={styles.service}>
+      <div style={[styles.service, styles[this.props.nthChild]]}>
         <div style={styles.inner}>
           <span style={styles.image}>
             <Isvg src={this.props.image} />
@@ -25,6 +25,7 @@ const styles = {
   service: {
     display: 'block',
     textAlign: 'center',
+    width: '100%',
 
     [breakpoint.medium]: {
       display: 'flex',
@@ -46,10 +47,6 @@ const styles = {
     display: 'block'
   },
   title: {
-    WebkitFontSmoothing: 'antialiased',
-    fontFamily: type.fontSans,
-    fontSize: type.beta,
-    lineHeight: '1.2',
     marginTop: '50px',
     marginBottom: '15px'
   }

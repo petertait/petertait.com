@@ -9,7 +9,7 @@ import Nav from '../../components/Nav'
 class Header extends Component {
   render() {
     return (
-      <header style={styles.header}>
+      <header className='container' style={styles.header}>
         <Logo/>
         <Nav/>
       </header>
@@ -21,14 +21,13 @@ const styles = {
   header: {
     margin: 'auto',
     maxWidth: layout.maxWidth,
-    padding: '40px 20px 20px',
+    paddingTop: '40px',
+    paddingBottom: '20px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
 
     [breakpoint.medium]: {
-      paddingLeft: layout.gutter,
-      paddingRight: layout.gutter,
       paddingBottom: '60px'
     }
   }
