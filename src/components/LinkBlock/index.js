@@ -2,10 +2,12 @@ import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
 @Radium
-class Button extends Component {
+class LinkBlock extends Component {
   render() {
     return (
-      <Button {...props} className={button} />
+      <Link to={this.props.link} style={styles.button}>
+        <span style={styles.content}>{this.props.content}</span> &rarr;
+      </Link>
     )
   }
 }
@@ -13,9 +15,9 @@ class Button extends Component {
 const styles = {
   button: {
     padding: '10px 15px 12px',
-    border: 'none',
+    border: '1px solid',
     backgroundColor: 'rgba(255,255,255,0.2)'
   }
 }
 
-export default Button
+export default LinkBlock
