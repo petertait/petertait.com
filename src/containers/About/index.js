@@ -3,7 +3,8 @@ import React, { Component, PropTypes } from 'react'
 import { color } from '../../vars'
 
 import Hero from '../../components/Hero'
-import Content from '../../components/Content'
+import Container from '../../components/Container'
+import Column from '../../components/Column'
 import ContentFile from './content.md'
 
 class Work extends Component {
@@ -22,9 +23,14 @@ class Work extends Component {
     return (
       <div>
         <Hero headline='User interface + experience designer at pebble {code}.' />
-        <div className='container'>
-          <Content title='About' html={ContentFile} />
-        </div>
+        <Container>
+          <Column grid='leftHalf'>
+            <h3>About</h3>
+          </Column>
+          <Column grid='rightHalf'>
+            <div dangerouslySetInnerHTML={{ __html: ContentFile }} />
+          </Column>
+        </Container>
       </div>
     )
   }
