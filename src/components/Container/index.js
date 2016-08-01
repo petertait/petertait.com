@@ -17,10 +17,13 @@ class Container extends Component {
 const styles = {
   container: {
     justifyContent: 'space-between',
-    paddingBottom: '50px',
+    padding: '0 20px 50px',
 
     [breakpoint.medium]: {
       display: 'flex'
+    },
+    [breakpoint.small]: {
+      padding: '0 40px 50px'
     }
   }
 }

@@ -24,10 +24,10 @@ class Work extends Component {
       <div>
         <Hero headline='User interface + experience designer at pebble {code}.' />
         <Container>
-          <Column grid='leftHalf'>
+          <Column>
             <h3>About</h3>
           </Column>
-          <Column grid='rightHalf'>
+          <Column>
             <div dangerouslySetInnerHTML={{ __html: ContentFile }} />
           </Column>
         </Container>
