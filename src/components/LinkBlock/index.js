@@ -16,7 +16,7 @@ const styles = {
   button: {
     padding: '10px 15px 12px',
     border: '1px solid',
-    backgroundColor: 'rgba(255,255,255,0.2)'
+    backgroundColor: 'rgba(255,255,255, 0.2)'
   }
 }
 

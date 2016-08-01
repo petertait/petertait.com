@@ -1,7 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
+
+import { breakpoint } from '../../vars'
+
 import Service from '../../components/Service'
-import { breakpoint, layout, type } from '../../vars'
 
 @Radium
 class Services extends Component {

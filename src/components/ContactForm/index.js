@@ -1,25 +1,22 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
-import { type, breakpoint, layout } from '../../vars'
-
 @Radium
-class Column extends Component {
+class ContactForm extends Component {
   render() {
     return (
-      <div style={styles.column}>
-        {this.props.children}
-      </div>
+      <form action='https://formspree.io/contact@petertait.com'
+      method='POST'>
+        <input type='text' name='name'/>
+        <input type='email' name='_replyto'/>
+        <input type='submit' value='Send'/>
+      </form>
     )
   }
 }
 
 const styles = {
-  column: {
-    [breakpoint.medium]: {
-      width: '50%'
-    }
-  }
+
 }
 
-export default Column
+export default ContactForm

@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import Radium from 'radium'
 
-import { type, breakpoint, layout } from '../../vars'
+import { breakpoint } from '../../vars'
 
 import LinkInline from '../../components/LinkInline'
 

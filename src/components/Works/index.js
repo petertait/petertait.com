@@ -1,8 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
-import { breakpoint, layout, type } from '../../vars'
+import { breakpoint } from '../../vars'
 import Styles from '../../global'
+
 import Work from '../../components/Work'
 
 @Radium

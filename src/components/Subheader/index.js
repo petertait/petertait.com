@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-import Radium from 'radium'
-
 import { Link } from 'react-router'
+import Radium from 'radium'
 
 @Radium
 class Subheader extends Component {

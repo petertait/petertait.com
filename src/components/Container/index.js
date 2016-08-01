@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
-import { type, breakpoint, layout } from '../../vars'
+import { breakpoint } from '../../vars'
 
 @Radium
 class Container extends Component {
