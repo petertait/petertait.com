@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react'
 
-import { color } from '../../vars'
+import { color } from '../vars'
 
-import Hero from '../../components/Hero'
-import Container from '../../components/Container'
-import Column from '../../components/Column'
-import ContentFile from './content.md'
+import Hero from '../components/Hero'
+import Container from '../components/Container'
+import Column from '../components/Column'
+import Content from '../content/About.md'
 
 class Work extends Component {
   componentWillMount() {
@@ -28,7 +28,7 @@ class Work extends Component {
             <h3>About</h3>
           </Column>
           <Column>
-            <div dangerouslySetInnerHTML={{ __html: ContentFile }} />
+            <div dangerouslySetInnerHTML={{ __html: Content }} />
           </Column>
         </Container>
       </div>

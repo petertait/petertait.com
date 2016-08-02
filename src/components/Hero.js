@@ -2,9 +2,9 @@ import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import Radium from 'radium'
 
-import { breakpoint } from '../../vars'
+import { breakpoint } from '../vars'
 
-import LinkInline from '../../components/LinkInline'
+import LinkInline from '../components/LinkInline'
 
 @Radium
 class Hero extends Component {

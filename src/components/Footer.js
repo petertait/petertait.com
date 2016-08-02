@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
-import { breakpoint, layout } from '../../vars'
+import { breakpoint, layout } from '../vars'
 
-import Social from '../../components/Social'
+import Social from '../components/Social'
 
 @Radium
 class Footer extends Component {

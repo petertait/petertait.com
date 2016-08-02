@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 
-import { color } from '../../vars'
+import { color } from '../vars'
 
-import Hero from '../../components/Hero'
-import Services from '../../components/Services'
-import Works from '../../components/Works'
+import Hero from '../components/Hero'
+import Services from '../components/Services'
+import Works from '../components/Works'
 
 class Home extends Component {
   componentWillMount() {

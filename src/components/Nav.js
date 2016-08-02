@@ -9,7 +9,7 @@ class Nav extends Component {
     return (
       <nav style={styles.nav}>
         <Link style={styles.link} to="/about" activeStyle={active}>About</Link>
-        <a style={styles.link} href='mailto:contact@petertait.com'>Contact</a>
+        <Link style={styles.link}  to="/contact" activeStyle={active}>Contact</Link>
       </nav>
     )
   }

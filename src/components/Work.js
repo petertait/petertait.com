@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import Radium from 'radium'
 
-import { type } from '../../vars'
+import { type } from '../vars'
 
 @Radium
 class Work extends Component {
