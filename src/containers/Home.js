@@ -11,7 +11,8 @@ class Home extends Component {
     this.state = {
       theme: {
         primary: color.blue,
-        secondary: color.sky
+        secondary: color.sky,
+        tertiary: color.black
       }
     }
     document.body.style.backgroundColor = this.state.theme.primary;
