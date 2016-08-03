@@ -66,6 +66,9 @@ class Styles extends Component {
         li: {
           listStyle: 'none'
         },
+        'input, textarea': {
+          border: 'none'
+        },
         'svg path': {
           fill: 'currentColor'
         },

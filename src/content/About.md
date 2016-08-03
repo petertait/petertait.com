@@ -1,4 +1,4 @@
-Currently based in Bath/London working as a user experience and interface designer at pebble {code} – digital innovation consultancy.
+I'm Peter, currently based in Bath/London working as a user experience and interface designer at pebble {code} – digital innovation consultancy.
 
 Having gained a first-class honours degree in graphic design at the University of Southampton. I am an agile designer with a focus on an interactive and refined process.
 

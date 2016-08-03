@@ -14,7 +14,21 @@ const config = {
   devtool: 'eval-source-map',
   devServer: {
     contentBase: 'build',
-    historyApiFallback: true
+    historyApiFallback: true,
+    stats: {
+      colors: true,
+      hash: false,
+      version: false,
+      timings: false,
+      assets: false,
+      chunks: false,
+      modules: false,
+      publicPath: false,
+      source: false,
+      errorDetails: false,
+      reasons: false,
+      children: false,
+    }
   },
   module: {
     loaders: [
