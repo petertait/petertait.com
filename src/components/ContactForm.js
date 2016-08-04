@@ -7,33 +7,44 @@ import { color, type } from '../vars'
 class ContactForm extends Component {
   render() {
     return (
-      <form style={styles.form} className='container' action='https://formspree.io/contact@petertait.com'
-      method='POST'>
-        <input style={styles.input} type='text' name='name' placeholder='Full Name' />
-        <textarea style={styles.input} type='email' name='_replyto' placeholder='Email Address'/>
-        <input style={styles.input} type='submit' value='Send'/>
-        <input type="hidden" name="_next" value="http://localhost:8080/" />
-      </form>
+      <div className='container'>
+        <form style={styles.form} action='https://formspree.io/contact@petertait.com'
+        method='POST'>
+          <input style={styles.input} type='text' name='name' placeholder='Full Name' />
+          <input style={styles.input} type='email' name='_replyto' placeholder='Email Address'/>
+          <textarea style={styles.input} type='message' name='message' placeholder='Message'/>
+          <input style={styles.btn} type='submit' value='Send'/>
+          <input type="hidden" name="_next" value="http://localhost:8080/" />
+        </form>
+      </div>
     )
   }
 }
 
 const styles = {
   form: {
-
+    maxWidth: '700px',
+    marginBottom: '100px'
   },
   input: {
-    width: '100%',
-    marginBottom: '50px',
+    backgroundColor: 'transparent',
+    padding: '10px 15px',
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    borderColor: color.blue,
+    color: color.blue,
+    marginBottom: '10px',
     fontFamily: type.fontMono,
     fontSize: type.beta,
-    backgroundColor: 'transparent',
-    borderBottom: '1px solid',
-    borderBottomColor: color.black,
-    outline: 'none'
   },
-  'input::placeholder': {
-    color: color.sky
+  btn: {
+    border: 'none',
+    padding: '10px 15px',
+    backgroundColor: color.blue,
+    color: color.sky,
+    borderBottom: 'none',
+    fontFamily: type.fontMono,
+    fontSize: type.beta
   }
 }
 

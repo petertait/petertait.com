@@ -9,8 +9,8 @@ class Contact extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: color.green,
-        secondary: color.black
+        primary: color.sky,
+        secondary: color.blue
       }
     }
     document.body.style.backgroundColor = this.state.theme.primary;
