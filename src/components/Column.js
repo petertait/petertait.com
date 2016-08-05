@@ -16,6 +16,9 @@ class Column extends Component {
 
 const styles = {
   column: {
+    paddingLeft: '20px',
+    paddingRight: '20px',
+    
     [breakpoint.medium]: {
       width: '50%'
     }

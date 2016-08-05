@@ -11,12 +11,12 @@ class Work extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: color.sky,
-        secondary: color.blue
+        primary: color.yellow,
+        secondary: color.black
       }
     }
-    document.body.style.backgroundColor = this.state.theme.primary;
-    document.body.style.color = this.state.theme.secondary;
+    document.body.style.backgroundColor = this.state.theme.primary
+    document.body.style.color = this.state.theme.secondary
   }
 
   render() {

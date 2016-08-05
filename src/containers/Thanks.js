@@ -5,14 +5,13 @@ import { color } from '../vars'
 import Hero from '../components/Hero'
 import Container from '../components/Container'
 import Column from '../components/Column'
-import ContactForm from '../components/ContactForm'
 
-class Contact extends Component {
+class Thanks extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: color.white,
-        secondary: color.black
+        primary: color.black,
+        secondary: color.white
       }
     }
     document.body.style.backgroundColor = this.state.theme.primary
@@ -22,18 +21,15 @@ class Contact extends Component {
   render() {
     return (
       <div>
-        <Hero headline='Talk to me.' />
-          <Container>
-            <Column>
-              <h3>Get in touch, whether it's a work enquiry or just to say hello.</h3>
-            </Column>
-            <Column>
-              <ContactForm />
-            </Column>
-          </Container>
+        <Hero headline='Thanks for getting in touch!' />
+        <Container>
+          <Column>
+            <h3>I'll be sure to reply as soon as possible.</h3>
+          </Column>
+        </Container>
       </div>
     )
   }
 }
 
-export default Contact
+export default Thanks

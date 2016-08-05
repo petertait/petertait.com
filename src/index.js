@@ -6,6 +6,7 @@ import App from './containers/App'
 import Home from './containers/Home'
 import About from './containers/About'
 import Contact from './containers/Contact'
+import Thanks from './containers/Thanks'
 
 render((
   <Router history={browserHistory}>
@@ -13,6 +14,7 @@ render((
       <IndexRoute component={Home} />
       <Route path='about' component={About} />
       <Route path='contact' component={Contact} />
+      <Route path='thanks' component={Thanks} />
       <Route path='*' component={Home} />
     </Route>
   </Router>

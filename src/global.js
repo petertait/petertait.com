@@ -19,7 +19,6 @@ class Styles extends Component {
           margin: 0
         },
         body: {
-          transition: '0.2s',
           fontFamily: type.fontMono,
           fontWeight: type.fontRegular,
           lineHeight: '1.5'
@@ -67,11 +66,15 @@ class Styles extends Component {
           listStyle: 'none'
         },
         'input, textarea': {
+          '-webkit-appearance': 'none',
+          borderRadius: '0',
           width: '100%',
-          outline: 'none'
+          outline: 'none',
+          fontFamily: type.fontMono,
+          fontSize: type.bodySize
         },
         textarea: {
-          minHeight: '300px',
+          minHeight: '200px',
           maxWidth: '100%'
         },
         'svg path': {

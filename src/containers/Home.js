@@ -11,12 +11,11 @@ class Home extends Component {
     this.state = {
       theme: {
         primary: color.blue,
-        secondary: color.sky,
-        tertiary: color.black
+        secondary: color.sky
       }
     }
-    document.body.style.backgroundColor = this.state.theme.primary;
-    document.body.style.color = this.state.theme.secondary;
+    document.body.style.backgroundColor = this.state.theme.primary
+    document.body.style.color = this.state.theme.secondary
   }
 
   render() {

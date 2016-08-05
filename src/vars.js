@@ -1,10 +1,12 @@
 // Colours
 export const color = {
-  black: '#151820',
   white: '#fff',
-  green: '#00ef91',
+  black: '#151820',
+  grey: '#ddd',
+  green: '#00e39c',
+  yellow: '#eed900',
   blue: '#0433ff',
-  aqua: '#00c1dd',
+  teal: '#4dded4',
   sky: '#e5eeff'
 }
 
