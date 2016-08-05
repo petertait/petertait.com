@@ -6,6 +6,7 @@ import Hero from '../components/Hero'
 import Container from '../components/Container'
 import Column from '../components/Column'
 import ContactForm from '../components/ContactForm'
+import SocialButtons from '../components/SocialButtons'
 
 class Contact extends Component {
   componentWillMount() {
@@ -26,6 +27,7 @@ class Contact extends Component {
           <Container>
             <Column>
               <h3>Get in touch, whether it's a work enquiry or just to say hello.</h3>
+              <SocialButtons />
             </Column>
             <Column>
               <ContactForm />
