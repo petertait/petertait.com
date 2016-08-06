@@ -45,6 +45,10 @@ const styles = {
       backgroundColor: color.black,
       color: color.white,
       opacity: '1'
+    },
+
+    [breakpoint.medium]: {
+      margin: '20px 10px 50px 0'
     }
   }
 }
