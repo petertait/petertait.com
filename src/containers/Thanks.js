@@ -5,6 +5,7 @@ import { color } from '../vars'
 import Hero from '../components/Hero'
 import Container from '../components/Container'
 import Column from '../components/Column'
+import SocialButtons from '../components/SocialButtons'
 
 class Thanks extends Component {
   componentWillMount() {
@@ -19,12 +20,14 @@ class Thanks extends Component {
   }
 
   render() {
+    const primary = this.state.theme.primary
+    const secondary = this.state.theme.secondary
     return (
       <div>
         <Hero headline='Thanks for getting in touch!' />
         <Container>
           <Column>
-            <h3>I'll be sure to reply as soon as possible.</h3>
+            <h3>{"I'll be sure to reply as soon as possible."}</h3>
           </Column>
         </Container>
       </div>

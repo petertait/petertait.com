@@ -8,7 +8,7 @@ import { breakpoint, color } from '../vars'
 class SocialButtons extends Component {
   render() {
     return (
-      <div style={styles.container}>
+      <div>
         <a key='1' style={styles.btn} href='mailto:contact@petertait.com'>
           <Isvg src='../images/email.svg' />
         </a>
@@ -24,28 +24,14 @@ class SocialButtons extends Component {
 }
 
 const styles = {
-  container: {
-    justifyContent: 'flex-end'
-  },
   btn: {
     display: 'inline-block',
     width: '45px',
     height: '45px',
-    padding: '12px',
+    padding: '9px 12px',
     margin: '0 10px 50px 0',
-    borderWidth: '1px',
-    borderStyle: 'solid',
-    borderColor: color.grey,
-    color: color.black,
+    border: '1px solid',
     borderRadius: '50%',
-    transition: '0.2s',
-
-    ':hover': {
-      borderColor: color.black,
-      backgroundColor: color.black,
-      color: color.white,
-      opacity: '1'
-    },
 
     [breakpoint.medium]: {
       margin: '20px 10px 50px 0'

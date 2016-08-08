@@ -7,7 +7,7 @@ import { breakpoint } from '../vars'
 class Social extends Component {
   render() {
     return (
-      <nav style={styles.nav}>
+      <nav>
         <a style={styles.link} href='mailto:contact@petertait.com'>Email</a>
         <a style={styles.link} href='http://github.com/petertait' target='_blank'>Github</a>
         <a style={styles.link} href='http://twitter.com/peter_tait' target='_blank'>Twitter</a>
@@ -17,9 +17,6 @@ class Social extends Component {
 }
 
 const styles = {
-  nav: {
-    justifyContent: 'flex-end'
-  },
   link: {
     margin: '0 40px 0 0',
     borderBottom: 'none',

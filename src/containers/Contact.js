@@ -26,7 +26,7 @@ class Contact extends Component {
         <Hero headline='Talk to me.' />
           <Container>
             <Column>
-              <h3>Get in touch and say hello. Whether you have a work enquiry or simply want to find out more, let's talk.</h3>
+              <h3>{"Get in touch and say hello. Whether you have a work enquiry or simply want to find out more, let's talk."}</h3>
               <SocialButtons />
             </Column>
             <Column>
