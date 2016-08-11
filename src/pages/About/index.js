@@ -1,18 +1,19 @@
 import React, { Component, PropTypes } from 'react'
 
-import { color } from '../vars'
+import { color } from '../../vars'
 
-import Hero from '../components/Hero'
-import Container from '../components/Container'
-import Column from '../components/Column'
-import Content from '../content/About.md'
+import Hero from '../../components/Hero'
+import Container from '../../components/Container'
+import Column from '../../components/Column'
+import LinkInline from '../../components/LinkInline'
+import Content from './content.md'
 
 class Work extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: color.yellow,
-        secondary: color.black
+        primary: color.blue,
+        secondary: color.white
       }
     }
     document.body.style.backgroundColor = this.state.theme.primary
@@ -24,10 +25,11 @@ class Work extends Component {
       <div>
         <Hero headline='User interface + experience designer at pebble {code}.' />
         <Container>
-          <Column>
+          <Column width='half'>
             <h3>About</h3>
+            <LinkInline link='cv' linkText='Curriculum Vitae' margin='vertical' />
           </Column>
-          <Column>
+          <Column width='half'>
             <div dangerouslySetInnerHTML={{ __html: Content }} />
           </Column>
         </Container>

@@ -1,19 +1,19 @@
 import React, { Component, PropTypes } from 'react'
 
-import { color } from '../vars'
+import { color } from '../../vars'
 
-import Hero from '../components/Hero'
-import Container from '../components/Container'
-import Column from '../components/Column'
-import ContactForm from '../components/ContactForm'
-import SocialButtons from '../components/SocialButtons'
+import Hero from '../../components/Hero'
+import Container from '../../components/Container'
+import Column from '../../components/Column'
+import ContactForm from '../../components/ContactForm'
+import AnchorInline from '../../components/AnchorInline'
 
 class Contact extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: color.white,
-        secondary: color.black
+        primary: color.sky,
+        secondary: color.blue
       }
     }
     document.body.style.backgroundColor = this.state.theme.primary
@@ -25,11 +25,11 @@ class Contact extends Component {
       <div>
         <Hero headline='Talk to me.' />
           <Container>
-            <Column>
+            <Column width='half'>
               <h3>{"Get in touch and say hello. Whether you have a work enquiry or simply want to find out more, let's talk."}</h3>
-              <SocialButtons />
+              <AnchorInline link='mailto:contact@petertait.com' linkText='Send me an email' />
             </Column>
-            <Column>
+            <Column width='half'>
               <ContactForm />
             </Column>
           </Container>

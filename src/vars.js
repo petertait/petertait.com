@@ -7,6 +7,7 @@ export const color = {
   yellow: '#eed900',
   blue: '#0433ff',
   teal: '#4dded4',
+  aqua: '#27cae4',
   sky: '#e5eeff'
 }
 
@@ -17,7 +18,7 @@ export const type = {
   mega: '48px',
   alpha: '38px',
   beta: '24px',
-  gamma: '18px',
+  gamma: '20px',
   delta: '16px',
   epsilon: '14px',
   zeta: '12px',

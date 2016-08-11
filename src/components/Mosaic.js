@@ -4,10 +4,11 @@ import Radium from 'radium'
 import { breakpoint } from '../vars'
 
 @Radium
-class Container extends Component {
+class Mosaic extends Component {
   render() {
     return (
-      <div className='container' style={styles.container}>
+      <div style={styles.mosaic}>
+        <div style={styles.item} />
         {this.props.children}
       </div>
     )
@@ -15,17 +16,16 @@ class Container extends Component {
 }
 
 const styles = {
-  container: {
-    justifyContent: 'space-between',
-    padding: '0 0 30px',
+  mosaic: {
+  	flexDirection: 'column',
+  	flexWrap: 'wrap',
+  	height: '100vw',
+  	fontSize: '0',
 
     [breakpoint.medium]: {
       display: 'flex'
-    },
-    [breakpoint.small]: {
-      padding: '0 20px 30px'
     }
   }
 }
 
-export default Container
+export default Mosaic

@@ -3,13 +3,13 @@ import { Link } from 'react-router'
 import Radium from 'radium'
 
 @Radium
-class LinkInline extends Component {
+class AnchorInline extends Component {
   render() {
     return (
       <span style={[styles[this.props.color], styles[this.props.margin]]}>
-        <Link to={this.props.link} style={styles.button}>
+        <a href={this.props.link} style={styles.button}>
           <span style={styles.content}>{this.props.linkText}</span> &rarr;
-        </Link>
+        </a>
       </span>
     )
   }
@@ -31,4 +31,4 @@ const styles = {
   }
 }
 
-export default LinkInline
+export default AnchorInline
