@@ -23,21 +23,22 @@ class ContactForm extends Component {
 
 const styles = {
   field: {
-    backgroundColor: color.sky,
+    backgroundColor: 'transparent',
     position: 'relative',
     padding: '10px 15px',
     borderWidth: '1px',
     borderStyle: 'solid',
-    borderColor: color.blue,
+    borderColor: 'currentColor',
     marginBottom: '-1px',
     transition: '0.2s',
-    color: color.blue,
-    opacity: '0.5',
+    color: 'currentColor',
+    opacity: '0.4',
 
     ':focus': {
       opacity: '1',
       zIndex: '1',
       transform: 'scale(1.01)',
+      backgroundColor: color.white
     }
   },
   btn: {

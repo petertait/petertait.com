@@ -29,16 +29,12 @@ const styles = {
     paddingTop: '50px',
 
     [breakpoint.medium]: {
-      paddingTop: '60px',
-      paddingBottom: '40px'
+      paddingTop: '60px'
     }
   },
   list: {
-    paddingBottom: '40px',
-
     [breakpoint.medium]: {
-      paddingTop: '20px',
-      paddingBottom: '0'
+      paddingTop: '20px'
     }
   },
   label: {

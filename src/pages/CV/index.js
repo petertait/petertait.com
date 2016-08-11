@@ -49,7 +49,7 @@ class CV extends Component {
             <h4 style={styles.h4}>July 2014–present</h4>
           </Column>
           <Column width='twoThird'>
-            <h3 style={styles.h3}>Senior Designer</h3>
+            <h3 style={styles.h3}>Senior UI/UX Designer</h3>
             <div style={styles.content} dangerouslySetInnerHTML={{ __html: Pebble }} />
           </Column>
         </Container>
@@ -66,7 +66,7 @@ class CV extends Component {
         <Container>
           <Column width='third'>
             <h3 style={styles.h3}>Electronic Ink</h3>
-            <h4 style={styles.h4}>March 2011–Sept 2011 <br/> April 2012–July 2012</h4>
+            <h4 style={styles.h4}>April 2012–July 2012 <br/> March 2011–Sept 2011</h4>
           </Column>
           <Column width='twoThird'>
             <h3 style={styles.h3}>Visual Designer</h3>
@@ -127,7 +127,7 @@ const styles = {
     fontSize: type.delta
   },
   education: {
-    paddingBottom: '50px'
+    paddingBottom: '30px'
   }
 }
 

@@ -10,7 +10,7 @@ Visit the site at http://petertait.com
 - Babel 6
 - Webpack
 - React
-- Postcss (React CSS Modules)
+- Radium inline styles
 
 <br>
 
@@ -26,7 +26,7 @@ Start the local dev server:
 $ npm start
 ```
 
-Navigate to **http://localhost:8000/** to view the app.
+Navigate to **http://localhost:8080/** to view the app.
 
 <br>
 

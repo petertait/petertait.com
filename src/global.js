@@ -74,7 +74,7 @@ class Styles extends Component {
           fontSize: type.bodySize
         },
         'input::-webkit-input-placeholder, textarea::-webkit-input-placeholder': {
-          color: color.blue
+          color: 'currentColor'
         },
         textarea: {
           minHeight: '200px',
