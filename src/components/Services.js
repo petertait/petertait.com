@@ -37,11 +37,11 @@ const styles = {
   container: {
     borderTop: '1px solid rgba(255,255,255,0.2)',
     borderBottom: '1px solid rgba(255,255,255,0.2)',
-    paddingTop: '40px',
+    paddingTop: '50px',
     paddingBottom: '50px',
 
     [breakpoint.medium]: {
-      paddingTop: '50px',
+      paddingTop: '60px',
       paddingBottom: '60px'
     }
   },

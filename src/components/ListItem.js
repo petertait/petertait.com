@@ -5,10 +5,10 @@ import Radium from 'radium'
 import { type } from '../vars'
 
 @Radium
-class Work extends Component {
+class ListItem extends Component {
   render() {
     return (
-      <Link to={this.props.link} style={styles.work}>
+      <Link to={this.props.link} style={styles.item}>
         <h2 style={styles.title}>{this.props.title}</h2>
         <p>{this.props.summary}</p>
       </Link>
@@ -17,7 +17,7 @@ class Work extends Component {
 }
 
 const styles = {
-  work: {
+  item: {
     borderBottom: 'none',
     marginBottom: '15px',
     display: 'table',
@@ -34,4 +34,4 @@ const styles = {
   }
 }
 
-export default Work
+export default ListItem

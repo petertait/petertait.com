@@ -73,15 +73,26 @@ class Styles extends Component {
           fontFamily: type.fontMono,
           fontSize: type.bodySize
         },
+        'input::-webkit-input-placeholder, textarea::-webkit-input-placeholder': {
+          color: color.blue
+        },
         textarea: {
           minHeight: '200px',
           maxWidth: '100%'
+        },
+        hr: {
+          backgroundColor: 'currentColor',
+          marginTop: '10px',
+          marginBottom: '60px',
+          border: 'none',
+          height: '1px',
+          opacity: '0.12'
         },
         'svg path': {
           fill: 'currentColor'
         },
         '::selection': {
-          backgroundColor: 'rgba(0,0,0, 0.15)'
+          backgroundColor: 'rgba(0, 0, 150, 0.1)'
         },
         mediaQueries: {
           '(min-width: 600px)': {

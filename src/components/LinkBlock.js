@@ -1,13 +1,16 @@
 import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router'
 import Radium from 'radium'
 
 @Radium
 class LinkBlock extends Component {
   render() {
     return (
-      <Link to={this.props.link} style={styles.button}>
-        <span style={styles.content}>{this.props.content}</span> &rarr;
-      </Link>
+      <span style={[styles[this.props.color], styles[this.props.margin]]}>
+        <Link to={this.props.link} style={styles.button}>
+          {this.props.linkText} &rarr;
+        </Link>
+      </span>
     )
   }
 }
@@ -15,8 +18,14 @@ class LinkBlock extends Component {
 const styles = {
   button: {
     padding: '10px 15px 12px',
-    border: '1px solid',
-    backgroundColor: 'rgba(255,255,255, 0.2)'
+    border: '1px solid'
+  },
+  white: {
+    color: 'white'
+  },
+  vertical: {
+    display: 'table',
+    margin: '50px 0 60px',
   }
 }
 

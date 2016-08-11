@@ -1,19 +1,19 @@
 import React, { Component, PropTypes } from 'react'
 
-import { color } from '../vars'
+import { color } from '../../vars'
 
-import Hero from '../components/Hero'
-import Container from '../components/Container'
-import Column from '../components/Column'
-import ContactForm from '../components/ContactForm'
-import SocialButtons from '../components/SocialButtons'
+import Hero from '../../components/Hero'
+import Container from '../../components/Container'
+import Column from '../../components/Column'
+import ContactForm from '../../components/ContactForm'
+import SocialButtons from '../../components/SocialButtons'
 
 class Contact extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: color.white,
-        secondary: color.black
+        primary: color.sky,
+        secondary: color.blue
       }
     }
     document.body.style.backgroundColor = this.state.theme.primary

@@ -1,17 +1,17 @@
 import React, { Component, PropTypes } from 'react'
 
-import { color } from '../vars'
+import { color } from '../../vars'
 
-import Hero from '../components/Hero'
-import Services from '../components/Services'
-import Works from '../components/Works'
+import Hero from '../../components/Hero'
+import Services from '../../components/Services'
+import List from '../../components/List'
 
 class Home extends Component {
   componentWillMount() {
     this.state = {
       theme: {
         primary: color.blue,
-        secondary: color.sky
+        secondary: color.white
       }
     }
     document.body.style.backgroundColor = this.state.theme.primary
@@ -23,7 +23,7 @@ class Home extends Component {
       <div>
         <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/about' linkText='Discover more about me' />
         <Services />
-        <Works />
+        <List title='Selected Work' />
       </div>
     )
   }
