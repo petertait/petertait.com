@@ -80,6 +80,9 @@ class Styles extends Component {
         'svg path': {
           fill: 'currentColor'
         },
+        '::selection': {
+          backgroundColor: 'rgba(0,0,0, 0.15)'
+        },
         mediaQueries: {
           '(min-width: 600px)': {
             '.container': {
