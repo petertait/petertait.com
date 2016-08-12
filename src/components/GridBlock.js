@@ -8,17 +8,13 @@ import { breakpoint, color, type } from '../vars'
 @Radium
 class GridBlock extends Component {
   render() {
-    const url = 'work/' + this.props.project
-    const color = {
-      color: this.props.color
-    }
+    const url = 'work/' + this.props.url
     return (
-      <div style={[styles.block, styles[this.props.width]]}>
-        <div style={[styles.inner, styles[this.props.color]]}>
-          <Link style={styles.link} to={url}>
-            <h2 style={styles.title}>{this.props.title}</h2>
-            <p style={styles.summary}>{this.props.summary}</p>
-          </Link>
+      <div key='1' style={[styles.block, styles[this.props.nthChild]]}>
+        <div key='2' style={[styles.inner, styles[this.props.color]]}>
+          <h2 style={styles.title}>{this.props.title}</h2>
+          <span style={styles.client}>{this.props.client}</span>
+          <Link style={styles.link} to={url}></Link>
         </div>
       </div>
     )
@@ -28,10 +24,10 @@ class GridBlock extends Component {
 const styles = {
   block: {
     position: 'relative',
-    width: 'calc(100% + 10px)',
-    left: '-5px',
+    width: 'calc(100% + 2px)',
+    left: '-1px',
     verticalAlign: 'top',
-    transition: '0.2s',
+    transition: '0.2s transform',
 
     ':hover': {
       transform: 'scale(0.98)'
@@ -43,54 +39,81 @@ const styles = {
       display: 'inline-block'
     }
   },
+  lastChild: {
+    marginBottom: '50px'
+  },
   inner: {
-    margin: '5px',
-    color: color.white
+    margin: '1px',
+    backgroundColor: color.blue,
+    color: color.white,
+    overflow: 'hidden',
+    transition: '0.2s'
   },
   link: {
     display: 'block',
     border: 'none',
     position: 'relative',
     height: '320px',
-    overflow: 'hidden',
-    padding: '30px 20px',
+    zIndex: '1',
   },
   title: {
+    width: '100%',
+    textAlign: 'center',
+    position: 'absolute',
+    top: '50%',
+    transform: 'translateY(-50%)',
     fontSize: type.mega,
     lineHeight: '1',
-    marginBottom: '20px'
+    padding: '20px'
   },
-  summary: {
-    fontSize: type.gamma,
-    opacity: '0.6',
-    lineHeight: '1.3'
+  client: {
+    width: '100%',
+    textAlign: 'center',
+    position: 'absolute',
+    bottom: '20px',
+    opacity: '0.6'
   },
 
   intranet: {
-    backgroundColor: color.intranet
+    ':hover': {
+      backgroundColor: color.intranet
+    }
   },
   education: {
-    backgroundColor: color.education
+    ':hover': {
+      backgroundColor: color.education
+    }
   },
   metrik: {
-    backgroundColor: color.metrik
+    ':hover': {
+      backgroundColor: color.metrik
+    }
   },
   people: {
-    backgroundColor: color.people
+    ':hover': {
+      backgroundColor: color.people
+    }
   },
   agile: {
-    color: color.black,
-    backgroundColor: color.agile
+    ':hover': {
+      color: color.black,
+      backgroundColor: color.agile
+    }
   },
   express: {
-    backgroundColor: color.express
+    ':hover': {
+      backgroundColor: color.express
+    }
   },
   pebble: {
-    backgroundColor: color.pebble
+    ':hover': {
+      backgroundColor: color.pebble
+    }
   },
   blue: {
-    backgroundColor: color.white,
-    color: color.black
+    ':hover': {
+      backgroundColor: color.black
+    }
   }
 }
 

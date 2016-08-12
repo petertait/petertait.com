@@ -27,7 +27,7 @@ class Work extends Component {
         <Container>
           <Column width='half'>
             <h3>About</h3>
-            <LinkInline link='cv' linkText='Curriculum Vitae' margin='vertical' />
+            <LinkInline link='about/cv' linkText='Curriculum Vitae' margin='vertical' />
           </Column>
           <Column width='half'>
             <div dangerouslySetInnerHTML={{ __html: Content }} />

@@ -86,7 +86,7 @@ class Styles extends Component {
           marginBottom: '60px',
           border: 'none',
           height: '1px',
-          opacity: '0.12'
+          opacity: '0.15'
         },
         'svg path': {
           fill: 'currentColor'

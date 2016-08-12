@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from 'react'
-import scriptLoader from 'react-async-script-loader'
 
-import { color } from '../../../vars'
+import { color, type } from '../../../vars'
 
 import Hero from '../../../components/Hero'
-import Intro from '../../../components/Intro'
-import Gallery from '../../../components/Gallery'
+import Container from '../../../components/Container'
+import Column from '../../../components/Column'
+
+import Intro from './intro.md'
 
 class Intranet extends Component {
   componentWillMount() {
@@ -22,13 +23,25 @@ class Intranet extends Component {
   render() {
     return (
       <div>
-        <Hero headline='Global Intranet.' />
-        <Intro headline='One of the largest Pharma brands set out to centralise and simplify the way their company communicates across multiple departments, languages and locations.' />
+        <Container>
+          <Column width='third'>
 
-        <Gallery />
+          </Column>
+          <Column width='twoThird'>
+            <div style={styles.content} dangerouslySetInnerHTML={{ __html: Intro }} />
+          </Column>
+        </Container>
 
+        <hr />
+        
       </div>
     )
+  }
+}
+
+const styles = {
+  content: {
+
   }
 }
 
