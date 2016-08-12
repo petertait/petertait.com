@@ -5,7 +5,7 @@ export const color = {
   blue: '#0433ff',
   sky: '#e5eeff',
 
-  intranet: '#bc0064',
+  intranet: '#3d1d90',
   education: '#03bcd4',
   people: '#5500C8',
   agile: '#eed900',
@@ -16,7 +16,7 @@ export const color = {
 
 // Typography
 export const type = {
-  tera: '72px',
+  tera: '84px',
   giga: '62px',
   mega: '48px',
   alpha: '38px',

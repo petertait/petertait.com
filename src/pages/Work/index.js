@@ -43,24 +43,25 @@ class Work extends Component {
             url='metrik'
             color='metrik' />
           <GridBlock
-            title='Agile Rebrand'
-            client='AstraZeneca'
-            url='agile-rebrand'
-            color='agile' />
-          <GridBlock
             title='Customer Satisfaction App'
             client='National Express'
             url='customer-satisfaction'
             color='express' />
           <GridBlock
-            title="pebble {code}'s Website"
+            title='Experiments + Hack Days'
+            client='Various Clients'
+            url='experiments'
+            color='blue' />
+          <GridBlock
+            title="pebble's Website"
             client='pebble {code}'
             url='pebble'
             color='pebble' />
           <GridBlock
-            title='Experiments'
-            client='Side Project'
-            color='blue'
+            title='Agile Rebrand'
+            client='AstraZeneca'
+            url='agile-rebrand'
+            color='agile'
             nthChild='lastChild' />
         </div>
       </div>

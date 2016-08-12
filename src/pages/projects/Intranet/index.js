@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 
 import { color, type } from '../../../vars'
 
-import Hero from '../../../components/Hero'
+import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
 
@@ -23,6 +23,8 @@ class Intranet extends Component {
   render() {
     return (
       <div>
+        <HeroFeature headline='Unifying Internal Communication at AstraZeneca' image='intranet' />
+
         <Container>
           <Column width='third'>
 
@@ -31,9 +33,7 @@ class Intranet extends Component {
             <div style={styles.content} dangerouslySetInnerHTML={{ __html: Intro }} />
           </Column>
         </Container>
-
         <hr />
-        
       </div>
     )
   }
