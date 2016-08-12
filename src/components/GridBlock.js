@@ -53,21 +53,16 @@ const styles = {
     position: 'relative',
     height: '320px',
     overflow: 'hidden',
+    padding: '30px 20px',
   },
   title: {
     fontSize: type.mega,
-    position: 'absolute',
-    top: '20px',
-    padding: '20px',
-    lineHeight: '1'
+    lineHeight: '1',
+    marginBottom: '20px'
   },
   summary: {
     fontSize: type.gamma,
     opacity: '0.6',
-    position: 'absolute',
-    bottom: '0',
-    left: '20px',
-    right: '20px',
     lineHeight: '1.3'
   },
 

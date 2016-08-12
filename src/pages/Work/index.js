@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import LazyLoad from 'react-lazy-load';
 import Fluffy from '../../vendor/fluffy'
 
 import { color } from '../../vars'
