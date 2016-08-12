@@ -14,7 +14,7 @@ class ContactForm extends Component {
         <input key='1' style={styles.field} type='text' name='name' placeholder='Full Name' />
         <input key='2' style={styles.field} type='email' name='_replyto' placeholder='Email Address'/>
         <textarea key='3' style={styles.field} type='message' name='message' placeholder='Message'/>
-        <input style={styles.btn} type='submit' value='Send Message &rarr;'/>
+        <input style={styles.btn} type='submit' value='Send message &rarr;'/>
         <input type='hidden' name='_next' value={url} />
       </form>
     )

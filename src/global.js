@@ -81,7 +81,7 @@ class Styles extends Component {
           maxWidth: '100%'
         },
         hr: {
-          backgroundColor: 'currentColor',
+          backgroundColor: 'inherit',
           marginTop: '10px',
           marginBottom: '60px',
           border: 'none',

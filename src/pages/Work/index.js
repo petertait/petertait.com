@@ -3,10 +3,9 @@ import React, { Component, PropTypes } from 'react'
 import { color } from '../../vars'
 
 import Hero from '../../components/Hero'
-import Mosaic from '../../components/Mosaic'
-import MosaicBlock from '../../components/MosaicBlock'
+import GridBlock from '../../components/GridBlock'
 
-class About extends Component {
+class Work extends Component {
   componentWillMount() {
     this.state = {
       theme: {
@@ -22,25 +21,21 @@ class About extends Component {
     return (
       <div>
         <Hero headline='Selected Works.' />
-        <Mosaic title='Recent Work'>
-          <MosaicBlock
+        <div className='container'>
+          <GridBlock
             title='Global Intranet'
             summary='Lead design and frontend developer of a global intranet spanning over 10 languages and 80 thousand daily users.'
-            link='/work/intranet'
             project='intranet'
-            color='pink'
-            width='twoThird' />
-          <MosaicBlock
-            title='Global Intranet'
-            summary='Lead design and frontend developer of a global intranet spanning over 10 languages and 80 thousand daily users.'
-            link='/work/intranet'
-            project='intranet'
-            color='pink'
             width='third' />
-        </Mosaic>
+          <GridBlock
+            title='Remote Education App'
+            summary='Lead design and frontend developer of a global intranet spanning over 10 languages and 80 thousand daily users.'
+            project='education'
+            width='third' />
+        </div>
       </div>
     )
   }
 }
 
-export default About
+export default Work
