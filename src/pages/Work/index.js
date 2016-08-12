@@ -9,8 +9,8 @@ class Work extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: color.black,
-        secondary: color.white
+        primary: color.sky,
+        secondary: color.blue
       }
     }
     document.body.style.backgroundColor = this.state.theme.primary
@@ -20,18 +20,48 @@ class Work extends Component {
   render() {
     return (
       <div>
-        <Hero headline='Selected Works.' />
+        <Hero headline='Selected Work.' />
         <div className='container'>
           <GridBlock
             title='Global Intranet'
-            summary='Lead design and frontend developer of a global intranet spanning over 10 languages and 80 thousand daily users.'
-            project='intranet'
-            width='third' />
+            client='AstraZeneca'
+            url='intranet'
+            color='intranet' />
           <GridBlock
             title='Remote Education App'
-            summary='Lead design and frontend developer of a global intranet spanning over 10 languages and 80 thousand daily users.'
-            project='education'
-            width='third' />
+            client='Pearson'
+            url='remote-education'
+            color='education' />
+          <GridBlock
+            title='People Search App'
+            client='AstraZeneca'
+            url='people-search'
+            color='people' />
+          <GridBlock
+            title='Metrik Typeface'
+            client='Side Project'
+            url='metrik'
+            color='metrik' />
+          <GridBlock
+            title='Agile Rebrand'
+            client='AstraZeneca'
+            url='agile-rebrand'
+            color='agile' />
+          <GridBlock
+            title='Customer Satisfaction App'
+            client='National Express'
+            url='customer-satisfaction'
+            color='express' />
+          <GridBlock
+            title="pebble {code}'s Website"
+            client='pebble {code}'
+            url='pebble'
+            color='pebble' />
+          <GridBlock
+            title='Experiments'
+            client='Side Project'
+            color='blue'
+            nthChild='lastChild' />
         </div>
       </div>
     )

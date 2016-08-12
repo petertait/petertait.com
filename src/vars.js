@@ -2,14 +2,16 @@
 export const color = {
   white: '#fff',
   black: '#151820',
-  grey: '#ddd',
   blue: '#0433ff',
-  teal: '#4dded4',
-  aqua: '#27cae4',
   sky: '#e5eeff',
-  pink: '#bc0064',
-  green: '#00e39c',
-  yellow: '#eed900'
+
+  intranet: '#bc0064',
+  education: '#03bcd4',
+  people: '#5500C8',
+  agile: '#eed900',
+  express: '#bc2487',
+  metrik: '#00bc01',
+  pebble: '#ed517f',
 }
 
 // Typography
@@ -24,8 +26,8 @@ export const type = {
   epsilon: '14px',
   zeta: '12px',
 
-  fontRegular: '400',
-  fontBold: '700',
+  fontRegular: 'normal',
+  fontBold: 'bold',
   fontMono: 'Iosevka, monospace',
   fontSans: 'apercu, sans-serif',
 

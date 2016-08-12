@@ -81,12 +81,12 @@ class Styles extends Component {
           maxWidth: '100%'
         },
         hr: {
-          backgroundColor: 'inherit',
+          backgroundColor: 'currentColor',
           marginTop: '10px',
           marginBottom: '60px',
           border: 'none',
           height: '1px',
-          opacity: '0.12'
+          opacity: '0.15'
         },
         'svg path': {
           fill: 'currentColor'

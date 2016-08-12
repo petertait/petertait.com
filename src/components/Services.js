@@ -39,10 +39,12 @@ const styles = {
     borderBottom: '1px solid rgba(255,255,255,0.2)',
     paddingTop: '50px',
     paddingBottom: '50px',
+    marginBottom: '50px',
 
     [breakpoint.medium]: {
       paddingTop: '60px',
-      paddingBottom: '60px'
+      paddingBottom: '60px',
+      marginBottom: '60px',
     }
   },
   services: {

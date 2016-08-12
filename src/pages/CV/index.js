@@ -37,7 +37,7 @@ class CV extends Component {
           </Column>
         </Container>
 
-        <hr style={styles.hr}/>
+        <hr />
 
         <Container>
           <Column width='full' headline='Work' />
@@ -74,7 +74,7 @@ class CV extends Component {
           </Column>
         </Container>
 
-        <hr style={styles.hr}/>
+        <hr />
 
         <Container>
           <Column width='full' headline='Education' />
