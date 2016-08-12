@@ -10,7 +10,9 @@ class Nav extends Component {
     const active = { borderBottom: '1px solid' }
     return (
       <nav style={styles.nav}>
-        
+        <span style={styles.link}>
+          <Link style={styles.inner} to="/work" activeStyle={active}>Work</Link>
+        </span>
         <span style={styles.link}>
           <Link style={styles.inner} to="/about" activeStyle={active}>About</Link>
         </span>

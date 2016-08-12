@@ -4,8 +4,9 @@ import { color } from '../../vars'
 
 import Hero from '../../components/Hero'
 import Mosaic from '../../components/Mosaic'
+import MosaicBlock from '../../components/MosaicBlock'
 
-class Home extends Component {
+class About extends Component {
   componentWillMount() {
     this.state = {
       theme: {
@@ -21,10 +22,25 @@ class Home extends Component {
     return (
       <div>
         <Hero headline='Selected Works.' />
-        <Mosaic />
+        <Mosaic title='Recent Work'>
+          <MosaicBlock
+            title='Global Intranet'
+            summary='Lead design and frontend developer of a global intranet spanning over 10 languages and 80 thousand daily users.'
+            link='/work/intranet'
+            project='intranet'
+            color='pink'
+            width='twoThird' />
+          <MosaicBlock
+            title='Global Intranet'
+            summary='Lead design and frontend developer of a global intranet spanning over 10 languages and 80 thousand daily users.'
+            link='/work/intranet'
+            project='intranet'
+            color='pink'
+            width='third' />
+        </Mosaic>
       </div>
     )
   }
 }
 
-export default Home
+export default About

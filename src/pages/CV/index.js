@@ -31,8 +31,8 @@ class CV extends Component {
       <div>
         <Hero headline='Curriculum Vitae' />
         <Container>
-          <Column width='third' headline='An agile designer with a focus on an interactive and refined process.' />
-          <Column width='twoThird'>
+          <Column width='half' headline='An agile designer with a focus on an interactive and refined process.' />
+          <Column width='half'>
             <div style={styles.content} dangerouslySetInnerHTML={{ __html: Intro }} />
           </Column>
         </Container>
@@ -44,31 +44,31 @@ class CV extends Component {
         </Container>
 
         <Container>
-          <Column width='third'>
+          <Column width='half'>
             <h3 style={styles.h3}>{'pebble {code}'}</h3>
             <h4 style={styles.h4}>July 2014–present</h4>
           </Column>
-          <Column width='twoThird'>
+          <Column width='half'>
             <h3 style={styles.h3}>Senior UI/UX Designer</h3>
             <div style={styles.content} dangerouslySetInnerHTML={{ __html: Pebble }} />
           </Column>
         </Container>
         <Container>
-          <Column width='third'>
+          <Column width='half'>
             <h3 style={styles.h3}>Freelance</h3>
             <h4 style={styles.h4}>2010–2014</h4>
           </Column>
-          <Column width='twoThird'>
+          <Column width='half'>
             <h3 style={styles.h3}>Designer and frontend developer</h3>
             <div style={styles.content} dangerouslySetInnerHTML={{ __html: Freelance }} />
           </Column>
         </Container>
         <Container>
-          <Column width='third'>
+          <Column width='half'>
             <h3 style={styles.h3}>Electronic Ink</h3>
             <h4 style={styles.h4}>April 2012–July 2012 <br/> March 2011–Sept 2011</h4>
           </Column>
-          <Column width='twoThird'>
+          <Column width='half'>
             <h3 style={styles.h3}>Visual Designer</h3>
             <div style={styles.content} dangerouslySetInnerHTML={{ __html: Eink }} />
           </Column>

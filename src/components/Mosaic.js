@@ -7,8 +7,8 @@ import { breakpoint } from '../vars'
 class Mosaic extends Component {
   render() {
     return (
-      <div style={styles.mosaic}>
-        <div style={styles.item} />
+      <div className='container' style={styles.mosaic}>
+        <h3>{this.props.title}</h3>
         {this.props.children}
       </div>
     )

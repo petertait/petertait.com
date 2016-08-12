@@ -17,13 +17,13 @@ Visit the site at http://petertait.com
 ## Getting Started
 
 ```sh
-$ npm install
+npm install
 ```
 
 Start the local dev server:
 
 ```sh
-$ npm start
+npm start
 ```
 
 Navigate to **http://localhost:8080/** to view the app.
@@ -33,19 +33,21 @@ Navigate to **http://localhost:8080/** to view the app.
 ## Build for Production
 
 ```sh
-$ npm run build
+npm run build
 ```
-
-**Input:** `src/app.js`
-
-**Output:** `build/app.js`
 
 <br>
 
 ## Clean
 
 ```sh
-$ npm run clean
+npm run clean
 ```
 
-**Input:** `build/app.js`
+<br>
+
+## Publish to surge.sh
+
+```sh
+npm run publish
+```

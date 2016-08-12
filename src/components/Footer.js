@@ -3,7 +3,7 @@ import Radium from 'radium'
 
 import { breakpoint, layout } from '../vars'
 
-import SocialButtons from '../components/SocialButtons'
+import Social from '../components/Social'
 
 @Radium
 class Footer extends Component {
@@ -13,7 +13,7 @@ class Footer extends Component {
     return (
       <footer className='container' style={styles.footer}>
         <div style={styles.legal}>{year + ' © Peter Tait Ltd.'}</div>
-        <SocialButtons/>
+        <Social />
       </footer>
     )
   }

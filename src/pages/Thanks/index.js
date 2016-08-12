@@ -5,7 +5,6 @@ import { color } from '../../vars'
 import Hero from '../../components/Hero'
 import Container from '../../components/Container'
 import Column from '../../components/Column'
-import SocialButtons from '../../components/SocialButtons'
 
 class Thanks extends Component {
   componentWillMount() {

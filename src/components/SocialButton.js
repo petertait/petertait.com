@@ -4,17 +4,12 @@ import Isvg from 'react-inlinesvg'
 
 import { breakpoint, color } from '../vars'
 
-import SocialButton from './SocialButton'
-
 @Radium
-class Social extends Component {
+class SocialButton extends Component {
   render() {
+    const icon = '../images/' + this.props.icon + '.svg'
     return (
-      <div>
-        <SocialButton link='mailto:contact@petertait.com' icon='email' />
-        <SocialButton link='http://github.com/petertait' icon='github' />
-        <SocialButton link='http://twitter.com/peter_tait' icon='twitter' />
-      </div>
+      <a style={styles.btn} href={this.props.link} target='_blank'><Isvg src={icon} /></a>
     )
   }
 }
@@ -35,4 +30,4 @@ const styles = {
   }
 }
 
-export default Social
+export default SocialButton

@@ -42,7 +42,7 @@ class Styles extends Component {
           '-webkit-font-smoothing': 'antialiased',
           fontFamily: type.fontSans,
           fontSize: type.beta,
-          lineHeight: '1.2'
+          lineHeight: '1.3'
         },
         h3: {
           fontWeight: type.fontRegular,

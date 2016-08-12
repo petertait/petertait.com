@@ -3,12 +3,13 @@ export const color = {
   white: '#fff',
   black: '#151820',
   grey: '#ddd',
-  green: '#00e39c',
-  yellow: '#eed900',
   blue: '#0433ff',
   teal: '#4dded4',
   aqua: '#27cae4',
-  sky: '#e5eeff'
+  sky: '#e5eeff',
+  pink: '#bc0064',
+  green: '#00e39c',
+  yellow: '#eed900'
 }
 
 // Typography
