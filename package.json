@@ -30,6 +30,7 @@
     "json-loader": "^0.5.4",
     "markdown-loader": "^0.1.7",
     "radium": "^0.18.1",
+    "react-async-script-loader": "^0.2.1",
     "react-inlinesvg": "^0.5.3",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",

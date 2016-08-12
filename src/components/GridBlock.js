@@ -8,15 +8,16 @@ import { breakpoint, color, type } from '../vars'
 @Radium
 class GridBlock extends Component {
   render() {
-    const thumb = {
-      backgroundImage: 'url(../images/work/' + this.props.project + '/thumb.png)'
-    }
     const url = 'work/' + this.props.project
+    const color = {
+      color: this.props.color
+    }
     return (
       <div style={[styles.block, styles[this.props.width]]}>
-        <div style={[styles.inner, styles[this.props.color], thumb]}>
+        <div style={[styles.inner, styles[this.props.color]]}>
           <Link style={styles.link} to={url}>
             <h2 style={styles.title}>{this.props.title}</h2>
+            <p style={styles.summary}>{this.props.summary}</p>
           </Link>
         </div>
       </div>
@@ -26,61 +27,75 @@ class GridBlock extends Component {
 
 const styles = {
   block: {
+    position: 'relative',
+    width: 'calc(100% + 10px)',
+    left: '-5px',
     verticalAlign: 'top',
     transition: '0.2s',
 
     ':hover': {
-      transform: 'scale(0.98)',
-      boxShadow: 'inset 0 0 0 10px white',
+      transform: 'scale(0.98)'
     },
 
     [breakpoint.medium]: {
-      display: 'inline-block',
-      marginLeft: '-4px',
+      left: '0',
+      width: '33.33%',
+      display: 'inline-block'
     }
   },
   inner: {
     margin: '5px',
+    color: color.white
   },
   link: {
     display: 'block',
     border: 'none',
     position: 'relative',
-    height: '300px'
+    height: '320px',
+    overflow: 'hidden',
   },
   title: {
-    fontFamily: type.fontMono,
     fontSize: type.mega,
     position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    padding: '10px',
-    textAlign: 'center',
-    lineHeight: '1.1'
+    top: '20px',
+    padding: '20px',
+    lineHeight: '1'
+  },
+  summary: {
+    fontSize: type.gamma,
+    opacity: '0.6',
+    position: 'absolute',
+    bottom: '0',
+    left: '20px',
+    right: '20px',
+    lineHeight: '1.3'
   },
 
-  full: {
-    [breakpoint.medium]: {
-      width: '100%'
-    }
+  intranet: {
+    backgroundColor: color.intranet
   },
-  half: {
-    [breakpoint.medium]: {
-      width: '50%'
-    }
+  education: {
+    backgroundColor: color.education
   },
-  third: {
-    [breakpoint.medium]: {
-      width: '33.33%'
-    }
+  metrik: {
+    backgroundColor: color.metrik
   },
-  twoThird: {
-    [breakpoint.medium]: {
-      width: '66.66%'
-    }
+  people: {
+    backgroundColor: color.people
   },
-  pink: {
-    backgroundColor: color.pink
+  agile: {
+    color: color.black,
+    backgroundColor: color.agile
+  },
+  express: {
+    backgroundColor: color.express
+  },
+  pebble: {
+    backgroundColor: color.pebble
+  },
+  blue: {
+    backgroundColor: color.white,
+    color: color.black
   }
 }
 
