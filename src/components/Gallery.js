@@ -3,6 +3,8 @@ import Radium from 'radium'
 
 import { breakpoint } from '../vars'
 
+import Fluffy from '../vendor/fluffy'
+
 @Radium
 class Gallery extends Component {
   render() {
@@ -19,6 +21,8 @@ class Gallery extends Component {
   }
 }
 
-const styles = {}
+const styles = {
+
+}
 
 export default Gallery
