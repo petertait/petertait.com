@@ -27,17 +27,22 @@ const styles = {
     position: 'relative',
     top: '-150px',
     paddingTop: '150px',
-    marginBottom: '-100px',
+    marginBottom: '-200px',
     backgroundSize: 'cover',
+    backgroundPosition: 'center',
     zIndex: '-1',
+
+    [breakpoint.medium]: {
+      marginBottom: '-170px',
+    }
   },
   inner: {
-    textAlign: 'center',
-    padding: '80px 20px 160px',
+    padding: '50px 0 120px',
     position: 'relative',
     zIndex: '3',
 
     [breakpoint.medium]: {
+      textAlign: 'center',
       padding: '80px 20px 200px'
     }
   },
@@ -50,7 +55,16 @@ const styles = {
     backgroundImage: 'linear-gradient(transparent 30%, #3d1d90)'
   },
   title: {
-    fontSize: type.tera
+    fontSize: type.mega,
+    textShadow: '0 0 40px rgba(0,0,0, 0.3)',
+
+    [breakpoint.small]: {
+      fontSize: type.giga
+    },
+
+    [breakpoint.medium]: {
+      fontSize: type.tera
+    }
   }
 }
 

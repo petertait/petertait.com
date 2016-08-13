@@ -23,14 +23,14 @@ class GridBlock extends Component {
 
 const styles = {
   block: {
+    padding: '1px',
     position: 'relative',
-    width: 'calc(100% + 2px)',
-    left: '-1px',
     verticalAlign: 'top',
     transition: '0.2s transform',
 
     ':hover': {
-      transform: 'scale(0.98)'
+      transform: 'scale(1.03)',
+      zIndex: '1'
     },
 
     [breakpoint.medium]: {
@@ -43,8 +43,9 @@ const styles = {
     marginBottom: '50px'
   },
   inner: {
-    margin: '1px',
     backgroundColor: color.blue,
+    backgroundSize: 'auto 100%',
+    backgroundPosition: 'center',
     color: color.white,
     overflow: 'hidden',
     transition: '0.2s'
@@ -64,7 +65,8 @@ const styles = {
     transform: 'translateY(-50%)',
     fontSize: type.mega,
     lineHeight: '1',
-    padding: '20px'
+    padding: '20px',
+    textShadow: '0 0 40px rgba(0,0,0, 0.5)'
   },
   client: {
     width: '100%',
@@ -75,8 +77,9 @@ const styles = {
   },
 
   intranet: {
+    backgroundImage: 'url(../images/work/intranet/hero.png)',
     ':hover': {
-      backgroundColor: color.intranet
+      backgroundSize: 'auto 105%',
     }
   },
   education: {

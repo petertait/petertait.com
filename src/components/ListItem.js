@@ -20,8 +20,7 @@ const styles = {
   item: {
     borderBottom: 'none',
     marginBottom: '15px',
-    display: 'table',
-    cursor: 'not-allowed'
+    display: 'table'
   },
   title: {
     WebkitFontSmoothing: 'antialiased',

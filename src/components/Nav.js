@@ -32,7 +32,7 @@ const styles = {
     marginLeft: '20px',
 
     [breakpoint.medium]: {
-      marginLeft: '40px'
+      marginLeft: '50px'
     }
   },
   inner: {

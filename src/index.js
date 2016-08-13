@@ -1,6 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory, applyRouterMiddleware } from 'react-router'
+import { useScroll } from 'react-router-scroll'
 
 import App from './App'
 import Home from './pages/Home'
@@ -13,7 +14,9 @@ import Work from './pages/Work'
 import Intranet from './pages/projects/Intranet'
 
 render((
-  <Router history={browserHistory}>
+  <Router
+    history={browserHistory}
+    render={applyRouterMiddleware(useScroll())}>
     <Route path={'/'} component={App}>
       <IndexRoute component={Home} />
       <Route path='about' component={About} />

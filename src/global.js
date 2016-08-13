@@ -62,6 +62,9 @@ class Styles extends Component {
         'a:hover': {
           opacity: '0.7'
         },
+        img: {
+          maxWidth: '100%'
+        },
         li: {
           listStyle: 'none'
         },

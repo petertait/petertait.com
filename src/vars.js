@@ -20,7 +20,7 @@ export const type = {
   giga: '62px',
   mega: '48px',
   alpha: '38px',
-  beta: '24px',
+  beta: '26px',
   gamma: '20px',
   delta: '16px',
   epsilon: '14px',

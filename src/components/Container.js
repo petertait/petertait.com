@@ -16,6 +16,7 @@ class Container extends Component {
 
 const styles = {
   container: {
+    flexWrap: 'wrap',
     justifyContent: 'space-between',
     padding: '0 0 30px',
 
