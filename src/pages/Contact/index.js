@@ -30,7 +30,7 @@ class Contact extends Component {
               <AnchorInline link='mailto:contact@petertait.com' linkText='Send me an email' margin='vertical' />
             </Column>
             <Column width='half'>
-              <ContactForm />
+              <ContactForm color='blue' />
             </Column>
           </Container>
       </div>

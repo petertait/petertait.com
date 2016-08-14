@@ -14,7 +14,7 @@ class ContactForm extends Component {
         <input key='1' style={styles.field} type='text' name='name' placeholder='Full Name' />
         <input key='2' style={styles.field} type='email' name='_replyto' placeholder='Email Address'/>
         <textarea key='3' style={styles.field} type='message' name='message' placeholder='Message'/>
-        <input style={styles.btn} type='submit' value='Send message &rarr;'/>
+        <input style={[styles.btn, styles[this.props.color]]} type='submit' value='Send message &rarr;'/>
         <input type='hidden' name='_next' value={url} />
       </form>
     )
@@ -45,14 +45,23 @@ const styles = {
     backgroundColor: 'transparent',
     color: 'inherit',
     width: 'auto',
-    border: '3px solid',
+    borderWidth: '2px',
+    borderStyle: 'solid',
+    borderColor: 'inherit',
     marginTop: '5px',
     padding: '8px 25px 8px 35px',
     transition: '0.2s',
     cursor: 'pointer',
 
     ':hover': {
-      opacity: '0.7'
+      opacity: '1'
+    }
+  },
+  blue: {
+    ':hover': {
+      backgroundColor: color.blue,
+      color: color.white,
+      borderColor: color.blue
     }
   }
 }
