@@ -5,14 +5,14 @@ import { color } from '../../../vars'
 import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
+import Gallery from '../../../components/Gallery'
 import ClientLogo from '../../../components/ClientLogo'
-import ProjectDetails from '../../../components/ProjectDetails'
+import ListBlock from '../../../components/ListBlock'
 import Image from '../../../components/Image'
 
-import Intro from './intro.md'
-import Design from './design.md'
-import System from './system.md'
-import Brand from './brand.md'
+import IntroContent from './intro.md'
+import ProductContent from './product.md'
+import VideoContent from './video.md'
 
 class Education extends Component {
   componentWillMount() {
@@ -36,8 +36,15 @@ class Education extends Component {
       { name: 'Lead frontend development' },
       { name: 'Responsive webapp design' }
     ]
+    const screens = [
+      { url: 'http://placehold.it/350x150', alt: 'this is an image' },
+      { url: 'http://placehold.it/350x150', alt: 'this is an image1' },
+      { url: 'http://placehold.it/350x150', alt: 'this is an image2' },
+      { url: 'http://placehold.it/350x150', alt: 'this is an image3' }
+    ]
     return (
       <div>
+        <Gallery images={screens}/>
         <HeroFeature headline='Workforce Education for the Digital Age' image='education' />
         <Container>
           <Column width='third'>
@@ -46,27 +53,40 @@ class Education extends Component {
           <Column
             width='twoThird'
             intro='Pearson wanted a new way to educate a workforce and increase their reach across a larger audience.'
-            content={Intro}>
-            <ProjectDetails title='Project Involvement' items={involvement} />
+            content={IntroContent}>
+            <ListBlock title='Project Involvement' items={involvement} />
           </Column>
         </Container>
         <hr />
         <Container>
           <Column
             width='third'
-            headline='User-centered design for a global audience. Built up from an MVP into a product.' />
+            headline='Brief: Transformation from an 800+ powerpoint to an energetic and educational product.' />
           <Column
             width='twoThird'
-            content={Design} />
+            content={ProductContent} />
           <Column width='full'>
             <Image
               position='marginBottomNegative'
-              url='../images/work/nucleus/devices.png'
-              alt='Intranet shown on multiple devices' />
+              url='../images/work/education/devices.png'
+              alt='Pearson Education Course shown on multiple devices' />
           </Column>
         </Container>
         <hr />
-
+        <Container>
+          <Column
+            width='third'
+            headline='Enough with the text. With talking head videos, users felt engaged again.' />
+          <Column
+            width='twoThird'
+            content={VideoContent} />
+          <Column width='full'>
+          <Image
+            url='../images/work/education/devices-video.png'
+            alt='Pearson Education Course shown on multiple devices' />
+          </Column>
+        </Container>
+        <hr />
       </div>
     )
   }

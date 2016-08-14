@@ -27,7 +27,6 @@ const styles = {
     position: 'relative',
     padding: '10px 15px',
     border: '1px solid',
-    borderColor: 'inherit',
     marginBottom: '-1px',
     transition: '0.2s',
     color: 'inherit',

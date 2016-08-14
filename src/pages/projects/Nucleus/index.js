@@ -5,14 +5,16 @@ import { color } from '../../../vars'
 import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
+import Gallery from '../../../components/Gallery'
 import ClientLogo from '../../../components/ClientLogo'
-import ProjectDetails from '../../../components/ProjectDetails'
+import ListBlock from '../../../components/ListBlock'
+import GridBlock from '../../../components/GridBlock'
 import Image from '../../../components/Image'
 
-import Intro from './intro.md'
-import Design from './design.md'
-import System from './system.md'
-import Brand from './brand.md'
+import IntroContent from './intro.md'
+import DesignContent from './design.md'
+import SystemContent from './system.md'
+import BrandContent from './brand.md'
 
 class Nucleus extends Component {
   componentWillMount() {
@@ -37,8 +39,15 @@ class Nucleus extends Component {
       { name: 'Atomic design system' },
       { name: 'Responsive webapp design' }
     ]
+    const screens = [
+      { url: 'http://placehold.it/350x150', alt: 'this is an image' },
+      { url: 'http://placehold.it/350x150', alt: 'this is an image1' },
+      { url: 'http://placehold.it/350x150', alt: 'this is an image2' },
+      { url: 'http://placehold.it/350x150', alt: 'this is an image3' }
+    ]
     return (
       <div>
+        <Gallery images={screens}/>
         <HeroFeature headline='Unifying Internal Communication at AstraZeneca' image='nucleus' />
         <Container>
           <Column width='third'>
@@ -47,8 +56,8 @@ class Nucleus extends Component {
           <Column
             width='twoThird'
             intro='Inconsistencies in communication hampered the business process. AstraZeneca needed a scalable platform to share insights.'
-            content={Intro}>
-            <ProjectDetails title='Project Involvement' items={involvement} />
+            content={IntroContent}>
+            <ListBlock title='Project Involvement' items={involvement} />
           </Column>
         </Container>
         <hr />
@@ -58,7 +67,7 @@ class Nucleus extends Component {
             headline='User-centered design for a global audience. Built up from an MVP into a product.' />
           <Column
             width='twoThird'
-            content={Design} />
+            content={DesignContent} />
           <Column width='full'>
             <Image
               position='marginBottomNegative'
@@ -74,7 +83,7 @@ class Nucleus extends Component {
           </Column>
           <Column
             width='twoThird'
-            content={System} />
+            content={SystemContent} />
           <Column width='full'>
             <Image
               url='../images/work/nucleus/components.png'
@@ -88,7 +97,7 @@ class Nucleus extends Component {
             headline='A brand that communicates a new direction.' />
           <Column
             width='twoThird'
-            content={Brand}>
+            content={BrandContent}>
             <Image
               type='background'
               url='../images/work/nucleus/atom.svg'

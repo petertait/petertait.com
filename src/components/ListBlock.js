@@ -4,7 +4,7 @@ import Radium from 'radium'
 import { breakpoint, type } from '../vars'
 
 @Radium
-class ProjectDetails extends Component {
+class ListBlock extends Component {
   render() {
     const listItems = this.props.items.map(function(item) {
       return (
@@ -31,7 +31,7 @@ const styles = {
   },
   listItem: {
     fontSize: type.delta,
-    borderBottom: '1px solid rgba(255,255,255, 0.2)',
+    borderBottom: '1px solid rgba(255,255,255, 0.25)',
     paddingBottom: '5px',
     opacity: '0.7',
     margin: '10px',
@@ -44,4 +44,4 @@ const styles = {
   }
 }
 
-export default ProjectDetails
+export default ListBlock

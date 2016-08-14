@@ -1,3 +1,3 @@
-AstraZeneca is one of the largest Pharmaceutical companies in the world. The company is spread across multiple continents with over 80,000 employees that speak a multitude of languages. This scenario resulted in each internal business sector, country and pretty much any group creating their own communication system that would work for their needs.
+Current safety in the workplace courses consist of 800+ powerpoint slides shoved into two full working days. Employees are often forced into the course and made to leave work for these two days.
 
-There was no centralised way for the company to communicate or share insights.
+Our aim was to bring some enjoyment back into learning and make the course more insightful for both employers and employees – whilst still being IOSH accredited.
