@@ -26,8 +26,7 @@ const styles = {
     backgroundColor: 'transparent',
     position: 'relative',
     padding: '10px 15px',
-    borderWidth: '1px',
-    borderStyle: 'solid',
+    border: '1px solid',
     borderColor: 'inherit',
     marginBottom: '-1px',
     transition: '0.2s',
@@ -51,11 +50,7 @@ const styles = {
     marginTop: '5px',
     padding: '8px 25px 8px 35px',
     transition: '0.2s',
-    cursor: 'pointer',
-
-    ':hover': {
-      opacity: '1'
-    }
+    cursor: 'pointer'
   },
   blue: {
     ':hover': {

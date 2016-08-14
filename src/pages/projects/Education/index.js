@@ -45,7 +45,7 @@ class Education extends Component {
           </Column>
           <Column
             width='twoThird'
-            intro='Inconsistencies in communication hampered the business process. AstraZeneca needed a scalable platform to share insights.'
+            intro='Pearson wanted a new way to educate a workforce and increase their reach across a larger audience.'
             content={Intro}>
             <ProjectDetails title='Project Involvement' items={involvement} />
           </Column>
@@ -66,38 +66,7 @@ class Education extends Component {
           </Column>
         </Container>
         <hr />
-        <Container>
-          <Column
-            width='third'
-            headline='Unifiying communication into one central system.'>
-          </Column>
-          <Column
-            width='twoThird'
-            content={System} />
-          <Column width='full'>
-            <Image
-              url='../images/work/nucleus/components.png'
-              alt='Intranet is made up of many different components' />
-          </Column>
-        </Container>
-        <hr />
-        <Container>
-          <Column
-            width='third'
-            headline='A brand that communicates a new direction.' />
-          <Column
-            width='twoThird'
-            content={Brand}>
-            <Image
-              type='background'
-              url='../images/work/nucleus/atom.svg'
-              alt=' ' />
-            <Image
-              type='logo'
-              url='../images/work/nucleus/logo.svg'
-              alt='Nucleus logo in monotone' />
-          </Column>
-        </Container>
+
       </div>
     )
   }
