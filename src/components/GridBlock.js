@@ -29,12 +29,11 @@ const styles = {
     transition: '0.2s transform',
 
     ':hover': {
-      transform: 'scale(1.03)',
+      transform: 'scale(1.04)',
       zIndex: '1'
     },
 
     [breakpoint.medium]: {
-      left: '0',
       width: '33.33%',
       display: 'inline-block'
     }
@@ -44,7 +43,7 @@ const styles = {
   },
   inner: {
     backgroundColor: color.blue,
-    backgroundSize: 'auto 100%',
+    backgroundSize: 'cover',
     backgroundPosition: 'center',
     color: color.white,
     overflow: 'hidden',
@@ -77,10 +76,7 @@ const styles = {
   },
 
   intranet: {
-    backgroundImage: 'url(../images/work/intranet/hero.png)',
-    ':hover': {
-      backgroundSize: 'auto 105%',
-    }
+    backgroundImage: 'url(../images/work/intranet/thumb.png)'
   },
   education: {
     ':hover': {

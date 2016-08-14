@@ -1,16 +1,18 @@
 import React, { Component, PropTypes } from 'react'
 
-import { color, type } from '../../../vars'
+import { color, breakpoint } from '../../../vars'
 
 import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
 import ProjectDetails from '../../../components/ProjectDetails'
-import ProjectImage from '../../../components/ProjectImage'
+import Image from '../../../components/Image'
 
 import Intro from './intro.md'
 import Design from './design.md'
+import System from './system.md'
+import Brand from './brand.md'
 
 class Intranet extends Component {
   componentWillMount() {
@@ -44,7 +46,7 @@ class Intranet extends Component {
           </Column>
           <Column
             width='twoThird'
-            intro='An agile designer with a focus on an interactive and refined process.'
+            intro='Inconsistencies in communication hampered the business process. AstraZeneca needed a scalable platform to share insights.'
             content={Intro}>
             <ProjectDetails title='Project Involvement' items={involvement} />
           </Column>
@@ -58,8 +60,9 @@ class Intranet extends Component {
             width='twoThird'
             content={Design} />
           <Column width='full'>
-            <ProjectImage
-              url='../images/work/intranet/responsive-devices.png'
+            <Image
+              position='marginBottomNegative'
+              url='../images/work/intranet/devices.png'
               alt='Intranet shown on multiple devices' />
           </Column>
         </Container>
@@ -71,11 +74,11 @@ class Intranet extends Component {
           </Column>
           <Column
             width='twoThird'
-            content={Design} />
+            content={System} />
           <Column width='full'>
-            <ProjectImage
+            <Image
               url='../images/work/intranet/components.png'
-              alt='Intranet shown on multiple devices' />
+              alt='Intranet is made up of many different components' />
           </Column>
         </Container>
         <hr />
@@ -85,7 +88,16 @@ class Intranet extends Component {
             headline='A brand that communicates a new direction.' />
           <Column
             width='twoThird'
-            content={Design} />
+            content={Brand}>
+            <Image
+              type='background'
+              url='../images/work/intranet/atom.svg'
+              alt=' ' />
+            <Image
+              type='logo'
+              url='../images/work/intranet/logo.svg'
+              alt='Nucleus logo in monotone' />
+          </Column>
         </Container>
       </div>
     )
@@ -93,7 +105,6 @@ class Intranet extends Component {
 }
 
 const styles = {
-
 }
 
 export default Intranet

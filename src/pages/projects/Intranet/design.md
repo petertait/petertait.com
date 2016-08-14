@@ -1,5 +1,5 @@
-I'm Peter, currently based in Bath/London working as a user experience and interface designer at pebble {code} – digital innovation consultancy.
+Traditionally intranets just aren't very good, they quickly become abandoned with old information and  become a burden to maintain. Instead we decided to create an MVP to initiate enthusiasm for a product that AstraZeneca can continuously improve.
 
-Having gained a first-class honours degree in graphic design at the University of Southampton, I've established a focus on an interactive and refined process.
+Instead of the tradition intranet of message boards, weather widgets and whatever other widget can be shoehorned in – the first release of this platform was simply news. News is a great way for a global company to communicate across different countries. A Chinese reader can feel more engaged with the company if they are reading daily news of what's happening in Sweden for example.
 
-Experienced with clients ranging from global corporations to family firms, including: Intel, AstraZeneca, Pearson, HSBC, National Grid, Lloyds Banking Group, IUCN, National Express, EDF, The World Bank, NG Bailey and APM Technologies.
+Product mapping, wireframing and prototyping led to the initial MVP. The MVP opened up the chance to user-test and see where the product could be validated and enhanced further. Throughout this we had to maintain a strong vision of our goal to improve communication and engagement – not to create another abandoned intranet behemoth.

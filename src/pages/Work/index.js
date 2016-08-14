@@ -23,7 +23,7 @@ class Work extends Component {
         <Hero headline='Selected Work.' />
         <div className='container'>
           <GridBlock
-            title='Global Intranet'
+            title='Nucleus Intranet'
             client='AstraZeneca'
             url='intranet'
             color='intranet' />

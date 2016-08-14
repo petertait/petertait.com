@@ -1,5 +1,3 @@
-I'm Peter, currently based in Bath/London working as a user experience and interface designer at pebble {code} – digital innovation consultancy.
+AstraZeneca is one of the largest Pharmaceutical companies in the world. The company is spread across multiple continents with over 80,000 employees that speak a multitude of languages. This scenario resulted in each internal business sector, country and pretty much any group creating their own communication system that would work for their needs.
 
-Having gained a first-class honours degree in graphic design at the University of Southampton, I've established a focus on an interactive and refined process.
-
-Experienced with clients ranging from global corporations to family firms, including: Intel, AstraZeneca, Pearson, HSBC, National Grid, Lloyds Banking Group, IUCN, National Express, EDF, The World Bank, NG Bailey and APM Technologies.
+There was no centralised way for the company to communicate or share insights.
