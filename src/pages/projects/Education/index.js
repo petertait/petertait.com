@@ -5,14 +5,16 @@ import { color } from '../../../vars'
 import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
-import Gallery from '../../../components/Gallery'
 import ClientLogo from '../../../components/ClientLogo'
 import ListBlock from '../../../components/ListBlock'
 import Image from '../../../components/Image'
+import Video from '../../../components/Video'
+import Button from '../../../components/Button'
 
 import IntroContent from './intro.md'
 import ProductContent from './product.md'
 import VideoContent from './video.md'
+import FasttrackContent from './fasttrack.md'
 
 class Education extends Component {
   componentWillMount() {
@@ -26,6 +28,11 @@ class Education extends Component {
     document.body.style.color = this.state.theme.secondary
   }
 
+  play() {
+    const audio = document.getElementById('audio')
+    audio.play()
+  }
+
   render() {
     const involvement = [
       { name: 'Workflows + product mapping' },
@@ -36,15 +43,9 @@ class Education extends Component {
       { name: 'Lead frontend development' },
       { name: 'Responsive webapp design' }
     ]
-    const screens = [
-      { url: 'http://placehold.it/350x150', alt: 'this is an image' },
-      { url: 'http://placehold.it/350x150', alt: 'this is an image1' },
-      { url: 'http://placehold.it/350x150', alt: 'this is an image2' },
-      { url: 'http://placehold.it/350x150', alt: 'this is an image3' }
-    ]
+
     return (
       <div>
-        <Gallery images={screens}/>
         <HeroFeature headline='Workforce Education for the Digital Age' image='education' />
         <Container>
           <Column width='third'>
@@ -73,20 +74,45 @@ class Education extends Component {
           </Column>
         </Container>
         <hr />
+        <Video
+          url='../media/work/education/demo.mp4'
+          alt='Pearson Education Course shown on multiple devices'
+          type='background'
+          color='education'
+          />
+        <Container>
+          <Column
+            width='third'
+            headline='Through gamification users were challenged to want to learn.' />
+          <Column
+            width='twoThird'
+            content={FasttrackContent}>
+          </Column>
+        </Container>
+        <hr />
         <Container>
           <Column
             width='third'
             headline='Enough with the text. With talking head videos, users felt engaged again.' />
           <Column
             width='twoThird'
-            content={VideoContent} />
+            content={VideoContent}>
+            <Button
+              click={this.play.bind(this)}
+              text='Play Sample Voiceover'
+              icon='play'
+              color='education' />
+            <audio id='audio' preload='auto'>
+              <source src='../media/work/education/voiceover.mp3' type='audio/mp3' />
+              <source src='../media/work/education/voiceover.wav' type='audio/wav' />
+            </audio>
+          </Column>
           <Column width='full'>
-          <Image
-            url='../images/work/education/devices-video.png'
-            alt='Pearson Education Course shown on multiple devices' />
+            <Image
+              url='../images/work/education/devices-video.png'
+              alt='Pearson Education Course shown on multiple devices' />
           </Column>
         </Container>
-        <hr />
       </div>
     )
   }

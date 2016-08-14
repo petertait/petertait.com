@@ -5,7 +5,6 @@ import { color } from '../../../vars'
 import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
-import Gallery from '../../../components/Gallery'
 import ClientLogo from '../../../components/ClientLogo'
 import ListBlock from '../../../components/ListBlock'
 import GridBlock from '../../../components/GridBlock'
@@ -39,15 +38,8 @@ class Nucleus extends Component {
       { name: 'Atomic design system' },
       { name: 'Responsive webapp design' }
     ]
-    const screens = [
-      { url: 'http://placehold.it/350x150', alt: 'this is an image' },
-      { url: 'http://placehold.it/350x150', alt: 'this is an image1' },
-      { url: 'http://placehold.it/350x150', alt: 'this is an image2' },
-      { url: 'http://placehold.it/350x150', alt: 'this is an image3' }
-    ]
     return (
       <div>
-        <Gallery images={screens}/>
         <HeroFeature headline='Unifying Internal Communication at AstraZeneca' image='nucleus' />
         <Container>
           <Column width='third'>
