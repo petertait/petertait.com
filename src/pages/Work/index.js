@@ -25,15 +25,15 @@ class Work extends Component {
           <GridBlock
             title='Nucleus Intranet'
             client='AstraZeneca'
-            url='intranet'
-            color='intranet' />
+            url='nucleus'
+            color='nucleus' />
           <GridBlock
-            title='Remote Education App'
+            title='Remote Education Product'
             client='Pearson'
             url='remote-education'
             color='education' />
           <GridBlock
-            title='People Search App'
+            title='People Search iOS App'
             client='AstraZeneca'
             url='people-search'
             color='people' />

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-import { color, breakpoint } from '../../../vars'
+import { color } from '../../../vars'
 
 import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
@@ -14,11 +14,11 @@ import Design from './design.md'
 import System from './system.md'
 import Brand from './brand.md'
 
-class Intranet extends Component {
+class Education extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: color.intranet,
+        primary: color.education,
         secondary: color.white
       }
     }
@@ -30,19 +30,18 @@ class Intranet extends Component {
     const involvement = [
       { name: 'Workflows + product mapping' },
       { name: 'Wireframing' },
-      { name: 'User testing' },
+      { name: 'Art + film direction' },
       { name: 'Lead design' },
-      { name: 'Branding' },
+      { name: 'Illustration' },
       { name: 'Lead frontend development' },
-      { name: 'Site Optimisation' },
-      { name: 'Responsive Webapp Design' }
+      { name: 'Responsive webapp design' }
     ]
     return (
       <div>
-        <HeroFeature headline='Unifying Internal Communication at AstraZeneca' image='intranet' />
+        <HeroFeature headline='Workforce Education for the Digital Age' image='education' />
         <Container>
           <Column width='third'>
-            <ClientLogo client='astrazeneca' />
+            <ClientLogo client='pearson' />
           </Column>
           <Column
             width='twoThird'
@@ -62,7 +61,7 @@ class Intranet extends Component {
           <Column width='full'>
             <Image
               position='marginBottomNegative'
-              url='../images/work/intranet/devices.png'
+              url='../images/work/nucleus/devices.png'
               alt='Intranet shown on multiple devices' />
           </Column>
         </Container>
@@ -77,7 +76,7 @@ class Intranet extends Component {
             content={System} />
           <Column width='full'>
             <Image
-              url='../images/work/intranet/components.png'
+              url='../images/work/nucleus/components.png'
               alt='Intranet is made up of many different components' />
           </Column>
         </Container>
@@ -91,11 +90,11 @@ class Intranet extends Component {
             content={Brand}>
             <Image
               type='background'
-              url='../images/work/intranet/atom.svg'
+              url='../images/work/nucleus/atom.svg'
               alt=' ' />
             <Image
               type='logo'
-              url='../images/work/intranet/logo.svg'
+              url='../images/work/nucleus/logo.svg'
               alt='Nucleus logo in monotone' />
           </Column>
         </Container>
@@ -104,7 +103,4 @@ class Intranet extends Component {
   }
 }
 
-const styles = {
-}
-
-export default Intranet
+export default Education

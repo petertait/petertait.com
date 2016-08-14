@@ -72,16 +72,13 @@ const styles = {
     textAlign: 'center',
     position: 'absolute',
     bottom: '20px',
-    opacity: '0.6'
+    opacity: '0.8'
   },
-
-  intranet: {
-    backgroundImage: 'url(../images/work/intranet/thumb.png)'
+  nucleus: {
+    backgroundImage: 'url(../images/work/nucleus/thumb.png)'
   },
   education: {
-    ':hover': {
-      backgroundColor: color.education
-    }
+    backgroundImage: 'url(../images/work/education/thumb.png)'
   },
   metrik: {
     ':hover': {

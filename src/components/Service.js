@@ -40,7 +40,7 @@ const styles = {
     }
   },
   inner: {
-    backgroundColor: 'rgba(0,0,0,0.1)',
+    border: '2px solid rgba(255,255,255, 0.15)',
     padding: '60px 30px 10px'
   },
   image: {

@@ -124,11 +124,14 @@ const styles = {
   h5: {
     marginTop: '-15px'
   },
-  award: {
-    marginTop: '5px'
-  },
   content: {
     fontSize: type.delta
+  },
+  education: {
+    marginBottom: '30px'
+  },
+  award: {
+    marginTop: '5px'
   }
 }
 

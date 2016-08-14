@@ -5,8 +5,8 @@ export const color = {
   blue: '#0433ff',
   sky: '#e5eeff',
 
-  intranet: '#3d1d90',
-  education: '#03bcd4',
+  nucleus: '#3d1d90',
+  education: '#00A9C6',
   people: '#5500C8',
   agile: '#eed900',
   express: '#bc2487',

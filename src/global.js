@@ -88,7 +88,7 @@ class Styles extends Component {
           marginTop: '10px',
           marginBottom: '60px',
           border: 'none',
-          height: '1px',
+          height: '2px',
           opacity: '0.15'
         },
         'svg path': {

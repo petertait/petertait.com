@@ -6,7 +6,7 @@ import { breakpoint, type } from '../vars'
 @Radium
 class ProjectDetails extends Component {
   render() {
-    var listItems = this.props.items.map(function(item) {
+    const listItems = this.props.items.map(function(item) {
       return (
         <li key={item.name} style={styles.listItem}>{item.name}</li>
       )
@@ -22,7 +22,7 @@ class ProjectDetails extends Component {
 
 const styles = {
   container: {
-    border: '2px solid rgba(255,255,255, 0.1)',
+    border: '2px solid rgba(255,255,255, 0.15)',
     padding: '30px 20px 20px',
     margin: '40px 0 20px'
   },
@@ -30,13 +30,14 @@ const styles = {
     margin: '0 10px 20px'
   },
   listItem: {
-    fontSize: type.epsilon,
-    borderBottom: '1px solid rgba(255,255,255, 0.12)',
+    fontSize: type.delta,
+    borderBottom: '1px solid rgba(255,255,255, 0.2)',
     paddingBottom: '5px',
     opacity: '0.7',
     margin: '10px',
 
     [breakpoint.medium]: {
+      fontSize: type.epsilon,
       display: 'inline-block',
       width: 'calc(50% - 20px)'
     }

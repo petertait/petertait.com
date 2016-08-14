@@ -8,7 +8,7 @@ import { breakpoint } from '../vars'
 class Image extends Component {
   render() {
     return (
-      <LazyLoad offset={400}>
+      <LazyLoad offset={400} debounce={false}>
         <img src={this.props.url} alt={this.props.alt} style={[styles[this.props.type], styles[this.props.position]]}/>
       </LazyLoad>
     )
@@ -18,7 +18,7 @@ class Image extends Component {
 const styles = {
   logo: {
     margin: '20px 0',
-    border: '2px solid rgba(255,255,255, 0.1)'
+    border: '2px solid rgba(255,255,255, 0.15)'
   },
   background: {
     position: 'absolute',

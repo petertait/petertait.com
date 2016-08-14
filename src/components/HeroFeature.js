@@ -11,7 +11,7 @@ class Hero extends Component {
     }
     return (
       <section style={[styles.hero, image]}>
-        <div style={styles.gradient} />
+        <div style={[styles.gradient, styles[this.props.image]]} />
         <div className='container'>
           <div style={styles.inner}>
             <h1 style={styles.title}>{this.props.headline}</h1>
@@ -51,8 +51,13 @@ const styles = {
     height: '100%',
     position: 'absolute',
     left: '0',
-    bottom: '0',
+    bottom: '0'
+  },
+  nucleus: {
     backgroundImage: 'linear-gradient(transparent 30%, #3d1d90)'
+  },
+  education: {
+    backgroundImage: 'linear-gradient(transparent 30%, #00A9C6)'
   },
   title: {
     fontSize: type.mega,
