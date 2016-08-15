@@ -9,9 +9,12 @@ import { breakpoint, color, type } from '../vars'
 class GridBlock extends Component {
   render() {
     const url = 'work/' + this.props.url
+    const backgroundImage = {
+      backgroundImage: 'url(../images/work/' + this.props.path + '/thumb.png)'
+    }
     return (
       <div key='1' style={[styles.block, styles[this.props.nthChild]]}>
-        <div key='2' style={[styles.inner, styles[this.props.color]]}>
+        <div key='2' style={[styles.inner, backgroundImage]}>
           <h2 style={styles.title}>{this.props.title}</h2>
           <span style={styles.client}>{this.props.client}</span>
           <Link style={styles.link} to={url}></Link>
@@ -73,39 +76,6 @@ const styles = {
     position: 'absolute',
     bottom: '20px',
     opacity: '0.8'
-  },
-  nucleus: {
-    backgroundImage: 'url(../images/work/nucleus/thumb.png)'
-  },
-  education: {
-    backgroundImage: 'url(../images/work/education/thumb.png)'
-  },
-  people: {
-    backgroundImage: 'url(../images/work/people/thumb.png)'
-  },
-  metrik: {
-    ':hover': {
-      backgroundColor: color.metrik
-    }
-  },
-  express: {
-    backgroundImage: 'url(../images/work/express/thumb.png)'
-  },
-  pebble: {
-    ':hover': {
-      backgroundColor: color.pebble
-    }
-  },
-  agile: {
-    ':hover': {
-      color: color.black,
-      backgroundColor: color.agile
-    }
-  },
-  blue: {
-    ':hover': {
-      backgroundColor: color.black
-    }
   }
 }
 

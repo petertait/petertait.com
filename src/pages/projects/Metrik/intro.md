@@ -1,0 +1,3 @@
+National Express perform frequent checks of their trains and stations to ensure they meet customer satisfaction standards. It's vital they can see trends of success and failures to give the ability to act upon pain points.
+
+National Express surveyed their trains and stations through a static Google Form. This form consisted of multiple questions and lacked many features including the ability to save a form's progress midway through. Another key missing feature was the lack of collaboration. The data outputted was simply a set of answers and visualising this was often done manually by creating static graphs in Excel.

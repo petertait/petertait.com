@@ -27,9 +27,8 @@ class Home extends Component {
           <h3>Selected Work</h3>
           <ListItem title='Nucleus: Global Intranet' summary='Lead design of a global intranet for AstraZeneca spanning over 10 languages and 80 thousand daily users.' link='work/nucleus' />
           <ListItem title='Remote Education Course' summary='Creation of a new way in educating a workforce remotely for Pearson Educaiton.' link='work/remote-education' />
-          <ListItem title='Metrik' summary='A geometric display typeface built for unique brands.' link='/' />
           <ListItem title='Global People Search' summary='An iOS app for searching colleagues within a AstraZeneca.' link='work/people-search' />
-          <ListItem title='Customer Satisfaction App' summary='Digital transformation of how National Express measure and maintain customer satisfaction.' link='/' />
+          <ListItem title='Customer Satisfaction App' summary='Digital transformation of how National Express measure and maintain customer satisfaction.' link='work/customer-satisfaction' />
         </div>
       </div>
     )

@@ -8,7 +8,7 @@ export const color = {
   nucleus: '#3d1d90',
   education: '#00A9C6',
   people: '#C90077',
-  metrik: '#00bc01',
+  metrik: '#00bc6c',
   express: '#252678',
   pebble: '#ed517f',
   agile: '#eed900'

@@ -26,42 +26,42 @@ class Work extends Component {
             title='Nucleus Intranet'
             client='AstraZeneca'
             url='nucleus'
-            color='nucleus' />
+            path='nucleus' />
           <GridBlock
             title='Remote Education Product'
             client='Pearson'
             url='remote-education'
-            color='education' />
+            path='education' />
           <GridBlock
             title='People Search App'
             client='AstraZeneca'
             url='people-search'
-            color='people' />
+            path='people' />
           <GridBlock
             title='Metrik Typeface'
             client='Side Project'
             url='metrik'
-            color='metrik' />
+            path='metrik' />
           <GridBlock
             title='Customer Satisfaction App'
             client='National Express'
             url='customer-satisfaction'
-            color='express' />
+            path='express' />
           <GridBlock
             title='Experiments + Hack Days'
             client='Various Clients'
             url='experiments'
-            color='blue' />
+            path='blue' />
           <GridBlock
             title="pebble's Website"
             client='pebble {code}'
             url='pebble'
-            color='pebble' />
+            path='pebble' />
           <GridBlock
             title='Agile Rebrand'
             client='AstraZeneca'
             url='agile-rebrand'
-            color='agile'
+            path='agile'
             nthChild='lastChild' />
         </div>
       </div>

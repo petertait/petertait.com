@@ -62,6 +62,9 @@ const styles = {
   people: {
     backgroundImage: 'linear-gradient(transparent 30%, #C90077)'
   },
+  metrik: {
+    backgroundImage: 'linear-gradient(transparent 30%, #00bc6c)'
+  },
   express: {
     backgroundImage: 'linear-gradient(transparent 30%, #252678)'
   },

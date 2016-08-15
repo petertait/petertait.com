@@ -12,7 +12,7 @@ class Button extends Component {
       <button
       style={[styles.btn, styles[this.props.color]]}
       onClick={this.props.click}>
-        <span style={styles.icon}><Isvg src={icon}/></span>
+        {this.props.icon && <span style={styles.icon}><Isvg src={icon}/></span>}
         <span style={styles.text}>{this.props.text}</span>
       </button>
     )
@@ -22,7 +22,7 @@ class Button extends Component {
 const styles = {
   btn: {
     display: 'table',
-    marginTop: '30px',
+    marginTop: '10px',
     padding: '8px 25px',
     borderWidth: '2px',
     borderStyle: 'solid',
@@ -41,7 +41,7 @@ const styles = {
     verticalAlign: 'middle',
     marginTop: '6px',
     marginRight: '10px',
-    opacity: '0.4'
+    opacity: '0.5'
   },
   text: {
     display: 'inline-block',
@@ -54,6 +54,15 @@ const styles = {
       borderColor: color.white,
       backgroundColor: color.white,
       color: color.education
+    }
+  },
+  metrik: {
+    color: color.white,
+
+    ':hover': {
+      borderColor: color.white,
+      backgroundColor: color.white,
+      color: color.metrik
     }
   }
 }
