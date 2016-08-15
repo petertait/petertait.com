@@ -16,6 +16,7 @@ import Education from './pages/projects/Education'
 import People from './pages/projects/People'
 import Express from './pages/projects/Express'
 import Metrik from './pages/projects/Metrik'
+import Experiments from './pages/projects/Experiments'
 
 render((
   <Router
@@ -32,6 +33,7 @@ render((
         <Route path='work/people-search' component={People} />
         <Route path='work/metrik' component={Metrik} />
         <Route path='work/customer-satisfaction' component={Express} />
+        <Route path='work/experiments' component={Experiments} />
       <Route path='thanks' component={Thanks} />
       <Route path='*' component={Home} />
     </Route>

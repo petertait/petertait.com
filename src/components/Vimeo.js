@@ -11,7 +11,7 @@ class Vimeo extends Component {
   render() {
     return (
       <div style={styles.container}>
-        <iframe style={styles.video} src={this.props.url} frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <iframe style={styles.video} src={this.props.url} frameBorder='0'></iframe>
       </div>
     )
   }

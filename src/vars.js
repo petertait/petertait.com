@@ -11,7 +11,8 @@ export const color = {
   metrik: '#00bc6c',
   express: '#252678',
   pebble: '#ed517f',
-  agile: '#eed900'
+  agile: '#eed900',
+  experiments: '#F37D00'
 }
 
 // Typography

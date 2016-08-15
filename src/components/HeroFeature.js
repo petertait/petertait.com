@@ -68,6 +68,9 @@ const styles = {
   express: {
     backgroundImage: 'linear-gradient(transparent 30%, #252678)'
   },
+  experiments: {
+    backgroundImage: 'linear-gradient(transparent 30%, #F37D00)'
+  },
   title: {
     fontSize: type.mega,
     textShadow: '0 0 40px rgba(0,0,0, 0.3)',
