@@ -7,8 +7,7 @@ import Container from '../../../components/Container'
 import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
 import ListBlock from '../../../components/ListBlock'
-import Image from '../../../components/Image'
-import Video from '../../../components/Video'
+import Media from '../../../components/Media'
 import Button from '../../../components/Button'
 
 import IntroContent from './intro.md'
@@ -70,19 +69,20 @@ class Education extends Component {
             width='twoThird'
             content={ProductContent} />
           <Column width='full'>
-            <Image
+            <Media
+              media='image'
               position='marginBottomNegative'
               url='../images/work/education/devices.png'
               alt='Pearson Education Course shown on multiple devices' />
           </Column>
         </Container>
         <hr />
-        <Video
+        <Media
+          media='video'
           url='../media/work/education/demo.mp4'
-          alt='Pearson Education Course shown on multiple devices'
           type='background'
-          color='education'
-          />
+          gradient='true'
+          color='education' />
         <Container>
           <Column
             width='third'
@@ -92,7 +92,7 @@ class Education extends Component {
             content={FasttrackContent}>
           </Column>
           <Column width='full'>
-            <Image
+            <Media
               url='../images/work/education/devices-responsive.png'
               alt='Pearson Course shown on multiple devices' />
           </Column>
@@ -116,7 +116,8 @@ class Education extends Component {
             </audio>
           </Column>
           <Column width='full'>
-            <Image
+            <Media
+              media='image'
               url='../images/work/education/devices-video.png'
               alt='Pearson Education Course shown on multiple devices' />
           </Column>

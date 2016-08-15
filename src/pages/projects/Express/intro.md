@@ -1,3 +1,3 @@
-Each employee as AstraZeneca has to juggle a handful of profiles – this led to varying contact details and no central source for user data.
+National Express perform frequent checks of their trains and stations to ensure they meet customer satisfaction standards. It's vital they can see trends of success and failures to give the ability to act upon pain points.
 
-People Search app created a central source of truth for user data and gave users the ability to easily search across the company and guarantee accurate results. Now multiple profiles can pull in data from this central source – taking away the manual work from AstraZeneca employees whom had to keep each of their profiles up to date.
+National Express surveyed their trains and stations through a static Google Form. This form consisted of multiple questions and lacked many features including the ability to save a form's progress midway through. Another key missing feature was the lack of collaboration. The data outputted was simply a set of answers and visualising this was often done manually by creating static graphs in Excel.

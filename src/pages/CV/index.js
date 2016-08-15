@@ -87,7 +87,7 @@ class CV extends Component {
               <h3 style={styles.h3}>Beechen Cliff School, Bath</h3>
               <h4 style={styles.h4}>A-Level <br/> 2008–2010</h4>
               <h5 style={styles.h5}>A* – Fine Art <br/> A&nbsp; – Graphic Design <br/> A&nbsp; – History</h5>
-              <h4 style={[styles.h4, styles.award]}>BMT Group: Prize for Excellence in Science and Technology</h4>
+              <h4 style={[styles.h4, styles.award]}>BMT Group: Award for Excellence in Science and Technology</h4>
             </div>
           </Column>
           <Column width='third'>

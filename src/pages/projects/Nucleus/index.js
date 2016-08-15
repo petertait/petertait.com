@@ -8,7 +8,7 @@ import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
 import ListBlock from '../../../components/ListBlock'
 import GridBlock from '../../../components/GridBlock'
-import Image from '../../../components/Image'
+import Media from '../../../components/Media'
 
 import IntroContent from './intro.md'
 import DesignContent from './design.md'
@@ -56,6 +56,12 @@ class Nucleus extends Component {
           </Column>
         </Container>
         <hr />
+        <Media
+          url='../images/work/nucleus/feature.jpg'
+          alt='Pearson Education Course shown on multiple devices'
+          gradient='true'
+          type='background'
+          color='nucleus' />
         <Container>
           <Column
             width='third'
@@ -64,7 +70,7 @@ class Nucleus extends Component {
             width='twoThird'
             content={DesignContent} />
           <Column width='full'>
-            <Image
+            <Media
               position='marginBottomNegative'
               url='../images/work/nucleus/devices.png'
               alt='Intranet shown on multiple devices' />
@@ -80,7 +86,8 @@ class Nucleus extends Component {
             width='twoThird'
             content={SystemContent} />
           <Column width='full'>
-            <Image
+            <Media
+              media='image'
               url='../images/work/nucleus/components.png'
               alt='Intranet is made up of many different components' />
           </Column>
@@ -93,11 +100,8 @@ class Nucleus extends Component {
           <Column
             width='twoThird'
             content={BrandContent}>
-            <Image
-              type='overlay'
-              url='../images/work/nucleus/atom.svg'
-              alt=' ' />
-            <Image
+            <Media
+              media='image'
               type='logo'
               url='../images/work/nucleus/logo.svg'
               alt='Nucleus logo in monotone' />

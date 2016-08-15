@@ -1,5 +1,5 @@
-Enterprise software is often ridiculed for it's bloated experience, but it doesn't have to be that way. We set out to make this application at a consumer grade. Using Titanium as the development language, we could prototype quickly but still deploy native code which performed well on iOS.
+Through observing how National Express measured satisfaction across their trains and stations, we were able to find areas to improve. After wireframing, we started prototyping (in React) a webapp which could be tested out in the field by a real user.
 
-The application was designed from the ground up to focus around the user. The initial onboarding guides the user to take a profile picture. A profile picture is vital for a company the size of AstraZeneca where people can search a name and get hundreds of results back – without a profile photo those results verge on useless.
+The core feature we set out to include was the ability to give contextual content dependent on the user's location. If a user was based in Farringdon where the station only has one platform, then only display that information within the app. Other features included the ability to leave comments and photos taken directly within the app.
 
-The application had a core feature set (no feature creep here) that focused around people. Features included favourites, video/phone calling, user profiles and a fast people search.
+The application was built to make the process of surveying as efficiently as possible. Closing the app would save the current progress, this combined with the application working across all platforms, made environment switching seamless.

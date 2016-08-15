@@ -8,8 +8,7 @@ import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
 import ListBlock from '../../../components/ListBlock'
 import GridBlock from '../../../components/GridBlock'
-import Image from '../../../components/Image'
-import Video from '../../../components/Video'
+import Media from '../../../components/Media'
 
 import IntroContent from './intro.md'
 import DesignContent from './design.md'
@@ -52,12 +51,12 @@ class People extends Component {
           </Column>
         </Container>
         <hr />
-        <Video
+        <Media
+          media='video'
           url='../media/work/people/demo.mp4'
-          alt='Pearson Education Course shown on multiple devices'
           type='background'
-          color='people'
-          />
+          gradient='true'
+          color='people' />
         <Container>
           <Column
             width='third'
@@ -66,7 +65,8 @@ class People extends Component {
             width='twoThird'
             content={DesignContent} />
           <Column width='full'>
-            <Image
+            <Media
+              media='image'
               url='../images/work/people/devices.png'
               alt='The different screens of the People Search App' />
           </Column>

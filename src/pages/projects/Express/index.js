@@ -8,11 +8,11 @@ import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
 import ListBlock from '../../../components/ListBlock'
 import GridBlock from '../../../components/GridBlock'
-import Image from '../../../components/Image'
-import Video from '../../../components/Video'
+import Media from '../../../components/Media'
 
 import IntroContent from './intro.md'
 import DesignContent from './design.md'
+import AnalyticsContent from './analytics.md'
 
 class Express extends Component {
   componentWillMount() {
@@ -32,19 +32,18 @@ class Express extends Component {
       { name: 'Wireframing' },
       { name: 'Lead design' },
       { name: 'Lead frontend development' },
-      { name: 'Titanium iOS development' },
       { name: 'Built with React' }
     ]
     return (
       <div>
-        <HeroFeature headline='Consumer Grade Search for the Enterprise' image='express' />
+        <HeroFeature headline='Improving Customer Satisfaction through Digital Transformation' image='express' />
         <Container>
           <Column width='third'>
             <ClientLogo client='express' />
           </Column>
           <Column
             width='twoThird'
-            intro='AstraZeneca needed an easy way for their workforce to communicate across multiple continents.'
+            intro='Through digital transformation, National Express can now manage customer satisfaction on a larger scale with insightful analytics.'
             content={IntroContent}>
             <ListBlock
               title='Project Involvement'
@@ -53,23 +52,40 @@ class Express extends Component {
           </Column>
         </Container>
         <hr />
-        <Video
-          url='../media/work/people/demo.mp4'
-          alt='Pearson Education Course shown on multiple devices'
+        <Media
+          media='video'
+          url='../media/work/express/demo.mp4'
           type='background'
-          color='people'
-          />
+          gradient='true'
+          color='express' />
         <Container>
           <Column
             width='third'
-            headline='User-centered, consumer grade quality for an enterprise audience.' />
+            headline='Responsive, scalable and fast. An application built for efficiency.' />
           <Column
             width='twoThird'
             content={DesignContent} />
           <Column width='full'>
-            <Image
-              url='../images/work/people/devices.png'
-              alt='The different screens of the People Search App' />
+            <Media
+              media='image'
+              position='marginBottomNegative'
+              url='../images/work/express/devices.png'
+              alt='Responsive screens of the app' />
+          </Column>
+        </Container>
+        <hr />
+        <Container>
+          <Column
+            width='third'
+            headline='Information is power. Through analytics, National Express can spot pain points and act on them.' />
+          <Column
+            width='twoThird'
+            content={AnalyticsContent} />
+          <Column width='full'>
+            <Media
+              media='image'
+              url='../images/work/express/devices-analytics.png'
+              alt='Showing Analytics within the National Express app' />
           </Column>
         </Container>
       </div>
