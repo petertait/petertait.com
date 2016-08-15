@@ -88,6 +88,11 @@ class Education extends Component {
             width='twoThird'
             content={FasttrackContent}>
           </Column>
+          <Column width='full'>
+            <Image
+              url='../images/work/education/devices-responsive.png'
+              alt='Pearson Course shown on multiple devices' />
+          </Column>
         </Container>
         <hr />
         <Container>

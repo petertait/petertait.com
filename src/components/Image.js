@@ -20,7 +20,7 @@ const styles = {
     margin: '20px 0',
     border: '2px solid rgba(255,255,255, 0.15)'
   },
-  background: {
+  overlay: {
     position: 'absolute',
     left: '0',
     bottom: '0',

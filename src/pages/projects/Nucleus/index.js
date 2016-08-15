@@ -91,7 +91,7 @@ class Nucleus extends Component {
             width='twoThird'
             content={BrandContent}>
             <Image
-              type='background'
+              type='overlay'
               url='../images/work/nucleus/atom.svg'
               alt=' ' />
             <Image
