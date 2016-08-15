@@ -80,30 +80,26 @@ const styles = {
   education: {
     backgroundImage: 'url(../images/work/education/thumb.png)'
   },
+  people: {
+    backgroundImage: 'url(../images/work/people/thumb.png)'
+  },
   metrik: {
     ':hover': {
       backgroundColor: color.metrik
     }
   },
-  people: {
+  express: {
+    backgroundImage: 'url(../images/work/express/thumb.png)'
+  },
+  pebble: {
     ':hover': {
-      backgroundColor: color.people
+      backgroundColor: color.pebble
     }
   },
   agile: {
     ':hover': {
       color: color.black,
       backgroundColor: color.agile
-    }
-  },
-  express: {
-    ':hover': {
-      backgroundColor: color.express
-    }
-  },
-  pebble: {
-    ':hover': {
-      backgroundColor: color.pebble
     }
   },
   blue: {

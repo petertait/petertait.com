@@ -59,6 +59,12 @@ const styles = {
   education: {
     backgroundImage: 'linear-gradient(transparent 30%, #00A9C6)'
   },
+  people: {
+    backgroundImage: 'linear-gradient(transparent 30%, #C90077)'
+  },
+  express: {
+    backgroundImage: 'linear-gradient(transparent 30%, #252678)'
+  },
   title: {
     fontSize: type.mega,
     textShadow: '0 0 40px rgba(0,0,0, 0.3)',

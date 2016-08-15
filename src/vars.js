@@ -7,11 +7,11 @@ export const color = {
 
   nucleus: '#3d1d90',
   education: '#00A9C6',
-  people: '#5500C8',
-  agile: '#eed900',
-  express: '#bc2487',
+  people: '#C90077',
   metrik: '#00bc01',
+  express: '#252678',
   pebble: '#ed517f',
+  agile: '#eed900'
 }
 
 // Typography

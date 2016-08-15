@@ -13,6 +13,8 @@ import Work from './pages/Work'
 
 import Nucleus from './pages/projects/Nucleus'
 import Education from './pages/projects/Education'
+import People from './pages/projects/People'
+import Express from './pages/projects/Express'
 
 render((
   <Router
@@ -26,6 +28,8 @@ render((
       <Route path='work' component={Work} />
         <Route path='work/nucleus' component={Nucleus} />
         <Route path='work/remote-education' component={Education} />
+        <Route path='work/people-search' component={People} />
+        <Route path='work/customer-satisfaction' component={Express} />
       <Route path='thanks' component={Thanks} />
       <Route path='*' component={Home} />
     </Route>

@@ -33,7 +33,7 @@ class Work extends Component {
             url='remote-education'
             color='education' />
           <GridBlock
-            title='People Search iOS App'
+            title='People Search App'
             client='AstraZeneca'
             url='people-search'
             color='people' />

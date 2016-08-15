@@ -41,14 +41,13 @@ const styles = {
     height: '200%',
     position: 'absolute',
     top: 'calc(30% + 60px)',
-    left: '0',
-
-    [breakpoint.medium]: {
-
-    }
+    left: '0'
   },
   education: {
     backgroundImage: 'linear-gradient(transparent, #00A9C6 50%)'
+  },
+  people: {
+    backgroundImage: 'linear-gradient(transparent, #C90077 50%)'
   }
 }
 
