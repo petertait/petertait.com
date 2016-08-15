@@ -1,3 +1,3 @@
-National Express perform frequent checks of their trains and stations to ensure they meet customer satisfaction standards. It's vital they can see trends of success and failures to give the ability to act upon pain points.
+The geometric shapes that make up each glyph within Metrik give a distinctive look and feel. The purpose of Metrik is to be a display typeface that has an impact perfect for brand design.
 
-National Express surveyed their trains and stations through a static Google Form. This form consisted of multiple questions and lacked many features including the ability to save a form's progress midway through. Another key missing feature was the lack of collaboration. The data outputted was simply a set of answers and visualising this was often done manually by creating static graphs in Excel.
+Using techniques learn't within the software industry, I plan on releasing each of the font weights as they are completed – instead of one final major release. I hope to seek feedback which can then influence the continuous delivery of updates.

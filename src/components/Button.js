@@ -22,13 +22,15 @@ class Button extends Component {
 const styles = {
   btn: {
     display: 'table',
-    marginTop: '10px',
-    padding: '8px 25px',
+    marginTop: '15px',
+    marginBottom: '30px',
+    padding: '15px 20px',
     borderWidth: '2px',
     borderStyle: 'solid',
     borderColor: 'inherit',
     backgroundColor: 'transparent',
     cursor: 'pointer',
+    lineHeight: '1',
     fontSize: type.bodySize,
     fontFamily: type.fontMono,
     transition: '0.2s background-color',
@@ -39,7 +41,6 @@ const styles = {
     height: 'auto',
     display: 'inline-block',
     verticalAlign: 'middle',
-    marginTop: '6px',
     marginRight: '10px',
     opacity: '0.5'
   },

@@ -12,8 +12,7 @@ import Vimeo from '../../../components/Vimeo'
 import Button from '../../../components/Button'
 
 import IntroContent from './intro.md'
-import DesignContent from './design.md'
-import AnalyticsContent from './analytics.md'
+import LearnContent from './learn.md'
 
 class Metrik extends Component {
   componentWillMount() {
@@ -29,11 +28,9 @@ class Metrik extends Component {
 
   render() {
     const involvement = [
-      { name: 'Workflows + product mapping' },
-      { name: 'Wireframing' },
-      { name: 'Lead design' },
-      { name: 'Lead frontend development' },
-      { name: 'Built with React' }
+      { name: 'Handcrafted letterforms on paper' },
+      { name: 'Glyph design within Illustrator' },
+      { name: 'Font creation with Glyphs' }
     ]
     return (
       <div>
@@ -44,35 +41,71 @@ class Metrik extends Component {
           </Column>
           <Column
             width='twoThird'
-            intro='Through digital transformation, National Metrik can now manage customer satisfaction on a larger scale with insightful analytics.'
+            intro='Metrik is a geometric typeface built from the ground up with the simplest of shapes.'
             content={IntroContent}>
             <ListBlock
               title='Project Involvement'
-              intro='As lead design on the project my involvement ranged from initial ideas stage, communicating daily with the client to production frontend development. An agile process helped with rapid and continuous development.'
+              intro="Metrik is a typeface I've created as a way to learn and appreciate typography further."
               items={involvement} />
+          </Column>
+        </Container>
+        <hr />
+        <Container>
+          <Column
+            width='third'
+            headline='Logo sample.' />
+          <Column width='twoThird'>
+            <Media
+              media='image'
+              url='../images/work/metrik/logo.svg'
+              alt='Metrik logo written out with the Metrik typeface.' />
+          </Column>
+        </Container>
+        <hr />
+        <Container>
+          <Column
+            width='third'
+            headline='Metrik v0.1.0 lowercase.' />
+          <Column width='twoThird'>
+            <Media
+              media='image'
+              url='../images/work/metrik/abc.svg'
+              alt='Metrik lowercase sample' />
+          </Column>
+        </Container>
+        <hr />
+        <Container>
+          <Column
+            width='third'
+            headline='Tester sample.' />
+          <Column width='twoThird'>
+            <Media
+              media='image'
+              url='../images/work/metrik/text.svg'
+              alt='Sentence tester set in Metrik' />
           </Column>
         </Container>
         <hr />
         <Media
           media='image'
-          url='../images/work/metrik/feature.jpg'
+          url='../images/work/metrik/book.jpg'
           type='background'
           gradient='true'
           color='metrik' />
-        <Container>
-          <Column
-            width='third'
-            headline='Responsive, scalable and fast. An application built for efficiency.' />
-          <Column
-            width='twoThird'
-            content={DesignContent}>
-            <Vimeo url='https://player.vimeo.com/video/132186891?color=00bc6c&title=0&byline=0&portrait=0' />
-          </Column>
-        </Container>
         <Media
           media='image'
           url='../images/work/metrik/shapes.svg'
-          alt='Showing Analytics within the National Metrik app' />
+          alt='Metrik glyphs expanded to show the geometric structure' />
+        <Container>
+          <Column
+            width='third'
+            headline='Learning by doing.' />
+          <Column
+            width='twoThird'
+            content={LearnContent}>
+            <Vimeo url='https://player.vimeo.com/video/132186891?color=00bc6c&title=0&byline=0&portrait=0' />
+          </Column>
+        </Container>
       </div>
     )
   }

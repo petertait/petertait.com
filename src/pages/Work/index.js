@@ -62,7 +62,7 @@ class Work extends Component {
             client='AstraZeneca'
             url='agile-rebrand'
             path='agile'
-            nthChild='lastChild' />
+             />
         </div>
       </div>
     )
