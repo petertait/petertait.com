@@ -36,13 +36,10 @@ class CV extends Component {
             <div style={styles.content} dangerouslySetInnerHTML={{ __html: Intro }} />
           </Column>
         </Container>
-
         <hr />
-
         <Container>
           <Column width='full' headline='Work' />
         </Container>
-
         <Container>
           <Column width='half'>
             <h3 style={styles.h3}>{'pebble {code}'}</h3>
@@ -73,9 +70,7 @@ class CV extends Component {
             <div style={styles.content} dangerouslySetInnerHTML={{ __html: Eink }} />
           </Column>
         </Container>
-
         <hr />
-
         <Container>
           <Column width='full' headline='Education' />
         </Container>
@@ -122,7 +117,8 @@ const styles = {
     marginBottom: '20px'
   },
   h5: {
-    marginTop: '-15px'
+    marginTop: '-15px',
+    fontWeight: type.fontRegular,
   },
   content: {
     fontSize: type.delta

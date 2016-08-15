@@ -20,7 +20,12 @@ class Video extends Component {
 
 const styles = {
   container: {
-    position: 'relative'
+    position: 'relative',
+    display: 'none',
+
+    [breakpoint.medium]: {
+      display: 'block',
+    }
   },
   video: {
     width: '100%',
@@ -34,7 +39,7 @@ const styles = {
     marginTop: '-60px',
     marginBottom: '-30%',
     filter: 'grayscale(100%)',
-    opacity: '0.25'
+    opacity: '0.3'
   },
   gradient: {
     width: '100%',

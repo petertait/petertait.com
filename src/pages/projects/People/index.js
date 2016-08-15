@@ -45,7 +45,10 @@ class People extends Component {
             width='twoThird'
             intro='AstraZeneca needed an easy way for their workforce to communicate across multiple continents.'
             content={IntroContent}>
-            <ListBlock title='Project Involvement' items={involvement} />
+            <ListBlock
+              title='Project Involvement'
+              intro='As the lead designer on the project, I led the design from the initial ideas stage to prototyping and production level frontend development – using the Titanium framework.'
+              items={involvement} />
           </Column>
         </Container>
         <hr />

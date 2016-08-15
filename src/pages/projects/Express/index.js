@@ -32,7 +32,8 @@ class Express extends Component {
       { name: 'Wireframing' },
       { name: 'Lead design' },
       { name: 'Lead frontend development' },
-      { name: 'Titanium iOS development' }
+      { name: 'Titanium iOS development' },
+      { name: 'Built with React' }
     ]
     return (
       <div>
@@ -45,7 +46,10 @@ class Express extends Component {
             width='twoThird'
             intro='AstraZeneca needed an easy way for their workforce to communicate across multiple continents.'
             content={IntroContent}>
-            <ListBlock title='Project Involvement' items={involvement} />
+            <ListBlock
+              title='Project Involvement'
+              intro='As lead design on the project my involvement ranged from initial ideas stage, communicating daily with the client to production frontend development. An agile process helped with rapid and continuous development.'
+              items={involvement} />
           </Column>
         </Container>
         <hr />

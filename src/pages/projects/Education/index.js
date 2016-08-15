@@ -55,7 +55,10 @@ class Education extends Component {
             width='twoThird'
             intro='Pearson wanted a new way to educate a workforce and increase their reach across a larger audience.'
             content={IntroContent}>
-            <ListBlock title='Project Involvement' items={involvement} />
+            <ListBlock
+              title='Project Involvement'
+              intro='My involvement consisted of overseeing the art direction and design of the project as the only designer on the project. This included the creation of wireframes, product maps, prototypes including leading the frontend development for production – whilst dealing with the client day-to-day using an agile process.'
+              items={involvement} />
           </Column>
         </Container>
         <hr />

@@ -14,6 +14,7 @@ class ListBlock extends Component {
     return (
       <div style={styles.container}>
         <h3 style={styles.title}>{this.props.title}</h3>
+        {this.props.intro && <p style={styles.intro}>{this.props.intro}</p>}
         <ul>{listItems}</ul>
       </div>
     )
@@ -29,11 +30,22 @@ const styles = {
   title: {
     margin: '0 10px 20px'
   },
+  intro: {
+    fontSize: type.delta,
+    padding: '0 10px 10px',
+    lineHeight: '1.7',
+    opacity: '0.8',
+
+    [breakpoint.medium]: {
+      fontSize: type.epsilon,
+      padding: '0 10px',
+    }
+  },
   listItem: {
     fontSize: type.delta,
     borderBottom: '1px solid rgba(255,255,255, 0.25)',
     paddingBottom: '5px',
-    opacity: '0.7',
+    opacity: '0.8',
     margin: '10px',
 
     [breakpoint.medium]: {

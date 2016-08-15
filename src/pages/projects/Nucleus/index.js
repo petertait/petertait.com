@@ -49,7 +49,10 @@ class Nucleus extends Component {
             width='twoThird'
             intro='Inconsistencies in communication hampered the business process. AstraZeneca needed a scalable platform to share insights.'
             content={IntroContent}>
-            <ListBlock title='Project Involvement' items={involvement} />
+            <ListBlock
+              title='Project Involvement'
+              intro='As the sole designer, I oversaw the entire design of the product from initial ideas stage to continuous development – including daily communication with product stakeholders. Beyond the product mapping, user-testing, prototyping, workshops, I also lead the frontend development of production code.'
+              items={involvement} />
           </Column>
         </Container>
         <hr />
