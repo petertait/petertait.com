@@ -5,20 +5,23 @@ import { color } from '../../../vars'
 import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
-import ListBlock from '../../../components/ListBlock'
 import GridBlock from '../../../components/GridBlock'
+import ListBlock from '../../../components/ListBlock'
 import Media from '../../../components/Media'
-import Vimeo from '../../../components/Vimeo'
+import Anchor from '../../../components/Anchor'
+import Button from '../../../components/Button'
 
 import IntroContent from './intro.md'
-import LearnContent from './learn.md'
+import PatientContent from './patient.md'
+import BeaconContent from './beacon.md'
+import PokeyContent from './pokey.md'
 
 class Experiments extends Component {
   componentWillMount() {
     this.state = {
       theme: {
         primary: color.experiments,
-        secondary: color.white
+        secondary: color.black
       }
     }
     document.body.style.backgroundColor = this.state.theme.primary
@@ -26,41 +29,97 @@ class Experiments extends Component {
   }
 
   render() {
-    const involvement = [
-      { name: 'Handcrafted letterforms on paper' },
-      { name: 'Glyph design within Illustrator' },
-      { name: 'Font creation with Glyphs' }
+    const patientInvolvement = [
+      { name: 'Lead design' },
+      { name: 'Frontend development' },
+      { name: 'Built with React + Cordova' },
+      { name: 'Hackathon winner' }
     ]
     return (
       <div>
-        <HeroFeature headline='Experiments + Hack Days' image='experiments' />
+        <HeroFeature headline='Experiments + Hack Days' image='experiments' color={color.experiments} />
         <Container>
           <Column width='third'>
-
+            <Anchor link='https://github.com/petertait' text='Github Profile' type='block' color='experiments' margin='bottom' />
           </Column>
           <Column
             width='twoThird'
-            intro='Metrik is a geometric typeface built from the ground up with the simplest of shapes.'
+            intro='Experimenting is a big part of my process – it helps everyone involved explore and validate ideas at speed.'
             content={IntroContent}>
+          </Column>
+        </Container>
+        <hr />
+        <Media
+          media='image'
+          url='../images/work/experiments/feature-patient.png'
+          type='background'
+          gradient='true'
+          color={color.experiments} />
+        <Container>
+          <Column
+            width='third'
+            headline='Patient Engagement Hackathon' />
+          <Column
+            width='twoThird'
+            content={PatientContent}>
             <ListBlock
               title='Project Involvement'
-              intro="Metrik is a typeface I've created as a way to learn and appreciate typography further."
-              items={involvement} />
+              color='black'
+              items={patientInvolvement} />
+          </Column>
+          <Column width='full'>
+            <Media
+              media='image'
+              url='../images/work/experiments/devices-patient.png'
+              position='marginBottomNegative'
+              alt='Patient Engagement screenshots' />
           </Column>
         </Container>
         <hr />
         <Container>
           <Column
             width='third'
-            headline='Logo sample.' />
-          <Column width='twoThird'>
+            headline='Curling with iBeacons' />
+          <Column
+            width='twoThird'
+            content={BeaconContent}>
+            <Anchor link='https://github.com/petertait/curling-hack-frontend' text='See source on Github' margin='topBottom' />
             <Media
               media='image'
-              url='../images/work/metrik/logo.svg'
-              alt='Metrik logo written out with the Metrik typeface.' />
+              url='../images/work/experiments/devices-beacon.png'
+              position='marginBottomNegative'
+              alt='Patient Engagement screenshots' />
           </Column>
         </Container>
         <hr />
+        <Container>
+          <Column
+            width='third'
+            headline='Pokey' >
+            <Button
+            text='Download coming soon'
+            icon='download'
+            color='experiments'
+            margin='bottom'
+            type='block' />
+          </Column>
+          <Column
+            width='twoThird'
+            content={PokeyContent}>
+            <Media
+              media='image'
+              url='../images/work/experiments/pokey.svg'
+              type='border'
+              color='black'
+              alt='Pokey sample' />
+            <Media
+              media='image'
+              url='../images/work/experiments/pokey-abc.svg'
+              type='border'
+              color='black'
+              alt='Pokey entire alphabet' />
+          </Column>
+        </Container>
       </div>
     )
   }

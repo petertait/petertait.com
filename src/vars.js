@@ -12,7 +12,7 @@ export const color = {
   express: '#252678',
   pebble: '#ed517f',
   agile: '#eed900',
-  experiments: '#F37D00'
+  experiments: '#ffc800'
 }
 
 // Typography

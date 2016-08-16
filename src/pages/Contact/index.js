@@ -6,7 +6,7 @@ import Hero from '../../components/Hero'
 import Container from '../../components/Container'
 import Column from '../../components/Column'
 import ContactForm from '../../components/ContactForm'
-import AnchorInline from '../../components/AnchorInline'
+import Anchor from '../../components/Anchor'
 
 class Contact extends Component {
   componentWillMount() {
@@ -27,7 +27,7 @@ class Contact extends Component {
           <Container>
             <Column width='half'>
               <h3>{"Get in touch and say hello. Whether you have a work enquiry or simply want to find out more, let's talk."}</h3>
-              <AnchorInline link='mailto:contact@petertait.com' linkText='Send me an email' margin='vertical' />
+              <Anchor link='mailto:contact@petertait.com' text='Send me an email' margin='topBottom' />
             </Column>
             <Column width='half'>
               <ContactForm color='blue' />

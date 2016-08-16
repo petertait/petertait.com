@@ -12,6 +12,8 @@ import Intro from './intro.md'
 import Pebble from './pebble.md'
 import Freelance from './freelance.md'
 import Eink from './eink.md'
+import Skills from './skills.md'
+import Passions from './passions.md'
 
 @Radium
 class CV extends Component {
@@ -95,6 +97,24 @@ class CV extends Component {
               <h3 style={styles.h3}>Beechen Cliff School, Bath</h3>
               <h4 style={styles.h4}>GCSE <br/> 2006–2008</h4>
               <h5 style={styles.h5}>12 A* to C grades</h5>
+            </div>
+          </Column>
+        </Container>
+        <hr />
+        <Container>
+          <Column width='full' headline='Personal' />
+        </Container>
+        <Container>
+          <Column width='half'>
+            <div>
+              <h3 style={styles.h3}>Skills</h3>
+              <div style={styles.content} dangerouslySetInnerHTML={{ __html: Skills }} />
+            </div>
+          </Column>
+          <Column width='half'>
+            <div>
+              <h3 style={styles.h3}>Passions</h3>
+              <div style={styles.content} dangerouslySetInnerHTML={{ __html: Passions }} />
             </div>
           </Column>
         </Container>

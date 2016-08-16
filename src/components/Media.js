@@ -16,7 +16,7 @@ class Image extends Component {
       )
     } else {
       mediaComponent = (
-        <img src={this.props.url} alt={this.props.alt} style={[styles.media, styles[this.props.position], styles[this.props.type]]} />
+        <img src={this.props.url} alt={this.props.alt} style={[styles.media, styles[this.props.position], styles[this.props.type], styles[this.props.color]]} />
       )
     }
     var gradient
@@ -36,21 +36,31 @@ class Image extends Component {
 
 const styles = {
   container: {
-    position: 'relative',
+    position: 'relative'
   },
   media: {
     width: '100%',
     maxWidth: '100%'
   },
-  logo: {
-    margin: '20px 0',
-    border: '2px solid rgba(255,255,255, 0.15)'
+  border: {
+    marginTop: '20px',
+    borderWidth: '2px',
+    borderStyle: 'solid',
+    borderColor: 'rgba(255,255,255, 0.15)'
+  },
+  black: {
+    borderColor: 'rgba(0,0,0, 0.15)'
   },
   background: {
     marginTop: '-60px',
     marginBottom: '-30%',
     filter: 'grayscale(100%)',
-    opacity: '0.3'
+    opacity: '0.3',
+    display: 'none',
+
+    [breakpoint.small]: {
+      display: 'inline'
+    }
   },
   marginBottomNegative: {
     position: 'relative',

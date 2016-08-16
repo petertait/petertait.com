@@ -10,17 +10,17 @@ class Button extends Component {
     const icon = '../images/' + this.props.icon + '.svg'
     return (
       <button
-      style={[styles.btn, styles[this.props.color]]}
+      style={[styles.button, styles[this.props.color], styles[this.props.margin]]}
       onClick={this.props.click}>
         {this.props.icon && <span style={styles.icon}><Isvg src={icon}/></span>}
-        <span style={styles.text}>{this.props.text}</span>
+        <span style={styles.text}>{this.props.text} {this.props.type === 'arrow' && '→'}</span>
       </button>
     )
   }
 }
 
 const styles = {
-  btn: {
+  button: {
     display: 'table',
     marginTop: '15px',
     marginBottom: '30px',
@@ -65,6 +65,23 @@ const styles = {
       backgroundColor: color.white,
       color: color.metrik
     }
+  },
+  experiments: {
+    ':hover': {
+      borderColor: color.black,
+      backgroundColor: color.black,
+      color: color.experiments
+    }
+  },
+
+  topBottom: {
+    display: 'table',
+    marginTop: '50px',
+    marginBottom: '60px'
+  },
+  bottom: {
+    display: 'table',
+    marginBottom: '50px'
   }
 }
 

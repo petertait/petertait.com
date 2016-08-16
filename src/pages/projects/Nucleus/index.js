@@ -40,7 +40,7 @@ class Nucleus extends Component {
     ]
     return (
       <div>
-        <HeroFeature headline='Unifying Internal Communication at AstraZeneca' image='nucleus' />
+        <HeroFeature headline='Unifying Internal Communication at AstraZeneca' image='nucleus' color={color.nucleus} />
         <Container>
           <Column width='third'>
             <ClientLogo client='astrazeneca' />
@@ -61,7 +61,7 @@ class Nucleus extends Component {
           alt='Pearson Education Course shown on multiple devices'
           gradient='true'
           type='background'
-          color='nucleus' />
+          color={color.nucleus} />
         <Container>
           <Column
             width='third'
@@ -102,7 +102,7 @@ class Nucleus extends Component {
             content={BrandContent}>
             <Media
               media='image'
-              type='logo'
+              type='border'
               url='../images/work/nucleus/logo.svg'
               alt='Nucleus logo in monotone' />
           </Column>

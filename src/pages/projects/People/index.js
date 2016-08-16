@@ -35,7 +35,7 @@ class People extends Component {
     ]
     return (
       <div>
-        <HeroFeature headline='Consumer Grade Search for the Enterprise' image='people' />
+        <HeroFeature headline='Consumer Grade Search for the Enterprise' image='people' color={color.people} />
         <Container>
           <Column width='third'>
             <ClientLogo client='astrazeneca' />
@@ -56,7 +56,7 @@ class People extends Component {
           url='../media/work/people/demo.mp4'
           type='background'
           gradient='true'
-          color='people' />
+          color={color.people} />
         <Container>
           <Column
             width='third'

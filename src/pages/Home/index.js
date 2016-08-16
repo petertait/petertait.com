@@ -21,7 +21,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/about' linkText='Discover more about me' />
+        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/about' text='Discover more about me' />
         <Services />
         <div className='container'>
           <h3>Selected Work</h3>

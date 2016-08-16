@@ -5,7 +5,7 @@ import { color } from '../../vars'
 import Hero from '../../components/Hero'
 import Container from '../../components/Container'
 import Column from '../../components/Column'
-import LinkInline from '../../components/LinkInline'
+import AnchorLink from '../../components/AnchorLink'
 import Content from './content.md'
 
 class Work extends Component {
@@ -27,7 +27,7 @@ class Work extends Component {
         <Container>
           <Column width='half'>
             <h3>About</h3>
-            <LinkInline link='about/cv' linkText='Curriculum Vitae' margin='vertical' />
+            <AnchorLink link='about/cv' text='Curriculum Vitae' margin='topBottom' />
           </Column>
           <Column width='half'>
             <div dangerouslySetInnerHTML={{ __html: Content }} />

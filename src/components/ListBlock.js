@@ -6,13 +6,14 @@ import { breakpoint, type } from '../vars'
 @Radium
 class ListBlock extends Component {
   render() {
+    const borderColor = this.props.color
     const listItems = this.props.items.map(function(item) {
       return (
-        <li key={item.name} style={styles.listItem}>{item.name}</li>
+        <li key={item.name} style={[styles.listItem, styles[borderColor]]}>{item.name}</li>
       )
     })
     return (
-      <div style={styles.container}>
+      <div style={[styles.container, styles[this.props.color]]}>
         <h3 style={styles.title}>{this.props.title}</h3>
         {this.props.intro && <p style={styles.intro}>{this.props.intro}</p>}
         <ul>{listItems}</ul>
@@ -23,7 +24,9 @@ class ListBlock extends Component {
 
 const styles = {
   container: {
-    border: '2px solid rgba(255,255,255, 0.15)',
+    borderWidth: '2px',
+    borderStyle: 'solid',
+    borderColor: 'rgba(255,255,255, 0.2)',
     padding: '30px 20px 20px',
     margin: '40px 0 20px'
   },
@@ -33,17 +36,19 @@ const styles = {
   intro: {
     fontSize: type.delta,
     padding: '0 10px 10px',
-    lineHeight: '1.7',
     opacity: '0.8',
 
     [breakpoint.medium]: {
       fontSize: type.epsilon,
+      lineHeight: '1.7',
       padding: '0 10px',
     }
   },
   listItem: {
     fontSize: type.delta,
-    borderBottom: '1px solid rgba(255,255,255, 0.25)',
+    borderBottomWidth: '1px',
+    borderBottomStyle: 'solid',
+    borderBottomColor: 'rgba(255,255,255, 0.25)',
     paddingBottom: '5px',
     opacity: '0.8',
     margin: '10px',
@@ -53,6 +58,9 @@ const styles = {
       display: 'inline-block',
       width: 'calc(50% - 20px)'
     }
+  },
+  black: {
+    borderColor: 'rgba(0,0,0, 0.2)'
   }
 }
 

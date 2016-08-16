@@ -4,7 +4,7 @@ import Radium from 'radium'
 
 import { breakpoint } from '../vars'
 
-import LinkInline from '../components/LinkInline'
+import AnchorLink from '../components/AnchorLink'
 
 @Radium
 class Hero extends Component {
@@ -13,7 +13,7 @@ class Hero extends Component {
       <section className='container'>
         <div style={styles.hero}>
           <h1>{this.props.headline}</h1>
-          {this.props.link && <span style={styles.button}><LinkInline link={this.props.link} linkText={this.props.linkText} /></span>}
+          {this.props.link && <span style={styles.button}><AnchorLink link={this.props.link} text={this.props.text} /></span>}
         </div>
       </section>
     )

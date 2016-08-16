@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
-import { breakpoint, type } from '../vars'
+import { breakpoint, type, color } from '../vars'
 
 @Radium
 class Hero extends Component {
@@ -9,9 +9,12 @@ class Hero extends Component {
     const image = {
       backgroundImage: 'url(../images/work/' + this.props.image + '/hero.png)'
     }
+    const gradient = {
+      backgroundImage: 'linear-gradient(rgba(0,0,0,0) 30%,' + this.props.color + ')'
+    }
     return (
       <section style={[styles.hero, image]}>
-        <div style={[styles.gradient, styles[this.props.image]]} />
+        <div style={[styles.gradient, gradient]} />
         <div className='container'>
           <div style={styles.inner}>
             <h1 style={styles.title}>{this.props.headline}</h1>
@@ -52,24 +55,6 @@ const styles = {
     position: 'absolute',
     left: '0',
     bottom: '0'
-  },
-  nucleus: {
-    backgroundImage: 'linear-gradient(transparent 30%, #3d1d90)'
-  },
-  education: {
-    backgroundImage: 'linear-gradient(transparent 30%, #00A9C6)'
-  },
-  people: {
-    backgroundImage: 'linear-gradient(transparent 30%, #C90077)'
-  },
-  metrik: {
-    backgroundImage: 'linear-gradient(transparent 30%, #00bc6c)'
-  },
-  express: {
-    backgroundImage: 'linear-gradient(transparent 30%, #252678)'
-  },
-  experiments: {
-    backgroundImage: 'linear-gradient(transparent 30%, #F37D00)'
   },
   title: {
     fontSize: type.mega,
