@@ -46,7 +46,7 @@ class People extends Component {
             content={IntroContent}>
             <ListBlock
               title='Project Involvement'
-              intro='As the lead designer on the project, I led the design from the initial ideas stage to prototyping and production level frontend development – using the Titanium framework.'
+              intro='As the lead design on the project, I led the design from the initial ideas stage to prototyping and production level frontend development – using the Titanium framework.'
               items={involvement} />
           </Column>
         </Container>
@@ -69,6 +69,28 @@ class People extends Component {
               media='image'
               url='../images/work/people/devices.png'
               alt='The different screens of the People Search App' />
+          </Column>
+        </Container>
+        <hr />
+        <Container>
+          <Column
+            width='full'
+            headline='Related projects'>
+            <GridBlock
+              title='Experiments + Hack Days'
+              client='Various Clients'
+              url='/work/experiments'
+              path='experiments' />
+            <GridBlock
+              title='Nucleus Intranet'
+              client='AstraZeneca'
+              url='/work/nucleus'
+              path='nucleus' />
+            <GridBlock
+              title='Remote Education Product'
+              client='Pearson'
+              url='/work/remote-education'
+              path='education' />
           </Column>
         </Container>
       </div>

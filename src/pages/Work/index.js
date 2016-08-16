@@ -25,39 +25,34 @@ class Work extends Component {
           <GridBlock
             title='Nucleus Intranet'
             client='AstraZeneca'
-            url='nucleus'
+            url='/work/nucleus'
             path='nucleus' />
           <GridBlock
             title='Remote Education Product'
             client='Pearson'
-            url='remote-education'
+            url='/work/remote-education'
             path='education' />
           <GridBlock
             title='People Search App'
             client='AstraZeneca'
-            url='people-search'
+            url='/work/people-search'
             path='people' />
           <GridBlock
             title='Metrik Typeface'
             client='Side Project'
-            url='metrik'
+            url='/work/metrik'
             path='metrik' />
           <GridBlock
             title='Customer Satisfaction App'
             client='National Express'
-            url='customer-satisfaction'
+            url='/work/customer-satisfaction'
             path='express' />
           <GridBlock
             title='Experiments + Hack Days'
             client='Various Clients'
-            url='experiments'
-            path='experiments' />
-          <GridBlock
-            title='pebble {code} website'
-            client='pebble {code}'
-            url='pebble'
-            path='pebble'
-            nthChild='lastChild' />
+            url='/work/experiments'
+            path='experiments'
+            nthChild='lastChild'  />
         </div>
       </div>
     )

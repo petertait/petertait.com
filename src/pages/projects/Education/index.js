@@ -6,6 +6,7 @@ import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
+import GridBlock from '../../../components/GridBlock'
 import ListBlock from '../../../components/ListBlock'
 import Media from '../../../components/Media'
 import Button from '../../../components/Button'
@@ -56,7 +57,7 @@ class Education extends Component {
             content={IntroContent}>
             <ListBlock
               title='Project Involvement'
-              intro='My involvement consisted of overseeing the art direction and design of the project as the only designer on the project. This included the creation of wireframes, product maps, prototypes including leading the frontend development for production – whilst dealing with the client day-to-day using an agile process.'
+              intro='My involvement consisted of being the sole designer, overseeing the art direction and design. This included the creation of wireframes, product maps, prototypes including leading the frontend development for production – whilst dealing with the client day-to-day using an agile process.'
               items={involvement} />
           </Column>
         </Container>
@@ -120,6 +121,28 @@ class Education extends Component {
               media='image'
               url='../images/work/education/devices-video.png'
               alt='Pearson Education Course shown on multiple devices' />
+          </Column>
+        </Container>
+        <hr />
+        <Container>
+          <Column
+            width='full'
+            headline='Related projects'>
+            <GridBlock
+              title='Nucleus Intranet'
+              client='AstraZeneca'
+              url='/work/nucleus'
+              path='nucleus' />
+            <GridBlock
+              title='Metrik Typeface'
+              client='Side Project'
+              url='/work/metrik'
+              path='metrik' />
+            <GridBlock
+              title='People Search App'
+              client='AstraZeneca'
+              url='/work/people-search'
+              path='people' />
           </Column>
         </Container>
       </div>

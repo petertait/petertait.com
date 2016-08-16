@@ -58,7 +58,7 @@ class Nucleus extends Component {
         <hr />
         <Media
           url='../images/work/nucleus/feature.jpg'
-          alt='Pearson Education Course shown on multiple devices'
+          alt='Nucleus running on a laptop'
           gradient='true'
           type='background'
           color={this.state.theme.primary} />
@@ -115,17 +115,17 @@ class Nucleus extends Component {
             <GridBlock
               title='Remote Education Product'
               client='Pearson'
-              url='remote-education'
+              url='/work/remote-education'
               path='education' />
             <GridBlock
               title='Metrik Typeface'
               client='Side Project'
-              url='metrik'
+              url='/work/metrik'
               path='metrik' />
             <GridBlock
               title='Customer Satisfaction App'
               client='National Express'
-              url='customer-satisfaction'
+              url='/work/customer-satisfaction'
               path='express' />
           </Column>
         </Container>

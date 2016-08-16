@@ -8,7 +8,6 @@ import { breakpoint, color, type } from '../vars'
 @Radium
 class GridBlock extends Component {
   render() {
-    const url = 'work/' + this.props.url
     const backgroundImage = {
       backgroundImage: 'url(../images/work/' + this.props.path + '/thumb.png)'
     }
@@ -17,7 +16,7 @@ class GridBlock extends Component {
         <div key='2' style={[styles.inner, backgroundImage]}>
           <h2 style={styles.title}>{this.props.title}</h2>
           <span style={styles.client}>{this.props.client}</span>
-          <Link style={styles.link} to={url}></Link>
+          <Link style={styles.link} to={this.props.url}></Link>
         </div>
       </div>
     )

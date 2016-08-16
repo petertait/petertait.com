@@ -106,6 +106,28 @@ class Metrik extends Component {
             <Vimeo url='https://player.vimeo.com/video/132186891?color=00bc6c&title=0&byline=0&portrait=0' />
           </Column>
         </Container>
+        <hr />
+        <Container>
+          <Column
+            width='full'
+            headline='Related projects'>
+            <GridBlock
+              title='Experiments + Hack Days'
+              client='Various Clients'
+              url='/work/experiments'
+              path='experiments' />
+            <GridBlock
+              title='Nucleus Intranet'
+              client='AstraZeneca'
+              url='/work/nucleus'
+              path='nucleus' />
+            <GridBlock
+              title='Remote Education Product'
+              client='Pearson'
+              url='/work/remote-education'
+              path='education' />  
+          </Column>
+        </Container>
       </div>
     )
   }

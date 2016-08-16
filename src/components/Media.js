@@ -24,7 +24,7 @@ class Image extends Component {
       gradient = <MediaGradient color={this.props.color} />
     }
     return (
-      <LazyLoad offset={200} debounce={false}>
+      <LazyLoad offset={800} debounce={false}>
         <div style={styles.container}>
           {mediaComponent}
           {gradient}

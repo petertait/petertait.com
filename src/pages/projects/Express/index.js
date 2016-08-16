@@ -88,6 +88,28 @@ class Express extends Component {
               alt='Showing Analytics within the National Express app' />
           </Column>
         </Container>
+        <hr />
+        <Container>
+          <Column
+            width='full'
+            headline='Related projects'>
+            <GridBlock
+              title='People Search App'
+              client='AstraZeneca'
+              url='/work/people-search'
+              path='people' />
+            <GridBlock
+              title='Remote Education Product'
+              client='Pearson'
+              url='/work/remote-education'
+              path='education' />
+            <GridBlock
+              title='Metrik Typeface'
+              client='Side Project'
+              url='/work/metrik'
+              path='metrik' />
+          </Column>
+        </Container>
       </div>
     )
   }

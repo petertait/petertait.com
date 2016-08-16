@@ -25,18 +25,18 @@ render((
     render={applyRouterMiddleware(useScroll())}>
     <Route path={'/'} component={App}>
       <IndexRoute component={Home} />
-      <Route path='about' component={About} />
-        <Route path='about/cv' component={CV} />
-      <Route path='contact' component={Contact} />
-      <Route path='work' component={Work} />
-        <Route path='work/nucleus' component={Nucleus} />
-        <Route path='work/remote-education' component={Education} />
-        <Route path='work/people-search' component={People} />
-        <Route path='work/metrik' component={Metrik} />
-        <Route path='work/customer-satisfaction' component={Express} />
-        <Route path='work/experiments' component={Experiments} />
-        <Route path='work/pebble' component={Pebble} />
-      <Route path='thanks' component={Thanks} />
+      <Route path='/about' component={About} />
+        <Route path='/about/cv' component={CV} />
+      <Route path='/contact' component={Contact} />
+      <Route path='/work' component={Work} />
+        <Route path='/work/nucleus' component={Nucleus} />
+        <Route path='/work/remote-education' component={Education} />
+        <Route path='/work/people-search' component={People} />
+        <Route path='/work/metrik' component={Metrik} />
+        <Route path='/work/customer-satisfaction' component={Express} />
+        <Route path='/work/experiments' component={Experiments} />
+        <Route path='/work/pebble' component={Pebble} />
+      <Route path='/thanks' component={Thanks} />
       <Route path='*' component={Home} />
     </Route>
   </Router>
