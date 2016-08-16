@@ -45,7 +45,7 @@ class Education extends Component {
 
     return (
       <div>
-        <HeroFeature headline='Workforce Education for the Digital Age' image='education' color={color.education} />
+        <HeroFeature headline='Workforce Education for the Digital Age' image='education' color={this.state.theme.primary} />
         <Container>
           <Column width='third'>
             <ClientLogo client='pearson' />
@@ -82,7 +82,7 @@ class Education extends Component {
           url='../media/work/education/demo.mp4'
           type='background'
           gradient='true'
-          color={color.education} />
+          color={this.state.theme.primary} />
         <Container>
           <Column
             width='third'

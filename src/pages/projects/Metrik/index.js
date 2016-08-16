@@ -34,7 +34,7 @@ class Metrik extends Component {
     ]
     return (
       <div>
-        <HeroFeature headline='Metrik: a geometric typeface' image='metrik' color={color.metrik}/>
+        <HeroFeature headline='Metrik: a geometric typeface' image='metrik' color={this.state.theme.primary}/>
         <Container>
           <Column width='third'>
             <Button text='Download coming soon' icon='download' color='metrik' />
@@ -91,7 +91,7 @@ class Metrik extends Component {
           url='../images/work/metrik/book.jpg'
           type='background'
           gradient='true'
-          color={color.metrik} />
+          color={this.state.theme.primary} />
         <Media
           media='image'
           url='../images/work/metrik/shapes.svg'

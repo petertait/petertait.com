@@ -51,7 +51,12 @@ class Work extends Component {
             title='Experiments + Hack Days'
             client='Various Clients'
             url='experiments'
-            path='experiments'
+            path='experiments' />
+          <GridBlock
+            title='pebble {code} website'
+            client='pebble {code}'
+            url='pebble'
+            path='pebble'
             nthChild='lastChild' />
         </div>
       </div>

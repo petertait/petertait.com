@@ -17,6 +17,7 @@ import People from './pages/projects/People'
 import Express from './pages/projects/Express'
 import Metrik from './pages/projects/Metrik'
 import Experiments from './pages/projects/Experiments'
+import Pebble from './pages/projects/Pebble'
 
 render((
   <Router
@@ -34,6 +35,7 @@ render((
         <Route path='work/metrik' component={Metrik} />
         <Route path='work/customer-satisfaction' component={Express} />
         <Route path='work/experiments' component={Experiments} />
+        <Route path='work/pebble' component={Pebble} />
       <Route path='thanks' component={Thanks} />
       <Route path='*' component={Home} />
     </Route>

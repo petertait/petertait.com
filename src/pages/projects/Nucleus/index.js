@@ -40,7 +40,7 @@ class Nucleus extends Component {
     ]
     return (
       <div>
-        <HeroFeature headline='Unifying Internal Communication at AstraZeneca' image='nucleus' color={color.nucleus} />
+        <HeroFeature headline='Unifying Internal Communication at AstraZeneca' image='nucleus' color={this.state.theme.primary} />
         <Container>
           <Column width='third'>
             <ClientLogo client='astrazeneca' />
@@ -61,7 +61,7 @@ class Nucleus extends Component {
           alt='Pearson Education Course shown on multiple devices'
           gradient='true'
           type='background'
-          color={color.nucleus} />
+          color={this.state.theme.primary} />
         <Container>
           <Column
             width='third'
@@ -105,6 +105,28 @@ class Nucleus extends Component {
               type='border'
               url='../images/work/nucleus/logo.svg'
               alt='Nucleus logo in monotone' />
+          </Column>
+        </Container>
+        <hr />
+        <Container>
+          <Column
+            width='full'
+            headline='Related projects'>
+            <GridBlock
+              title='Remote Education Product'
+              client='Pearson'
+              url='remote-education'
+              path='education' />
+            <GridBlock
+              title='Metrik Typeface'
+              client='Side Project'
+              url='metrik'
+              path='metrik' />
+            <GridBlock
+              title='Customer Satisfaction App'
+              client='National Express'
+              url='customer-satisfaction'
+              path='express' />
           </Column>
         </Container>
       </div>

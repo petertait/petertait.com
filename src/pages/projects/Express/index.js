@@ -36,7 +36,7 @@ class Express extends Component {
     ]
     return (
       <div>
-        <HeroFeature headline='Improving Customer Satisfaction through Digital Transformation' image='express' color={color.express} />
+        <HeroFeature headline='Improving Customer Satisfaction through Digital Transformation' image='express' color={this.state.theme.primary} />
         <Container>
           <Column width='third'>
             <ClientLogo client='express' />
@@ -57,7 +57,7 @@ class Express extends Component {
           url='../media/work/express/demo.mp4'
           type='background'
           gradient='true'
-          color={color.express} />
+          color={this.state.theme.primary} />
         <Container>
           <Column
             width='third'

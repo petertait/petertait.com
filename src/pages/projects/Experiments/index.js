@@ -37,7 +37,7 @@ class Experiments extends Component {
     ]
     return (
       <div>
-        <HeroFeature headline='Experiments + Hack Days' image='experiments' color={color.experiments} />
+        <HeroFeature headline='Experiments + Hack Days' image='experiments' color={this.state.theme.primary} />
         <Container>
           <Column width='third'>
             <Anchor link='https://github.com/petertait' text='Github Profile' type='block' color='experiments' margin='bottom' />
@@ -54,7 +54,7 @@ class Experiments extends Component {
           url='../images/work/experiments/feature-patient.png'
           type='background'
           gradient='true'
-          color={color.experiments} />
+          color={this.state.theme.primary} />
         <Container>
           <Column
             width='third'
