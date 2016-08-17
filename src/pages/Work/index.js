@@ -55,6 +55,11 @@ class Work extends Component {
               client='Various Clients'
               url='/work/experiments'
               path='experiments' />
+            <BlockGrid
+              title="pebble {code}'s Website"
+              client='pebble {code}'
+              url='/work/pebble'
+              path='pebble' />
           </Column>
         </Container>
       </div>

@@ -120,6 +120,28 @@ class Experiments extends Component {
               alt='Pokey entire alphabet' />
           </Column>
         </Container>
+        <hr />
+        <Container>
+          <Column
+            width='full'
+            headline='Related projects'>
+            <BlockGrid
+              title="pebble {code}'s Website"
+              client='pebble {code}'
+              url='/work/pebble'
+              path='pebble' />
+            <BlockGrid
+              title='Metrik Typeface'
+              client='Side Project'
+              url='/work/metrik'
+              path='metrik' />
+            <BlockGrid
+              title='Remote Education Product'
+              client='Pearson'
+              url='/work/remote-education'
+              path='education' />
+          </Column>
+        </Container>
       </div>
     )
   }

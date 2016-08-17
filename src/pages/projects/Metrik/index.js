@@ -112,10 +112,10 @@ class Metrik extends Component {
             width='full'
             headline='Related projects'>
             <BlockGrid
-              title='Experiments + Hack Days'
-              client='Various Clients'
-              url='/work/experiments'
-              path='experiments' />
+              title="pebble {code}'s Website"
+              client='pebble {code}'
+              url='/work/pebble'
+              path='pebble' />
             <BlockGrid
               title='Nucleus Intranet'
               client='AstraZeneca'
@@ -125,7 +125,7 @@ class Metrik extends Component {
               title='Remote Education Product'
               client='Pearson'
               url='/work/remote-education'
-              path='education' />  
+              path='education' />
           </Column>
         </Container>
       </div>
