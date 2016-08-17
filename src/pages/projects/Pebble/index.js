@@ -5,8 +5,8 @@ import { color } from '../../../vars'
 import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
-import ListBlock from '../../../components/ListBlock'
-import GridBlock from '../../../components/GridBlock'
+import BlockList from '../../../components/BlockList'
+import BlockGrid from '../../../components/BlockGrid'
 import Media from '../../../components/Media'
 import Button from '../../../components/Button'
 
@@ -33,7 +33,7 @@ class Pebble extends Component {
     ]
     return (
       <div>
-        <HeroFeature headline='Metrik: a geometric typeface' image='metrik' color={this.state.theme.primary}/>
+        <HeroFeature headline='Metrik: a geometric typeface' image='metrik' color={this.state.theme.primary} />
         <Container>
           <Column width='third'>
             <Button text='Download coming soon' icon='download' color='metrik' />
@@ -42,7 +42,7 @@ class Pebble extends Component {
             width='twoThird'
             intro='Metrik is a geometric typeface built from the ground up with the simplest of shapes.'
             content={IntroContent}>
-            <ListBlock
+            <BlockList
               title='Project Involvement'
               intro="Metrik is a typeface I've created as a way to learn and appreciate typography further."
               items={involvement} />

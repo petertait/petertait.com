@@ -5,10 +5,10 @@ import Isvg from 'react-inlinesvg'
 import { breakpoint } from '../vars'
 
 @Radium
-class Service extends Component {
+class BlockFeature extends Component {
   render() {
     return (
-      <div style={[styles.service, styles[this.props.nthChild]]}>
+      <div style={[styles.item, styles[this.props.width], styles[this.props.nthChild]]}>
         <div style={styles.inner}>
           <span style={styles.image}>
             <Isvg src={this.props.image} />
@@ -22,21 +22,30 @@ class Service extends Component {
 }
 
 const styles = {
-  service: {
+  item: {
     display: 'block',
     textAlign: 'center',
     width: '100%',
+    marginBottom: '20px',
 
     [breakpoint.medium]: {
-      display: 'flex',
-      width: 'calc(33% - 5px)',
+      display: 'flex'
     },
   },
-  odd: {
-    margin: '20px 0',
-
+  half: {
     [breakpoint.medium]: {
-      margin: '0 10px'
+      width: 'calc(50% - 5px)'
+    }
+  },
+  third: {
+    [breakpoint.medium]: {
+      width: 'calc(33% - 5px)'
+    }
+  },
+  odd: {
+    [breakpoint.medium]: {
+      marginLeft: '10px',
+      marginRight: '10px',
     }
   },
   inner: {
@@ -53,4 +62,4 @@ const styles = {
 }
 
 
-export default Service
+export default BlockFeature

@@ -6,13 +6,13 @@ import Isvg from 'react-inlinesvg'
 import { breakpoint, color, type } from '../vars'
 
 @Radium
-class GridBlock extends Component {
+class BlockGrid extends Component {
   render() {
     const backgroundImage = {
       backgroundImage: 'url(../images/work/' + this.props.path + '/thumb.png)'
     }
     return (
-      <div key='1' style={[styles.block, styles[this.props.nthChild]]}>
+      <div key='1' style={styles.block}>
         <div key='2' style={[styles.inner, backgroundImage]}>
           <h2 style={styles.title}>{this.props.title}</h2>
           <span style={styles.client}>{this.props.client}</span>
@@ -39,9 +39,6 @@ const styles = {
       width: '33.33%',
       display: 'inline-block'
     }
-  },
-  lastChild: {
-    marginBottom: '50px'
   },
   inner: {
     backgroundColor: color.blue,
@@ -78,4 +75,4 @@ const styles = {
   }
 }
 
-export default GridBlock
+export default BlockGrid

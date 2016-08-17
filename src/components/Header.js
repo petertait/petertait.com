@@ -3,6 +3,8 @@ import Radium from 'radium'
 
 import { breakpoint, layout } from '../vars'
 
+import Container from '../components/Container'
+import Column from '../components/Column'
 import Logo from '../components/Logo'
 import Nav from '../components/Nav'
 
@@ -10,26 +12,29 @@ import Nav from '../components/Nav'
 class Header extends Component {
   render() {
     return (
-      <header className='container' style={styles.header}>
-        <Logo/>
-        <Nav/>
-      </header>
+      <Container>
+        <Column width='full'>
+          <header style={styles.header}>
+            <Logo/>
+            <Nav/>
+          </header>
+        </Column>
+      </Container>
     )
   }
 }
 
 const styles = {
   header: {
+    width: '100%',
     margin: 'auto',
-    maxWidth: layout.maxWidth,
     paddingTop: '40px',
-    paddingBottom: '20px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
 
     [breakpoint.medium]: {
-      paddingBottom: '60px'
+      paddingBottom: '30px'
     }
   }
 }

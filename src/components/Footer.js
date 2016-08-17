@@ -3,6 +3,8 @@ import Radium from 'radium'
 
 import { breakpoint, layout } from '../vars'
 
+import Container from '../components/Container'
+import Column from '../components/Column'
 import Social from '../components/Social'
 
 @Radium
@@ -11,27 +13,28 @@ class Footer extends Component {
     var today = new Date();
     var year = today.getFullYear();
     return (
-      <footer className='container' style={styles.footer}>
-        <div style={styles.legal}>{year + ' © Peter Tait Ltd.'}</div>
-        <Social />
-      </footer>
+      <Container>
+        <Column width='full'>
+          <footer style={styles.footer}>
+            <div style={styles.legal}>{year + ' © Peter Tait Ltd.'}</div>
+            <Social />
+          </footer>
+        </Column>
+      </Container>
     )
   }
 }
 
 const styles = {
   footer: {
-    margin: 'auto',
-    maxWidth: layout.maxWidth,
-    paddingTop: '20px',
-    paddingBottom: '30px',
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingTop: '30px',
 
     [breakpoint.medium]: {
       display: 'flex',
-      paddingBottom: '80px',
-      paddingTop: '50px',
+      paddingTop: '20px',
+      paddingBottom: '50px'
     }
   },
   legal: {

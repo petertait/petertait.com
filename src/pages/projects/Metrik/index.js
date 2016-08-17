@@ -5,8 +5,8 @@ import { color } from '../../../vars'
 import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
-import ListBlock from '../../../components/ListBlock'
-import GridBlock from '../../../components/GridBlock'
+import BlockList from '../../../components/BlockList'
+import BlockGrid from '../../../components/BlockGrid'
 import Media from '../../../components/Media'
 import Vimeo from '../../../components/Vimeo'
 import Button from '../../../components/Button'
@@ -43,7 +43,7 @@ class Metrik extends Component {
             width='twoThird'
             intro='Metrik is a geometric typeface built from the ground up with the simplest of shapes.'
             content={IntroContent}>
-            <ListBlock
+            <BlockList
               title='Project Involvement'
               intro="Metrik is a typeface I've created as a way to learn and appreciate typography further."
               items={involvement} />
@@ -111,17 +111,17 @@ class Metrik extends Component {
           <Column
             width='full'
             headline='Related projects'>
-            <GridBlock
+            <BlockGrid
               title='Experiments + Hack Days'
               client='Various Clients'
               url='/work/experiments'
               path='experiments' />
-            <GridBlock
+            <BlockGrid
               title='Nucleus Intranet'
               client='AstraZeneca'
               url='/work/nucleus'
               path='nucleus' />
-            <GridBlock
+            <BlockGrid
               title='Remote Education Product'
               client='Pearson'
               url='/work/remote-education'

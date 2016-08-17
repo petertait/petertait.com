@@ -3,7 +3,9 @@ import React, { Component, PropTypes } from 'react'
 import { color } from '../../vars'
 
 import Hero from '../../components/Hero'
-import GridBlock from '../../components/GridBlock'
+import Container from '../../components/Container'
+import Column from '../../components/Column'
+import BlockGrid from '../../components/BlockGrid'
 
 class Work extends Component {
   componentWillMount() {
@@ -21,39 +23,40 @@ class Work extends Component {
     return (
       <div>
         <Hero headline='Selected Work.' />
-        <div className='container'>
-          <GridBlock
-            title='Nucleus Intranet'
-            client='AstraZeneca'
-            url='/work/nucleus'
-            path='nucleus' />
-          <GridBlock
-            title='Remote Education Product'
-            client='Pearson'
-            url='/work/remote-education'
-            path='education' />
-          <GridBlock
-            title='People Search App'
-            client='AstraZeneca'
-            url='/work/people-search'
-            path='people' />
-          <GridBlock
-            title='Metrik Typeface'
-            client='Side Project'
-            url='/work/metrik'
-            path='metrik' />
-          <GridBlock
-            title='Customer Satisfaction App'
-            client='National Express'
-            url='/work/customer-satisfaction'
-            path='express' />
-          <GridBlock
-            title='Experiments + Hack Days'
-            client='Various Clients'
-            url='/work/experiments'
-            path='experiments'
-            nthChild='lastChild'  />
-        </div>
+        <Container>
+          <Column width='full'>
+            <BlockGrid
+              title='Nucleus Intranet'
+              client='AstraZeneca'
+              url='/work/nucleus'
+              path='nucleus' />
+            <BlockGrid
+              title='Remote Education Product'
+              client='Pearson'
+              url='/work/remote-education'
+              path='education' />
+            <BlockGrid
+              title='People Search App'
+              client='AstraZeneca'
+              url='/work/people-search'
+              path='people' />
+            <BlockGrid
+              title='Metrik Typeface'
+              client='Side Project'
+              url='/work/metrik'
+              path='metrik' />
+            <BlockGrid
+              title='Customer Satisfaction App'
+              client='National Express'
+              url='/work/customer-satisfaction'
+              path='express' />
+            <BlockGrid
+              title='Experiments + Hack Days'
+              client='Various Clients'
+              url='/work/experiments'
+              path='experiments' />
+          </Column>
+        </Container>
       </div>
     )
   }

@@ -38,7 +38,7 @@ export const type = {
 
 // Layout
 export const layout = {
-  gutter: '40px',
+  gutter: '20px',
   maxWidth: '1100px'
 }
 

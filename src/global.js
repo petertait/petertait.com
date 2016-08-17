@@ -23,14 +23,6 @@ class Styles extends Component {
           fontWeight: type.fontRegular,
           lineHeight: '1.5'
         },
-        '.container': {
-          position: 'relative',
-          margin: 'auto',
-          width: '100%',
-          maxWidth: layout.maxWidth,
-          paddingLeft: '20px',
-          paddingRight: '20px',
-        },
         h1: {
           fontSize: type.alpha,
           fontFamily: type.fontSans,
@@ -96,10 +88,6 @@ class Styles extends Component {
         },
         mediaQueries: {
           '(min-width: 600px)': {
-            '.container': {
-              paddingLeft: layout.gutter,
-              paddingRight: layout.gutter,
-            },
             h1:  {
               fontSize: type.mega
             }

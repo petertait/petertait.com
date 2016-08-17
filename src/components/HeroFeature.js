@@ -3,6 +3,9 @@ import Radium from 'radium'
 
 import { breakpoint, type, color } from '../vars'
 
+import Container from '../components/Container'
+import Column from '../components/Column'
+
 @Radium
 class Hero extends Component {
   render() {
@@ -15,11 +18,13 @@ class Hero extends Component {
     return (
       <section style={[styles.hero, image]}>
         <div style={[styles.gradient, gradient]} />
-        <div className='container'>
-          <div style={styles.inner}>
-            <h1 style={styles.title}>{this.props.headline}</h1>
-          </div>
-        </div>
+        <Container>
+          <Column width='full'>
+            <div style={styles.inner}>
+              <h1 style={styles.title}>{this.props.headline}</h1>
+            </div>
+          </Column>
+        </Container>
       </section>
     )
   }
@@ -40,13 +45,13 @@ const styles = {
     }
   },
   inner: {
-    padding: '50px 0 120px',
+    padding: '40px 0 90px',
     position: 'relative',
     zIndex: '3',
 
     [breakpoint.medium]: {
       textAlign: 'center',
-      padding: '80px 20px 200px'
+      padding: '80px 20px 170px'
     }
   },
   gradient: {
@@ -58,14 +63,14 @@ const styles = {
   },
   title: {
     fontSize: type.mega,
-    textShadow: '0 0 40px rgba(0,0,0, 0.3)',
 
     [breakpoint.small]: {
       fontSize: type.giga
     },
 
     [breakpoint.medium]: {
-      fontSize: type.tera
+      fontSize: type.tera,
+      textShadow: '0 0 40px rgba(0,0,0, 0.2)'
     }
   }
 }

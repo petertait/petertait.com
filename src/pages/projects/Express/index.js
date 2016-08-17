@@ -6,8 +6,8 @@ import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
-import ListBlock from '../../../components/ListBlock'
-import GridBlock from '../../../components/GridBlock'
+import BlockList from '../../../components/BlockList'
+import BlockGrid from '../../../components/BlockGrid'
 import Media from '../../../components/Media'
 
 import IntroContent from './intro.md'
@@ -45,7 +45,7 @@ class Express extends Component {
             width='twoThird'
             intro='Through digital transformation, National Express can now manage customer satisfaction on a larger scale with insightful analytics.'
             content={IntroContent}>
-            <ListBlock
+            <BlockList
               title='Project Involvement'
               intro='As lead design on the project my involvement ranged from initial ideas stage, communicating daily with the client to production frontend development. An agile process helped with rapid and continuous development.'
               items={involvement} />
@@ -93,17 +93,17 @@ class Express extends Component {
           <Column
             width='full'
             headline='Related projects'>
-            <GridBlock
+            <BlockGrid
               title='People Search App'
               client='AstraZeneca'
               url='/work/people-search'
               path='people' />
-            <GridBlock
+            <BlockGrid
               title='Remote Education Product'
               client='Pearson'
               url='/work/remote-education'
               path='education' />
-            <GridBlock
+            <BlockGrid
               title='Metrik Typeface'
               client='Side Project'
               url='/work/metrik'

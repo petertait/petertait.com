@@ -7,7 +7,10 @@ import { breakpoint, type } from '../vars'
 class Column extends Component {
   render() {
     return (
-      <div style={[styles.column, styles[this.props.width]]}>
+      <div style={[styles.column, styles[this.props.width], styles[this.props.display]]}>
+        {this.props.title &&
+          <h3 style={styles.title}>{this.props.title}</h3>
+        }
         {this.props.headline &&
           <h2 style={styles.headline}>{this.props.headline}</h2>
         }
@@ -28,7 +31,11 @@ const styles = {
     paddingLeft: '20px',
     paddingRight: '20px'
   },
+  title: {
+    width: '100%'
+  },
   headline: {
+    width: '100%',
     marginBottom: '20px'
   },
   intro: {
@@ -37,6 +44,13 @@ const styles = {
 
     [breakpoint.medium]: {
       fontSize: '30px',
+    }
+  },
+  flex: {
+    [breakpoint.medium]: {
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+      display: 'flex'
     }
   },
   full: {

@@ -6,8 +6,8 @@ import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
-import GridBlock from '../../../components/GridBlock'
-import ListBlock from '../../../components/ListBlock'
+import BlockGrid from '../../../components/BlockGrid'
+import BlockList from '../../../components/BlockList'
 import Media from '../../../components/Media'
 import Button from '../../../components/Button'
 
@@ -55,7 +55,7 @@ class Education extends Component {
             width='twoThird'
             intro='Pearson wanted a new way to educate a workforce and increase their reach across a larger audience.'
             content={IntroContent}>
-            <ListBlock
+            <BlockList
               title='Project Involvement'
               intro='My involvement consisted of being the sole designer, overseeing the art direction and design. This included the creation of wireframes, product maps, prototypes including leading the frontend development for production – whilst dealing with the client day-to-day using an agile process.'
               items={involvement} />
@@ -128,17 +128,17 @@ class Education extends Component {
           <Column
             width='full'
             headline='Related projects'>
-            <GridBlock
+            <BlockGrid
               title='Nucleus Intranet'
               client='AstraZeneca'
               url='/work/nucleus'
               path='nucleus' />
-            <GridBlock
+            <BlockGrid
               title='Metrik Typeface'
               client='Side Project'
               url='/work/metrik'
               path='metrik' />
-            <GridBlock
+            <BlockGrid
               title='People Search App'
               client='AstraZeneca'
               url='/work/people-search'

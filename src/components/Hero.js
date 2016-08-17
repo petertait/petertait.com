@@ -4,32 +4,36 @@ import Radium from 'radium'
 
 import { breakpoint } from '../vars'
 
+import Container from '../components/Container'
+import Column from '../components/Column'
 import AnchorLink from '../components/AnchorLink'
 
 @Radium
 class Hero extends Component {
   render() {
     return (
-      <section className='container'>
-        <div style={styles.hero}>
-          <h1>{this.props.headline}</h1>
-          {this.props.link && <span style={styles.button}><AnchorLink link={this.props.link} text={this.props.text} /></span>}
-        </div>
-      </section>
+      <Container>
+        <Column width='full'>
+          <div style={styles.hero}>
+            <h1>{this.props.headline}</h1>
+            {this.props.link && <span style={styles.link}><AnchorLink link={this.props.link} text={this.props.text} /></span>}
+          </div>
+        </Column>
+      </Container>
     )
   }
 }
 
 const styles = {
   hero: {
-    paddingTop: '40px',
-    paddingBottom: '60px',
+    paddingTop: '30px',
+    paddingBottom: '30px',
 
     [breakpoint.medium]: {
-      paddingBottom: '100px'
+      paddingBottom: '60px'
     }
   },
-  button: {
+  link: {
     marginTop: '60px',
     display: 'table',
 

@@ -6,8 +6,8 @@ import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
-import ListBlock from '../../../components/ListBlock'
-import GridBlock from '../../../components/GridBlock'
+import BlockList from '../../../components/BlockList'
+import BlockGrid from '../../../components/BlockGrid'
 import Media from '../../../components/Media'
 
 import IntroContent from './intro.md'
@@ -44,7 +44,7 @@ class People extends Component {
             width='twoThird'
             intro='AstraZeneca needed an easy way for their workforce to communicate across multiple continents.'
             content={IntroContent}>
-            <ListBlock
+            <BlockList
               title='Project Involvement'
               intro='As the lead design on the project, I led the design from the initial ideas stage to prototyping and production level frontend development – using the Titanium framework.'
               items={involvement} />
@@ -67,6 +67,7 @@ class People extends Component {
           <Column width='full'>
             <Media
               media='image'
+              position='marginBottomNegative'
               url='../images/work/people/devices.png'
               alt='The different screens of the People Search App' />
           </Column>
@@ -76,17 +77,17 @@ class People extends Component {
           <Column
             width='full'
             headline='Related projects'>
-            <GridBlock
+            <BlockGrid
               title='Experiments + Hack Days'
               client='Various Clients'
               url='/work/experiments'
               path='experiments' />
-            <GridBlock
+            <BlockGrid
               title='Nucleus Intranet'
               client='AstraZeneca'
               url='/work/nucleus'
               path='nucleus' />
-            <GridBlock
+            <BlockGrid
               title='Remote Education Product'
               client='Pearson'
               url='/work/remote-education'

@@ -6,8 +6,8 @@ import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
-import ListBlock from '../../../components/ListBlock'
-import GridBlock from '../../../components/GridBlock'
+import BlockList from '../../../components/BlockList'
+import BlockGrid from '../../../components/BlockGrid'
 import Media from '../../../components/Media'
 
 import IntroContent from './intro.md'
@@ -49,7 +49,7 @@ class Nucleus extends Component {
             width='twoThird'
             intro='Inconsistencies in communication hampered the business process. AstraZeneca needed a scalable platform to share insights.'
             content={IntroContent}>
-            <ListBlock
+            <BlockList
               title='Project Involvement'
               intro='As the sole designer, I oversaw the entire design of the product from initial ideas stage to continuous development – including daily communication with product stakeholders. Beyond the product mapping, user-testing, prototyping, workshops, I also lead the frontend development of production code.'
               items={involvement} />
@@ -112,17 +112,17 @@ class Nucleus extends Component {
           <Column
             width='full'
             headline='Related projects'>
-            <GridBlock
+            <BlockGrid
               title='Remote Education Product'
               client='Pearson'
               url='/work/remote-education'
               path='education' />
-            <GridBlock
+            <BlockGrid
               title='Metrik Typeface'
               client='Side Project'
               url='/work/metrik'
               path='metrik' />
-            <GridBlock
+            <BlockGrid
               title='Customer Satisfaction App'
               client='National Express'
               url='/work/customer-satisfaction'

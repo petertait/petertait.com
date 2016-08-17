@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
-import { breakpoint } from '../vars'
+import { breakpoint, layout } from '../vars'
 
 @Radium
 class Container extends Component {
@@ -16,15 +16,22 @@ class Container extends Component {
 
 const styles = {
   container: {
+    maxWidth: layout.maxWidth,
+    width: '100%',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    padding: '0 0 30px',
+    paddingLeft: '0',
+    paddingRight: '0',
+    paddingBottom: '30px',
+    position: 'relative',
+    margin: 'auto',
 
     [breakpoint.medium]: {
       display: 'flex'
     },
     [breakpoint.small]: {
-      padding: '0 20px 30px'
+      paddingLeft: layout.gutter,
+      paddingRight: layout.gutter,
     }
   }
 }
