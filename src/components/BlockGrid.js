@@ -40,6 +40,7 @@ const styles = {
     }
   },
   inner: {
+    backgroundColor: color.blue,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     color: color.white,
