@@ -13,6 +13,7 @@ import Button from '../../../components/Button'
 
 import IntroContent from './intro.md'
 import DesignContent from './design.md'
+import ResultsContent from './results.md'
 import PerformanceContent from './performance.md'
 import IllustrationsContent from './illustrations.md'
 
@@ -65,6 +66,22 @@ class Pebble extends Component {
               position='marginBottomNegative'
               url='../images/work/pebble/browser.png'
               alt='Full size of the pebble {code} website' />
+          </Column>
+        </Container>
+        <hr />
+        <Container>
+          <Column
+            width='third'
+            headline='666% traffic increase? Not bad.' />
+          <Column
+            width='twoThird'
+            content={ResultsContent} />
+          <Column width='full'>
+            <Media
+              media='image'
+              position='marginBottomNegative'
+              url='../images/work/pebble/404.png'
+              alt='The new pebble {code} 404 page that went viral.' />
           </Column>
         </Container>
         <hr />
