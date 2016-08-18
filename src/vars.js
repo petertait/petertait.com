@@ -29,11 +29,11 @@ export const type = {
 
   fontRegular: 'normal',
   fontBold: 'bold',
-  fontMono: 'Iosevka, monospace',
+  fontMono: 'iosevka, monospace',
   fontSans: 'apercu, sans-serif',
 
   bodySize: '18px',
-  bodyWeight: '400'
+  bodyWeight: 'normal'
 }
 
 // Layout

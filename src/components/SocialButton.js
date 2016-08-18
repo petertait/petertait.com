@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 import Isvg from 'react-inlinesvg'
 
-import { breakpoint, color } from '../vars'
+import { breakpoint } from '../vars'
 
 @Radium
 class SocialButton extends Component {

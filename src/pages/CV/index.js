@@ -8,12 +8,12 @@ import Container from '../../components/Container'
 import Column from '../../components/Column'
 import ColumnContent from '../../components/ColumnContent'
 
-import Intro from './intro.md'
-import Pebble from './pebble.md'
-import Freelance from './freelance.md'
-import Eink from './eink.md'
-import Skills from './skills.md'
-import Passions from './passions.md'
+import IntroContent from './intro.md'
+import PebbleContent from './pebble.md'
+import FreelanceContent from './freelance.md'
+import EinkContent from './eink.md'
+import SkillsContent from './skills.md'
+import PassionsContent from './passions.md'
 
 @Radium
 class CV extends Component {
@@ -35,7 +35,7 @@ class CV extends Component {
         <Container>
           <Column width='half' headline='An agile designer with a focus on an interactive and refined process.' />
           <Column width='half'>
-            <div style={styles.content} dangerouslySetInnerHTML={{ __html: Intro }} />
+            <div style={styles.content} dangerouslySetInnerHTML={{ __html: IntroContent }} />
           </Column>
         </Container>
         <hr />
@@ -49,7 +49,7 @@ class CV extends Component {
           </Column>
           <Column width='half'>
             <h3 style={styles.h3}>Senior UI/UX Designer</h3>
-            <div style={styles.content} dangerouslySetInnerHTML={{ __html: Pebble }} />
+            <div style={styles.content} dangerouslySetInnerHTML={{ __html: PebbleContent }} />
           </Column>
         </Container>
         <Container>
@@ -59,7 +59,7 @@ class CV extends Component {
           </Column>
           <Column width='half'>
             <h3 style={styles.h3}>Designer and frontend developer</h3>
-            <div style={styles.content} dangerouslySetInnerHTML={{ __html: Freelance }} />
+            <div style={styles.content} dangerouslySetInnerHTML={{ __html: FreelanceContent }} />
           </Column>
         </Container>
         <Container>
@@ -69,7 +69,7 @@ class CV extends Component {
           </Column>
           <Column width='half'>
             <h3 style={styles.h3}>Visual Designer</h3>
-            <div style={styles.content} dangerouslySetInnerHTML={{ __html: Eink }} />
+            <div style={styles.content} dangerouslySetInnerHTML={{ __html: EinkContent }} />
           </Column>
         </Container>
         <hr />
@@ -106,16 +106,12 @@ class CV extends Component {
         </Container>
         <Container>
           <Column width='half'>
-            <div>
-              <h3 style={styles.h3}>Skills</h3>
-              <div style={styles.content} dangerouslySetInnerHTML={{ __html: Skills }} />
-            </div>
+            <h3 style={styles.h3}>Skills</h3>
+            <div style={styles.content} dangerouslySetInnerHTML={{ __html: SkillsContent }} />
           </Column>
           <Column width='half'>
-            <div>
-              <h3 style={styles.h3}>Passions</h3>
-              <div style={styles.content} dangerouslySetInnerHTML={{ __html: Passions }} />
-            </div>
+            <h3 style={styles.h3}>Passions</h3>
+            <div style={styles.content} dangerouslySetInnerHTML={{ __html: PassionsContent }} />
           </Column>
         </Container>
       </div>
@@ -125,12 +121,11 @@ class CV extends Component {
 
 const styles = {
   h3: {
-    marginBottom: '5px',
     fontSize: type.gamma,
-    fontFamily: type.fontSans
+    fontFamily: type.fontSans,
+    marginBottom: '5px'
   },
   h4: {
-    color: color.blue,
     fontSize: type.delta,
     fontWeight: type.fontRegular,
     opacity: '0.5',
@@ -138,7 +133,7 @@ const styles = {
   },
   h5: {
     marginTop: '-15px',
-    fontWeight: type.fontRegular,
+    fontWeight: type.fontRegular
   },
   content: {
     fontSize: type.delta

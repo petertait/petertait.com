@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
-import { color, type } from '../vars'
+import { color } from '../vars'
 
 @Radium
 class ContactForm extends Component {

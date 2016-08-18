@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Radium, { Style } from 'radium';
 
-import { type, breakpoint, layout, color } from './vars'
+import { type, breakpoint, layout } from './vars'
 
 @Radium
 class Styles extends Component {

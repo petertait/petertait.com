@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import Radium from 'radium'
-import Isvg from 'react-inlinesvg'
 
 import { breakpoint, color, type } from '../vars'
 
@@ -41,7 +40,6 @@ const styles = {
     }
   },
   inner: {
-    backgroundColor: color.blue,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     color: color.white,

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import {StyleRoot} from 'radium';
+import { StyleRoot } from 'radium';
 
 import Styles from './global'
 import Header from './components/Header'

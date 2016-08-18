@@ -6,7 +6,8 @@ import Hero from '../../components/Hero'
 import Container from '../../components/Container'
 import Column from '../../components/Column'
 import AnchorLink from '../../components/AnchorLink'
-import Content from './content.md'
+
+import AboutContent from './content.md'
 
 class Work extends Component {
   componentWillMount() {
@@ -25,12 +26,11 @@ class Work extends Component {
       <div>
         <Hero headline='User interface + experience designer at pebble {code}.' />
         <Container>
-          <Column width='half'>
-            <h3>About</h3>
+          <Column width='half' title='About'>
             <AnchorLink link='about/cv' text='Curriculum Vitae' margin='topBottom' />
           </Column>
           <Column width='half'>
-            <div dangerouslySetInnerHTML={{ __html: Content }} />
+            <div dangerouslySetInnerHTML={{ __html: AboutContent }} />
           </Column>
         </Container>
       </div>

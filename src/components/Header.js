@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
-import { breakpoint, layout } from '../vars'
+import { breakpoint } from '../vars'
 
 import Container from '../components/Container'
 import Column from '../components/Column'

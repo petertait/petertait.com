@@ -25,8 +25,9 @@ class Contact extends Component {
       <div>
         <Hero headline='Talk to me.' />
           <Container>
-            <Column width='half'>
-              <h3>{"Get in touch and say hello. Whether you have a work enquiry or simply want to find out more, let's talk."}</h3>
+            <Column
+              width='half'
+              title="Get in touch and say hello. Whether you have a work enquiry or simply want to find out more, let's talk.">
               <Anchor link='mailto:contact@petertait.com' text='Send me an email' margin='topBottom' />
             </Column>
             <Column width='half'>
