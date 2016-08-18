@@ -2,7 +2,7 @@
 export const color = {
   white: '#fff',
   black: '#151820',
-  blue: '#0433ff',
+  blue: '#0032D2',
   sky: '#e5eeff',
 
   nucleus: '#3d1d90',
