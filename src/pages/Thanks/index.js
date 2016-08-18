@@ -25,7 +25,7 @@ class Thanks extends Component {
       <div>
         <Hero headline='Thanks for getting in touch!' />
         <Container>
-          <Column title="I'll be sure to reply as soon as possible." />
+          <Column title='I’ll be sure to reply as soon as possible.' />
         </Container>
       </div>
     )

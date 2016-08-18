@@ -48,7 +48,7 @@ class Pebble extends Component {
             content={IntroContent}>
             <BlockList
               title='Project Involvement'
-              intro="I was lead design on the refresh and building of the website. Designed between whiteboards and Sketch, created with Jekyll."
+              intro='I was lead design on the refresh and building of the website. Designed between whiteboards and Sketch, created with Jekyll.'
               items={involvement} />
           </Column>
         </Container>
