@@ -39,7 +39,7 @@ const styles = {
     paddingBottom: '5px',
     opacity: '0.8',
     margin: '10px',
-    width: '100%',
+    width: 'calc(100% - 20px)',
     display: 'inline-block',
 
     [breakpoint.medium]: {
@@ -49,7 +49,7 @@ const styles = {
   },
   full: {
     [breakpoint.medium]: {
-      width: '100%'
+      width: 'calc(100% - 20px)'
     }
   },
   black: {
