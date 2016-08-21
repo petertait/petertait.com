@@ -6,9 +6,11 @@ import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
-import BlockList from '../../../components/BlockList'
+import Block from '../../../components/Block'
+import List from '../../../components/List'
 import BlockGrid from '../../../components/BlockGrid'
 import Media from '../../../components/Media'
+import Process from '../../../components/Process'
 
 import IntroContent from './intro.md'
 import DesignContent from './design.md'
@@ -38,6 +40,27 @@ class Nucleus extends Component {
       { name: 'Atomic design system' },
       { name: 'Responsive webapp design' }
     ]
+    const processDiscover = [
+      { name: 'Client workshops' },
+      { name: 'Current product map' },
+      { name: 'User interviews' }
+    ]
+    const processAnalyse = [
+      { name: 'Team workshop' },
+      { name: 'Product map' },
+      { name: 'Concepts' }
+    ]
+    const processDevelop = [
+      { name: 'Wireframes' },
+      { name: 'Atomic design' },
+      { name: 'Prototypes + MVP' },
+      { name: 'Continuous improvement' }
+    ]
+    const processOutcome = [
+      { name: 'Product with trained up internal team' },
+      { name: 'Savings of over £1m' },
+      { name: 'Handover + training' }
+    ]
     return (
       <div>
         <HeroFeature headline='Unifying Internal Communication at AstraZeneca' image='nucleus' color={this.state.theme.primary} />
@@ -49,10 +72,12 @@ class Nucleus extends Component {
             width='twoThird'
             intro='Inconsistencies in communication hampered the business process. AstraZeneca needed a scalable platform to share insights.'
             content={IntroContent}>
-            <BlockList
-              title='Project Involvement'
-              intro='As the sole designer, I oversaw the entire design of the product from initial ideas stage to continuous development – including daily communication with product stakeholders. Beyond the product mapping, user-testing, prototyping, workshops, I also lead the frontend development of production code.'
-              items={involvement} />
+            <Block
+              border='solid'
+              title='Involvement'
+              intro='As the sole designer, I oversaw the entire design of the product from initial ideas stage to continuous development – including daily communication with product stakeholders. Beyond the product mapping, user-testing, prototyping and workshops, I also lead the frontend development of production code.'>
+              <List items={involvement} />
+            </Block>
           </Column>
         </Container>
         <hr />
@@ -63,6 +88,25 @@ class Nucleus extends Component {
           type='background'
           color={this.state.theme.primary} />
         <Container>
+          <Column width='full'>
+            <Block
+              type='processFeature'
+              border='solid'
+              title='Process'>
+              <Process
+                title='Discover'
+                items={processDiscover} />
+              <Process
+                title='Analyse'
+                items={processAnalyse} />
+              <Process
+                title='Develop'
+                items={processDevelop} />
+              <Process
+                title='Outcome'
+                items={processOutcome} />
+            </Block>
+          </Column>
           <Column
             width='third'
             headline='User-centered design for a global audience. Built up from an MVP into a product.' />

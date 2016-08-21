@@ -6,7 +6,7 @@ import { color, type } from '../../vars'
 import Hero from '../../components/Hero'
 import Container from '../../components/Container'
 import Column from '../../components/Column'
-import ColumnContent from '../../components/ColumnContent'
+import Anchor from '../../components/Anchor'
 
 import IntroContent from './intro.md'
 import PebbleContent from './pebble.md'
@@ -33,7 +33,9 @@ class CV extends Component {
       <div>
         <Hero headline='Curriculum Vitae' />
         <Container>
-          <Column width='half' headline='An agile designer with a focus on an interactive and refined process.' />
+          <Column width='half' headline='An agile designer with a focus on an interactive and refined process.'>
+            <Anchor link='../media/docs/peter-tait-cv-19-08-16.pdf' text='Download the PDF' margin='topBottom' />
+          </Column>
           <Column width='half'>
             <div style={styles.content} dangerouslySetInnerHTML={{ __html: IntroContent }} />
           </Column>

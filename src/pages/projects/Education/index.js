@@ -6,10 +6,12 @@ import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
+import Block from '../../../components/Block'
+import List from '../../../components/List'
 import BlockGrid from '../../../components/BlockGrid'
-import BlockList from '../../../components/BlockList'
 import Media from '../../../components/Media'
 import Button from '../../../components/Button'
+import Process from '../../../components/Process'
 
 import IntroContent from './intro.md'
 import ProductContent from './product.md'
@@ -43,7 +45,25 @@ class Education extends Component {
       { name: 'Lead frontend development' },
       { name: 'Responsive webapp design' }
     ]
-
+    const processDiscover = [
+      { name: 'Client workshops' },
+      { name: 'Current market alternatives' }
+    ]
+    const processAnalyse = [
+      { name: 'Team workshop' },
+      { name: 'Product map' },
+      { name: 'Concepts' }
+    ]
+    const processDevelop = [
+      { name: 'Wireframes' },
+      { name: 'Hi-fi designs' },
+      { name: 'Prototypes + MVP' },
+      { name: 'Develop product with continuous releases' }
+    ]
+    const processOutcome = [
+      { name: 'Product released' },
+      { name: 'Handover + training' }
+    ]
     return (
       <div>
         <HeroFeature headline='Workforce Education for the Digital Age' image='education' color={this.state.theme.primary} />
@@ -55,14 +75,35 @@ class Education extends Component {
             width='twoThird'
             intro='Pearson wanted a new way to educate a workforce and increase their reach across a larger audience.'
             content={IntroContent}>
-            <BlockList
+            <Block
+              border='solid'
               title='Project Involvement'
-              intro='My involvement consisted of being the sole designer, overseeing the art direction and design. This included the creation of wireframes, product maps, prototypes including leading the frontend development for production – whilst dealing with the client day-to-day using an agile process.'
-              items={involvement} />
+              intro='My involvement consisted of being the sole designer, overseeing the art direction and design. This included the creation of wireframes, product maps, prototypes including leading the frontend development for production – whilst dealing with the client day-to-day using an agile process.'>
+              <List items={involvement} />
+            </Block>
           </Column>
         </Container>
         <hr />
         <Container>
+          <Column width='full'>
+            <Block
+              type='process'
+              border='solid'
+              title='Process'>
+              <Process
+                title='Discover'
+                items={processDiscover} />
+              <Process
+                title='Analyse'
+                items={processAnalyse} />
+              <Process
+                title='Develop'
+                items={processDevelop} />
+              <Process
+                title='Outcome'
+                items={processOutcome} />
+            </Block>
+          </Column>
           <Column
             width='third'
             headline='Brief: Transformation from an 800+ powerpoint to an energetic and educational product.' />

@@ -5,7 +5,8 @@ import { color } from '../../../vars'
 import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
-import BlockList from '../../../components/BlockList'
+import Block from '../../../components/Block'
+import List from '../../../components/List'
 import BlockGrid from '../../../components/BlockGrid'
 import Media from '../../../components/Media'
 import Vimeo from '../../../components/Vimeo'
@@ -43,10 +44,12 @@ class Metrik extends Component {
             width='twoThird'
             intro='Metrik is a geometric typeface built from the ground up with the simplest of shapes.'
             content={IntroContent}>
-            <BlockList
+            <Block
+              border='solid'
               title='Project Involvement'
-              intro="Metrik is a typeface I've created as a way to learn and appreciate typography further."
-              items={involvement} />
+              intro='Metrik is a typeface created to help me learn and further appreciate typography.'>
+              <List items={involvement} />
+            </Block>
           </Column>
         </Container>
         <hr />

@@ -11,19 +11,14 @@ import BlockGrid from '../../../components/BlockGrid'
 import ClientLogo from '../../../components/ClientLogo'
 import Media from '../../../components/Media'
 import Button from '../../../components/Button'
-import Process from '../../../components/Process'
 
 import IntroContent from './intro.md'
-import DesignContent from './design.md'
-import ResultsContent from './results.md'
-import PerformanceContent from './performance.md'
-import IllustrationsContent from './illustrations.md'
 
-class Pebble extends Component {
+class Websites extends Component {
   componentWillMount() {
     this.state = {
       theme: {
-        primary: color.pebble,
+        primary: color.websites,
         secondary: color.white
       }
     }
@@ -37,30 +32,9 @@ class Pebble extends Component {
       { name: 'Development of Jekyll site' },
       { name: 'Brand illustrations' }
     ]
-    const processDiscover = [
-      { name: 'Internal workshops' },
-      { name: 'Current sitemap' },
-      { name: 'Current userflow' },
-      { name: 'Understand business requirements' }
-    ]
-    const processAnalyse = [
-      { name: 'Product map' },
-      { name: 'Concepts' },
-      { name: 'Technology experiments' }
-    ]
-    const processDevelop = [
-      { name: 'Wireframes' },
-      { name: 'Hi-fi designs' },
-      { name: 'Prototypes' },
-      { name: 'Develop website with continuous releases' }
-    ]
-    const processOutcome = [
-      { name: 'Continuous releases' },
-      { name: 'Increase of up to 666% traffic' }
-    ]
     return (
       <div>
-        <HeroFeature headline='Startups + Enterprise Unite' image='pebble' color={this.state.theme.primary} />
+        <HeroFeature headline='Marketing Websites' image='websites' color={this.state.theme.primary} />
         <Container>
           <Column width='third'>
             <ClientLogo client='pebble' />
@@ -79,84 +53,50 @@ class Pebble extends Component {
         </Container>
         <hr />
         <Container>
-          <Column width='full'>
-            <Block
-              type='process'
-              border='solid'
-              title='Process'>
-              <Process
-                title='Discover'
-                items={processDiscover} />
-              <Process
-                title='Analyse'
-                items={processAnalyse} />
-              <Process
-                title='Develop'
-                items={processDevelop} />
-              <Process
-                title='Outcome'
-                items={processOutcome} />
-            </Block>
-          </Column>
           <Column
             width='third'
-            headline='Bold and uncomplicated design.' />
+            headline='APM Technologies' />
           <Column
             width='twoThird'
-            content={DesignContent} />
+            content={IntroContent} />
           <Column width='full'>
             <Media
               media='image'
               position='marginBottomNegative'
               url='../images/work/pebble/browser.png'
-              alt='Full size of the pebble {code} website' />
+              alt='Full size of the APM website' />
           </Column>
         </Container>
         <hr />
         <Container>
           <Column
             width='third'
-            headline='666% traffic increase? Not bad.' />
+            headline='Templars Weddings' />
           <Column
             width='twoThird'
-            content={ResultsContent} />
+            content={IntroContent} />
           <Column width='full'>
             <Media
               media='image'
               position='marginBottomNegative'
-              url='../images/work/pebble/404.png'
-              alt='The new pebble {code} 404 page that went viral.' />
+              url='../images/work/pebble/browser.png'
+              alt='Full size of the APM website' />
           </Column>
         </Container>
         <hr />
         <Container>
           <Column
             width='third'
-            headline='Mobile first, built for performance.' />
+            headline='New Tradition' />
           <Column
             width='twoThird'
-            content={PerformanceContent} />
+            content={IntroContent} />
           <Column width='full'>
             <Media
               media='image'
               position='marginBottomNegative'
-              url='../images/work/pebble/devices.png'
-              alt='The different screens of the pebble {code} website' />
-          </Column>
-        </Container>
-        <hr />
-        <Container>
-          <Column
-            width='third'
-            headline='Fun and vibrant illustrations that are full of character.' />
-          <Column
-            width='twoThird'
-            content={IllustrationsContent} />
-          <Column width='full'>
-            <Media
-              media='image'
-              url='../images/work/pebble/illustrations.png'
-              alt='Illustrations created for the pebble {code} brand' />
+              url='../images/work/pebble/browser.png'
+              alt='Full size of the APM website' />
           </Column>
         </Container>
         <hr />
@@ -186,4 +126,4 @@ class Pebble extends Component {
   }
 }
 
-export default Pebble
+export default Websites

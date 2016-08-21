@@ -5,8 +5,9 @@ import { color } from '../../../vars'
 import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
+import Block from '../../../components/Block'
+import List from '../../../components/List'
 import BlockGrid from '../../../components/BlockGrid'
-import BlockList from '../../../components/BlockList'
 import Media from '../../../components/Media'
 import Anchor from '../../../components/Anchor'
 import Button from '../../../components/Button'
@@ -62,10 +63,9 @@ class Experiments extends Component {
           <Column
             width='twoThird'
             content={PatientContent}>
-            <BlockList
-              title='Project Involvement'
-              color='black'
-              items={patientInvolvement} />
+            <Block title='Project Involvement' color='black' border='solid'>
+              <List color='black' items={patientInvolvement} />
+            </Block>
           </Column>
           <Column width='full'>
             <Media

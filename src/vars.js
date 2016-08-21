@@ -10,9 +10,10 @@ export const color = {
   people: '#C90077',
   metrik: '#00bc6c',
   express: '#252678',
-  pebble: '#ed517f',
+  pebble: '#cb3966',
   agile: '#eed900',
-  experiments: '#ffc800'
+  experiments: '#ffc800',
+  websites: '#656a77'
 }
 
 // Typography

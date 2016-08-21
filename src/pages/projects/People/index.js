@@ -6,9 +6,11 @@ import HeroFeature from '../../../components/HeroFeature'
 import Container from '../../../components/Container'
 import Column from '../../../components/Column'
 import ClientLogo from '../../../components/ClientLogo'
-import BlockList from '../../../components/BlockList'
+import Block from '../../../components/Block'
+import List from '../../../components/List'
 import BlockGrid from '../../../components/BlockGrid'
 import Media from '../../../components/Media'
+import Process from '../../../components/Process'
 
 import IntroContent from './intro.md'
 import DesignContent from './design.md'
@@ -33,6 +35,25 @@ class People extends Component {
       { name: 'Lead frontend development' },
       { name: 'Titanium iOS development' }
     ]
+    const processDiscover = [
+      { name: 'Client workshops' },
+      { name: 'Current workflow' }
+    ]
+    const processAnalyse = [
+      { name: 'Team workshop' },
+      { name: 'Product map' },
+      { name: 'Concepts' },
+      { name: 'Understand Titanium' }
+    ]
+    const processDevelop = [
+      { name: 'Wireframes' },
+      { name: 'Hi-fi designs' },
+      { name: 'Prototypes + MVP' }
+    ]
+    const processOutcome = [
+      { name: 'MVP released' },
+      { name: 'Handover + training' }
+    ]
     return (
       <div>
         <HeroFeature headline='Consumer Grade Search for the Enterprise' image='people' color={this.state.theme.primary} />
@@ -44,10 +65,12 @@ class People extends Component {
             width='twoThird'
             intro='AstraZeneca needed an easy way for their workforce to communicate across multiple continents.'
             content={IntroContent}>
-            <BlockList
+            <Block
+              border='solid'
               title='Project Involvement'
-              intro='As the lead design on the project, I led the design from the initial ideas stage to prototyping and production level frontend development – using the Titanium framework.'
-              items={involvement} />
+              intro='As the lead design on the project, I led the design from the initial ideas stage to prototyping and production level frontend development – using the Titanium framework.'>
+              <List items={involvement} />
+            </Block>
           </Column>
         </Container>
         <hr />
@@ -58,6 +81,25 @@ class People extends Component {
           gradient='true'
           color={this.state.theme.primary} />
         <Container>
+          <Column width='full'>
+            <Block
+              type='processFeature'
+              border='solid'
+              title='Process'>
+              <Process
+                title='Discover'
+                items={processDiscover} />
+              <Process
+                title='Analyse'
+                items={processAnalyse} />
+              <Process
+                title='Develop'
+                items={processDevelop} />
+              <Process
+                title='Outcome'
+                items={processOutcome} />
+            </Block>
+          </Column>
           <Column
             width='third'
             headline='User-centered, consumer grade quality for an enterprise audience.' />

@@ -23,7 +23,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/about' text='Discover more about me' />
+        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/contact' text='Available for Hire' />
         <hr />
         <Container>
           <Column
@@ -64,7 +64,7 @@ class Home extends Component {
               title='Global People Search'
               summary='An iOS app for searching colleagues within a AstraZeneca.' link='work/people-search' />
             <ListItem
-              title='Metrik Typeface' 
+              title='Metrik Typeface'
               summary='A geometric display typeface built for unique brands.'
               link='/work/metrik' />
             <ListItem
