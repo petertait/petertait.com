@@ -34,7 +34,7 @@ class CV extends Component {
         <Hero headline='Curriculum Vitae' />
         <Container>
           <Column width='half' headline='An agile designer with a focus on an interactive and refined process.'>
-            <Anchor link='../media/docs/peter-tait-cv.pdf' text='Download the PDF' margin='topBottom' />
+            <Anchor url='../media/docs/peter-tait-cv.pdf' text='Download the PDF' margin='topBottom' />
           </Column>
           <Column width='half'>
             <div style={styles.content} dangerouslySetInnerHTML={{ __html: IntroContent }} />

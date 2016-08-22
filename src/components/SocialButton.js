@@ -9,24 +9,20 @@ class SocialButton extends Component {
   render() {
     const icon = '../images/' + this.props.icon + '.svg'
     return (
-      <a style={styles.btn} href={this.props.link} target='_blank'><Isvg src={icon} /></a>
+      <a style={styles.button} href={this.props.link} target='_blank'><Isvg src={icon} /></a>
     )
   }
 }
 
 const styles = {
-  btn: {
+  button: {
     display: 'inline-block',
     width: '45px',
     height: '45px',
     padding: '9px 12px',
-    margin: '0 10px 50px 0',
+    marginRight: '10px',
     border: '1px solid',
-    borderRadius: '50%',
-
-    [breakpoint.medium]: {
-      margin: '20px 10px 50px 0'
-    }
+    borderRadius: '50%'
   }
 }
 

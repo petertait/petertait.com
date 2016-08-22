@@ -9,14 +9,14 @@ class Anchor extends Component {
     var link
     if (this.props.type === 'block') {
       link = (
-        <a href={this.props.link} style={[styles.block, styles[this.props.color]]} key='1'>
+        <a href={this.props.url} style={[styles.block, styles[this.props.color]]} key='1' target='_blank'>
           <span>{this.props.text}</span> &rarr;
         </a>
       )
     } else {
       link = (
-        <a href={this.props.link} style={styles.link}>
-          <span style={styles.linkInner}>{this.props.text}</span> &rarr;
+        <a href={this.props.url} style={styles.link} target='_blank'>
+          <span style={styles.linkInner} >{this.props.text}</span> &rarr;
         </a>
       )
     }

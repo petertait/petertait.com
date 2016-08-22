@@ -41,7 +41,7 @@ class Experiments extends Component {
         <HeroFeature headline='Experiments + Hack Days' image='experiments' color={this.state.theme.primary} />
         <Container>
           <Column width='third'>
-            <Anchor link='https://github.com/petertait' text='Github Profile' type='block' color='experiments' margin='bottom' />
+            <Anchor url='https://github.com/petertait' text='Github Profile' type='block' color='experiments' margin='bottom' />
           </Column>
           <Column
             width='twoThird'
@@ -83,7 +83,7 @@ class Experiments extends Component {
           <Column
             width='twoThird'
             content={BeaconContent}>
-            <Anchor link='https://github.com/petertait/curling-hack-frontend' text='See source on Github' margin='topBottom' />
+            <Anchor url='https://github.com/petertait/curling-hack-frontend' text='See source on Github' margin='topBottom' />
             <Media
               media='image'
               url='../images/work/experiments/devices-beacon.png'
@@ -136,10 +136,10 @@ class Experiments extends Component {
               url='/work/metrik'
               path='metrik' />
             <BlockGrid
-              title='Remote Education Product'
-              client='Pearson'
-              url='/work/remote-education'
-              path='education' />
+              title="Marketing Websites"
+              client='Various Clients'
+              url='/work/marketing-websites'
+              path='websites' />
           </Column>
         </Container>
       </div>

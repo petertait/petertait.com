@@ -175,10 +175,10 @@ class Pebble extends Component {
               url='/work/metrik'
               path='metrik' />
             <BlockGrid
-              title='Remote Education Product'
-              client='Pearson'
-              url='/work/remote-education'
-              path='education' />
+              title="Marketing Websites"
+              client='Various Clients'
+              url='/work/marketing-websites'
+              path='websites' />
           </Column>
         </Container>
       </div>

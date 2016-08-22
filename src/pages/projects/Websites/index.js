@@ -10,9 +10,12 @@ import List from '../../../components/List'
 import BlockGrid from '../../../components/BlockGrid'
 import ClientLogo from '../../../components/ClientLogo'
 import Media from '../../../components/Media'
-import Button from '../../../components/Button'
+import Anchor from '../../../components/Anchor'
 
 import IntroContent from './intro.md'
+import APMContent from './apm.md'
+import TemplarsContent from './templars.md'
+import TraditionContent from './tradition.md'
 
 class Websites extends Component {
   componentWillMount() {
@@ -36,34 +39,28 @@ class Websites extends Component {
       <div>
         <HeroFeature headline='Marketing Websites' image='websites' color={this.state.theme.primary} />
         <Container>
-          <Column width='third'>
-            <ClientLogo client='pebble' />
-          </Column>
+          <Column width='third'/>
           <Column
             width='twoThird'
-            intro='As part of a website refresh for pebble {code} the target was to unite startups and enterprise.'
+            intro='Beyond applications, I have created brochure and marketing websites for a multitude of clients and target audiences.'
             content={IntroContent}>
-            <Block
-              border='solid'
-              title='Involvement'
-              intro='I was lead design on the refresh and building of the website. Designed between whiteboards and Sketch, created with Jekyll.'>
-              <List items={involvement} />
-            </Block>
           </Column>
         </Container>
         <hr />
         <Container>
           <Column
             width='third'
-            headline='APM Technologies' />
+            headline='APM Technologies'>
+            <Anchor url='http://apmtechnologies.com' text='Visit the site' margin='topBottom' />
+          </Column>
           <Column
             width='twoThird'
-            content={IntroContent} />
+            content={APMContent} />
           <Column width='full'>
             <Media
               media='image'
               position='marginBottomNegative'
-              url='../images/work/pebble/browser.png'
+              url='../images/work/websites/apm.png'
               alt='Full size of the APM website' />
           </Column>
         </Container>
@@ -71,32 +68,36 @@ class Websites extends Component {
         <Container>
           <Column
             width='third'
-            headline='Templars Weddings' />
+            headline='Templars Weddings'>
+            <Anchor url='http://templarsweddings.com' text='Visit the site' margin='topBottom' />
+          </Column>
           <Column
             width='twoThird'
-            content={IntroContent} />
+            content={TemplarsContent} />
           <Column width='full'>
             <Media
               media='image'
               position='marginBottomNegative'
-              url='../images/work/pebble/browser.png'
-              alt='Full size of the APM website' />
+              url='../images/work/websites/templars.png'
+              alt='Full size of the Templars Weddings website' />
           </Column>
         </Container>
         <hr />
         <Container>
           <Column
             width='third'
-            headline='New Tradition' />
+            headline='New Tradition'>
+            <Anchor url='http://newtradition.co.uk' text='Visit the site' margin='topBottom' />
+          </Column>
           <Column
             width='twoThird'
-            content={IntroContent} />
+            content={TraditionContent} />
           <Column width='full'>
             <Media
               media='image'
               position='marginBottomNegative'
-              url='../images/work/pebble/browser.png'
-              alt='Full size of the APM website' />
+              url='../images/work/websites/tradition.png'
+              alt='Full size of the New Tradition website' />
           </Column>
         </Container>
         <hr />
@@ -110,10 +111,10 @@ class Websites extends Component {
               url='/work/customer-satisfaction'
               path='express' />
             <BlockGrid
-              title='Metrik Typeface'
-              client='Side Project'
-              url='/work/metrik'
-              path='metrik' />
+              title="pebble {code}'s Website"
+              client='pebble {code}'
+              url='/work/pebble'
+              path='pebble' />
             <BlockGrid
               title='Remote Education Product'
               client='Pearson'

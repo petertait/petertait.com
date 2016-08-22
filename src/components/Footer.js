@@ -29,12 +29,11 @@ const styles = {
   footer: {
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: '30px',
+    paddingTop: '40px',
+    paddingBottom: '50px',
 
     [breakpoint.medium]: {
-      display: 'flex',
-      paddingTop: '20px',
-      paddingBottom: '50px'
+      display: 'flex'
     }
   },
   legal: {

@@ -28,7 +28,7 @@ class Contact extends Component {
             <Column
               width='half'
               title='Get in touch and say hello. Whether you have a work enquiry or simply want to find out more, let’s talk.'>
-              <Anchor link='mailto:contact@petertait.com' text='Send me an email' margin='topBottom' />
+              <Anchor url='mailto:contact@petertait.com' text='Send me an email' margin='topBottom' />
             </Column>
             <Column width='half'>
               <ContactForm color='blue' />
