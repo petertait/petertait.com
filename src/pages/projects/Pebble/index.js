@@ -71,7 +71,7 @@ class Pebble extends Component {
             content={IntroContent}>
             <Block
               border='solid'
-              title='Project Involvement'
+              title='Involvement'
               intro='I was lead design on the refresh and building of the website. Designed between whiteboards and Sketch, created with Jekyll.'>
               <List items={involvement} />
             </Block>

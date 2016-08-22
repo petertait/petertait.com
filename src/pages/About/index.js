@@ -26,8 +26,8 @@ class Work extends Component {
       <div>
         <Hero headline='User interface + experience designer at pebble {code}.' />
         <Container>
-          <Column width='half' title='About'>
-            <AnchorLink link='about/cv' text='Curriculum Vitae' margin='topBottom' />
+          <Column width='half'>
+            <AnchorLink link='about/cv' text='Curriculum Vitae' margin='bottom' />
           </Column>
           <Column width='half'>
             <div dangerouslySetInnerHTML={{ __html: AboutContent }} />

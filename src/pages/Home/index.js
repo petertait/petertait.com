@@ -59,7 +59,7 @@ class Home extends Component {
               link='work/nucleus' />
             <ListItem
               title='Remote Education Course'
-              summary='Creation of a new way in educating a workforce remotely for Pearson Educaiton.' link='work/remote-education' />
+              summary='Creation of a new way in educating a workforce remotely for Pearson Education.' link='work/remote-education' />
             <ListItem
               title='Global People Search'
               summary='An iOS app for searching colleagues within a AstraZeneca.' link='work/people-search' />

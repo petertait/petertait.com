@@ -63,7 +63,7 @@ class Experiments extends Component {
           <Column
             width='twoThird'
             content={PatientContent}>
-            <Block title='Project Involvement' color='black' border='solid'>
+            <Block title='Involvement' color='black' border='solid'>
               <List color='black' items={patientInvolvement} />
             </Block>
           </Column>

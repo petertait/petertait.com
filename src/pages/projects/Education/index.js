@@ -77,7 +77,7 @@ class Education extends Component {
             content={IntroContent}>
             <Block
               border='solid'
-              title='Project Involvement'
+              title='Involvement'
               intro='My involvement consisted of being the sole designer, overseeing the art direction and design. This included the creation of wireframes, product maps, prototypes including leading the frontend development for production – whilst dealing with the client day-to-day using an agile process.'>
               <List items={involvement} />
             </Block>

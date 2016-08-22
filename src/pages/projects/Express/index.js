@@ -70,7 +70,7 @@ class Express extends Component {
             content={IntroContent}>
             <Block
               border='solid'
-              title='Project Involvement'
+              title='Involvement'
               intro='As lead design on the project my involvement ranged from initial ideas stage, communicating daily with the client to production frontend development. An agile process helped with rapid and continuous development.'>
               <List items={involvement} />
             </Block>

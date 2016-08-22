@@ -14,7 +14,7 @@ class Block extends Component {
           styles[this.props.color],
           styles[this.props.type]
         ]}>
-        <h3 style={styles.title}>{this.props.title}</h3>
+        <h2 style={styles.title}>{this.props.title}</h2>
         {this.props.intro && <p style={styles.intro}>{this.props.intro}</p>}
         {this.props.children}
       </div>
@@ -41,13 +41,9 @@ const styles = {
   },
   intro: {
     fontSize: type.delta,
-    padding: '0 10px 10px',
-    opacity: '0.8',
-
-    [breakpoint.medium]: {
-      fontSize: type.epsilon,
-      padding: '0 10px',
-    }
+    lineHeight: '1.7',
+    padding: '0 10px',
+    opacity: '0.8'
   },
   processFeature: {
     marginBottom: '50px',

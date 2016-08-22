@@ -46,7 +46,7 @@ class Metrik extends Component {
             content={IntroContent}>
             <Block
               border='solid'
-              title='Project Involvement'
+              title='Involvement'
               intro='Metrik is a typeface created to help me learn and further appreciate typography.'>
               <List items={involvement} />
             </Block>

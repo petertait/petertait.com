@@ -67,7 +67,7 @@ class People extends Component {
             content={IntroContent}>
             <Block
               border='solid'
-              title='Project Involvement'
+              title='Involvement'
               intro='As the lead design on the project, I led the design from the initial ideas stage to prototyping and production level frontend development – using the Titanium framework.'>
               <List items={involvement} />
             </Block>

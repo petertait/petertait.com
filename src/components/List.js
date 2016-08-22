@@ -32,7 +32,7 @@ const styles = {
     width: '100%',
   },
   listItem: {
-    fontSize: type.delta,
+    fontSize: type.epsilon,
     borderBottomWidth: '1px',
     borderBottomStyle: 'solid',
     borderBottomColor: 'rgba(255,255,255, 0.25)',

@@ -10,7 +10,7 @@ export const color = {
   people: '#C90077',
   metrik: '#00bc6c',
   express: '#252678',
-  pebble: '#cb3966',
+  pebble: '#D94774',
   agile: '#eed900',
   experiments: '#ffc800',
   websites: '#656a77'
