@@ -74,6 +74,10 @@ const styles = {
     }
   },
 
+  top: {
+    display: 'table',
+    marginTop: '50px'
+  },
   topBottom: {
     display: 'table',
     marginTop: '50px',

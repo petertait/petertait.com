@@ -7,6 +7,7 @@ import Container from '../../components/Container'
 import Column from '../../components/Column'
 import BlockFeature from '../../components/BlockFeature'
 import ListItem from '../../components/ListItem'
+import AnchorLink from '../../components/AnchorLink'
 
 class Home extends Component {
   componentWillMount() {
@@ -23,7 +24,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/contact' text='Available for Hire' />
+        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/contact' text='Available for hire' />
         <hr />
         <Container>
           <Column
@@ -71,6 +72,7 @@ class Home extends Component {
               title='Customer Satisfaction App'
               summary='Digital transformation of how National Express measure and maintain customer satisfaction.'
               link='work/customer-satisfaction' />
+            <AnchorLink link='/work' text='View all work' margin='top' />
           </Column>
         </Container>
       </div>

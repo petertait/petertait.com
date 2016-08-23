@@ -48,6 +48,11 @@ const styles = {
   white: {
     color: 'white'
   },
+
+  top: {
+    display: 'table',
+    marginTop: '50px'
+  },
   topBottom: {
     display: 'table',
     marginTop: '50px',

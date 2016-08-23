@@ -46,7 +46,7 @@ npm run clean
 
 <br>
 
-## Publish to Netlify
+## Deploy to Netlify
 
 ```sh
 npm run deploy
