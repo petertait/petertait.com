@@ -10,6 +10,7 @@
     "email": "contact@petertait.com",
     "url": "http://petertait.com"
   },
+  "license" : "MIT",
   "dependencies": {
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
@@ -41,6 +42,6 @@
     "start": "webpack-dev-server --history-api-fallback --host 0.0.0.0 --hot --inline --progress",
     "clean": "rm -rf build/scripts",
     "build": "NODE_ENV=production webpack -p",
-    "publish": "NODE_ENV=production webpack -p; surge build"
+    "deploy": "netlify deploy"
   }
 }

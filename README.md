@@ -46,8 +46,8 @@ npm run clean
 
 <br>
 
-## Publish to surge.sh
+## Publish to Netlify
 
 ```sh
-npm run publish
+npm run deploy
 ```
