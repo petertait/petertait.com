@@ -1,7 +1,7 @@
 # Freelance website for Peter Tait
 #### Multifunctional designer/developer based in Bath. Traditionally trained designer that codes.
 
-Visit the site at http://petertait.com
+Visit the site at https://petertait.com
 
 <br>
 
