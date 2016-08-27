@@ -24,7 +24,7 @@ class Work extends Component {
   render() {
     return (
       <div>
-        <Hero headline='User interface + experience designer at pebble {code}.' />
+        <Hero headline='Freelance designer and frontend developer.' />
         <Container>
           <Column width='half'>
             <AnchorLink link='about/cv' text='Curriculum Vitae' margin='bottom' />
