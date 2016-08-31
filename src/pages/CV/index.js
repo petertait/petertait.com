@@ -46,22 +46,22 @@ class CV extends Component {
         </Container>
         <Container>
           <Column width='half'>
-            <h3 style={styles.h3}>{'pebble {code}'}</h3>
-            <h4 style={styles.h4}>July 2014–present</h4>
-          </Column>
-          <Column width='half'>
-            <h3 style={styles.h3}>Senior UI/UX Designer</h3>
-            <div style={styles.content} dangerouslySetInnerHTML={{ __html: PebbleContent }} />
-          </Column>
-        </Container>
-        <Container>
-          <Column width='half'>
             <h3 style={styles.h3}>Freelance</h3>
-            <h4 style={styles.h4}>2010–2014</h4>
+            <h4 style={styles.h4}>Sept 2010–Present</h4>
           </Column>
           <Column width='half'>
             <h3 style={styles.h3}>Designer and frontend developer</h3>
             <div style={styles.content} dangerouslySetInnerHTML={{ __html: FreelanceContent }} />
+          </Column>
+        </Container>
+        <Container>
+          <Column width='half'>
+            <h3 style={styles.h3}>{'pebble {code}'}</h3>
+            <h4 style={styles.h4}>July 2014–Sept 2016</h4>
+          </Column>
+          <Column width='half'>
+            <h3 style={styles.h3}>Senior UI/UX Designer</h3>
+            <div style={styles.content} dangerouslySetInnerHTML={{ __html: PebbleContent }} />
           </Column>
         </Container>
         <Container>

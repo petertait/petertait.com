@@ -24,7 +24,7 @@ class Work extends Component {
   render() {
     return (
       <div>
-        <Hero headline='Freelance designer and frontend developer.' />
+        <Hero headline='I’m a designer who builds brands and products.' />
         <Container>
           <Column width='half'>
             <AnchorLink link='about/cv' text='Curriculum Vitae' margin='bottom' />
