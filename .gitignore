@@ -4,18 +4,7 @@ build/scripts
 # Logs
 logs
 *.log
-
-# Coverage directory used by tools like nyc
-.nyc_output
-coverage
-
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
+.DS_Store
 
 # Dependency directory
 node_modules
-
-# Users Environment Variables
-.lock-wscript
-
-.idea
