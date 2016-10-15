@@ -46,7 +46,7 @@ class CV extends Component {
         </Container>
         <Container>
           <Column width='half'>
-            <h3 style={styles.h3}>Freelance</h3>
+            <h3 style={styles.h3}>Peter Tait Ltd.</h3>
             <h4 style={styles.h4}>Sept 2010–Present</h4>
           </Column>
           <Column width='half'>
