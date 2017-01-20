@@ -24,7 +24,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer that codes.' link='/contact' text='Available for freelance work' />
+        <Hero headline='Multifunctional designer/developer based in Bath — a traditionally trained designer who codes.' link='/contact' text='Available for freelance work' />
         <hr />
         <Container>
           <Column
