@@ -106,7 +106,7 @@ class Metrik extends Component {
           <Column
             width='twoThird'
             content={LearnContent}>
-            <Vimeo url='https://player.vimeo.com/video/132186891?color=00bc6c&title=0&byline=0&portrait=0' />
+            <Vimeo url='https://player.vimeo.com/video/207820921?color=00bc6c&title=0&byline=0&portrait=0' />
           </Column>
         </Container>
         <hr />
