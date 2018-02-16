@@ -32,7 +32,7 @@ const styles = {
     cursor: 'pointer',
     lineHeight: '1',
     fontSize: type.bodySize,
-    fontFamily: type.fontMono,
+    fontFamily: type.fontSans,
     transition: '0.2s background-color',
     outline: 'none'
   },

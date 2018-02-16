@@ -30,8 +30,7 @@ export const type = {
 
   fontRegular: 'normal',
   fontBold: 'bold',
-  fontMono: 'iosevka, monospace',
-  fontSans: 'apercu, sans-serif',
+  fontSans: 'basier, sans-serif',
 
   bodySize: '18px',
   bodyWeight: 'normal'

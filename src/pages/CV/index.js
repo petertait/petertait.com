@@ -125,6 +125,7 @@ const styles = {
   h3: {
     fontSize: type.gamma,
     fontFamily: type.fontSans,
+    fontWeight: type.fontBold,
     marginBottom: '5px'
   },
   h4: {

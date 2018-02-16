@@ -26,7 +26,7 @@ const styles = {
   field: {
     backgroundColor: 'transparent',
     position: 'relative',
-    padding: '10px 15px',
+    padding: '15px',
     border: '1px solid',
     marginBottom: '-1px',
     transition: '0.2s',
@@ -35,8 +35,6 @@ const styles = {
 
     ':focus': {
       opacity: '1',
-      zIndex: '1',
-      transform: 'scale(1.01)',
       backgroundColor: color.white
     }
   },
@@ -49,7 +47,7 @@ const styles = {
     borderColor: 'inherit',
     marginTop: '5px',
     marginBottom: '20px',
-    padding: '8px 25px 8px 35px',
+    padding: '12px 15px 12px 25px',
     transition: '0.2s',
     cursor: 'pointer'
   },

@@ -10,7 +10,8 @@ class Styles extends Component {
       <Style rules={{
         html: {
           boxSizing: 'border-box',
-          fontSize: type.bodySize
+          fontSize: type.bodySize,
+          '-webkit-font-smoothing': 'antialiased'
         },
         '*, *::before, *::after': {
           boxSizing: 'inherit',
@@ -19,7 +20,7 @@ class Styles extends Component {
           margin: 0
         },
         body: {
-          fontFamily: type.fontMono,
+          fontFamily: type.fontSans,
           fontWeight: type.fontRegular,
           lineHeight: '1.5'
         },
@@ -31,7 +32,6 @@ class Styles extends Component {
           maxWidth: '1000px',
         },
         h2: {
-          '-webkit-font-smoothing': 'antialiased',
           fontFamily: type.fontSans,
           fontSize: type.beta,
           lineHeight: '1.3'
@@ -65,7 +65,7 @@ class Styles extends Component {
           borderRadius: '0',
           width: '100%',
           outline: 'none',
-          fontFamily: type.fontMono,
+          fontFamily: type.fontSans,
           fontSize: type.bodySize
         },
         'input::-webkit-input-placeholder, textarea::-webkit-input-placeholder': {
