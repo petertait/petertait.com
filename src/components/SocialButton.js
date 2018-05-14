@@ -17,12 +17,16 @@ class SocialButton extends Component {
 const styles = {
   button: {
     display: 'inline-block',
-    width: '45px',
-    height: '45px',
-    padding: '9px 12px',
-    marginRight: '10px',
-    border: '1px solid',
-    borderRadius: '50%'
+    width: '20px',
+    height: '20px',
+    marginLeft: '0',
+    marginRight: '30px',
+    border: 'none',
+
+    [breakpoint.medium]: {
+      marginLeft: '30px',
+      marginRight: '0'
+    }
   }
 }
 

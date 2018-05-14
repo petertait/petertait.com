@@ -28,7 +28,7 @@ class Footer extends Component {
 const styles = {
   footer: {
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     paddingTop: '40px',
     paddingBottom: '50px',
 

@@ -23,10 +23,8 @@ const styles = {
     display: 'inline-block',
     width: '45px',
     height: '45px',
-    padding: '9px 12px',
     margin: '0 10px 50px 0',
-    border: '1px solid',
-    borderRadius: '50%',
+    border: '0',
 
     [breakpoint.medium]: {
       margin: '20px 10px 50px 0'

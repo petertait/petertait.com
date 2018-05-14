@@ -24,7 +24,6 @@ class BlockFeature extends Component {
 const styles = {
   item: {
     display: 'block',
-    textAlign: 'center',
     width: '100%',
     marginBottom: '20px',
 
@@ -53,7 +52,8 @@ const styles = {
     padding: '60px 30px 10px'
   },
   image: {
-    display: 'block'
+    display: 'block',
+    textAlign: 'center'
   },
   title: {
     marginTop: '50px',
