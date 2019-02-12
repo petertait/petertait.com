@@ -40,7 +40,7 @@ class Home extends Component {
               width='third'
               nthChild='odd'
               image='images/design.svg'
-              title='Application &amp; website design'
+              title='App &amp; website design'
               summary='User-centered website and application design. Using Agile methods to produce quick and effective results.' />
             <BlockFeature
               width='third'

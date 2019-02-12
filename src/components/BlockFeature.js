@@ -26,6 +26,7 @@ const styles = {
     display: 'block',
     width: '100%',
     marginBottom: '20px',
+    textAlign: 'center',
 
     [breakpoint.medium]: {
       display: 'flex'
