@@ -1,53 +1,26 @@
 # Freelance website for Peter Tait
-#### Multifunctional designer/developer based in Bath. Traditionally trained designer that codes.
+
+Multifunctional designer/developer based in Bath. Traditionally trained designer that codes.
 
 Visit the site at https://petertait.com
 
-<br>
+## Tech used
 
-## Tech used:
+- [Gatsby](https://www.gatsbyjs.org/docs/)
+- [styled-components](https://www.styled-components.com/)
 
-- Babel 6
-- Webpack
-- React
-- Radium inline styles
+### Access Locally
 
-<br>
-
-## Getting Started
-
-```sh
-npm install
+```
+$ git clone https://github.com/petertait/petertait.com.git
+$ cd petertait.com
+$ yarn
+$ yarn start
 ```
 
-Start the local dev server:
+To test the CMS locally, you'll need run a production build of the site:
 
-```sh
-npm start
 ```
-
-Navigate to **http://localhost:8080/** to view the app.
-
-<br>
-
-## Build for Production
-
-```sh
-npm run build
-```
-
-<br>
-
-## Clean
-
-```sh
-npm run clean
-```
-
-<br>
-
-## Deploy to Netlify
-
-```sh
-npm run deploy
+$ yarn build
+$ yarn serve
 ```
