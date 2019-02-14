@@ -25,10 +25,10 @@ class Header extends React.Component {
           <NavButton to="/" activeClassName="active">
             About
           </NavButton>
-          <NavButton to="/work" activeClassName="active">
+          <NavButton to="/" activeClassName="active">
             Work
           </NavButton>
-          <NavButton to="/contact" activeClassName="active">
+          <NavButton to="/" activeClassName="active">
             Contact
           </NavButton>
         </Nav>

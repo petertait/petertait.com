@@ -54,11 +54,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${theme.font.sans};
 
     &::-moz-selection {
-      background: ${transparentize(0.8, darken(0.15, theme.color.blue))};
+      background: ${transparentize(0.6, "#666")};
     }
 
     &::selection {
-      background: ${transparentize(0.8, darken(0.15, theme.color.blue))};
+      background: ${transparentize(0.6, "#666")};
     }
   }
 

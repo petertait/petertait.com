@@ -35,8 +35,10 @@ export const Inner = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  padding: 20vh 120px 0 100px;
+  padding: 50px 120px 0 100px;
   flex-shrink: 0;
   white-space: normal;
   max-width: 1400px;
