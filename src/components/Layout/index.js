@@ -4,6 +4,8 @@ import { StaticQuery, graphql } from "gatsby";
 
 import GlobalStyle from "config/global";
 
+import Menu from "components/Menu";
+
 import touchIcon from "./apple-touch-icon.png";
 import favicon16 from "./favicon-16.png";
 import favicon32 from "./favicon-32.png";
@@ -79,8 +81,8 @@ class Layout extends Component {
               />
             </Helmet>
             <GlobalStyle />
+            <Menu />
             <Wrapper>{children}</Wrapper>
-            {/* <Menu /> */}
           </>
         )}
       />

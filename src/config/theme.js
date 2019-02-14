@@ -1,10 +1,13 @@
 const theme = {
   color: {
-    ink: "#0032D2",
-    paper: "#fff"
+    blue: "#0032D2",
+    purple: "#5b21d6",
+    yellow: "#eab600"
   },
 
   font: {
+    sans: "'neutrif-studio', sans-serif !important",
+    mono: "'space-mono', mono !important",
     size: {
       tera: "100px",
       giga: "72px",
@@ -33,7 +36,9 @@ const theme = {
     mobile: "40em"
   },
 
-  gutter: "30px"
+  gutter: "30px",
+
+  transition: "0.2s ease-in-out"
 };
 
 export default theme;

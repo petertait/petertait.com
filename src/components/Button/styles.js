@@ -1,45 +1,39 @@
 import styled from "styled-components";
-import styledMap from "styled-map";
-import { space, color } from "styled-system";
-import { lighten } from "polished";
+import { space, color, alignSelf } from "styled-system";
 import { Link } from "gatsby";
 
 import theme from "config/theme";
 
+export const Arrow = styled.span`
+  margin-right: -5px;
+  margin-left: 10px;
+  transition: transform ${theme.transition};
+`;
+
 export const Wrapper = styled(Link)`
   line-height: 1;
-  display: inline-block;
+  display: flex;
   position: relative;
   cursor: pointer;
-  border: 1px solid;
+  padding: 17px 22px;
+  align-self: flex-start;
+  border: 2px solid;
   background-color: transparent;
-  font-weight: ${theme.font.weight.bold};
-
-  padding: ${styledMap("size", {
-    small: "9px 12px",
-    default: "12px 22px"
-  })};
-
-  font-size: ${styledMap("size", {
-    small: theme.font.size.kappa,
-    default: theme.font.size.zeta
-  })};
-
-  color: ${styledMap("shade", {
-    ink: "white",
-    default: theme.color.ink
-  })};
-
-  background-color: ${styledMap("shade", {
-    ink: theme.color.ink,
-    default: "transparent"
-  })};
+  color: white;
+  font-size: ${theme.font.size.epsilon};
 
   &:focus {
     outline: none;
   }
 
   &:hover {
+    color: black;
+    border-color: ${props => props.color || "white"};
+    background-color: ${props => props.color || "white"};
+
+    ${Arrow} {
+      transform: translateX(5px);
+    }
   }
 
   &:disabled {
@@ -49,4 +43,5 @@ export const Wrapper = styled(Link)`
 
   ${space};
   ${color};
+  ${alignSelf};
 `;

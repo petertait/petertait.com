@@ -1,12 +1,12 @@
-import NeutrifStudioRegularWOFF2 from "./neutrif-studio-regular/neutrif-studio-regular.woff2";
-import NeutrifStudioRegularWOFF from "./neutrif-studio-regular/neutrif-studio-regular.woff";
+import NeutrifStudioRegularWOFF from "./neutrif-studio/neutrif-studio-regular.woff";
+import NeutrifStudioBoldWOFF from "./neutrif-studio/neutrif-studio-bold.woff";
 
-import NeutrifStudioBoldWOFF2 from "./neutrif-studio-bold/neutrif-studio-bold.woff2";
-import NeutrifStudioBoldWOFF from "./neutrif-studio-bold/neutrif-studio-bold.woff";
+import SpaceMonoRegularWOFF from "./space-mono/space-mono-regular.woff";
+import SpaceMonoBoldWOFF from "./space-mono/space-mono-bold.woff";
 
 export {
-  NeutrifStudioRegularWOFF2,
   NeutrifStudioRegularWOFF,
-  NeutrifStudioBoldWOFF2,
-  NeutrifStudioBoldWOFF
+  NeutrifStudioBoldWOFF,
+  SpaceMonoRegularWOFF,
+  SpaceMonoBoldWOFF
 };

@@ -25,9 +25,9 @@ import HeroBlock from "./HeroBlock";
 export const Block = styled.div`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   position: relative;
-  justify-content: center;
-  align-items: center;
+  z-index: 1;
   min-height: 100vh;
   padding: 80px;
   flex-shrink: 0;

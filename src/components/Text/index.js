@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import {
+  style,
   flex,
   color,
   space,
   width,
+  opacity,
   fontSize,
   fontWeight,
   textAlign,
@@ -25,13 +27,17 @@ export const Text = styled.div`
   ${letterSpacing};
 `;
 
+const textStroke = style({
+  prop: "textStroke",
+  cssProperty: "-webkitTextStroke"
+});
+
 const H1Text = Text.withComponent("h1");
 export const H1 = styled(H1Text)`
   width: 100%;
-  line-height: 1.2;
-  margin: 0 0 10px;
-  letter-spacing: -0.3px;
-  font-size: ${theme.font.size.tera};
+  line-height: 1;
+  margin: 0 0 20px;
+  letter-spacing: -2px;
   font-weight: ${theme.font.weight.bold};
 
   @media (max-width: ${theme.size.tablet}) {
@@ -44,8 +50,10 @@ export const H1 = styled(H1Text)`
 
   ${color};
   ${space};
+  ${opacity};
   ${fontSize};
   ${fontWeight};
+  ${textStroke};
 `;
 
 const H2Text = Text.withComponent("h2");

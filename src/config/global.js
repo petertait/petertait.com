@@ -5,10 +5,10 @@ import { color } from "styled-system";
 import theme from "./theme";
 
 import {
-  NeutrifStudioRegularWOFF2,
   NeutrifStudioRegularWOFF,
-  NeutrifStudioBoldWOFF2,
-  NeutrifStudioBoldWOFF
+  NeutrifStudioBoldWOFF,
+  SpaceMonoRegularWOFF,
+  SpaceMonoBoldWOFF
 } from "./fonts/fonts";
 
 const GlobalStyle = createGlobalStyle`
@@ -19,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-weight: 400;
     src:
-      url(${NeutrifStudioRegularWOFF2}) format('woff2'),
   	  url(${NeutrifStudioRegularWOFF}) format('woff');
   }
 
@@ -28,8 +27,23 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-weight: 600;
     src:
-      url(${NeutrifStudioBoldWOFF2}) format('woff2'),
   	  url(${NeutrifStudioBoldWOFF}) format('woff');
+  }
+
+  @font-face {
+    font-family: "space-mono";
+    font-style: normal;
+    font-weight: 400;
+    src:
+  	  url(${SpaceMonoRegularWOFF}) format('woff');
+  }
+
+  @font-face {
+    font-family: "space-mono";
+    font-style: normal;
+    font-weight: 600;
+    src:
+  	  url(${SpaceMonoBoldWOFF}) format('woff');
   }
 
   * {
@@ -37,14 +51,14 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-family: "neutrif-studio", sans-serif !important;
+    font-family: ${theme.font.sans};
 
     &::-moz-selection {
-      background: ${transparentize(0.8, darken(0.15, theme.color.ink))}; 
+      background: ${transparentize(0.8, darken(0.15, theme.color.blue))};
     }
 
     &::selection {
-      background: ${transparentize(0.8, darken(0.15, theme.color.ink))}; 
+      background: ${transparentize(0.8, darken(0.15, theme.color.blue))};
     }
   }
 
@@ -63,9 +77,10 @@ const GlobalStyle = createGlobalStyle`
 	body {
     line-height: 1.6;
     -webkit-text-size-adjust: none;
-    color: ${theme.color.paper};
-    background-color: ${theme.color.ink};
+    color: white;
+    background-color: ${theme.color.blue};
     font-size: ${theme.font.size.delta};
+    font-weight: ${theme.font.weight.regular};
 
     ${color};
 
@@ -79,10 +94,10 @@ const GlobalStyle = createGlobalStyle`
     transition: ${theme.transition};
 
     p & {
-      color: ${theme.color.ink};
+      color: ${theme.color.blue};
 
       &:hover {
-        color: ${darken(0.1, theme.color.ink)};
+        color: ${darken(0.1, theme.color.blue)};
       }
     }
   }
@@ -90,7 +105,7 @@ const GlobalStyle = createGlobalStyle`
   hr {
     margin: 40px auto;
     border: none;
-    border-top: 1px solid ${theme.color.paper};
+    border-top: 1px solid white;
   }
 
   strong {

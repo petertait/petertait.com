@@ -1,13 +1,14 @@
 import React from "react";
 
-import Block from "components/Block";
+import { Wrapper, Inner, Pattern } from "./styles";
 
-import { Wrapper } from "./styles";
-
-const HeroBlock = ({ children, ...props }) => {
+const HeroBlock = ({ bg, color, width, pattern, children }) => {
   return (
-    <Wrapper>
-      <Block {...props}>{children}</Block>
+    <Wrapper bg={bg} color={color} width={width}>
+      <Inner width={width}>
+        {children}
+        {pattern && <Pattern color={bg}>{pattern}</Pattern>}
+      </Inner>
     </Wrapper>
   );
 };

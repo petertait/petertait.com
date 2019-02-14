@@ -8,13 +8,14 @@ module.exports = {
       "Multifunctional designer and frontend developer. Experienced with clients ranging from global corporations to family firms."
   },
   plugins: [
+    "gatsby-plugin-react-svg",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     {
-      resolve: `gatsby-plugin-layout`,
+      resolve: "gatsby-plugin-layout",
       options: {
-        component: require.resolve(`./src/components/Layout`)
+        component: require.resolve("./src/components/Layout/index.js")
       }
     },
     {

@@ -1,12 +1,13 @@
 import React from "react";
 
-import { Wrapper } from "./styles";
+import { Wrapper, Arrow } from "./styles";
 
 const Button = ({ as, to, shade, size, children, ...props }) => {
   if (!to) {
     return (
       <Wrapper as="button" shade={shade} size={size} {...props}>
         {children}
+        <Arrow>→</Arrow>
       </Wrapper>
     );
   }
@@ -22,6 +23,7 @@ const Button = ({ as, to, shade, size, children, ...props }) => {
         {...props}
       >
         {children}
+        <Arrow>→</Arrow>
       </Wrapper>
     );
   }
@@ -36,6 +38,7 @@ const Button = ({ as, to, shade, size, children, ...props }) => {
       {...props}
     >
       {children}
+      <Arrow>→</Arrow>
     </Wrapper>
   );
 };

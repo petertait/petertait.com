@@ -1,26 +1,5 @@
 import styled from "styled-components";
-import {
-  flex,
-  color,
-  space,
-  width,
-  order,
-  height,
-  minHeight,
-  zIndex,
-  display,
-  borders,
-  maxWidth,
-  flexWrap,
-  position,
-  boxShadow,
-  alignSelf,
-  alignItems,
-  justifySelf,
-  flexDirection,
-  justifyContent,
-  background
-} from "styled-system";
+import { flex, space, width, order, maxWidth } from "styled-system";
 
 import theme from "config/theme";
 
@@ -55,5 +34,4 @@ export const Column = styled.div`
   ${space};
   ${width};
   ${order};
-  ${flexWrap};
 `;
