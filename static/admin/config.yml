@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: "v2"
 
 display_url: https://petertait.com
 media_folder: static/media
