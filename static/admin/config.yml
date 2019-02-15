@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: "v2"
+  branch: v2
 
 display_url: https://petertait.com
 media_folder: static/media
@@ -39,16 +39,19 @@ collections:
                   { label: Heading, name: heading, widget: string },
                   { label: Subheading, name: subheading, widget: string },
                   {
-                    label: Button Text,
-                    name: buttonText,
-                    widget: string,
-                    default: Learn more,
-                  },
-                  {
-                    label: Button Path,
-                    name: buttonPath,
-                    widget: string,
-                    default: /,
+                    label: Button,
+                    name: button,
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: Text,
+                          name: text,
+                          widget: string,
+                          default: Learn more,
+                        },
+                        { label: Path, name: path, widget: string, default: / },
+                      ],
                   },
                 ],
             }

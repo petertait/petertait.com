@@ -7,6 +7,7 @@ page:
 block1:
   heading: "Multifunctional designer + developer."
   subheading: "A traditionally trained designer who codes."
-  buttonText: ""
-  buttonPath: ""
+  button:
+    text: "Available for Freelance"
+    path: "/contact"
 ---

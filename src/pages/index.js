@@ -33,9 +33,7 @@ export const HomePageTemplate = ({ page }) => {
             </H1>
           </FitText>
         )}
-        <Button mt="100px" to="/contact">
-          Available for Freelance
-        </Button>
+        <Button mt="100px" content={page.block1.button} />
       </HeroBlock>
       <Block width="1000px" color="white" bg="black" title="Services" />
     </>
@@ -76,16 +74,9 @@ export const homePageQuery = graphql`
             block1 {
               heading
               subheading
-              buttonText
-              buttonPath
-            }
-            services {
-              title
-              service {
-                heading
-                image {
-                  relativePath
-                }
+              button {
+                text
+                path
               }
             }
           }
