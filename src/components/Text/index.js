@@ -38,6 +38,7 @@ export const H1 = styled(H1Text)`
   line-height: 1;
   margin: 0 0 20px;
   letter-spacing: -2px;
+  font-size: ${theme.font.size.tera};
   font-weight: ${theme.font.weight.bold};
 
   @media (max-width: ${theme.size.tablet}) {

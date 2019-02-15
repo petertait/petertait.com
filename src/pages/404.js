@@ -9,9 +9,7 @@ import Button from "components/Button";
 import Layout from "components/Layout";
 import { HeroBlock } from "components/Block";
 
-const ErrorPage = ({ data }) => {
-  const { frontmatter: page } = data.allMarkdownRemark.edges[0].node;
-
+export const ErrorPageTemplate = ({ page }) => {
   return (
     <Layout content={page}>
       <HeroBlock width="100vw" maxWidth="100vw" color="black" bg="white">
@@ -32,6 +30,16 @@ const ErrorPage = ({ data }) => {
           {page.block1.buttonText}
         </Button>
       </HeroBlock>
+    </Layout>
+  );
+};
+
+const ErrorPage = ({ data }) => {
+  const { frontmatter: page } = data.allMarkdownRemark.edges[0].node;
+
+  return (
+    <Layout shade="dark" footerShade="dark" content={page}>
+      <ErrorPageTemplate page={page} />
     </Layout>
   );
 };

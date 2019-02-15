@@ -30,7 +30,6 @@
     "react-dom": "^16.4.1",
     "react-fittext": "^1.0.0",
     "react-helmet": "^5.2.0",
-    "react-spring": "^8.0.7",
     "remark": "^10.0.1",
     "remark-html": "^9.0.0",
     "remark-preset-lint-recommended": "^3.0.2",

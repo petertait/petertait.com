@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { color, width, maxWidth } from "styled-system";
 import { darken, transparentize } from "polished";
 
-import theme from "config/theme";
-
 export const Wrapper = styled.div`
   position: relative;
   max-width: 1400px;

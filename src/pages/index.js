@@ -9,13 +9,11 @@ import { H1 } from "components/Text";
 import Button from "components/Button";
 import Layout from "components/Layout";
 
-import HeroPattern from "templates/home-page/pattern-2.svg";
+import HeroPattern from "templates/home-page/pattern-1.svg";
 
-const HomePage = ({ data }) => {
-  const { frontmatter: page } = data.allMarkdownRemark.edges[0].node;
-
+export const HomePageTemplate = ({ page }) => {
   return (
-    <Layout content={page}>
+    <>
       <HeroBlock
         width="90vw"
         color="white"
@@ -35,13 +33,25 @@ const HomePage = ({ data }) => {
             </H1>
           </FitText>
         )}
-        <Button mt="100px" to={page.block1.buttonPath}>
-          {page.block1.buttonText}
+        <Button mt="100px" to="/contact">
+          Available for Freelance
         </Button>
       </HeroBlock>
-      <Block width="1000px" color="black" bg="black">
-        <H1>{page.block1.heading}</H1>
-      </Block>
+      <Block width="1000px" color="white" bg="black" title="Services" />
+    </>
+  );
+};
+
+// HomePageTemplate.propTypes = {
+//   title: PropTypes.string
+// };
+
+const HomePage = ({ data }) => {
+  const { frontmatter: page } = data.allMarkdownRemark.edges[0].node;
+
+  return (
+    <Layout shade="dark" content={page}>
+      <HomePageTemplate page={page} />
     </Layout>
   );
 };
@@ -68,6 +78,15 @@ export const homePageQuery = graphql`
               subheading
               buttonText
               buttonPath
+            }
+            services {
+              title
+              service {
+                heading
+                image {
+                  relativePath
+                }
+              }
             }
           }
         }
