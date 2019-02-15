@@ -24,14 +24,16 @@ const HomePage = ({ data }) => {
         <FitText minFontSize={80} maxFontSize={110}>
           <H1>{page.block1.heading}</H1>
         </FitText>
-        <FitText minFontSize={80} maxFontSize={110}>
-          <H1
-            color={transparentize(1, "white")}
-            textStroke={`1px ${transparentize(0.5, "white")}`}
-          >
-            {page.block1.subheading}
-          </H1>
-        </FitText>
+        {page.block1.subheading && (
+          <FitText minFontSize={80} maxFontSize={110}>
+            <H1
+              color={transparentize(1, "white")}
+              textStroke={`1px ${transparentize(0.5, "white")}`}
+            >
+              {page.block1.subheading}
+            </H1>
+          </FitText>
+        )}
         <Button mt="100px" to="/contact">
           Available for Freelance
         </Button>
