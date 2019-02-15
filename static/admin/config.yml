@@ -5,7 +5,6 @@ backend:
 display_url: https://petertait.com
 media_folder: static/media
 public_folder: /media
-functions: /functions
 
 collections:
   - name: pages
@@ -29,98 +28,16 @@ collections:
               label: Page,
               name: page,
               widget: object,
-              fields:
-                [
-                  { label: Title, name: title, widget: string },
-                  { label: Background, name: background, widget: image },
-                ],
+              fields: [{ label: Title, name: title, widget: string }],
             }
           - {
-              label: Hero,
-              name: hero,
+              label: Block 1,
+              name: block1,
               widget: object,
               fields:
                 [
                   { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                ],
-            }
-          - {
-              label: Introduction,
-              name: introduction,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                ],
-            }
-          - {
-              label: Approach,
-              name: approach,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Background,
-                    name: background,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Button Text,
-                    name: buttonText,
-                    widget: string,
-                    default: Learn more,
-                  },
-                  {
-                    label: Button Path,
-                    name: buttonPath,
-                    widget: string,
-                    default: /,
-                  },
-                ],
-            }
-          - {
-              label: Clients,
-              name: clients,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Client,
-                    name: client,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Name, name: name, widget: string },
-                        {
-                          label: Image,
-                          name: image,
-                          widget: file,
-                          allow_multiple: false,
-                        },
-                      ],
-                  },
-                ],
-            }
-          - {
-              label: Footer,
-              name: footer,
-              widget: object,
-              fields:
-                [
-                  { label: Quote, name: quote, widget: text },
-                  { label: Author, name: author, widget: string },
-                  { label: Background, name: background, widget: image },
+                  { label: Subheading, name: subheading, widget: string },
                 ],
             }
 

@@ -78,7 +78,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.6;
     -webkit-text-size-adjust: none;
     color: white;
-    background-color: ${theme.color.blue};
+    background-color: black;
     font-size: ${theme.font.size.delta};
     font-weight: ${theme.font.weight.regular};
 

@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ErrorPageTemplate } from "../../pages/404";
+import ErrorPage from "../../pages/404";
 
 const ErrorPagePreview = ({ entry }) => {
-  const page = entry.getIn(["data"]).toJS();
-  return <ErrorPageTemplate page={page} />;
+  const data = entry.getIn(["data"]).toJS();
+  return <ErrorPage page={data} />;
 };
 
 ErrorPagePreview.propTypes = {

@@ -29,7 +29,7 @@ const HomePage = ({ data }) => {
             color={transparentize(1, "white")}
             textStroke={`1px ${transparentize(0.5, "white")}`}
           >
-            A traditionally trained designer who codes.
+            {page.block1.subheading}
           </H1>
         </FitText>
         <Button mt="100px" to="/contact">
@@ -62,6 +62,7 @@ export const homePageQuery = graphql`
             }
             block1 {
               heading
+              subheading
             }
           }
         }
