@@ -1,12 +1,10 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: "v2"
 
-display_url: https://pelatum.co
+display_url: https://petertait.com
 media_folder: static/media
 public_folder: /media
-functions: /functions
-logo_url: https://pelatum.co/media/pelatum-logo-indigo.svg
 
 collections:
   - name: pages
