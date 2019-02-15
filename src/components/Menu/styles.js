@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { transparentize } from "polished";
 import { Link } from "gatsby";
 
 import theme from "config/theme";
@@ -10,12 +11,14 @@ export const Wrapper = styled.header`
   position: fixed;
   display: flex;
   align-items: center;
+  mix-blend-mode: difference;
 `;
 
 export const Logo = styled(Link)`
   display: flex;
   padding: 15px;
   margin-right: 5px;
+  background-color: white;
 
   svg {
     height: 35px;
@@ -23,12 +26,12 @@ export const Logo = styled(Link)`
 
     path {
       transition: ${theme.transition};
-      fill: white;
+      fill: black;
     }
   }
 
   &:hover {
-    background-color: white;
+    background-color: ${transparentize(0.2, "white")};
 
     svg path {
       fill: black;

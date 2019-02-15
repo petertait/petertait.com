@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: "v2"
-  repo: petertait/petertait.com
 
 display_url: https://petertait.com
 media_folder: static/media
@@ -29,16 +28,914 @@ collections:
               label: Page,
               name: page,
               widget: object,
-              fields: [{ label: Title, name: title, widget: string }],
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Background, name: background, widget: image },
+                ],
             }
           - {
-              label: Block 1,
-              name: block1,
+              label: Hero,
+              name: hero,
               widget: object,
               fields:
                 [
                   { label: Heading, name: heading, widget: string },
-                  { label: Subheading, name: subheading, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+          - {
+              label: Introduction,
+              name: introduction,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+          - {
+              label: Approach,
+              name: approach,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Background,
+                    name: background,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                  {
+                    label: Button Text,
+                    name: buttonText,
+                    widget: string,
+                    default: Learn more,
+                  },
+                  {
+                    label: Button Path,
+                    name: buttonPath,
+                    widget: string,
+                    default: /,
+                  },
+                ],
+            }
+          - {
+              label: Clients,
+              name: clients,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Client,
+                    name: client,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Name, name: name, widget: string },
+                        {
+                          label: Image,
+                          name: image,
+                          widget: file,
+                          allow_multiple: false,
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Footer,
+              name: footer,
+              widget: object,
+              fields:
+                [
+                  { label: Quote, name: quote, widget: text },
+                  { label: Author, name: author, widget: string },
+                  { label: Background, name: background, widget: image },
+                ],
+            }
+
+      - file: src/pages/about/index.md
+        label: About
+        name: about
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: about-page,
+            }
+          - {
+              label: Page,
+              name: page,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Background, name: background, widget: image },
+                ],
+            }
+          - {
+              label: Hero,
+              name: hero,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                    default: empty,
+                  },
+                  {
+                    label: Description,
+                    name: description,
+                    widget: text,
+                    required: true,
+                  },
+                ],
+            }
+          - {
+              label: Industry,
+              name: industry,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                  },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Quotes,
+                    name: quotes,
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: Text,
+                          name: text,
+                          widget: text,
+                          required: true,
+                        },
+                        { label: Author, name: author, widget: string },
+                        { label: Role, name: role, widget: string },
+                        { label: Avatar, name: avatar, widget: image },
+                      ],
+                  },
+                ],
+            }
+          - { label: Image, name: image, widget: image }
+          - {
+              label: Mission,
+              name: mission,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Founder,
+                    name: founder,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Heading, name: heading, widget: string },
+                        { label: Image, name: image, widget: image },
+                        { label: Text, name: text, widget: markdown },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Call to Action,
+              name: cta,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                  },
+                  { label: Description, name: description, widget: text },
+                  { label: Button Text, name: buttonText, widget: string },
+                  { label: Button Path, name: buttonPath, widget: string },
+                ],
+            }
+          - {
+              label: Footer,
+              name: footer,
+              widget: object,
+              fields: [{ label: Background, name: background, widget: image }],
+            }
+
+      - file: src/pages/solutions/index.md
+        label: Solutions
+        name: solutions
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: solutions-page,
+            }
+          - {
+              label: Page,
+              name: page,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Background, name: background, widget: image },
+                ],
+            }
+          - {
+              label: Hero,
+              name: hero,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                    default: empty,
+                  },
+                  {
+                    label: Description,
+                    name: description,
+                    widget: text,
+                    required: true,
+                  },
+                ],
+            }
+          - {
+              label: Experiences,
+              name: experiences,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                  },
+                  { label: Description, name: description, widget: text },
+                  { label: Button Text, name: buttonText, widget: string },
+                  { label: Button Path, name: buttonPath, widget: string },
+                  {
+                    label: Block 1,
+                    name: block1,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Title, name: title, widget: string },
+                        { label: Text, name: text1, widget: text },
+                        { label: Screenshot, name: screenshot, widget: image },
+                        { label: Text, name: text2, widget: text },
+                      ],
+                  },
+                  {
+                    label: Block 2,
+                    name: block2,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Title, name: title, widget: string },
+                        { label: Text, name: text1, widget: text },
+                        { label: Screenshot, name: screenshot, widget: image },
+                        { label: Text, name: text2, widget: text },
+                      ],
+                  },
+                  {
+                    label: Quotes,
+                    name: quotes,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Heading, name: heading, widget: string },
+                        { label: Description, name: description, widget: text },
+                        {
+                          label: Quote,
+                          name: quote,
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: Text,
+                                name: text,
+                                widget: text,
+                                required: true,
+                              },
+                              { label: Client, name: client, widget: string },
+                              {
+                                label: Logo,
+                                name: logo,
+                                widget: file,
+                                allow_multiple: false,
+                              },
+                              { label: Author, name: role, widget: string },
+                            ],
+                        },
+                      ],
+                  },
+                ],
+            }
+          - { label: Image, name: image, widget: image }
+          - {
+              label: Academy,
+              name: academy,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                  },
+                  { label: Description, name: description, widget: text },
+                  { label: Button Text, name: buttonText, widget: string },
+                  { label: Button Path, name: buttonPath, widget: string },
+                  {
+                    label: Modules,
+                    name: modules,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Heading, name: heading, widget: string },
+                        { label: Description, name: description, widget: text },
+                        {
+                          label: Item,
+                          name: item,
+                          widget: list,
+                          fields:
+                            [
+                              { label: Title, name: title, widget: string },
+                              {
+                                label: Description,
+                                name: description,
+                                widget: text,
+                              },
+                              {
+                                label: Icon,
+                                name: icon,
+                                widget: file,
+                                allow_multiple: false,
+                              },
+                              {
+                                label: Active Icon,
+                                name: activeIcon,
+                                widget: file,
+                                allow_multiple: false,
+                              },
+                              { label: Text, name: text, widget: markdown },
+                            ],
+                        },
+                      ],
+                  },
+                  { label: Quote, name: quote, widget: text },
+                ],
+            }
+          - {
+              label: Resources,
+              name: resources,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                  },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Resource 1,
+                    name: resource1,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Title, name: title, widget: string },
+                        {
+                          label: Description,
+                          name: description,
+                          widget: string,
+                        },
+                        {
+                          label: Item,
+                          name: item,
+                          widget: list,
+                          fields:
+                            [
+                              { label: Text, name: text, widget: string },
+                              {
+                                label: Icon,
+                                name: icon,
+                                widget: file,
+                                allow_multiple: false,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: Resource 2,
+                    name: resource2,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Title, name: title, widget: string },
+                        {
+                          label: Description,
+                          name: description,
+                          widget: string,
+                        },
+                        {
+                          label: Item,
+                          name: item,
+                          widget: list,
+                          fields:
+                            [
+                              { label: Text, name: text, widget: string },
+                              {
+                                label: Icon,
+                                name: icon,
+                                widget: file,
+                                allow_multiple: false,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: Resource 3,
+                    name: resource3,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Title, name: title, widget: string },
+                        {
+                          label: Description,
+                          name: description,
+                          widget: string,
+                        },
+                        {
+                          label: Icon,
+                          name: icon,
+                          widget: file,
+                          allow_multiple: false,
+                        },
+                      ],
+                  },
+                  {
+                    label: Call to Action,
+                    name: cta,
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: Heading,
+                          name: heading,
+                          widget: string,
+                          required: true,
+                        },
+                        { label: Description, name: description, widget: text },
+                        {
+                          label: Button Text,
+                          name: buttonText,
+                          widget: string,
+                        },
+                        {
+                          label: File,
+                          name: file,
+                          widget: file,
+                          allow_multiple: false,
+                        },
+                      ],
+                  },
+                  {
+                    label: Quotes,
+                    name: quotes,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Heading, name: heading, widget: string },
+                        { label: Description, name: description, widget: text },
+                        {
+                          label: Quote,
+                          name: quote,
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: Text,
+                                name: text,
+                                widget: text,
+                                required: true,
+                              },
+                              { label: Client, name: client, widget: string },
+                              {
+                                label: Logo,
+                                name: logo,
+                                widget: file,
+                                allow_multiple: false,
+                              },
+                              { label: Author, name: role, widget: string },
+                            ],
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Footer,
+              name: footer,
+              widget: object,
+              fields: [{ label: Background, name: background, widget: image }],
+            }
+
+      - file: src/pages/insights/index.md
+        label: Insights
+        name: insights
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: insights-page,
+            }
+          - {
+              label: Page,
+              name: page,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Background, name: background, widget: image },
+                ],
+            }
+          - {
+              label: Hero,
+              name: hero,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                    default: empty,
+                  },
+                  {
+                    label: Description,
+                    name: description,
+                    widget: text,
+                    required: true,
+                  },
+                ],
+            }
+          - {
+              label: Medium,
+              name: medium,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    default: Insights,
+                  },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+          - {
+              label: Whitepapers,
+              name: papers,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    default: Whitepapers,
+                  },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Paper,
+                    name: paper,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Title, name: title, widget: string },
+                        {
+                          label: Description,
+                          name: description,
+                          widget: string,
+                        },
+                        { label: Image, name: image, widget: image },
+                        {
+                          label: File,
+                          name: file,
+                          widget: file,
+                          allow_multiple: false,
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Case Studies,
+              name: studies,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    default: Case Studies,
+                  },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Study,
+                    name: study,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Title, name: title, widget: string },
+                        {
+                          label: Description,
+                          name: description,
+                          widget: string,
+                        },
+                        {
+                          label: File,
+                          name: file,
+                          widget: file,
+                          allow_multiple: false,
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: News,
+              name: news,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    default: In the News,
+                  },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Article,
+                    name: article,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Title, name: title, widget: string },
+                        { label: Description, name: description, widget: text },
+                        { label: Path, name: path, widget: string },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Call to Action,
+              name: cta,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                  },
+                  { label: Description, name: description, widget: text },
+                  { label: Button Text, name: buttonText, widget: string },
+                  { label: Button Path, name: buttonPath, widget: string },
+                ],
+            }
+          - {
+              label: Footer,
+              name: footer,
+              widget: object,
+              fields: [{ label: Background, name: background, widget: image }],
+            }
+
+      - file: src/pages/partners/index.md
+        label: Partners
+        name: partners
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: partners-page,
+            }
+          - {
+              label: Page,
+              name: page,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Background, name: background, widget: image },
+                ],
+            }
+          - {
+              label: Hero,
+              name: hero,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                    default: empty,
+                  },
+                  {
+                    label: Description,
+                    name: description,
+                    widget: text,
+                    required: true,
+                  },
+                ],
+            }
+          - {
+              label: Content,
+              name: content,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Text, name: text, widget: markdown },
+                  {
+                    label: Button Text,
+                    name: buttonText,
+                    widget: string,
+                    default: Learn more,
+                  },
+                  {
+                    label: Button Path,
+                    name: buttonPath,
+                    widget: string,
+                    default: /,
+                  },
+                ],
+            }
+          - {
+              label: Call to Action,
+              name: cta,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                  },
+                  { label: Description, name: description, widget: text },
+                  { label: Button Text, name: buttonText, widget: string },
+                  { label: Button Path, name: buttonPath, widget: string },
+                ],
+            }
+          - {
+              label: Footer,
+              name: footer,
+              widget: object,
+              fields: [{ label: Background, name: background, widget: image }],
+            }
+
+      - file: src/pages/contact/index.md
+        label: Contact
+        name: contact
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: contact-page,
+            }
+          - {
+              label: Page,
+              name: page,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Background, name: background, widget: image },
+                ],
+            }
+          - {
+              label: Hero,
+              name: hero,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                    default: empty,
+                  },
+                  {
+                    label: Description,
+                    name: description,
+                    widget: text,
+                    required: true,
+                  },
+                ],
+            }
+          - {
+              label: Call to Action,
+              name: cta,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                  },
+                  { label: Description, name: description, widget: text },
+                  { label: Button Text, name: buttonText, widget: string },
+                  { label: Button Path, name: buttonPath, widget: string },
+                ],
+            }
+
+      - file: src/pages/success/index.md
+        label: Success
+        name: success
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: success-page,
+            }
+          - {
+              label: Page,
+              name: page,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Background, name: background, widget: image },
+                ],
+            }
+          - {
+              label: Hero,
+              name: hero,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                    default: empty,
+                  },
+                  {
+                    label: Description,
+                    name: description,
+                    widget: text,
+                    required: true,
+                  },
+                  { label: Button Text, name: buttonText, widget: string },
+                  { label: Button Path, name: buttonPath, widget: string },
                 ],
             }
 
@@ -85,3 +982,95 @@ collections:
                   { label: Button Path, name: buttonPath, widget: string },
                 ],
             }
+
+      - file: src/pages/legal/index.md
+        label: Legal
+        name: legal
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: legal-page,
+            }
+          - {
+              label: Page,
+              name: page,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Background, name: background, widget: image },
+                ],
+            }
+          - {
+              label: Hero,
+              name: hero,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+          - {
+              label: Call to Action,
+              name: cta,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    required: true,
+                  },
+                  { label: Description, name: description, widget: text },
+                  { label: Button Text, name: buttonText, widget: string },
+                  { label: Button Path, name: buttonPath, widget: string },
+                ],
+            }
+
+  - name: legal
+    label: Legal
+    create: true
+    folder: src/pages/legal/
+    identifier_field: name
+    editor:
+      preview: false
+
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: legal-post,
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: Page,
+          name: page,
+          widget: object,
+          fields:
+            [
+              { label: Title, name: title, widget: string },
+              { label: Background, name: background, widget: image },
+            ],
+        }
+      - {
+          label: Hero,
+          name: hero,
+          widget: object,
+          fields:
+            [
+              {
+                label: Heading,
+                name: heading,
+                widget: string,
+                required: true,
+                default: empty,
+              },
+              { label: Updated Date, name: date, widget: datetime },
+            ],
+        }
+      - { label: Body, name: body, widget: markdown }

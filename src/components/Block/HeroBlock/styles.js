@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { color, width } from "styled-system";
+import { color, width, maxWidth } from "styled-system";
 import { darken, transparentize } from "polished";
 
 import theme from "config/theme";
@@ -9,11 +9,11 @@ export const Wrapper = styled.div`
   max-width: 1400px;
 
   ${width};
-  ${color};
+  ${maxWidth}
 
   &::after {
     content: "";
-    width: 200px;
+    width: 250px;
     height: 100vh;
     position: absolute;
     right: 0;
@@ -38,22 +38,24 @@ export const Inner = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 50px 120px 0 100px;
+  padding: 50px 150px 0 100px;
   flex-shrink: 0;
   white-space: normal;
   max-width: 1400px;
 
+  ${color};
   ${width};
+  ${maxWidth}
 `;
 
 export const Pattern = styled.div`
-  position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
   z-index: -1;
+  object-fit: cover;
+  position: absolute;
 
   svg path {
-    fill: ${props => darken(0.03, props.color || theme.color.blue)};
+    fill: ${props => darken(0.03, props.color || "black")};
   }
 `;

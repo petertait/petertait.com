@@ -1,15 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import { transparentize } from "polished";
+import FitText from "react-fittext";
 
+import { H1 } from "components/Text";
+import Button from "components/Button";
 import Layout from "components/Layout";
+import { HeroBlock } from "components/Block";
 
 const ErrorPage = ({ data }) => {
   const { frontmatter: page } = data.allMarkdownRemark.edges[0].node;
 
   return (
-    <>
-      <HeroBlock width="100vw" color="black" bg="white">
+    <Layout content={page}>
+      <HeroBlock width="100vw" maxWidth="100vw" color="black" bg="white">
         <FitText minFontSize={80} maxFontSize={110}>
           <H1>{page.block1.heading}</H1>
         </FitText>
@@ -23,11 +28,11 @@ const ErrorPage = ({ data }) => {
             </H1>
           </FitText>
         )}
-        <Button mt="100px" to={page.block1.buttonPath}>
+        <Button mt="100px" color="black" to={page.block1.buttonPath}>
           {page.block1.buttonText}
         </Button>
       </HeroBlock>
-    </>
+    </Layout>
   );
 };
 

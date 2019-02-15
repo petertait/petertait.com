@@ -5,7 +5,7 @@ import ErrorPage from "../../pages/404";
 
 const ErrorPagePreview = ({ entry }) => {
   const data = entry.getIn(["data"]).toJS();
-  return <ErrorPage page={data} />;
+  return <ErrorPage data={data} />;
 };
 
 ErrorPagePreview.propTypes = {

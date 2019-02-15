@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { readableColor } from "polished";
 import { space, color, alignSelf } from "styled-system";
 import { Link } from "gatsby";
 
@@ -27,9 +28,9 @@ export const Wrapper = styled(Link)`
   }
 
   &:hover {
-    color: black;
     border-color: ${props => props.color || "white"};
     background-color: ${props => props.color || "white"};
+    color: ${props => (props.color ? readableColor(props.color) : "black")};
 
     ${Arrow} {
       transform: translateX(5px);

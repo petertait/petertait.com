@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Icon from "./logo.svg";
 
 import { Wrapper, Logo, Nav, NavButton } from "./styles";
 
-class Header extends React.Component {
+class Header extends Component {
   state = {
     isVisible: false
   };
@@ -22,13 +22,13 @@ class Header extends React.Component {
           <Icon />
         </Logo>
         <Nav>
-          <NavButton to="/" activeClassName="active">
+          <NavButton to="/about" activeClassName="active">
             About
           </NavButton>
-          <NavButton to="/" activeClassName="active">
+          <NavButton to="/work" activeClassName="active">
             Work
           </NavButton>
-          <NavButton to="/" activeClassName="active">
+          <NavButton to="/contact" activeClassName="active">
             Contact
           </NavButton>
         </Nav>

@@ -8,22 +8,21 @@ module.exports = {
       "Multifunctional designer and frontend developer. Experienced with clients ranging from global corporations to family firms."
   },
   plugins: [
-    "gatsby-plugin-react-svg",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
-    {
-      resolve: "gatsby-plugin-layout",
-      options: {
-        component: require.resolve("./src/components/Layout/index.js")
-      }
-    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-21049349-1"
       }
     },
+    // {
+    //   resolve: "gatsby-plugin-layout",
+    //   options: {
+    //     component: require.resolve("./src/components/Layout/index.js")
+    //   }
+    // },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
@@ -44,12 +43,12 @@ module.exports = {
       options: {
         src: path.join(__dirname, "src"),
         pages: path.join(__dirname, "src/pages"),
-        img: path.join(__dirname, "src/img"),
-        config: path.join(__dirname, "src/config"),
         templates: path.join(__dirname, "src/templates"),
-        components: path.join(__dirname, "src/components")
+        components: path.join(__dirname, "src/components"),
+        config: path.join(__dirname, "src/config")
       }
     },
+    "gatsby-plugin-react-svg",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
