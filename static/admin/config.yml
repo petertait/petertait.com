@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: v2
 
+site_url: https://pt-staging.netlify.com
 display_url: https://petertait.com
 media_folder: static/media
 public_folder: /media
