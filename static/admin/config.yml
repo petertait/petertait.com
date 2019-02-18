@@ -32,11 +32,12 @@ collections:
               fields: [{ label: Title, name: title, widget: string }],
             }
           - {
-              label: Block 1,
-              name: block1,
+              label: Hero,
+              name: hero,
               widget: object,
               fields:
                 [
+                  { label: Background, name: background, widget: file },
                   { label: Heading, name: heading, widget: string },
                   { label: Subheading, name: subheading, widget: string },
                   {

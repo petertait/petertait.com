@@ -9,8 +9,6 @@ import { H1 } from "components/Text";
 import Button from "components/Button";
 import Layout from "components/Layout";
 
-import HeroPattern from "templates/home-page/pattern-1.svg";
-
 export const HomePageTemplate = ({ page }) => {
   return (
     <>
@@ -18,7 +16,7 @@ export const HomePageTemplate = ({ page }) => {
         width="90vw"
         color="white"
         bg={lighten(0.03, "black")}
-        pattern={<HeroPattern />}
+        content={page.hero}
       >
         <FitText minFontSize={80} maxFontSize={110}>
           <H1>{page.block1.heading}</H1>
@@ -48,7 +46,7 @@ const HomePage = ({ data }) => {
   const { frontmatter: page } = data.allMarkdownRemark.edges[0].node;
 
   return (
-    <Layout shade="dark" content={page}>
+    <Layout content={page}>
       <HomePageTemplate page={page} />
     </Layout>
   );
@@ -71,12 +69,26 @@ export const homePageQuery = graphql`
             page {
               title
             }
-            block1 {
+            hero {
               heading
               subheading
               button {
                 text
                 path
+              }
+              background {
+                relativePath
+              }
+            }
+          }
+          services {
+            heading
+            text
+            service {
+              heading
+              text
+              icon {
+                relativePath
               }
             }
           }
