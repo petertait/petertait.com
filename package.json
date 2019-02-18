@@ -17,6 +17,7 @@
     "gatsby-plugin-sharp": "^2.0.15",
     "gatsby-plugin-sitemap": "^2.0.4",
     "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-plugin-transition-link": "^1.5.1",
     "gatsby-remark-copy-linked-files": "^2.0.7",
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-relative-images": "^0.2.1",

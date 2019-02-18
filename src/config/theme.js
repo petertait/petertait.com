@@ -38,7 +38,7 @@ const theme = {
 
   gutter: "30px",
 
-  transition: "0.2s ease-in-out"
+  transition: "0.3s ease-in-out"
 };
 
 export default theme;

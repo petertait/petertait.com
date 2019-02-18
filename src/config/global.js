@@ -87,6 +87,11 @@ const GlobalStyle = createGlobalStyle`
     #___gatsby > div[role="group"] {
       display: flex;
     }
+
+    .tl-edges {
+      overflow-x: unset!important;
+      max-width: none;
+    }
 	}
 
   a {
