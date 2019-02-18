@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
 page:
-  title: ""
+  title: ''
 hero:
   background: /media/pattern-1.svg
   button:
@@ -10,16 +10,21 @@ hero:
   heading: Multifunctional designer + developer.
   subheading: A traditionally trained designer who codes.
 services:
-  heading: ""
-  text: ""
+  heading: Services
   service:
-    - heading: "Print, branding + graphic design"
-      text: "Modern design mixed with the theory of traditional graphic design."
+    - heading: 'Print, branding + graphic design'
       image: /media/eye-white.svg
-    - heading: "App + website design"
-      text: "User-centered website and application design. Using Agile methods to produce quick and effective results."
+      text: Modern design mixed with the theory of traditional graphic design.
+    - heading: App + website design
       image: /media/devices-white.svg
-    - heading: "Frontend development"
-      text: "The entire process from rapid prototyping, visual concepts to a fully functional live product."
+      text: >-
+        User-centered website and application design. Using Agile methods to
+        produce quick and effective results.
+    - heading: Frontend development
       image: /media/code-white.svg
+      text: >-
+        The entire process from rapid prototyping, visual concepts to a fully
+        functional live product.
+  text: Lorem ipsum dolor sit
 ---
+
