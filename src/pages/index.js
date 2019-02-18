@@ -19,19 +19,19 @@ export const HomePageTemplate = ({ page }) => {
         content={page.hero}
       >
         <FitText minFontSize={80} maxFontSize={110}>
-          <H1>{page.block1.heading}</H1>
+          <H1>{page.hero.heading}</H1>
         </FitText>
-        {page.block1.subheading && (
+        {page.hero.subheading && (
           <FitText minFontSize={80} maxFontSize={110}>
             <H1
               color={transparentize(1, "white")}
               textStroke={`1px ${transparentize(0.5, "white")}`}
             >
-              {page.block1.subheading}
+              {page.hero.subheading}
             </H1>
           </FitText>
         )}
-        <Button mt="100px" content={page.block1.button} />
+        <Button mt="100px" content={page.hero.button} />
       </HeroBlock>
       <Block width="1000px" color="white" bg="black" title="Services" />
     </>
@@ -87,7 +87,7 @@ export const homePageQuery = graphql`
             service {
               heading
               text
-              icon {
+              image {
                 relativePath
               }
             }
