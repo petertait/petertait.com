@@ -40,6 +40,11 @@ export const Inner = styled.div`
   flex-shrink: 0;
   white-space: normal;
   max-width: 1400px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+  background-image: ${props =>
+    props.image ? `url(media/${props.image})` : "none"};
 
   ${color};
   ${width};

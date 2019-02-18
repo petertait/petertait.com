@@ -1,12 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { transparentize, lighten } from "polished";
-import FitText from "react-fittext";
+import { lighten } from "polished";
 
 import Block, { HeroBlock } from "components/Block";
-import { H1 } from "components/Text";
-import Button from "components/Button";
+
 import Layout from "components/Layout";
 
 export const HomePageTemplate = ({ page }) => {
@@ -17,22 +15,7 @@ export const HomePageTemplate = ({ page }) => {
         color="white"
         bg={lighten(0.03, "black")}
         content={page.hero}
-      >
-        <FitText minFontSize={80} maxFontSize={110}>
-          <H1>{page.hero.heading}</H1>
-        </FitText>
-        {page.hero.subheading && (
-          <FitText minFontSize={80} maxFontSize={110}>
-            <H1
-              color={transparentize(1, "white")}
-              textStroke={`1px ${transparentize(0.5, "white")}`}
-            >
-              {page.hero.subheading}
-            </H1>
-          </FitText>
-        )}
-        <Button mt="100px" content={page.hero.button} />
-      </HeroBlock>
+      />
       <Block width="1000px" color="white" bg="black" title="Services" />
     </>
   );
@@ -78,6 +61,17 @@ export const homePageQuery = graphql`
               }
               background {
                 relativePath
+              }
+            }
+            services {
+              heading
+              text
+              service {
+                heading
+                text
+                image {
+                  relativePath
+                }
               }
             }
           }
