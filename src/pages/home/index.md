@@ -1,9 +1,9 @@
 ---
 templateKey: home-page
 page:
-  title: ''
+  title: ""
 hero:
-  background: /media/pattern-1.svg
+  background: /media/pattern-2.svg
   button:
     path: /contact
     text: Available for Freelance
@@ -12,7 +12,7 @@ hero:
 services:
   heading: Services
   service:
-    - heading: 'Print, branding + graphic design'
+    - heading: "Print, branding + graphic design"
       image: /media/eye-white.svg
       text: Modern design mixed with the theory of traditional graphic design.
     - heading: App + website design
@@ -27,4 +27,3 @@ services:
         functional live product.
   text: Lorem ipsum dolor sit
 ---
-

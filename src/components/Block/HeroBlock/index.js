@@ -15,7 +15,7 @@ const HeroBlock = ({ content, bg, color, width, maxWidth }) => {
         color={color}
         width={width}
         maxWidth={maxWidth}
-        image={content.background.relativePath}
+        image={content.background && content.background.relativePath}
       >
         <FitText minFontSize={80} maxFontSize={110}>
           <H1>{content.heading}</H1>

@@ -41,8 +41,8 @@ export const Inner = styled.div`
   white-space: normal;
   max-width: 1400px;
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100% auto;
+  background-position: center;
+  background-size: cover;
   background-image: ${props =>
     props.image ? `url(media/${props.image})` : "none"};
 

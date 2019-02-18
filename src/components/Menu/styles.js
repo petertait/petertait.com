@@ -68,7 +68,7 @@ export const NavButton = styled(Link)`
   display: flex;
   align-items: center;
   position: relative;
-  opacity: 0.5;
+  ${"" /* opacity: 0.5; */}
   font-size: ${theme.font.size.delta};
 
   &:hover,
