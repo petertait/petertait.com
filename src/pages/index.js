@@ -81,17 +81,6 @@ export const homePageQuery = graphql`
               }
             }
           }
-          services {
-            heading
-            text
-            service {
-              heading
-              text
-              image {
-                relativePath
-              }
-            }
-          }
         }
       }
     }
