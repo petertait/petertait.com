@@ -14,14 +14,16 @@ class Header extends Component {
   };
 
   render() {
+    console.log(shade);
     // const { isVisible } = this.state;
+    const { color, shade } = this.props;
 
     return (
       <Wrapper role="navigation" aria-label="main-navigation">
-        <Logo to="/" title="Logo">
+        <Logo to="/" title="Logo" color={color} shade={shade}>
           <Icon />
         </Logo>
-        <Nav>
+        <Nav color={color} shade={shade}>
           <NavButton to="/about" activeClassName="active">
             About
           </NavButton>

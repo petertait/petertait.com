@@ -2,14 +2,14 @@ import React from "react";
 
 import { Wrapper, Arrow } from "./styles";
 
-const Button = ({ as, content, shade, size, ...props }) => {
+const Button = ({ as, content, color, shade, size, ...props }) => {
   if (!content || !content.path || !content.text) {
     return null;
   }
 
   if (!content.path) {
     return (
-      <Wrapper as="button" shade={shade} size={size} {...props}>
+      <Wrapper as="button" color={color} shade={shade} size={size} {...props}>
         {content.text}
         <Arrow>→</Arrow>
       </Wrapper>
@@ -24,6 +24,7 @@ const Button = ({ as, content, shade, size, ...props }) => {
       <Wrapper
         as="a"
         href={content.path}
+        color={color}
         shade={shade}
         size={size}
         target="_blank"
@@ -39,6 +40,7 @@ const Button = ({ as, content, shade, size, ...props }) => {
     <Wrapper
       as={as}
       href={as === "a" && content.path}
+      color={color}
       shade={shade}
       size={size}
       to={content.path}

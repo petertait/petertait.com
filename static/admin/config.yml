@@ -32,6 +32,21 @@ collections:
               fields: [{ label: Title, name: title, widget: string }],
             }
           - {
+              label: Color,
+              name: color,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Light,
+                    name: light,
+                    widget: string,
+                    default: "white",
+                  },
+                  { label: Dark, name: dark, widget: string, default: "black" },
+                ],
+            }
+          - {
               label: Hero,
               name: hero,
               widget: object,

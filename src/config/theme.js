@@ -30,8 +30,7 @@ const theme = {
   },
 
   size: {
-    maxWidth: "1140px",
-    desktop: "65em",
+    desktop: "72em",
     tablet: "52em",
     mobile: "40em"
   },

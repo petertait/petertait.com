@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import styledMap from "styled-map";
+import { lighten } from "polished";
 import {
   flex,
   color,
@@ -33,11 +35,22 @@ export const Wrapper = styled.div`
   flex-shrink: 0;
   white-space: normal;
 
+  color: ${styledMap("shade", {
+    light: props => (props.color ? props.color.dark : "black"),
+    dark: props => (props.color ? props.color.light : "white"),
+    default: props => (props.color ? props.color.dark : "black")
+  })};
+
+  background-color: ${styledMap("shade", {
+    light: props => (props.color ? props.color.light : "white"),
+    dark: props => (props.color ? props.color.dark : "black"),
+    default: props => (props.color ? props.color.light : "white")
+  })};
+
   ${flex};
   ${space};
   ${width};
   ${order};
-  ${color};
   ${height};
   ${zIndex};
   ${borders};

@@ -2,35 +2,41 @@ import React from "react";
 import FitText from "react-fittext";
 import { transparentize } from "polished";
 
-import { H1 } from "components/Text";
 import Button from "components/Button";
+import { H1 } from "components/Text";
 
 import { Wrapper, Inner } from "./styles";
 
-const HeroBlock = ({ content, bg, color, width, maxWidth }) => {
+const HeroBlock = ({ shade, content, color, width, maxWidth }) => {
   return (
-    <Wrapper bg={bg} width={width} maxWidth={maxWidth}>
+    <Wrapper shade={shade} color={color} width={width} maxWidth={maxWidth}>
       <Inner
-        bg={bg}
+        shade={shade}
         color={color}
         width={width}
         maxWidth={maxWidth}
         image={content.background && content.background.relativePath}
       >
-        <FitText minFontSize={80} maxFontSize={110}>
-          <H1>{content.heading}</H1>
-        </FitText>
+        {content.heading && (
+          <FitText minFontSize={80} maxFontSize={110}>
+            <H1 shade={shade} color={color}>
+              {content.heading}
+            </H1>
+          </FitText>
+        )}
         {content.subheading && (
           <FitText minFontSize={80} maxFontSize={110}>
-            <H1
-              color={transparentize(1, "white")}
-              textStroke={`1px ${transparentize(0.5, "white")}`}
-            >
+            <H1 outline shade={shade} color={color}>
               {content.subheading}
             </H1>
           </FitText>
         )}
-        <Button mt="100px" content={content.button} />
+        <Button
+          mt="100px"
+          shade={shade}
+          color={color}
+          content={content.button}
+        />
       </Inner>
     </Wrapper>
   );

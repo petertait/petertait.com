@@ -1,6 +1,6 @@
 import styled from "styled-components";
+import styledMap from "styled-map";
 import {
-  style,
   flex,
   color,
   space,
@@ -12,6 +12,7 @@ import {
   lineHeight,
   letterSpacing
 } from "styled-system";
+import { transparentize } from "polished";
 
 import theme from "config/theme";
 
@@ -27,19 +28,43 @@ export const Text = styled.div`
   ${letterSpacing};
 `;
 
-const textStroke = style({
-  prop: "textStroke",
-  cssProperty: "-webkitTextStroke"
-});
-
 const H1Text = Text.withComponent("h1");
 export const H1 = styled(H1Text)`
   width: 100%;
   line-height: 1;
   margin: 0 0 20px;
   letter-spacing: -2px;
-  font-size: ${theme.font.size.tera};
   font-weight: ${theme.font.weight.bold};
+  font-size: ${theme.font.size.tera};
+  font-size: calc(94px + 6 * ((100vw - 320px) / 680));
+
+  color: ${styledMap("shade", {
+    light: props =>
+      props.outline ? "transparent" : props.color ? props.color.dark : "black",
+    dark: props =>
+      props.outline ? "transparent" : props.color ? props.color.light : "white",
+    default: props =>
+      props.outline ? "transparent" : props.color ? props.color.dark : "black"
+  })};
+
+  -webkit-text-stroke: ${styledMap("shade", {
+    light: props =>
+      props.outline
+        ? `1px ${transparentize(0.5, props.color.dark || "black")}`
+        : "none",
+    dark: props =>
+      props.outline
+        ? `1px ${transparentize(0.5, props.color.light || "white")}`
+        : "none",
+    default: props =>
+      props.outline
+        ? `1px ${transparentize(0.5, props.color.dark || "black")}`
+        : "none"
+  })};
+
+  @media (max-width: ${theme.size.desktop}) {
+    font-size: calc(80px + 6 * ((100vw - 320px) / 680));
+  }
 
   @media (max-width: ${theme.size.tablet}) {
     font-size: ${theme.font.size.mega};
@@ -54,7 +79,6 @@ export const H1 = styled(H1Text)`
   ${opacity};
   ${fontSize};
   ${fontWeight};
-  ${textStroke};
 `;
 
 const H2Text = Text.withComponent("h2");

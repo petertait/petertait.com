@@ -2,8 +2,12 @@
 templateKey: home-page
 page:
   title: ""
+color:
+  light: "#eee"
+  dark: "#292929"
 hero:
-  background: /media/pattern-2.svg
+  shade: "dark"
+  background: /media/pattern-1.svg
   button:
     path: /contact
     text: Available for Freelance

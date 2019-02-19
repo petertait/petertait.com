@@ -11906,7 +11906,7 @@ react-dnd@^7.0.0:
     recompose "^0.30.0"
     shallowequal "^1.1.0"
 
-react-dom@^16.0.0, react-dom@^16.4.1, react-dom@^16.6.3:
+react-dom@^16.0.0, react-dom@^16.6.3:
   version "16.6.3"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.6.3.tgz#8fa7ba6883c85211b8da2d0efeffc9d3825cccc0"
   integrity sha512-8ugJWRCWLGXy+7PmNh8WJz3g1TaTUt1XyoIcFN+x0Zbkoz+KKdUyx1AQLYJdbFXjuF41Nmjn5+j//rxvhFjgSQ==
@@ -11915,6 +11915,16 @@ react-dom@^16.0.0, react-dom@^16.4.1, react-dom@^16.6.3:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.11.2"
+
+react-dom@^16.8.2:
+  version "16.8.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.2.tgz#7c8a69545dd554d45d66442230ba04a6a0a3c3d3"
+  integrity sha512-cPGfgFfwi+VCZjk73buu14pYkYBR1b/SRMSYqkLDdhSEHnSwcuYTPu6/Bh6ZphJFIk80XLvbSe2azfcRzNF+Xg==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+    scheduler "^0.13.2"
 
 react-emotion@^9.2.5:
   version "9.2.12"
@@ -11993,6 +12003,11 @@ react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-media-hook@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-media-hook/-/react-media-hook-0.3.0.tgz#5f6474bd441af26612b9aee762d8b450cc5560f3"
+  integrity sha512-JGVkij5DIskixVntQI/jPH5ymEh3YyqBKY4XN6g8nhN1FCfbucWCr/beTceMe+/5tDZg9B1QBrv1IvVJZyyN4g==
 
 react-modal@^3.1.5:
   version "3.8.1"
@@ -12203,7 +12218,7 @@ react-waypoint@^8.1.0:
     prop-types "^15.0.0"
     react-is "^16.6.3"
 
-react@^16.2.0, react@^16.4.1, react@^16.6.3:
+react@^16.4.1, react@^16.6.3:
   version "16.6.3"
   resolved "https://registry.yarnpkg.com/react/-/react-16.6.3.tgz#25d77c91911d6bbdd23db41e70fb094cc1e0871c"
   integrity sha512-zCvmH2vbEolgKxtqXL2wmGCUxUyNheYn/C+PD1YAjfxHC54+MhdruyhO7QieQrYsYeTxrn93PM2y0jRH1zEExw==
@@ -12213,7 +12228,7 @@ react@^16.2.0, react@^16.4.1, react@^16.6.3:
     prop-types "^15.6.2"
     scheduler "^0.11.2"
 
-react@^16.6.0:
+react@^16.6.0, react@^16.8.2:
   version "16.8.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.2.tgz#83064596feaa98d9c2857c4deae1848b542c9c0c"
   integrity sha512-aB2ctx9uQ9vo09HVknqv3DGRpI7OIGJhCx3Bt0QqoRluEjHSaObJl+nG12GDdYH6sTgE7YiPJ6ZUyMx9kICdXw==

@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { lighten } from "polished";
 
 import Block, { HeroBlock } from "components/Block";
 
@@ -11,12 +10,12 @@ export const HomePageTemplate = ({ page }) => {
   return (
     <>
       <HeroBlock
+        shade="dark"
         width="90vw"
-        color="white"
-        bg={lighten(0.03, "black")}
+        color={page.color}
         content={page.hero}
       />
-      <Block width="1000px" color="white" bg="black" title="Services" />
+      <Block width="1000px" shade="dark" color={page.color} title="Services" />
     </>
   );
 };
@@ -29,7 +28,7 @@ const HomePage = ({ data }) => {
   const { frontmatter: page } = data.allMarkdownRemark.edges[0].node;
 
   return (
-    <Layout content={page}>
+    <Layout content={page} color={page.color} shade={page.hero.shade}>
       <HomePageTemplate page={page} />
     </Layout>
   );
@@ -52,7 +51,12 @@ export const homePageQuery = graphql`
             page {
               title
             }
+            color {
+              light
+              dark
+            }
             hero {
+              shade
               heading
               subheading
               button {

@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { readableColor } from "polished";
+import styledMap from "styled-map";
 import { space, color, alignSelf } from "styled-system";
 import { Link } from "gatsby";
+import { transparentize } from "polished";
 
 import theme from "config/theme";
 
@@ -20,10 +21,15 @@ export const Wrapper = styled(Link)`
   align-self: flex-start;
   border: 2px solid;
   background-color: transparent;
-  color: white;
   z-index: 1;
   overflow: hidden;
   font-size: ${theme.font.size.epsilon};
+
+  color: ${styledMap("shade", {
+    light: props => (props.color ? props.color.dark : "black"),
+    dark: props => (props.color ? props.color.light : "white"),
+    default: props => (props.color ? props.color.dark : "black")
+  })};
 
   &::before {
     content: "";
@@ -36,7 +42,12 @@ export const Wrapper = styled(Link)`
     opacity: 0;
     transform: translateX(-105%);
     transition: ${theme.transition};
-    background-color: ${props => props.color || "white"};
+
+    background-color: ${styledMap("shade", {
+      light: props => (props.color ? props.color.dark : "black"),
+      dark: props => (props.color ? props.color.light : "white"),
+      default: props => (props.color ? props.color.dark : "black")
+    })};
   }
 
   &:focus {
@@ -44,9 +55,24 @@ export const Wrapper = styled(Link)`
   }
 
   &:hover {
-    border-color: ${props => props.color || "white"};
-    ${"" /* background-color: ${props => props.color || "white"}; */}
-    color: ${props => (props.color ? readableColor(props.color) : "black")};
+    box-shadow: 0 5px 100px
+      ${styledMap("shade", {
+        light: props => transparentize(0.9, "black"),
+        dark: props => transparentize(0.1, "black"),
+        default: props => transparentize(0.9, "black")
+      })};
+
+    border-color: ${styledMap("shade", {
+      light: props => (props.color ? props.color.dark : "black"),
+      dark: props => (props.color ? props.color.light : "white"),
+      default: props => (props.color ? props.color.dark : "black")
+    })};
+
+    color: ${styledMap("shade", {
+      light: props => (props.color ? props.color.light : "white"),
+      dark: props => (props.color ? props.color.dark : "black"),
+      default: props => (props.color ? props.color.light : "white")
+    })};
 
     &::before {
       transform: none;
