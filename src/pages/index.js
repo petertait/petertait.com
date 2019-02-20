@@ -6,16 +6,18 @@ import Block, { HeroBlock } from "components/Block";
 
 import Layout from "components/Layout";
 
+import Services from "templates/home-page/Services";
+
 export const HomePageTemplate = ({ page }) => {
   return (
     <>
-      <HeroBlock
-        shade="dark"
-        width="90vw"
-        color={page.color}
-        content={page.hero}
-      />
-      <Block width="1000px" shade="dark" color={page.color} title="Services" />
+      <HeroBlock color={page.color} content={page.hero} />
+      <Block width="1200px" shade="dark" color={page.color}>
+        <Services content={page.services} shade="dark" color={page.color} />
+      </Block>
+      <Block width="1200px" shade="light" color={page.color}>
+        <Services content={page.services} shade="dark" color={page.color} />
+      </Block>
     </>
   );
 };

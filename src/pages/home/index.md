@@ -3,8 +3,8 @@ templateKey: home-page
 page:
   title: ""
 color:
-  light: "#eee"
-  dark: "#292929"
+  light: "#fff"
+  dark: "#0032D2"
 hero:
   shade: "dark"
   background: /media/pattern-1.svg
@@ -18,16 +18,16 @@ services:
   service:
     - heading: "Print, branding + graphic design"
       image: /media/eye-white.svg
-      text: Modern design mixed with the theory of traditional graphic design.
-    - heading: App + website design
+      text: Modern methods mixed with the theory of traditional graphic design. Providing the full brand to product design package.
+    - heading: App, vr + website design
       image: /media/devices-white.svg
       text: >-
-        User-centered website and application design. Using Agile methods to
-        produce quick and effective results.
+        User-centered website, virtual reality and application design. Using Agile methods to
+        produce quick and impactful results.
     - heading: Frontend development
       image: /media/code-white.svg
       text: >-
         The entire process from rapid prototyping, visual concepts to a fully
-        functional live product.
-  text: Lorem ipsum dolor sit
+        functional deployed product. Utilising the latest methods in development.
+  text: Clients range from global corporations to startups. Services offered to these clients have ranged from VR design, full branding to product design and development.
 ---

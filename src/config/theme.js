@@ -6,7 +6,7 @@ const theme = {
   },
 
   font: {
-    sans: "'neutrif-studio', sans-serif !important",
+    sans: "'apercu', sans-serif !important",
     mono: "'space-mono', mono !important",
     size: {
       tera: "100px",
@@ -17,11 +17,11 @@ const theme = {
       cesar: "30px",
       gamma: "28px",
       theta: "24px",
-      upsilon: "20px",
-      delta: "18px",
-      epsilon: "16px",
-      zeta: "14px",
-      kappa: "12px"
+      upsilon: "22px",
+      delta: "20px",
+      epsilon: "18px",
+      zeta: "16px",
+      kappa: "14px"
     },
     weight: {
       regular: 400,
@@ -30,7 +30,7 @@ const theme = {
   },
 
   size: {
-    desktop: "72em",
+    desktop: "80em",
     tablet: "52em",
     mobile: "40em"
   },

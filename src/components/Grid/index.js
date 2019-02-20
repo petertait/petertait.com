@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { flex, space, width, order, maxWidth } from "styled-system";
+import { flex, space, width, order, maxWidth, alignItems } from "styled-system";
 
 import theme from "config/theme";
 
@@ -20,6 +20,7 @@ export const Grid = styled.div`
   ${space};
   ${width};
   ${maxWidth};
+  ${alignItems}
 `;
 
 export default Grid;

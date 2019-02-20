@@ -3757,7 +3757,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@^15.5.1, create-react-class@^15.5.2, create-react-class@^15.5.3, create-react-class@^15.6.0:
+create-react-class@^15.5.1, create-react-class@^15.5.2, create-react-class@^15.6.0:
   version "15.6.3"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
   integrity sha512-M+/3Q6E6DLO6Yx3OwrWjwHBnvfXXYA7W+dFjt/ZDBemHO1DDZhsalX/NUtnTYclN6GfnBDRh4qRHjcDHmlJBJg==
@@ -6835,6 +6835,11 @@ gray-matter@^4.0.0, gray-matter@^4.0.1:
     kind-of "^6.0.2"
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
+
+gsap@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-2.1.0.tgz#f8ddd091a2fefc7defb19dd4e9b80bd36903d64c"
+  integrity sha512-InFn9MNrXwJF6C8MQ4jMFPlkyZX04Y1eBeOvbuYYIjPCfkHKGzl8ZQkvWm4ShlpchQ8VIi4nN/nnjs50o4nklQ==
 
 gud@^1.0.0:
   version "1.0.0"
@@ -11938,14 +11943,6 @@ react-error-overlay@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
   integrity sha512-XzgvowFrwDo6TWcpJ/WTiarb9UI6lhA4PMzS7n1joK3sHfBBBOQHUc0U4u57D6DWO9vHv6lVSWx2Q/Ymfyv4hw==
-
-react-fittext@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-fittext/-/react-fittext-1.0.0.tgz#836a1c04f9322f6c94cb69e45c66006fc42d37a5"
-  integrity sha1-g2ocBPkyL2yUy2nkXGYAb8QtN6U=
-  dependencies:
-    create-react-class "^15.5.3"
-    prop-types "^15.5.10"
 
 react-frame-component@^4.0.2:
   version "4.0.2"

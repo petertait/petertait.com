@@ -7,8 +7,9 @@ import { transparentize } from "polished";
 import theme from "config/theme";
 
 export const Arrow = styled.span`
-  margin-right: -5px;
-  margin-left: 10px;
+  top: 1px;
+  margin: 0 -5px 0 10px;
+  position: relative;
   transition: transform ${theme.transition};
 `;
 
@@ -17,18 +18,25 @@ export const Wrapper = styled(Link)`
   display: flex;
   position: relative;
   cursor: pointer;
-  padding: 17px 22px;
+  padding: 18px 22px 16px;
   align-self: flex-start;
-  border: 2px solid;
+  border: 1px solid;
   background-color: transparent;
   z-index: 1;
   overflow: hidden;
   font-size: ${theme.font.size.epsilon};
+  transition: ${theme.transition};
 
   color: ${styledMap("shade", {
-    light: props => (props.color ? props.color.dark : "black"),
     dark: props => (props.color ? props.color.light : "white"),
     default: props => (props.color ? props.color.dark : "black")
+  })};
+
+  border-color: ${styledMap("shade", {
+    dark: props =>
+      transparentize(0.7, props.color ? props.color.light : "white"),
+    default: props =>
+      transparentize(0.7, props.color ? props.color.dark : "black")
   })};
 
   &::before {
@@ -44,7 +52,6 @@ export const Wrapper = styled(Link)`
     transition: ${theme.transition};
 
     background-color: ${styledMap("shade", {
-      light: props => (props.color ? props.color.dark : "black"),
       dark: props => (props.color ? props.color.light : "white"),
       default: props => (props.color ? props.color.dark : "black")
     })};
@@ -57,19 +64,16 @@ export const Wrapper = styled(Link)`
   &:hover {
     box-shadow: 0 5px 100px
       ${styledMap("shade", {
-        light: props => transparentize(0.9, "black"),
-        dark: props => transparentize(0.1, "black"),
-        default: props => transparentize(0.9, "black")
+        dark: props => transparentize(0.8, "black"),
+        default: props => transparentize(0.1, "black")
       })};
 
     border-color: ${styledMap("shade", {
-      light: props => (props.color ? props.color.dark : "black"),
       dark: props => (props.color ? props.color.light : "white"),
       default: props => (props.color ? props.color.dark : "black")
     })};
 
     color: ${styledMap("shade", {
-      light: props => (props.color ? props.color.light : "white"),
       dark: props => (props.color ? props.color.dark : "black"),
       default: props => (props.color ? props.color.light : "white")
     })};

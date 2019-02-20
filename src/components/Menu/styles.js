@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 import styledMap from "styled-map";
-import { darken, lighten, transparentize } from "polished";
+import { transparentize } from "polished";
 
 import theme from "config/theme";
 
@@ -12,7 +12,6 @@ export const Wrapper = styled.header`
   position: fixed;
   display: flex;
   align-items: center;
-  ${"" /* mix-blend-mode: difference; */}
 `;
 
 export const Logo = styled(Link)`
@@ -32,9 +31,13 @@ export const Logo = styled(Link)`
     left: 0;
     z-index: -1;
     opacity: 0;
-    background-color: white;
     transform: translateX(-105%);
     transition: ${theme.transition};
+
+    background-color: ${styledMap("shade", {
+      dark: props => (props.color ? props.color.light : "white"),
+      default: props => (props.color ? props.color.dark : "black")
+    })};
   }
 
   svg {
@@ -42,19 +45,22 @@ export const Logo = styled(Link)`
     width: auto;
 
     path {
-      fill: ${props => (props.color ? props.color.light : "white")};
       transition: ${theme.transition};
+
+      fill: ${styledMap("shade", {
+        dark: props => (props.color ? props.color.light : "white"),
+        default: props => (props.color ? props.color.dark : "black")
+      })};
     }
   }
 
   &:hover {
     transition: ${theme.transition} 0.15s;
 
-    box-shadow: 0 5px 100px
+    box-shadow: 0 5px 70px
       ${styledMap("shade", {
-        light: props => transparentize(0.9, "black"),
-        dark: props => transparentize(0.1, "black"),
-        default: props => transparentize(0.9, "black")
+        dark: props => transparentize(0.8, "black"),
+        default: props => transparentize(0.1, "black")
       })};
 
     &::before {
@@ -63,7 +69,10 @@ export const Logo = styled(Link)`
     }
 
     svg path {
-      fill: ${props => (props.color ? props.color.dark : "black")};
+      fill: ${styledMap("shade", {
+        dark: props => (props.color ? props.color.dark : "black"),
+        default: props => (props.color ? props.color.light : "white")
+      })};
     }
   }
 `;
@@ -106,10 +115,16 @@ export const Nav = styled.nav`
   align-items: center;
 
   ${NavButton} {
-    color: ${props => (props.color ? props.color.light : "white")};
+    color: ${styledMap("shade", {
+      dark: props => (props.color ? props.color.light : "white"),
+      default: props => (props.color ? props.color.dark : "black")
+    })};
 
     &::before {
-      background-color: ${props => (props.color ? props.color.light : "white")};
+      background-color: ${styledMap("shade", {
+        dark: props => (props.color ? props.color.light : "white"),
+        default: props => (props.color ? props.color.dark : "black")
+      })};
     }
   }
 `;

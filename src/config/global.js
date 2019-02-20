@@ -1,12 +1,14 @@
 import { createGlobalStyle } from "styled-components";
-import { normalize, darken, transparentize } from "polished";
+import { normalize, darken } from "polished";
 import { color } from "styled-system";
 
 import theme from "./theme";
 
 import {
-  NeutrifStudioRegularWOFF,
-  NeutrifStudioBoldWOFF,
+  ApercuRegularWOFF,
+  ApercuBoldWOFF,
+  ApercuRegularWOFF2,
+  ApercuBoldWOFF2,
   SpaceMonoRegularWOFF,
   SpaceMonoBoldWOFF
 } from "./fonts/fonts";
@@ -15,19 +17,21 @@ const GlobalStyle = createGlobalStyle`
   ${normalize()}
 
   @font-face {
-    font-family: "neutrif-studio";
+    font-family: "apercu";
     font-style: normal;
     font-weight: 400;
     src:
-  	  url(${NeutrifStudioRegularWOFF}) format('woff');
+  	  url(${ApercuRegularWOFF}) format('woff'),
+      url(${ApercuRegularWOFF2}) format('woff2');
   }
 
   @font-face {
-    font-family: "neutrif-studio";
+    font-family: "apercu";
     font-style: normal;
     font-weight: 600;
     src:
-  	  url(${NeutrifStudioBoldWOFF}) format('woff');
+  	  url(${ApercuBoldWOFF}) format('woff'),
+      url(${ApercuBoldWOFF2}) format('woff2');
   }
 
   @font-face {
@@ -52,14 +56,6 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     font-family: ${theme.font.sans};
-
-    &::-moz-selection {
-      background: ${transparentize(0.6, "#666")};
-    }
-
-    &::selection {
-      background: ${transparentize(0.6, "#666")};
-    }
   }
 
   html {
@@ -79,7 +75,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-text-size-adjust: none;
     color: white;
     background-color: black;
-    font-size: ${theme.font.size.delta};
+    font-size: ${theme.font.size.epsilon};
     font-weight: ${theme.font.weight.regular};
 
     ${color};

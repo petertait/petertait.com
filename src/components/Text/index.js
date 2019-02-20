@@ -16,7 +16,7 @@ import { transparentize } from "polished";
 
 import theme from "config/theme";
 
-export const Text = styled.div`
+const Text = styled.div`
   ${flex};
   ${color};
   ${space};
@@ -28,19 +28,20 @@ export const Text = styled.div`
   ${letterSpacing};
 `;
 
+export default Text;
+
 const H1Text = Text.withComponent("h1");
 export const H1 = styled(H1Text)`
   width: 100%;
   line-height: 1;
   margin: 0 0 20px;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
   font-weight: ${theme.font.weight.bold};
   font-size: ${theme.font.size.tera};
-  font-size: calc(94px + 6 * ((100vw - 320px) / 680));
+  font-size: 100px;
+  font-size: calc(98px + 6 * ((100vw - 320px) / 680));
 
   color: ${styledMap("shade", {
-    light: props =>
-      props.outline ? "transparent" : props.color ? props.color.dark : "black",
     dark: props =>
       props.outline ? "transparent" : props.color ? props.color.light : "white",
     default: props =>
@@ -48,17 +49,13 @@ export const H1 = styled(H1Text)`
   })};
 
   -webkit-text-stroke: ${styledMap("shade", {
-    light: props =>
-      props.outline
-        ? `1px ${transparentize(0.5, props.color.dark || "black")}`
-        : "none",
     dark: props =>
       props.outline
-        ? `1px ${transparentize(0.5, props.color.light || "white")}`
+        ? `1px ${transparentize(0.4, props.color.light || "white")}`
         : "none",
     default: props =>
       props.outline
-        ? `1px ${transparentize(0.5, props.color.dark || "black")}`
+        ? `1px ${transparentize(0.4, props.color.dark || "black")}`
         : "none"
   })};
 
@@ -67,11 +64,11 @@ export const H1 = styled(H1Text)`
   }
 
   @media (max-width: ${theme.size.tablet}) {
-    font-size: ${theme.font.size.mega};
+    font-size: calc(60px + 6 * ((100vw - 320px) / 680));
   }
 
   @media (max-width: ${theme.size.mobile}) {
-    font-size: ${theme.font.size.alpha};
+    font-size: calc(50px + 6 * ((100vw - 320px) / 680));
   }
 
   ${color};
@@ -79,6 +76,10 @@ export const H1 = styled(H1Text)`
   ${opacity};
   ${fontSize};
   ${fontWeight};
+
+  p {
+    margin: 0;
+  }
 `;
 
 const H2Text = Text.withComponent("h2");
@@ -102,9 +103,9 @@ export const H2 = styled(H2Text)`
 const H3Text = Text.withComponent("h3");
 export const H3 = styled(H3Text)`
   width: 100%;
-  line-height: 1.4;
+  line-height: 1.1;
   margin: 0 0 10px;
-  font-size: ${theme.font.size.gamma};
+  font-size: ${theme.font.size.theta};
   font-weight: ${theme.font.weight.bold};
 
   @media (max-width: ${theme.size.mobile}) {
@@ -123,7 +124,7 @@ export const H4 = styled(H4Text)`
   line-height: 1.1;
   margin: 0 0 10px;
   font-size: ${theme.font.size.upsilon};
-  font-weight: ${theme.font.weight.bold};
+  font-weight: ${theme.font.weight.regular};
 
   ${color};
   ${space};

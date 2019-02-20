@@ -4,9 +4,14 @@ templateKey: error-page
 page:
   title: "Error"
 
-block1:
-  heading: Page not found!
+color:
+  light: "white"
+  dark: "black"
+
+hero:
+  shade: "light"
+  heading: "Page not found!"
   subheading: ""
-  buttonPath: /
-  buttonText: Return Home
+  buttonPath: "/"
+  buttonText: "Return Home"
 ---

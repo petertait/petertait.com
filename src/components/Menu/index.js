@@ -14,12 +14,11 @@ class Header extends Component {
   };
 
   render() {
-    console.log(shade);
     // const { isVisible } = this.state;
     const { color, shade } = this.props;
 
     return (
-      <Wrapper role="navigation" aria-label="main-navigation">
+      <Wrapper role="navigation" color={color} aria-label="main-navigation">
         <Logo to="/" title="Logo" color={color} shade={shade}>
           <Icon />
         </Logo>
@@ -29,6 +28,9 @@ class Header extends Component {
           </NavButton>
           <NavButton to="/work" activeClassName="active">
             Work
+          </NavButton>
+          <NavButton to="/fonts" activeClassName="active">
+            Fonts
           </NavButton>
           <NavButton to="/contact" activeClassName="active">
             Contact

@@ -70,6 +70,13 @@ collections:
                         { label: Path, name: path, widget: string, default: / },
                       ],
                   },
+                  {
+                    label: "Shade",
+                    name: "shade",
+                    widget: "select",
+                    options: ["light", "dark"],
+                    default: "light",
+                  },
                 ],
             }
           - {
@@ -120,6 +127,21 @@ collections:
                 ],
             }
           - {
+              label: Color,
+              name: color,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Light,
+                    name: light,
+                    widget: string,
+                    default: "white",
+                  },
+                  { label: Dark, name: dark, widget: string, default: "black" },
+                ],
+            }
+          - {
               label: Hero,
               name: hero,
               widget: object,
@@ -128,17 +150,19 @@ collections:
                   {
                     label: Heading,
                     name: heading,
-                    widget: string,
+                    widget: text,
                     required: true,
                     default: empty,
                   },
-                  {
-                    label: Description,
-                    name: description,
-                    widget: text,
-                    required: true,
-                  },
+                  { label: Description, name: description, widget: text },
                   { label: Button Text, name: buttonText, widget: string },
                   { label: Button Path, name: buttonPath, widget: string },
+                  {
+                    label: "Shade",
+                    name: "shade",
+                    widget: "select",
+                    options: ["light", "dark"],
+                    default: "light",
+                  },
                 ],
             }
