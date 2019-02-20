@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { Link } from "gatsby";
 import styledMap from "styled-map";
 import { lighten, transparentize } from "polished";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import theme from "config/theme";
 
-export const Logo = styled(Link)`
+export const Logo = styled(AniLink)`
   display: flex;
   padding: 18px;
   position: relative;

@@ -12,10 +12,15 @@ export const HomePageTemplate = ({ page }) => {
   return (
     <>
       <HeroBlock color={page.color} content={page.hero} />
-      <Block width="1200px" shade="dark" color={page.color}>
-        <Services content={page.services} shade="dark" color={page.color} />
+      <Block width="1200px" color={page.color} content={page.services}>
+        <Services content={page.services} shade="light" color={page.color} />
       </Block>
-      <Block width="1200px" shade="light" color={page.color}>
+      <Block
+        width="1200px"
+        shade="light"
+        color={page.color}
+        content={page.services}
+      >
         <Services content={page.services} shade="dark" color={page.color} />
       </Block>
     </>

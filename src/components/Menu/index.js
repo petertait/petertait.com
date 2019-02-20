@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { darken } from "polished";
 
 import Icon from "./logo.svg";
 
@@ -19,7 +20,14 @@ class Header extends Component {
 
     return (
       <Wrapper role="navigation" color={color} aria-label="main-navigation">
-        <Logo to="/" title="Logo" color={color}>
+        <Logo
+          cover
+          to="/"
+          title="Logo"
+          color={color}
+          bg={color ? darken(0.1, color.dark) : "black"}
+          duration={0.6}
+        >
           <Icon />
         </Logo>
         <MenuButton color={color} onClick={this.toggleVisiblity}>

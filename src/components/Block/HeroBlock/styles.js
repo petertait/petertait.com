@@ -45,7 +45,7 @@ export const Inner = styled.div`
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  padding: 80px 150px 40px 80px;
+  padding: 80px 170px 40px 80px;
   flex-shrink: 0;
   white-space: normal;
   max-width: 1400px;

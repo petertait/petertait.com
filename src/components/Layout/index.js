@@ -82,7 +82,7 @@ class Layout extends Component {
             </Helmet>
             <GlobalStyle />
             <Menu color={color} shade={shade} />
-            <Wrapper>{children}</Wrapper>
+            <Wrapper color={color}>{children}</Wrapper>
           </>
         )}
       />

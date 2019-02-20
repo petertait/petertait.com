@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import styledMap from "styled-map";
-import { space, color, alignSelf } from "styled-system";
-import { Link } from "gatsby";
+import { space, alignSelf } from "styled-system";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { transparentize } from "polished";
 
 import theme from "config/theme";
@@ -13,7 +13,7 @@ export const Arrow = styled.span`
   transition: transform ${theme.transition};
 `;
 
-export const Wrapper = styled(Link)`
+export const Wrapper = styled(AniLink)`
   line-height: 1;
   display: flex;
   position: relative;
@@ -62,11 +62,7 @@ export const Wrapper = styled(Link)`
   }
 
   &:hover {
-    box-shadow: 0 5px 100px
-      ${styledMap("shade", {
-        dark: props => transparentize(0.8, "black"),
-        default: props => transparentize(0.1, "black")
-      })};
+    box-shadow: 0 5px 100px ${transparentize(0.8, "black")};
 
     border-color: ${styledMap("shade", {
       dark: props => (props.color ? props.color.light : "white"),
@@ -94,6 +90,5 @@ export const Wrapper = styled(Link)`
   }
 
   ${space};
-  ${color};
   ${alignSelf};
 `;

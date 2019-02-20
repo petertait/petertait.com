@@ -1,4 +1,5 @@
 import React from "react";
+import { darken } from "polished";
 
 import { Wrapper, Arrow } from "./styles";
 
@@ -44,6 +45,8 @@ const Button = ({ as, content, color, shade, size, ...props }) => {
       shade={shade}
       size={size}
       to={content.path}
+      bg={color ? darken(0.1, color.dark) : "black"}
+      duration={0.54}
       {...props}
     >
       {content.text}

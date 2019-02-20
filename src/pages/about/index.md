@@ -1,5 +1,5 @@
 ---
-templateKey: home-page
+templateKey: about-page
 page:
   title: ""
 color:
@@ -9,12 +9,11 @@ hero:
   shade: "dark"
   background: /media/pattern-1.svg
   button:
-    path: about
+    path: /contact
     text: Available for Freelance
   heading: Multifunctional designer + developer.
   subheading: A traditionally trained designer who codes.
 services:
-  shade: "dark"
   heading: Services
   service:
     - heading: "Print, branding + graphic design"
