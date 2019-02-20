@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import styledMap from "styled-map";
+import { darken, transparentize } from "polished";
 import {
   flex,
   space,
@@ -61,6 +62,24 @@ const Block = styled.div`
   ${justifySelf};
   ${flexDirection};
   ${justifyContent};
+
+  &::after {
+    content: "";
+    width: 50px;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    background: ${styledMap("shade", {
+      dark: props =>
+        `linear-gradient(to right, ${transparentize(
+          1,
+          darken(0.05, props.color.dark)
+        )} 0%, ${transparentize(0, darken(0.05, props.color.dark))} 100%)`,
+      default: "none"
+    })};
+  }
 `;
 
 export default Block;

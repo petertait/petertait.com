@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Icon from "./logo.svg";
 
-import { Wrapper, Logo, Nav, NavButton } from "./styles";
+import { Wrapper, Logo, MenuButton, MenuIcon } from "./styles";
 
 class Header extends Component {
   state = {
@@ -14,28 +14,19 @@ class Header extends Component {
   };
 
   render() {
-    // const { isVisible } = this.state;
-    const { color, shade } = this.props;
+    const { isVisible } = this.state;
+    const { color } = this.props;
 
     return (
       <Wrapper role="navigation" color={color} aria-label="main-navigation">
-        <Logo to="/" title="Logo" color={color} shade={shade}>
+        <Logo to="/" title="Logo" color={color}>
           <Icon />
         </Logo>
-        <Nav color={color} shade={shade}>
-          <NavButton to="/about" activeClassName="active">
-            About
-          </NavButton>
-          <NavButton to="/work" activeClassName="active">
-            Work
-          </NavButton>
-          <NavButton to="/fonts" activeClassName="active">
-            Fonts
-          </NavButton>
-          <NavButton to="/contact" activeClassName="active">
-            Contact
-          </NavButton>
-        </Nav>
+        <MenuButton color={color} onClick={this.toggleVisiblity}>
+          <MenuIcon isVisible={isVisible} color={color}>
+            <span />
+          </MenuIcon>
+        </MenuButton>
       </Wrapper>
     );
   }
