@@ -67,6 +67,8 @@
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc --noEmit",
+    "lint": "tslint --project .",
     "graphql-types": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/graphql-types.d.ts"
   },
   "devDependencies": {
