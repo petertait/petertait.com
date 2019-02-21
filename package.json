@@ -18,12 +18,16 @@
     "gatsby-plugin-sitemap": "^2.0.4",
     "gatsby-plugin-styled-components": "^3.0.4",
     "gatsby-plugin-transition-link": "^1.5.1",
+    "gatsby-plugin-typescript": "^2.0.8",
     "gatsby-remark-copy-linked-files": "^2.0.7",
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-relative-images": "^0.2.1",
     "gatsby-source-filesystem": "^2.0.12",
     "gatsby-transformer-remark": "^2.1.15",
     "gatsby-transformer-sharp": "^2.1.9",
+    "graphql": "^14.1.1",
+    "graphql-code-generator": "^0.9.4",
+    "graphql-codegen-typescript-template": "^0.9.4",
     "gsap": "^2.1.0",
     "netlify-cms": "^2.3.1",
     "polished": "^2.3.1",
@@ -62,13 +66,22 @@
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "graphql-types": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/graphql-types.d.ts"
   },
   "devDependencies": {
+    "@types/node": "^10.3.5",
+    "@types/react": "^16.4.1",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-helmet": "^5.0.6",
     "gatsby-plugin-root-import": "^2.0.4",
     "husky": "^1.2.1",
     "lint-staged": "^8.1.0",
     "prettier": "^1.15.3",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "typescript": "^3.3.3",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "tslint-react": "^3.6.0"
   }
 }

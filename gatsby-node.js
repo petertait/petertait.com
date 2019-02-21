@@ -34,7 +34,7 @@ exports.createPages = ({ actions, graphql }) => {
 
       if (edge.node.frontmatter.templateKey === "home-page") {
         pathName = "/";
-        component = path.resolve(`src/pages/index.js`);
+        component = path.resolve(`src/pages/index.tsx`);
       } else if (edge.node.frontmatter.templateKey === "error-page") {
         pathName = "/404";
         component = path.resolve(`src/pages/404.js`);
