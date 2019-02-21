@@ -2,10 +2,10 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
+import { MarkdownRemarkEdge } from "config/types/graphql-types";
+
 import Block, { HeroBlock } from "components/Block";
-
 import Layout from "components/Layout";
-
 import Services from "templates/home-page/Services";
 
 export const HomePageTemplate = ({ page }) => {
@@ -31,8 +31,12 @@ export const HomePageTemplate = ({ page }) => {
 //   title: PropTypes.string
 // };
 
-const HomePage = ({ data }) => {
-  const { frontmatter: page } = data.allMarkdownRemark.edges[0].node;
+interface IHomePageTemplate {
+  data: { allMarkdownRemark: MarkdownRemarkEdge };
+}
+
+const HomePage = (query: IHomePageTemplate) => {
+  const { frontmatter: page } = query.data.allMarkdownRemark.edges[0].node;
 
   return (
     <Layout content={page} color={page.color} shade={page.hero.shade}>
@@ -41,9 +45,9 @@ const HomePage = ({ data }) => {
   );
 };
 
-HomePage.propTypes = {
-  data: PropTypes.object.isRequired
-};
+// HomePage.propTypes = {
+//   data: PropTypes.object.isRequired
+// };
 
 export default HomePage;
 
