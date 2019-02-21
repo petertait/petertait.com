@@ -64,7 +64,7 @@ export const Inner = styled.div`
   ${maxWidth}
 
   @media (max-width: ${theme.size.desktop}) {
-    padding: 40px 100px 0 50px;
+    padding: 60px 100px 0 50px;
   }
 `;
 

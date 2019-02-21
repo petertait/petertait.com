@@ -25,8 +25,8 @@ class Header extends Component {
           to="/"
           title="Logo"
           color={color}
-          bg={color ? darken(0.1, color.dark) : "black"}
           duration={0.6}
+          bg={color ? darken(0.1, color.dark) : "black"}
         >
           <Icon />
         </Logo>

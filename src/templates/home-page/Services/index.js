@@ -4,7 +4,9 @@ import Service from "./Service";
 
 import { Wrapper, Inner } from "./styles";
 
-const Services = ({ content, color, shade }) => {
+const Services = ({ content, color }) => {
+  const shade = content.shade;
+
   return (
     <Wrapper>
       <Inner>

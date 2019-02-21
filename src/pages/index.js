@@ -13,7 +13,7 @@ export const HomePageTemplate = ({ page }) => {
     <>
       <HeroBlock color={page.color} content={page.hero} />
       <Block width="1200px" color={page.color} content={page.services}>
-        <Services content={page.services} shade="light" color={page.color} />
+        <Services content={page.services} color={page.color} />
       </Block>
       <Block
         width="1200px"
@@ -75,6 +75,7 @@ export const homePageQuery = graphql`
               }
             }
             services {
+              shade
               heading
               text
               service {

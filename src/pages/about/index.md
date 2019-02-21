@@ -4,14 +4,14 @@ page:
   title: ""
 color:
   light: "#fff"
-  dark: "#0032D2"
+  dark: "#222"
 hero:
   shade: "dark"
   background: /media/pattern-1.svg
   button:
     path: /contact
     text: Available for Freelance
-  heading: Multifunctional designer + developer.
+  heading: Based in Bath, UK.
   subheading: A traditionally trained designer who codes.
 services:
   heading: Services

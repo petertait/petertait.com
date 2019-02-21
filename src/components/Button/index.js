@@ -44,9 +44,9 @@ const Button = ({ as, content, color, shade, size, ...props }) => {
       color={color}
       shade={shade}
       size={size}
+      duration={0.6}
       to={content.path}
       bg={color ? darken(0.1, color.dark) : "black"}
-      duration={0.54}
       {...props}
     >
       {content.text}

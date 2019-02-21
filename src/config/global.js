@@ -73,8 +73,6 @@ const GlobalStyle = createGlobalStyle`
 	body {
     line-height: 1.6;
     -webkit-text-size-adjust: none;
-    color: white;
-    background-color: black;
     font-size: ${theme.font.size.epsilon};
     font-weight: ${theme.font.weight.regular};
 
@@ -93,14 +91,6 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     transition: ${theme.transition};
-
-    p & {
-      color: ${theme.color.blue};
-
-      &:hover {
-        color: ${darken(0.1, theme.color.blue)};
-      }
-    }
   }
 
   hr {
