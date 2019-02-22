@@ -30,9 +30,9 @@ const HomePage = ({ data }) => {
   );
 };
 
-HomePage.propTypes = {
-  data: PropTypes.object.isRequired
-};
+// HomePage.propTypes = {
+//   data: PropTypes.object.isRequired
+// };
 
 export default HomePage;
 

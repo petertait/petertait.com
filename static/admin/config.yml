@@ -11,6 +11,8 @@ collections:
   - name: pages
     label: Pages
     delete: false
+    # editor:
+    #   preview: false
 
     files:
       - file: src/pages/home/index.md
