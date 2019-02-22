@@ -30,12 +30,16 @@ const theme = {
   },
 
   size: {
-    desktop: "80em",
+    desktop: "78em",
     tablet: "52em",
     mobile: "40em"
   },
 
-  gutter: "30px",
+  gutter: {
+    large: "80px",
+    medium: "50px",
+    small: "20px"
+  },
 
   transition: "0.3s ease-in-out"
 };

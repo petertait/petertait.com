@@ -3,36 +3,34 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
 import Block, { HeroBlock } from "components/Block";
-
 import Layout from "components/Layout";
-
 import Services from "templates/home-page/Services";
 import Works from "templates/home-page/Works";
 
+export const HomePageTemplate = ({ page }) => (
+  <>
+    <HeroBlock color={page.color} content={page.hero} />
+    <Block width="1200px" color={page.color} content={page.services}>
+      <Services content={page.services} color={page.color} />
+    </Block>
+    <Block width="1200px" shade="light" color={page.color} content={page.works}>
+      <Works content={page.works} color={page.color} />
+    </Block>
+  </>
+);
+
 const HomePage = ({ data }) => {
   const { frontmatter: page } = data.markdownRemark;
-
   return (
     <Layout content={page} color={page.color}>
-      <HeroBlock color={page.color} content={page.hero} />
-      <Block width="1200px" color={page.color} content={page.services}>
-        <Services content={page.services} color={page.color} />
-      </Block>
-      <Block
-        width="1200px"
-        shade="light"
-        color={page.color}
-        content={page.works}
-      >
-        <Works content={page.works} color={page.color} />
-      </Block>
+      <HomePageTemplate page={page} />
     </Layout>
   );
 };
 
-// HomePage.propTypes = {
-//   data: PropTypes.object.isRequired
-// };
+HomePage.propTypes = {
+  data: PropTypes.object.isRequired
+};
 
 export default HomePage;
 

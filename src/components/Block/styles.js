@@ -40,6 +40,15 @@ export const Wrapper = styled.div`
   ${maxWidth};
   ${alignItems};
   ${justifyContent};
+
+  @media (max-width: ${theme.size.desktop}) {
+    min-height: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 80px ${theme.gutter.medium};
+
+    ${space};
+  }
 `;
 
 export const Heading = styled(H3)`

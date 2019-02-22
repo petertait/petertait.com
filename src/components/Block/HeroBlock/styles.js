@@ -13,6 +13,11 @@ export const Wrapper = styled.div`
   ${width};
   ${maxWidth};
 
+  @media (max-width: ${theme.size.desktop}) {
+    width: 100%;
+    max-width: 100%;
+  }
+
   &::after {
     content: "";
     width: 200px;
@@ -33,6 +38,10 @@ export const Wrapper = styled.div`
           darken(0.03, props.color.light)
         )} 0%, ${transparentize(0, darken(0.03, props.color.light))} 100%)`
     })};
+
+    @media (max-width: ${theme.size.desktop}) {
+      display: none;
+    }
   }
 `;
 
@@ -64,7 +73,10 @@ export const Inner = styled.div`
   ${maxWidth}
 
   @media (max-width: ${theme.size.desktop}) {
-    padding: 60px 100px 0 50px;
+    min-height: 0;
+    position: relative;
+    max-width: 100%;
+    padding: 160px ${theme.gutter.medium} 80px;
   }
 `;
 
