@@ -30,5 +30,18 @@ services:
       text: >-
         The entire process from rapid prototyping, visual concepts to a fully
         functional deployed product. Utilising the latest methods in development.
-  text: Clients range from global corporations to startups. Services offered to these clients have ranged from VR design, full branding to product design and development.
+  text: Clients range from global corporations to startups. Services offered to these clients have included virtual reality experience design, branding, product design and development.
+works:
+  shade: "light"
+  heading: "Selected Works"
+  text: ""
+  work:
+    - image: ""
+      heading: "Nucleus Intranet"
+      client: "AstraZeneca"
+      color: "#000"
+    - image: ""
+      heading: "Nucleus Intranet"
+      client: "AstraZeneca"
+      color: "#000"
 ---

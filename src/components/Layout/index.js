@@ -38,7 +38,7 @@ class Layout extends Component {
   };
 
   render() {
-    const { color, shade, content, children } = this.props;
+    const { color, content, children } = this.props;
 
     return (
       <StaticQuery
@@ -81,7 +81,7 @@ class Layout extends Component {
               />
             </Helmet>
             <GlobalStyle />
-            <Menu color={color} shade={shade} />
+            <Menu color={color} />
             <Wrapper color={color}>{children}</Wrapper>
           </>
         )}

@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
 import Block, { HeroBlock } from "components/Block";
-
 import Layout from "components/Layout";
-
 import Services from "templates/home-page/Services";
 
-export const AboutPageTemplate = ({ page }) => {
+const AboutPage = ({ data }) => {
+  const { frontmatter: page } = data.markdownRemark;
+
   return (
-    <>
+    <Layout content={page} color={page.color} shade={page.hero.shade}>
       <HeroBlock color={page.color} content={page.hero} />
       <Block
         width="1200px"
@@ -28,20 +28,6 @@ export const AboutPageTemplate = ({ page }) => {
       >
         <Services content={page.services} shade="dark" color={page.color} />
       </Block>
-    </>
-  );
-};
-
-// AboutPageTemplate.propTypes = {
-//   title: PropTypes.string
-// };
-
-const AboutPage = ({ data }) => {
-  const { frontmatter: page } = data.markdownRemark;
-
-  return (
-    <Layout content={page} color={page.color} shade={page.hero.shade}>
-      <AboutPageTemplate page={page} />
     </Layout>
   );
 };

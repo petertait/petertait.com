@@ -5,25 +5,17 @@ import { graphql } from "gatsby";
 import Layout from "components/Layout";
 import { HeroBlock } from "components/Block";
 
-export const ErrorPageTemplate = ({ page }) => {
+const ErrorPage = ({ data }) => {
+  const { frontmatter: page } = data.allMarkdownRemark.edges[0].node;
+
   return (
-    <>
+    <Layout content={page} color={page.color} shade={page.hero.shade}>
       <HeroBlock
         width="100vw"
         maxWidth="100%"
         color={page.color}
         content={page.hero}
       />
-    </>
-  );
-};
-
-const ErrorPage = ({ data }) => {
-  const { frontmatter: page } = data.allMarkdownRemark.edges[0].node;
-
-  return (
-    <Layout content={page} color={page.color} shade={page.hero.shade}>
-      <ErrorPageTemplate page={page} />
     </Layout>
   );
 };

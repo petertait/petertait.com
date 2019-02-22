@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { normalize, darken } from "polished";
+import { normalize } from "polished";
 import { color } from "styled-system";
 
 import theme from "./theme";

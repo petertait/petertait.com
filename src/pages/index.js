@@ -7,10 +7,13 @@ import Block, { HeroBlock } from "components/Block";
 import Layout from "components/Layout";
 
 import Services from "templates/home-page/Services";
+import Works from "templates/home-page/Works";
 
-export const HomePageTemplate = ({ page }) => {
+const HomePage = ({ data }) => {
+  const { frontmatter: page } = data.markdownRemark;
+
   return (
-    <>
+    <Layout content={page} color={page.color}>
       <HeroBlock color={page.color} content={page.hero} />
       <Block width="1200px" color={page.color} content={page.services}>
         <Services content={page.services} color={page.color} />
@@ -19,24 +22,10 @@ export const HomePageTemplate = ({ page }) => {
         width="1200px"
         shade="light"
         color={page.color}
-        content={page.services}
+        content={page.works}
       >
-        <Services content={page.services} shade="dark" color={page.color} />
+        <Works content={page.works} color={page.color} />
       </Block>
-    </>
-  );
-};
-
-// HomePageTemplate.propTypes = {
-//   title: PropTypes.string
-// };
-
-const HomePage = ({ data }) => {
-  const { frontmatter: page } = data.allMarkdownRemark.edges[0].node;
-
-  return (
-    <Layout content={page} color={page.color} shade={page.hero.shade}>
-      <HomePageTemplate page={page} />
     </Layout>
   );
 };
@@ -49,43 +38,54 @@ export default HomePage;
 
 export const homePageQuery = graphql`
   query HomePage {
-    allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "home-page" } } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            page {
-              title
+    markdownRemark(frontmatter: { templateKey: { eq: "home-page" } }) {
+      frontmatter {
+        page {
+          title
+        }
+        color {
+          light
+          dark
+        }
+        hero {
+          shade
+          heading
+          subheading
+          button {
+            text
+            path
+          }
+          background {
+            relativePath
+          }
+        }
+        services {
+          shade
+          heading
+          text
+          service {
+            heading
+            text
+            image {
+              relativePath
             }
-            color {
-              light
-              dark
-            }
-            hero {
-              shade
-              heading
-              subheading
-              button {
-                text
-                path
-              }
-              background {
-                relativePath
-              }
-            }
-            services {
-              shade
-              heading
-              text
-              service {
-                heading
-                text
-                image {
-                  relativePath
-                }
-              }
-            }
+          }
+        }
+        works {
+          shade
+          heading
+          text
+          work {
+            color
+            client
+            heading
+            # image {
+            #   childImageSharp {
+            #     fluid(maxWidth: 700, quality: 50) {
+            #       ...GatsbyImageSharpFluid_noBase64
+            #     }
+            #   }
+            # }
           }
         }
       }

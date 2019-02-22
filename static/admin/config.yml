@@ -11,8 +11,6 @@ collections:
   - name: pages
     label: Pages
     delete: false
-    editor:
-      preview: false
 
     files:
       - file: src/pages/home/index.md
@@ -52,6 +50,13 @@ collections:
               widget: object,
               fields:
                 [
+                  {
+                    label: "Shade",
+                    name: "shade",
+                    widget: "select",
+                    options: ["light", "dark"],
+                    default: "dark",
+                  },
                   { label: Background, name: background, widget: file },
                   { label: Heading, name: heading, widget: string },
                   { label: Subheading, name: subheading, widget: string },
@@ -70,13 +75,6 @@ collections:
                         { label: Path, name: path, widget: string, default: / },
                       ],
                   },
-                  {
-                    label: "Shade",
-                    name: "shade",
-                    widget: "select",
-                    options: ["light", "dark"],
-                    default: "light",
-                  },
                 ],
             }
           - {
@@ -85,6 +83,13 @@ collections:
               widget: object,
               fields:
                 [
+                  {
+                    label: "Shade",
+                    name: "shade",
+                    widget: "select",
+                    options: ["light", "dark"],
+                    default: "dark",
+                  },
                   { label: Heading, name: heading, widget: string },
                   { label: Text, name: text, widget: string },
                   {
@@ -101,6 +106,40 @@ collections:
                           widget: file,
                           allow_multiple: false,
                         },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Works,
+              name: works,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Shade",
+                    name: "shade",
+                    widget: "select",
+                    options: ["light", "dark"],
+                    default: "light",
+                  },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Text, name: text, widget: string },
+                  {
+                    label: Work,
+                    name: work,
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: Image,
+                          name: image,
+                          widget: image,
+                          allow_multiple: false,
+                        },
+                        { label: Client, name: client, widget: string },
+                        { label: Heading, name: heading, widget: string },
+                        { label: Color, name: color, widget: string },
                       ],
                   },
                 ],
@@ -150,11 +189,11 @@ collections:
                   {
                     label: Heading,
                     name: heading,
-                    widget: text,
+                    widget: string,
                     required: true,
                     default: empty,
                   },
-                  { label: Description, name: description, widget: text },
+                  { label: Description, name: description, widget: string },
                   { label: Button Text, name: buttonText, widget: string },
                   { label: Button Path, name: buttonPath, widget: string },
                   {

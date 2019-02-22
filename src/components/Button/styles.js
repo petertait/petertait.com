@@ -24,8 +24,8 @@ export const Wrapper = styled(AniLink)`
   background-color: transparent;
   z-index: 1;
   overflow: hidden;
-  font-size: ${theme.font.size.epsilon};
   transition: ${theme.transition};
+  font-size: ${theme.font.size.epsilon};
 
   color: ${styledMap("shade", {
     dark: props => (props.color ? props.color.light : "white"),
