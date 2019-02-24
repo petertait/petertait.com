@@ -13,7 +13,7 @@ export const HomePageTemplate = ({ page }) => (
     <Block width="1200px" color={page.color} content={page.services}>
       <Services content={page.services} color={page.color} />
     </Block>
-    <Block width="1200px" shade="light" color={page.color} content={page.works}>
+    <Block width="1500px" shade="light" color={page.color} content={page.works}>
       <Works content={page.works} color={page.color} />
     </Block>
   </>
@@ -77,13 +77,17 @@ export const homePageQuery = graphql`
             color
             client
             heading
-            # image {
-            #   childImageSharp {
-            #     fluid(maxWidth: 700, quality: 50) {
-            #       ...GatsbyImageSharpFluid_noBase64
-            #     }
-            #   }
-            # }
+            image {
+              childImageSharp {
+                fluid(
+                  maxWidth: 700
+                  quality: 70
+                  duotone: { highlight: "#ffffff", shadow: "#002FC4" }
+                ) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

@@ -1,13 +1,11 @@
 const theme = {
   color: {
-    blue: "#0032D2",
-    purple: "#5b21d6",
-    yellow: "#eab600"
+    paper: "#f9f9f9"
   },
 
   font: {
     sans: "'apercu', sans-serif !important",
-    mono: "'space-mono', mono !important",
+    mono: "'apercu mono', mono !important",
     size: {
       tera: "100px",
       giga: "72px",

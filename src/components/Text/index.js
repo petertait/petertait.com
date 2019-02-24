@@ -85,7 +85,7 @@ export const H1 = styled(H1Text)`
 const H2Text = Text.withComponent("h2");
 export const H2 = styled(H2Text)`
   width: 100%;
-  line-height: 1.3;
+  line-height: 1;
   margin: 0 0 10px;
   font-size: ${theme.font.size.beta};
   font-weight: ${theme.font.weight.bold};
@@ -134,7 +134,7 @@ export const H4 = styled(H4Text)`
 
 const H5Text = Text.withComponent("h5");
 export const H5 = styled(H5Text)`
-  line-height: 1.4;
+  line-height: 1.1;
   margin: 0 0 10px;
   font-size: ${theme.font.size.epsilon};
   font-weight: ${theme.font.weight.regular};
@@ -147,7 +147,7 @@ export const H5 = styled(H5Text)`
 
 const H6Text = Text.withComponent("h6");
 export const H6 = styled(H6Text)`
-  line-height: 1.4;
+  line-height: 1.1;
   margin: 0 0 10px;
   font-size: ${theme.font.size.zeta};
   font-weight: ${theme.font.weight.regular};

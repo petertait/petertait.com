@@ -113,11 +113,8 @@ export const Wrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: stretch;
-  box-shadow: 0 5px 70px ${transparentize(0.92, "black")};
-
-  &::hover {
-    box-shadow: 0 5px 70px ${transparentize(0.8, "black")};
-  }
+  transition: ${theme.transition};
+  box-shadow: 0 5px 60px ${transparentize(0.9, "black")};
 
   ${Logo}::before, ${MenuButton}::before {
     content: "";

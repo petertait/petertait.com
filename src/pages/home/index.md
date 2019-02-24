@@ -1,10 +1,10 @@
 ---
 templateKey: home-page
 page:
-  title: ''
+  title: ""
 color:
-  dark: '#0032D2'
-  light: '#fff'
+  dark: "#0032D2"
+  light: "#fff"
 hero:
   background: /media/pattern-1.svg
   button:
@@ -16,12 +16,12 @@ hero:
 services:
   heading: Services
   service:
-    - heading: 'Print, branding + graphic design'
+    - heading: "Print, branding + graphic design"
       image: /media/eye-white.svg
       text: >-
         Modern methods mixed with the theory of traditional graphic design.
         Providing the full brand to product design package.
-    - heading: 'App, vr + website design'
+    - heading: "App, vr + website design"
       image: /media/devices-white.svg
       text: >-
         User-centered website, virtual reality and application design. Using
@@ -40,15 +40,14 @@ services:
 works:
   heading: Selected Works
   shade: light
-  text: ''
+  text: ""
   work:
     - client: AstraZeneca
-      color: '#000'
+      color: "#000"
       heading: Nucleus Intranet
-      image: /media/submarine.jpg
+      image: /media/rock.jpg
     - client: AstraZeneca
-      color: '#000'
+      color: "#000"
       heading: Nucleus Intranet
       image: /media/nucleus.jpg
 ---
-
