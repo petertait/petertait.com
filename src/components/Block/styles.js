@@ -4,11 +4,12 @@ import {
   space,
   width,
   zIndex,
+  position,
   maxWidth,
   alignItems,
   justifyContent
 } from "styled-system";
-import { darken, transparentize } from "polished";
+import { darken } from "polished";
 
 import theme from "config/theme";
 
@@ -23,10 +24,10 @@ export const Wrapper = styled.div`
   position: relative;
   justify-content: center;
 
-  box-shadow: 0 0 300px
+  box-shadow: -100px 0 500px
     ${styledMap("shade", {
-      dark: props => darken(0.2, props.color ? props.color.dark : "black"),
-      default: props => darken(0.2, props.color ? props.color.dark : "black")
+      dark: props => darken(0.06, props.color ? props.color.dark : "black"),
+      default: props => darken(0.06, props.color ? props.color.dark : "black")
     })};
 
   color: ${styledMap("shade", {
@@ -42,7 +43,6 @@ export const Wrapper = styled.div`
   ${width};
   ${zIndex};
   ${maxWidth};
-  ${alignItems};
 
   @media (max-width: ${theme.size.desktop}) {
     min-height: 0;
@@ -60,15 +60,12 @@ export const Inner = styled.div`
   justify-content: center;
   padding: 100px 80px 40px;
   min-height: 100vh;
-
-  position: ${styledMap("isPinned", {
-    true: "fixed",
-    default: "relative"
-  })};
+  transform: translateZ(0);
 
   ${space};
   ${width};
   ${maxWidth};
+  ${position};
   ${justifyContent};
 
   @media (max-width: ${theme.size.desktop}) {

@@ -17,32 +17,6 @@ export const Wrapper = styled.div`
     width: 100%;
     max-width: 100%;
   }
-
-  &::after {
-    content: "";
-    width: 200px;
-    height: 100vh;
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    background: ${styledMap("shade", {
-      dark: props =>
-        `linear-gradient(to right, ${transparentize(
-          1,
-          darken(0.05, props.color.dark)
-        )} 0%, ${transparentize(0, darken(0.06, props.color.dark))} 100%)`,
-      default: props =>
-        `linear-gradient(to right, ${transparentize(
-          1,
-          darken(0.03, props.color.light)
-        )} 0%, ${transparentize(0, darken(0.03, props.color.light))} 100%)`
-    })};
-
-    @media (max-width: ${theme.size.desktop}) {
-      display: none;
-    }
-  }
 `;
 
 export const Inner = styled.div`

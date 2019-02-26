@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
   &::before {
     content: "";
     width: 100%;
-    height: 90%;
+    height: calc(100% - 30px);
     top: -5px;
     left: -20px;
     opacity: 0;
@@ -68,7 +68,7 @@ export const Inner = styled.div`
 `;
 
 export const Heading = styled(H4)`
-  margin: 50px 0 5px;
+  margin: 30px 0 5px;
   font-size: ${theme.font.size.epsilon};
   font-weight: ${theme.font.weight.bold};
 `;

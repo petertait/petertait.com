@@ -8,6 +8,6 @@ export const Wrapper = styled.div`
 
 export const Inner = styled(Grid)`
   padding: 0;
-  margin: 55px 0 35px -25px;
+  margin: 75px 0 35px -25px;
   width: calc(100% + 25px);
 `;

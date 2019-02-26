@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useMount } from "react-use";
 
-import { useOnScreen, useWindowScrollPosition } from "config/utils";
+import { useWindowScrollPosition } from "config/utils";
 import { Column } from "components/Grid";
 import Button from "components/Button";
 
@@ -16,10 +16,8 @@ const Block = ({ width, color, content, children, ...props }) => {
   useMount(() => setRef(wrapper));
 
   const wrapperOffsetLeft = ref && ref.current.offsetLeft;
-  const wrapperWidth = ref && ref.current.clientWidth;
-
-  const isPinned =
-    wrapperOffsetLeft < x && wrapperOffsetLeft + wrapperWidth > x;
+  // const wrapperWidth = ref && ref.current.clientWidth;
+  const isPinned = wrapperOffsetLeft < x;
 
   return (
     <Wrapper
@@ -29,7 +27,13 @@ const Block = ({ width, color, content, children, ...props }) => {
       width={width}
       {...props}
     >
-      <Inner width={width} isPinned={isPinned} {...props}>
+      <Inner
+        width={width}
+        {...props}
+        css={`
+          position: ${isPinned ? "fixed" : "relative"};
+        `}
+      >
         <Header>
           {(content.heading || content.text) && (
             <Column flex="1" width="auto" justifyContent="center">

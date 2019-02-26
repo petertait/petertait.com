@@ -13,7 +13,7 @@ export const Logo = styled(AniLink)`
   z-index: 2;
   transition: ${theme.transition};
   background-color: ${props =>
-    props.color ? lighten(0.06, props.color.dark) : "black"};
+    props.color ? lighten(0.1, props.color.dark) : "black"};
 
   svg {
     height: 35px;
@@ -31,7 +31,7 @@ export const Logo = styled(AniLink)`
     box-shadow: 0 5px 50px
       ${props =>
         transparentize(
-          0.9,
+          0.85,
           darken(0.2, props.color ? props.color.dark : "black")
         )};
 
@@ -86,14 +86,14 @@ export const MenuButton = styled.button`
   overflow: hidden;
   transition: ${theme.transition};
   background-color: ${props =>
-    props.color ? lighten(0.03, props.color.dark) : "black"};
+    props.color ? lighten(0.05, props.color.dark) : "black"};
 
   &:hover {
     z-index: 3;
     box-shadow: 0 5px 50px
       ${props =>
         transparentize(
-          0.9,
+          0.85,
           darken(0.2, props.color ? props.color.dark : "black")
         )};
 
@@ -124,10 +124,10 @@ export const Wrapper = styled.header`
   align-items: center;
   justify-content: stretch;
   transition: ${theme.transition};
-  box-shadow: 0 5px 70px
+  box-shadow: 0 5px 50px
     ${props =>
       transparentize(
-        0.7,
+        0.85,
         darken(0.2, props.color ? props.color.dark : "black")
       )};
 
