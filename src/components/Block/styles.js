@@ -8,21 +8,26 @@ import {
   alignItems,
   justifyContent
 } from "styled-system";
-import StyledText, { H3 } from "components/Text";
+import { darken, transparentize } from "polished";
 
 import theme from "config/theme";
 
+import StyledText, { H3 } from "components/Text";
+
 export const Wrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
   z-index: 1;
   min-height: 100vh;
-  padding: 80px;
   flex-shrink: 0;
   white-space: normal;
+  position: relative;
+  justify-content: center;
+
+  box-shadow: 0 0 300px
+    ${styledMap("shade", {
+      dark: props => darken(0.2, props.color ? props.color.dark : "black"),
+      default: props => darken(0.2, props.color ? props.color.dark : "black")
+    })};
 
   color: ${styledMap("shade", {
     dark: props => (props.color ? props.color.light : "white"),
@@ -34,11 +39,36 @@ export const Wrapper = styled.div`
     default: props => (props.color ? props.color.light : "white")
   })};
 
-  ${space};
   ${width};
   ${zIndex};
   ${maxWidth};
   ${alignItems};
+
+  @media (max-width: ${theme.size.desktop}) {
+    min-height: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+`;
+
+export const Inner = styled.div`
+  top: 0;
+  left: 0;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 80px 40px;
+  min-height: 100vh;
+
+  position: ${styledMap("isPinned", {
+    true: "fixed",
+    default: "relative"
+  })};
+
+  ${space};
+  ${width};
+  ${maxWidth};
   ${justifyContent};
 
   @media (max-width: ${theme.size.desktop}) {
@@ -51,10 +81,16 @@ export const Wrapper = styled.div`
   }
 `;
 
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
 export const Heading = styled(H3)`
-  margin-bottom: 20px;
+  margin: 0;
 `;
 
 export const Text = styled(StyledText)`
+  margin-top: 20px;
   font-size: ${theme.font.size.upsilon};
 `;

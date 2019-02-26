@@ -3,14 +3,14 @@ import { darken } from "polished";
 
 import { Wrapper, Arrow } from "./styles";
 
-const Button = ({ as, content, color, shade, size, ...props }) => {
+const Button = ({ as, content, color, ...props }) => {
   if (!content || !content.path || !content.text) {
     return null;
   }
 
   if (!content.path) {
     return (
-      <Wrapper as="button" color={color} shade={shade} size={size} {...props}>
+      <Wrapper as="button" color={color} {...props}>
         {content.text}
         <Arrow>→</Arrow>
       </Wrapper>
@@ -24,11 +24,9 @@ const Button = ({ as, content, color, shade, size, ...props }) => {
     return (
       <Wrapper
         as="a"
-        href={content.path}
         color={color}
-        shade={shade}
-        size={size}
         target="_blank"
+        href={content.path}
         {...props}
       >
         {content.text}
@@ -40,12 +38,10 @@ const Button = ({ as, content, color, shade, size, ...props }) => {
   return (
     <Wrapper
       as={as}
-      href={as === "a" && content.path}
       color={color}
-      shade={shade}
-      size={size}
       duration={0.6}
       to={content.path}
+      href={as === "a" && content.path}
       bg={color ? darken(0.1, color.dark) : "black"}
       {...props}
     >

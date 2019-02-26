@@ -10,10 +10,10 @@ import Works from "templates/home-page/Works";
 export const HomePageTemplate = ({ page }) => (
   <>
     <HeroBlock color={page.color} content={page.hero} />
-    <Block width="1200px" color={page.color} content={page.services}>
+    <Block width="1200px" content={page.services} color={page.color}>
       <Services content={page.services} color={page.color} />
     </Block>
-    <Block width="1500px" shade="light" color={page.color} content={page.works}>
+    <Block width="1300px" content={page.works} color={page.color}>
       <Works content={page.works} color={page.color} />
     </Block>
   </>
@@ -73,8 +73,11 @@ export const homePageQuery = graphql`
           shade
           heading
           text
+          button {
+            text
+            path
+          }
           work {
-            color
             client
             heading
             image {
@@ -82,7 +85,7 @@ export const homePageQuery = graphql`
                 fluid(
                   maxWidth: 700
                   quality: 70
-                  duotone: { highlight: "#ffffff", shadow: "#002FC4" }
+                  duotone: { highlight: "#ffffff", shadow: "#0032D2" }
                 ) {
                   ...GatsbyImageSharpFluid
                 }

@@ -41,13 +41,17 @@ works:
   heading: Selected Works
   shade: light
   text: ""
+  button:
+    text: All works
+    path: work
   work:
-    - client: AstraZeneca
-      color: "#000"
-      heading: Nucleus Intranet
+    - client: Pelatum
+      heading: Data Consultancy Brand
+      image: /media/jump.jpg
+    - client: Viion
+      heading: VR Worlds Interface
       image: /media/rock.jpg
     - client: AstraZeneca
-      color: "#000"
       heading: Nucleus Intranet
       image: /media/nucleus.jpg
 ---

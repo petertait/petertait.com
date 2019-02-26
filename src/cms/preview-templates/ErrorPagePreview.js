@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ErrorPageTemplate } from "pages/index";
+import { ErrorPageTemplate } from "pages/404";
 
 import Layout from "../Layout";
 

@@ -26,18 +26,19 @@
     "gatsby-transformer-sharp": "^2.1.9",
     "gsap": "^2.1.0",
     "netlify-cms": "^2.3.1",
-    "polished": "^2.3.1",
+    "polished": "3.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
-    "react-media-hook": "^0.3.0",
+    "react-use": "^5.5.4",
     "remark": "^10.0.1",
     "remark-html": "^9.0.0",
     "remark-preset-lint-recommended": "^3.0.2",
     "styled-components": "^4.1.3",
     "styled-map": "^3.2.0-rc.1",
-    "styled-system": "^3.1.11"
+    "styled-system": "^3.1.11",
+    "the-platform": "^0.9.3"
   },
   "husky": {
     "hooks": {

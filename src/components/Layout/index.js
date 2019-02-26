@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-import { useMediaPredicate } from "react-media-hook";
+import { useMedia } from "the-platform";
 
 import GlobalStyle from "config/global";
 import theme from "config/theme";
@@ -15,8 +15,7 @@ import favicon32 from "./favicon-32.png";
 import Scroller from "./Scroller";
 
 const Layout = ({ color, content, children }) => {
-  const isDesktop = useMediaPredicate(`(min-width: ${theme.size.desktop})`);
-
+  const isDesktop = useMedia(`(min-width: ${theme.size.desktop})`);
   return (
     <StaticQuery
       query={graphql`

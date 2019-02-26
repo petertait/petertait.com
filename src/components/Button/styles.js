@@ -2,7 +2,7 @@ import styled from "styled-components";
 import styledMap from "styled-map";
 import { space, alignSelf } from "styled-system";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import { transparentize } from "polished";
+import { darken, transparentize } from "polished";
 
 import theme from "config/theme";
 
@@ -18,14 +18,22 @@ export const Wrapper = styled(AniLink)`
   display: flex;
   position: relative;
   cursor: pointer;
-  padding: 18px 22px 16px;
   align-self: flex-start;
   border: 1px solid;
   background-color: transparent;
   z-index: 1;
   overflow: hidden;
   transition: ${theme.transition};
-  font-size: ${theme.font.size.epsilon};
+
+  font-size: ${styledMap("size", {
+    small: theme.font.size.zeta,
+    default: theme.font.size.epsilon
+  })};
+
+  padding: ${styledMap("size", {
+    small: "13px 18px",
+    default: "18px 22px 16px"
+  })};
 
   color: ${styledMap("shade", {
     dark: props => (props.color ? props.color.light : "white"),
@@ -62,7 +70,12 @@ export const Wrapper = styled(AniLink)`
   }
 
   &:hover {
-    box-shadow: 0 5px 100px ${transparentize(0.8, "black")};
+    box-shadow: 0 5px 70px
+      ${props =>
+        transparentize(
+          0.7,
+          darken(0.2, props.color ? props.color.dark : "black")
+        )};
 
     border-color: ${styledMap("shade", {
       dark: props => (props.color ? props.color.light : "white"),
@@ -80,7 +93,10 @@ export const Wrapper = styled(AniLink)`
     }
 
     ${Arrow} {
-      transform: translateX(5px);
+      transform: ${styledMap("size", {
+        small: "translateX(3px)",
+        default: "translateX(5px)"
+      })};
     }
   }
 

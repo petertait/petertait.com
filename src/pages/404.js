@@ -5,17 +5,22 @@ import { graphql } from "gatsby";
 import Layout from "components/Layout";
 import { HeroBlock } from "components/Block";
 
-const ErrorPage = ({ data }) => {
-  const { frontmatter: page } = data.allMarkdownRemark.edges[0].node;
+export const ErrorPageTemplate = ({ page }) => (
+  <>
+    <HeroBlock
+      width="100vw"
+      maxWidth="100%"
+      color={page.color}
+      content={page.hero}
+    />
+  </>
+);
 
+const ErrorPage = ({ data }) => {
+  const { frontmatter: page } = data.markdownRemark;
   return (
-    <Layout content={page} color={page.color} shade={page.hero.shade}>
-      <HeroBlock
-        width="100vw"
-        maxWidth="100%"
-        color={page.color}
-        content={page.hero}
-      />
+    <Layout content={page} color={page.color}>
+      <ErrorPageTemplate page={page} />
     </Layout>
   );
 };
@@ -28,27 +33,21 @@ export default ErrorPage;
 
 export const errorPageQuery = graphql`
   query ErrorPage {
-    allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "error-page" } } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            page {
-              title
-            }
-            color {
-              light
-              dark
-            }
-            hero {
-              shade
-              heading
-              subheading
-              buttonPath
-              buttonText
-            }
-          }
+    markdownRemark(frontmatter: { templateKey: { eq: "error-page" } }) {
+      frontmatter {
+        page {
+          title
+        }
+        color {
+          light
+          dark
+        }
+        hero {
+          shade
+          heading
+          subheading
+          buttonPath
+          buttonText
         }
       }
     }

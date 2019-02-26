@@ -1,5 +1,13 @@
 import styled from "styled-components";
-import { flex, space, width, order, maxWidth, alignItems } from "styled-system";
+import {
+  flex,
+  space,
+  width,
+  order,
+  maxWidth,
+  alignItems,
+  justifyContent
+} from "styled-system";
 
 import theme from "config/theme";
 
@@ -28,11 +36,12 @@ export default Grid;
 export const Column = styled.div`
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   position: relative;
 
   ${flex};
   ${space};
   ${width};
   ${order};
+  ${justifyContent};
 `;

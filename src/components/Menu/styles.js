@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import styledMap from "styled-map";
-import { lighten, transparentize } from "polished";
+import { lighten, darken, transparentize } from "polished";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import theme from "config/theme";
@@ -28,7 +28,12 @@ export const Logo = styled(AniLink)`
   }
 
   &:hover {
-    box-shadow: 0 5px 70px ${transparentize(0.8, "black")};
+    box-shadow: 0 5px 50px
+      ${props =>
+        transparentize(
+          0.9,
+          darken(0.2, props.color ? props.color.dark : "black")
+        )};
 
     svg path {
       fill: ${props => (props.color ? props.color.dark : "black")};
@@ -85,7 +90,12 @@ export const MenuButton = styled.button`
 
   &:hover {
     z-index: 3;
-    box-shadow: 0 5px 70px ${transparentize(0.8, "black")};
+    box-shadow: 0 5px 50px
+      ${props =>
+        transparentize(
+          0.9,
+          darken(0.2, props.color ? props.color.dark : "black")
+        )};
 
     ${MenuIcon}::before, ${MenuIcon}::after, ${MenuIcon} span {
       background-color: ${props => (props.color ? props.color.dark : "black")};
@@ -114,7 +124,12 @@ export const Wrapper = styled.header`
   align-items: center;
   justify-content: stretch;
   transition: ${theme.transition};
-  box-shadow: 0 5px 60px ${transparentize(0.9, "black")};
+  box-shadow: 0 5px 70px
+    ${props =>
+      transparentize(
+        0.7,
+        darken(0.2, props.color ? props.color.dark : "black")
+      )};
 
   ${Logo}::before, ${MenuButton}::before {
     content: "";

@@ -128,6 +128,26 @@ collections:
                   { label: Heading, name: heading, widget: string },
                   { label: Text, name: text, widget: string },
                   {
+                    label: Button,
+                    name: button,
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: Text,
+                          name: text,
+                          widget: string,
+                          default: "All works",
+                        },
+                        {
+                          label: Path,
+                          name: path,
+                          widget: string,
+                          default: /work,
+                        },
+                      ],
+                  },
+                  {
                     label: Work,
                     name: work,
                     widget: list,
@@ -141,7 +161,6 @@ collections:
                         },
                         { label: Client, name: client, widget: string },
                         { label: Heading, name: heading, widget: string },
-                        { label: Color, name: color, widget: string },
                       ],
                   },
                 ],

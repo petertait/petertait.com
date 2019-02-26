@@ -11,8 +11,6 @@ import {
 } from "styled-system";
 import GatsbyImage from "gatsby-image";
 
-import theme from "config/theme";
-
 import { Wrapper as Icon } from "components/Icon/styles";
 
 export const Wrapper = styled(GatsbyImage)`

@@ -31,7 +31,7 @@ export const Wrapper = styled.div`
         `linear-gradient(to right, ${transparentize(
           1,
           darken(0.05, props.color.dark)
-        )} 0%, ${transparentize(0, darken(0.05, props.color.dark))} 100%)`,
+        )} 0%, ${transparentize(0, darken(0.06, props.color.dark))} 100%)`,
       default: props =>
         `linear-gradient(to right, ${transparentize(
           1,
@@ -54,7 +54,7 @@ export const Inner = styled.div`
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  padding: 80px 170px 40px 80px;
+  padding: 90px 170px 40px 80px;
   flex-shrink: 0;
   white-space: normal;
   max-width: 1400px;
