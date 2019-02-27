@@ -5,35 +5,35 @@ import { H1 } from "components/Text";
 
 import { Wrapper, Inner } from "./styles";
 
-const HeroBlock = ({ content, color, width, maxWidth }) => {
+const HeroBlock = ({ content, colors, width, maxWidth }) => {
   return (
     <Wrapper
-      color={color}
       width={width}
+      colors={colors}
       maxWidth={maxWidth}
       shade={content.shade}
     >
       <Inner
-        color={color}
         width={width}
+        colors={colors}
         maxWidth={maxWidth}
         shade={content.shade}
         image={content.background && content.background.relativePath}
       >
         {content.heading && (
-          <H1 color={color} shade={content.shade}>
+          <H1 colors={colors} shade={content.shade}>
             {content.heading}
           </H1>
         )}
         {content.subheading && (
-          <H1 outline color={color} shade={content.shade}>
+          <H1 outline colors={colors} shade={content.shade}>
             {content.subheading}
           </H1>
         )}
         <Button
           cover
           mt="90px"
-          color={color}
+          colors={colors}
           shade={content.shade}
           content={content.button}
         />

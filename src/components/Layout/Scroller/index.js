@@ -3,7 +3,7 @@ import { useMount, useUnmount } from "react-use";
 
 import { Wrapper } from "./styles";
 
-const Scroller = ({ color, children }) => {
+const Scroller = ({ colors, children }) => {
   const replaceVerticalScrollByHorizontal = event => {
     if (event.deltaY !== 0) {
       window.scroll(window.scrollX + event.deltaY * 5, window.scrollY);
@@ -25,7 +25,7 @@ const Scroller = ({ color, children }) => {
     }
   });
 
-  return <Wrapper color={color}>{children}</Wrapper>;
+  return <Wrapper colors={colors}>{children}</Wrapper>;
 };
 
 export default Scroller;

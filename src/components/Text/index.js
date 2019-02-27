@@ -35,7 +35,7 @@ export const H1 = styled(H1Text)`
   width: 100%;
   line-height: 1;
   margin: 0 0 20px;
-  letter-spacing: -3px;
+  letter-spacing: -4px;
   font-weight: ${theme.font.weight.bold};
   font-size: ${theme.font.size.tera};
   font-size: 100px;
@@ -43,31 +43,49 @@ export const H1 = styled(H1Text)`
 
   color: ${styledMap("shade", {
     dark: props =>
-      props.outline ? "transparent" : props.color ? props.color.light : "white",
+      props.outline
+        ? "transparent"
+        : props.colors
+        ? props.colors.light
+        : "white",
     default: props =>
-      props.outline ? "transparent" : props.color ? props.color.dark : "black"
+      props.outline ? "transparent" : props.colors ? props.colors.dark : "black"
   })};
 
   -webkit-text-stroke: ${styledMap("shade", {
     dark: props =>
       props.outline
-        ? `1px ${transparentize(0.4, props.color.light || "white")}`
+        ? `1px ${transparentize(
+            0.4,
+            props.colors ? props.colors.light : "white"
+          )}`
         : "none",
     default: props =>
       props.outline
-        ? `1px ${transparentize(0.4, props.color.dark || "black")}`
+        ? `1px ${transparentize(
+            0.4,
+            props.colors ? props.colors.dark : "black"
+          )}`
         : "none"
   })};
 
+  @media (max-height: ${theme.size.maxHeight}) {
+    letter-spacing: -3px;
+    font-size: calc(80px + 6 * ((100vw - 320px) / 680));
+  }
+
   @media (max-width: ${theme.size.desktop}) {
+    letter-spacing: -3px;
     font-size: calc(80px + 6 * ((100vw - 320px) / 680));
   }
 
   @media (max-width: ${theme.size.tablet}) {
+    letter-spacing: -2px;
     font-size: calc(60px + 6 * ((100vw - 320px) / 680));
   }
 
   @media (max-width: ${theme.size.mobile}) {
+    letter-spacing: -1px;
     font-size: calc(50px + 6 * ((100vw - 320px) / 680));
   }
 

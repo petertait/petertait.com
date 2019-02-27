@@ -6,15 +6,15 @@ export const Wrapper = styled.div`
 
   *::-moz-selection {
     background: ${props =>
-      props.color
-        ? transparentize(0.7, lighten(0.4, props.color.dark))
+      props.colors
+        ? transparentize(0.7, lighten(0.4, props.colors.dark))
         : "black"};
   }
 
   *::selection {
     background: ${props =>
-      props.color
-        ? transparentize(0.7, lighten(0.4, props.color.dark))
+      props.colors
+        ? transparentize(0.7, lighten(0.4, props.colors.dark))
         : "black"};
   }
 `;

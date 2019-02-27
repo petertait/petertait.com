@@ -2,7 +2,7 @@
 templateKey: about-page
 page:
   title: ""
-color:
+colors:
   light: "#fff"
   dark: "#222"
 hero:

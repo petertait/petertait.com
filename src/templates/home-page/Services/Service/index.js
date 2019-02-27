@@ -2,9 +2,9 @@ import React from "react";
 
 import { Wrapper, Image, Heading, Text } from "./styles";
 
-const Service = ({ content, color, shade }) => {
+const Service = ({ content, colors, shade }) => {
   return (
-    <Wrapper color={color} shade={shade}>
+    <Wrapper colors={colors} shade={shade}>
       {content.image && (
         <Image src={`/media/${content.image.relativePath}`} alt="" />
       )}

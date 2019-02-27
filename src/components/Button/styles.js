@@ -36,15 +36,15 @@ export const Wrapper = styled(AniLink)`
   })};
 
   color: ${styledMap("shade", {
-    dark: props => (props.color ? props.color.light : "white"),
-    default: props => (props.color ? props.color.dark : "black")
+    dark: props => (props.colors ? props.colors.light : "white"),
+    default: props => (props.colors ? props.colors.dark : "black")
   })};
 
   border-color: ${styledMap("shade", {
     dark: props =>
-      transparentize(0.7, props.color ? props.color.light : "white"),
+      transparentize(0.7, props.colors ? props.colors.light : "white"),
     default: props =>
-      transparentize(0.7, props.color ? props.color.dark : "black")
+      transparentize(0.7, props.colors ? props.colors.dark : "black")
   })};
 
   &::before {
@@ -60,8 +60,8 @@ export const Wrapper = styled(AniLink)`
     transition: ${theme.transition};
 
     background-color: ${styledMap("shade", {
-      dark: props => (props.color ? props.color.light : "white"),
-      default: props => (props.color ? props.color.dark : "black")
+      dark: props => (props.colors ? props.colors.light : "white"),
+      default: props => (props.colors ? props.colors.dark : "black")
     })};
   }
 
@@ -74,17 +74,17 @@ export const Wrapper = styled(AniLink)`
       ${props =>
         transparentize(
           0.7,
-          darken(0.2, props.color ? props.color.dark : "black")
+          darken(0.2, props.colors ? props.colors.dark : "black")
         )};
 
     border-color: ${styledMap("shade", {
-      dark: props => (props.color ? props.color.light : "white"),
-      default: props => (props.color ? props.color.dark : "black")
+      dark: props => (props.colors ? props.colors.light : "white"),
+      default: props => (props.colors ? props.colors.dark : "black")
     })};
 
     color: ${styledMap("shade", {
-      dark: props => (props.color ? props.color.dark : "black"),
-      default: props => (props.color ? props.color.light : "white")
+      dark: props => (props.colors ? props.colors.dark : "black"),
+      default: props => (props.colors ? props.colors.light : "white")
     })};
 
     &::before {

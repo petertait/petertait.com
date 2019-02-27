@@ -14,7 +14,7 @@ import favicon32 from "./favicon-32.png";
 
 import Scroller from "./Scroller";
 
-const Layout = ({ color, content, children }) => {
+const Layout = ({ colors, content, children }) => {
   const isDesktop = useMedia(`(min-width: ${theme.size.desktop})`);
   return (
     <StaticQuery
@@ -45,8 +45,12 @@ const Layout = ({ color, content, children }) => {
             <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
           </Helmet>
           <GlobalStyle />
-          <Menu color={color} />
-          {isDesktop ? <Scroller color={color}>{children}</Scroller> : children}
+          <Menu colors={colors} />
+          {isDesktop ? (
+            <Scroller colors={colors}>{children}</Scroller>
+          ) : (
+            children
+          )}
         </>
       )}
     />

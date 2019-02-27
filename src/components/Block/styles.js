@@ -6,7 +6,6 @@ import {
   zIndex,
   position,
   maxWidth,
-  alignItems,
   justifyContent
 } from "styled-system";
 import { darken } from "polished";
@@ -18,26 +17,25 @@ import StyledText, { H3 } from "components/Text";
 export const Wrapper = styled.div`
   display: flex;
   z-index: 1;
-  min-height: 100vh;
+  height: 100vh;
   flex-shrink: 0;
   white-space: normal;
   position: relative;
-  justify-content: center;
 
-  box-shadow: -100px 0 500px
+  box-shadow: -100px 0 300px
     ${styledMap("shade", {
-      dark: props => darken(0.06, props.color ? props.color.dark : "black"),
-      default: props => darken(0.06, props.color ? props.color.dark : "black")
+      dark: props => darken(0.03, props.colors ? props.colors.dark : "black"),
+      default: props => darken(0.03, props.colors ? props.colors.dark : "black")
     })};
 
   color: ${styledMap("shade", {
-    dark: props => (props.color ? props.color.light : "white"),
-    default: props => (props.color ? props.color.dark : "black")
+    dark: props => (props.colors ? props.colors.light : "white"),
+    default: props => (props.colors ? props.colors.dark : "black")
   })};
 
   background-color: ${styledMap("shade", {
-    dark: props => (props.color ? props.color.dark : "black"),
-    default: props => (props.color ? props.color.light : "white")
+    dark: props => (props.colors ? props.colors.dark : "black"),
+    default: props => (props.colors ? props.colors.light : "white")
   })};
 
   ${width};
@@ -58,8 +56,8 @@ export const Inner = styled.div`
   align-content: center;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 80px 40px;
-  min-height: 100vh;
+  padding: 110px 80px 20px;
+  height: 100vh;
   transform: translateZ(0);
 
   ${space};
@@ -67,6 +65,14 @@ export const Inner = styled.div`
   ${maxWidth};
   ${position};
   ${justifyContent};
+
+  &.pinned {
+    position: fixed;
+  }
+
+  @media (max-height: 700px) {
+    justify-content: flex-start;
+  }
 
   @media (max-width: ${theme.size.desktop}) {
     min-height: 0;

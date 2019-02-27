@@ -2,8 +2,8 @@
 templateKey: home-page
 page:
   title: ""
-color:
-  dark: "#0032D2"
+colors:
+  dark: "#002AB1"
   light: "#fff"
 hero:
   background: /media/pattern-1.svg

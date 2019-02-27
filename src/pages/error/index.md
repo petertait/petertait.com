@@ -4,7 +4,7 @@ templateKey: error-page
 page:
   title: "Error"
 
-color:
+colors:
   light: "white"
   dark: "black"
 

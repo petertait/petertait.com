@@ -10,23 +10,23 @@ const AboutPage = ({ data }) => {
   const { frontmatter: page } = data.markdownRemark;
 
   return (
-    <Layout content={page} color={page.color} shade={page.hero.shade}>
-      <HeroBlock color={page.color} content={page.hero} />
+    <Layout content={page} colors={page.colors} shade={page.hero.shade}>
+      <HeroBlock colors={page.colors} content={page.hero} />
       <Block
         width="1200px"
         shade="dark"
-        color={page.color}
+        colors={page.colors}
         content={page.services}
       >
-        <Services content={page.services} shade="dark" color={page.color} />
+        <Services content={page.services} shade="dark" colors={page.colors} />
       </Block>
       <Block
         width="1200px"
         shade="light"
-        color={page.color}
+        colors={page.colors}
         content={page.services}
       >
-        <Services content={page.services} shade="dark" color={page.color} />
+        <Services content={page.services} shade="dark" colors={page.colors} />
       </Block>
     </Layout>
   );
@@ -45,7 +45,7 @@ export const aboutPageQuery = graphql`
         page {
           title
         }
-        color {
+        colors {
           light
           dark
         }

@@ -1,8 +1,4 @@
 const theme = {
-  color: {
-    paper: "#f9f9f9"
-  },
-
   font: {
     sans: "'apercu', sans-serif !important",
     mono: "'apercu mono', mono !important",
@@ -28,6 +24,7 @@ const theme = {
   },
 
   size: {
+    maxHeight: "850px",
     desktop: "78em",
     tablet: "52em",
     mobile: "40em"

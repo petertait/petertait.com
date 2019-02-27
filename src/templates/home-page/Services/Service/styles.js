@@ -2,6 +2,7 @@ import styled from "styled-components";
 import styledMap from "styled-map";
 import { transparentize } from "polished";
 
+import theme from "config/theme";
 import StyledText, { H3 } from "components/Text";
 
 export const Wrapper = styled.div`
@@ -12,10 +13,14 @@ export const Wrapper = styled.div`
 
   border-color: ${styledMap("shade", {
     dark: props =>
-      transparentize(0.7, props.color ? props.color.light : "white"),
+      transparentize(0.7, props.colors ? props.colors.light : "white"),
     default: props =>
-      transparentize(0.7, props.color ? props.color.dark : "black")
+      transparentize(0.7, props.colors ? props.colors.dark : "black")
   })};
+
+  @media (max-height: ${theme.size.maxHeight}) {
+    padding: 20px 40px 30px;
+  }
 `;
 
 export const Image = styled.img`
@@ -23,10 +28,19 @@ export const Image = styled.img`
   height: 140px;
   display: flex;
   margin: auto;
+
+  @media (max-height: ${theme.size.maxHeight}) {
+    width: 140px;
+    height: 100px;
+  }
 `;
 
 export const Heading = styled(H3)`
   margin: 50px auto 20px;
+
+  @media (max-height: ${theme.size.maxHeight}) {
+    margin-top: 20px;
+  }
 `;
 
 export const Text = styled(StyledText)``;

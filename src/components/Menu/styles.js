@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import styledMap from "styled-map";
-import { lighten, darken, transparentize } from "polished";
+import { lighten, transparentize } from "polished";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import theme from "config/theme";
@@ -13,7 +13,7 @@ export const Logo = styled(AniLink)`
   z-index: 2;
   transition: ${theme.transition};
   background-color: ${props =>
-    props.color ? lighten(0.1, props.color.dark) : "black"};
+    props.colors ? lighten(0.09, props.colors.dark) : "black"};
 
   svg {
     height: 35px;
@@ -23,26 +23,23 @@ export const Logo = styled(AniLink)`
 
     path {
       transition: ${theme.transition};
-      fill: ${props => (props.color ? props.color.light : "white")};
+      fill: ${props => (props.colors ? props.colors.light : "white")};
     }
   }
 
-  &:hover {
-    box-shadow: 0 5px 50px
-      ${props =>
-        transparentize(
-          0.85,
-          darken(0.2, props.color ? props.color.dark : "black")
-        )};
-
-    svg path {
-      fill: ${props => (props.color ? props.color.dark : "black")};
-    }
+  &:hover svg path {
+    fill: ${props => (props.colors ? props.colors.dark : "black")};
   }
 `;
 
 export const MenuIcon = styled.div`
   position: relative;
+  transition: ${theme.transition};
+
+  transform: ${styledMap("isVisible", {
+    false: "none",
+    true: "translateX(3px)"
+  })};
 
   span {
     margin-top: 6px;
@@ -56,7 +53,7 @@ export const MenuIcon = styled.div`
     width: 100%;
     height: 2px;
     display: block;
-    transform-origin: 2px;
+    transform-origin: 4px;
     background-color: white;
     transition: ${theme.transition};
 
@@ -82,31 +79,16 @@ export const MenuButton = styled.button`
   cursor: pointer;
   height: 71px;
   width: 71px;
-  padding: 20px;
   overflow: hidden;
+  padding: 20px 19px 20px 21px;
   transition: ${theme.transition};
   background-color: ${props =>
-    props.color ? lighten(0.05, props.color.dark) : "black"};
+    lighten(0.05, props.colors ? props.colors.dark : "black")};
 
   &:hover {
-    z-index: 3;
-    box-shadow: 0 5px 50px
-      ${props =>
-        transparentize(
-          0.85,
-          darken(0.2, props.color ? props.color.dark : "black")
-        )};
-
     ${MenuIcon}::before, ${MenuIcon}::after, ${MenuIcon} span {
-      background-color: ${props => (props.color ? props.color.dark : "black")};
-    }
-
-    ${MenuIcon}::before {
-      transform: translateY(-1px);
-    }
-
-    ${MenuIcon}::after {
-      transform: translateY(1px);
+      background-color: ${props =>
+        props.colors ? props.colors.dark : "black"};
     }
   }
 
@@ -124,12 +106,6 @@ export const Wrapper = styled.header`
   align-items: center;
   justify-content: stretch;
   transition: ${theme.transition};
-  box-shadow: 0 5px 50px
-    ${props =>
-      transparentize(
-        0.85,
-        darken(0.2, props.color ? props.color.dark : "black")
-      )};
 
   ${Logo}::before, ${MenuButton}::before {
     content: "";
@@ -141,11 +117,51 @@ export const Wrapper = styled.header`
     opacity: 0;
     transform: translateX(-105%);
     transition: ${theme.transition};
-    background-color: ${props => (props.color ? props.color.light : "white")};
+    background-color: ${props => (props.colors ? props.colors.light : "white")};
   }
 
   ${Logo}:hover::before, ${MenuButton}:hover::before {
     opacity: 1;
     transform: none;
+  }
+`;
+
+export const Inner = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 103px;
+  transition: ${theme.transition};
+  background-color: ${props =>
+    lighten(0.05, props.colors ? props.colors.dark : "black")};
+  box-shadow: 0 0 70px
+    ${props => transparentize(0.8, props.colors ? props.colors.dark : "black")};
+
+  transform: ${styledMap("isVisible", {
+    false: "translateX(calc(-100% + 71px))",
+    true: "translateX(-103px)"
+  })};
+`;
+
+export const NavButton = styled(AniLink)`
+  font-size: 18px;
+  padding: 10px;
+  margin: 0 5px;
+`;
+
+export const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  transition: ${theme.transition};
+  border-right: 1px solid ${transparentize(0.9, "white")};
+
+  ${NavButton} {
+    color: ${props =>
+      transparentize(0.3, props.colors ? props.colors.light : "white")};
+  }
+
+  ${NavButton}.active,
+  ${NavButton}:hover {
+    color: ${props => (props.colors ? props.colors.light : "white")};
   }
 `;

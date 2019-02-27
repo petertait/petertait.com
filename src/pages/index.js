@@ -9,12 +9,12 @@ import Works from "templates/home-page/Works";
 
 export const HomePageTemplate = ({ page }) => (
   <>
-    <HeroBlock color={page.color} content={page.hero} />
-    <Block width="1200px" content={page.services} color={page.color}>
-      <Services content={page.services} color={page.color} />
+    <HeroBlock colors={page.colors} content={page.hero} />
+    <Block width="1200px" content={page.services} colors={page.colors}>
+      <Services content={page.services} colors={page.colors} />
     </Block>
-    <Block width="1300px" content={page.works} color={page.color}>
-      <Works content={page.works} color={page.color} />
+    <Block width="1300px" content={page.works} colors={page.colors}>
+      <Works content={page.works} colors={page.colors} />
     </Block>
   </>
 );
@@ -22,7 +22,7 @@ export const HomePageTemplate = ({ page }) => (
 const HomePage = ({ data }) => {
   const { frontmatter: page } = data.markdownRemark;
   return (
-    <Layout content={page} color={page.color}>
+    <Layout content={page} colors={page.colors}>
       <HomePageTemplate page={page} />
     </Layout>
   );
@@ -41,7 +41,7 @@ export const homePageQuery = graphql`
         page {
           title
         }
-        color {
+        colors {
           light
           dark
         }
@@ -85,7 +85,7 @@ export const homePageQuery = graphql`
                 fluid(
                   maxWidth: 700
                   quality: 70
-                  duotone: { highlight: "#ffffff", shadow: "#0032D2" }
+                  duotone: { highlight: "#ffffff", shadow: "#002AB1" }
                 ) {
                   ...GatsbyImageSharpFluid
                 }

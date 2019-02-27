@@ -32,8 +32,8 @@ collections:
               fields: [{ label: Title, name: title, widget: string }],
             }
           - {
-              label: Color,
-              name: color,
+              label: Colors,
+              name: colors,
               widget: object,
               fields:
                 [
@@ -187,8 +187,8 @@ collections:
                 ],
             }
           - {
-              label: Color,
-              name: color,
+              label: Colors,
+              name: colors,
               widget: object,
               fields:
                 [

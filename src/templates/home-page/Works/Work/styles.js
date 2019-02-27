@@ -11,6 +11,10 @@ export const Image = styled(StyledImage)`
   object-fit: cover;
   object-position: center;
   transition: ${theme.transition};
+
+  @media (max-height: ${theme.size.maxHeight}) {
+    height: 350px;
+  }
 `;
 
 export const Client = styled(Text)`
@@ -35,7 +39,7 @@ export const Wrapper = styled.div`
     transform: scale(0.96);
     position: absolute;
     transition: ${theme.transition};
-    border: 1px solid ${props => (props.color ? props.color.dark : "black")};
+    border: 1px solid ${props => (props.colors ? props.colors.dark : "black")};
   }
 
   &:hover {
@@ -56,7 +60,7 @@ export const Wrapper = styled.div`
         ${props =>
           transparentize(
             0.75,
-            darken(0.2, props.color ? props.color.dark : "black")
+            darken(0.2, props.colors ? props.colors.dark : "black")
           )};
     }
   }
@@ -64,7 +68,11 @@ export const Wrapper = styled.div`
 
 export const Inner = styled.div`
   margin-top: 30px;
-  color: ${props => (props.color ? props.color.dark : "black")};
+  color: ${props => (props.colors ? props.colors.dark : "black")};
+
+  @media (max-height: ${theme.size.maxHeight}) {
+    margin-top: 10px;
+  }
 `;
 
 export const Heading = styled(H4)`
