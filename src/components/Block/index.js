@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react";
 import { useMount } from "react-use";
 
-import { useWindowScrollPosition } from "config/utils";
+import { markdownify, useWindowScrollPosition } from "config/utils";
 import { Column } from "components/Grid";
 import Button from "components/Button";
 
 import HeroBlock from "./HeroBlock";
-import { Wrapper, Inner, Header, Heading, Text } from "./styles";
+import { Wrapper, Inner, Header, Heading, Subheading, Text } from "./styles";
 
 const Block = ({ width, colors, content, children, ...props }) => {
   const wrapper = useRef(null);
@@ -29,10 +29,12 @@ const Block = ({ width, colors, content, children, ...props }) => {
     >
       <Inner width={width} className={isPinned && "pinned"} {...props}>
         <Header>
-          {(content.heading || content.text) && (
+          {(content.heading || content.subheading) && (
             <Column flex="1" width="auto" justifyContent="center">
               {content.heading && <Heading>{content.heading}</Heading>}
-              {content.text && <Text>{content.text}</Text>}
+              {content.subheading && (
+                <Subheading>{content.subheading}</Subheading>
+              )}
             </Column>
           )}
           <Button
@@ -42,6 +44,11 @@ const Block = ({ width, colors, content, children, ...props }) => {
             content={content.button}
           />
         </Header>
+        {content.text && (
+          <Text
+            dangerouslySetInnerHTML={{ __html: markdownify(content.text) }}
+          />
+        )}
         {children}
       </Inner>
     </Wrapper>

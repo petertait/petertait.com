@@ -2,32 +2,32 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import Block, { HeroBlock } from "components/Block";
 import Layout from "components/Layout";
-import Services from "templates/home-page/Services";
+import Button from "components/Button";
+import Block, { HeroBlock } from "components/Block";
+
+export const AboutPageTemplate = ({ page }) => (
+  <>
+    <HeroBlock colors={page.colors} content={page.hero} />
+    <Block width="1200px" content={page.about} colors={page.colors}>
+      {page.about.button && (
+        <Button
+          cover
+          mt="90px"
+          colors={page.colors}
+          shade={page.about.shade}
+          content={page.about.button}
+        />
+      )}
+    </Block>
+  </>
+);
 
 const AboutPage = ({ data }) => {
   const { frontmatter: page } = data.markdownRemark;
-
   return (
-    <Layout content={page} colors={page.colors} shade={page.hero.shade}>
-      <HeroBlock colors={page.colors} content={page.hero} />
-      <Block
-        width="1200px"
-        shade="dark"
-        colors={page.colors}
-        content={page.services}
-      >
-        <Services content={page.services} shade="dark" colors={page.colors} />
-      </Block>
-      <Block
-        width="1200px"
-        shade="light"
-        colors={page.colors}
-        content={page.services}
-      >
-        <Services content={page.services} shade="dark" colors={page.colors} />
-      </Block>
+    <Layout content={page} colors={page.colors}>
+      <AboutPageTemplate page={page} />
     </Layout>
   );
 };
@@ -61,15 +61,14 @@ export const aboutPageQuery = graphql`
             relativePath
           }
         }
-        services {
+        about {
+          shade
           heading
+          subheading
           text
-          service {
-            heading
+          button {
             text
-            image {
-              relativePath
-            }
+            path
           }
         }
       }

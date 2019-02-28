@@ -22,12 +22,6 @@ export const Wrapper = styled.div`
   white-space: normal;
   position: relative;
 
-  box-shadow: -100px 0 300px
-    ${styledMap("shade", {
-      dark: props => darken(0.03, props.colors ? props.colors.dark : "black"),
-      default: props => darken(0.03, props.colors ? props.colors.dark : "black")
-    })};
-
   color: ${styledMap("shade", {
     dark: props => (props.colors ? props.colors.light : "white"),
     default: props => (props.colors ? props.colors.dark : "black")
@@ -41,6 +35,15 @@ export const Wrapper = styled.div`
   ${width};
   ${zIndex};
   ${maxWidth};
+
+  & + & {
+    box-shadow: -100px 0 300px
+      ${styledMap("shade", {
+        dark: props => darken(0.03, props.colors ? props.colors.dark : "black"),
+        default: props =>
+          darken(0.03, props.colors ? props.colors.light : "white")
+      })};
+  }
 
   @media (max-width: ${theme.size.desktop}) {
     min-height: 0;
@@ -70,6 +73,10 @@ export const Inner = styled.div`
     position: fixed;
   }
 
+  @media (max-height: ${theme.size.maxHeight}) {
+    padding-top: 90px;
+  }
+
   @media (max-height: 700px) {
     justify-content: flex-start;
   }
@@ -93,7 +100,17 @@ export const Heading = styled(H3)`
   margin: 0;
 `;
 
-export const Text = styled(StyledText)`
+export const Subheading = styled(StyledText)`
   margin-top: 20px;
   font-size: ${theme.font.size.upsilon};
+`;
+
+export const Text = styled(StyledText)`
+  margin-top: 40px;
+  column-fill: auto;
+  columns: 2;
+
+  p {
+    margin-bottom: 20px;
+  }
 `;

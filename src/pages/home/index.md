@@ -33,14 +33,14 @@ services:
         functional deployed product. Utilising the latest methods in
         development.
   shade: dark
-  text: >-
+  subheading: >-
     Clients range from global corporations to startups. Services offered to
     these clients have included virtual reality experience design, branding,
     product design and development.
 works:
   heading: Selected Works
   shade: light
-  text: ""
+  subheading: ""
   button:
     text: All works
     path: work

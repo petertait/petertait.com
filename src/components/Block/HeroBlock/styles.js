@@ -5,6 +5,8 @@ import { darken } from "polished";
 
 import theme from "config/theme";
 
+import { Wrapper as Block } from "../styles";
+
 export const Wrapper = styled.div`
   position: relative;
   width: 95vw;
@@ -16,6 +18,15 @@ export const Wrapper = styled.div`
   @media (max-width: ${theme.size.desktop}) {
     width: 100%;
     max-width: 100%;
+  }
+
+  & + ${Block} {
+    box-shadow: -100px 0 300px
+      ${styledMap("shade", {
+        dark: props => darken(0.03, props.colors ? props.colors.dark : "black"),
+        default: props =>
+          darken(0.03, props.colors ? props.colors.light : "white")
+      })};
   }
 `;
 

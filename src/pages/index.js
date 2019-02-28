@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import Block, { HeroBlock } from "components/Block";
 import Layout from "components/Layout";
+import Block, { HeroBlock } from "components/Block";
 import Services from "templates/home-page/Services";
 import Works from "templates/home-page/Works";
 
@@ -60,7 +60,7 @@ export const homePageQuery = graphql`
         services {
           shade
           heading
-          text
+          subheading
           service {
             heading
             text
@@ -72,7 +72,7 @@ export const homePageQuery = graphql`
         works {
           shade
           heading
-          text
+          subheading
           button {
             text
             path
