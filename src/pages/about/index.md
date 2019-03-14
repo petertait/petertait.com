@@ -8,7 +8,7 @@ colors:
 hero:
   background: /media/pattern-1.svg
   button:
-    path: about
+    path: contact
     text: Get in contact
   heading: Designer who builds brands and products.
   shade: light
@@ -37,7 +37,7 @@ about:
     Clients range from global corporations to startups. Services offered to
     these clients have included virtual reality experience design, branding,
     product design and development.
-  button:
+  textButton:
     text: Curriculum Vitae
     path: cv
   text: |

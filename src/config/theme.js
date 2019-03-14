@@ -33,7 +33,8 @@ const theme = {
   gutter: {
     large: "80px",
     medium: "50px",
-    small: "20px"
+    small: "35px",
+    tiny: "25px"
   },
 
   transition: "0.3s ease-in-out"

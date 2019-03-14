@@ -10,13 +10,13 @@ export const AboutPageTemplate = ({ page }) => (
   <>
     <HeroBlock colors={page.colors} content={page.hero} />
     <Block width="1200px" content={page.about} colors={page.colors}>
-      {page.about.button && (
+      {page.about.textButton && (
         <Button
           cover
-          mt="90px"
+          mt="30px"
           colors={page.colors}
           shade={page.about.shade}
-          content={page.about.button}
+          content={page.about.textButton}
         />
       )}
     </Block>
@@ -66,7 +66,7 @@ export const aboutPageQuery = graphql`
           heading
           subheading
           text
-          button {
+          textButton {
             text
             path
           }

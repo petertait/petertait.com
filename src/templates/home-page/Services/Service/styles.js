@@ -19,7 +19,20 @@ export const Wrapper = styled.div`
   })};
 
   @media (max-height: ${theme.size.maxHeight}) {
-    padding: 20px 40px 30px;
+    padding: 30px 40px;
+  }
+
+  @media (max-width: ${theme.size.desktop}) {
+    padding: 30px 20px 30px 30px;
+  }
+
+  @media (max-width: ${theme.size.tablet}) {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+
+  @media (max-width: ${theme.size.mobile}) {
+    padding: 30px;
   }
 `;
 
@@ -29,17 +42,23 @@ export const Image = styled.img`
   display: flex;
   margin: auto;
 
-  @media (max-height: ${theme.size.maxHeight}) {
+  @media (max-height: ${theme.size.maxHeight}),
+    (max-width: ${theme.size.desktop}) {
     width: 140px;
     height: 100px;
+  }
+
+  @media (max-width: ${theme.size.tablet}) {
+    margin: 0;
   }
 `;
 
 export const Heading = styled(H3)`
   margin: 50px auto 20px;
 
-  @media (max-height: ${theme.size.maxHeight}) {
-    margin-top: 20px;
+  @media (max-height: ${theme.size.maxHeight}),
+    (max-width: ${theme.size.tablet}) {
+    margin-top: 30px;
   }
 `;
 

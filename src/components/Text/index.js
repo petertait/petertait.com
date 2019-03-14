@@ -34,7 +34,7 @@ const H1Text = Text.withComponent("h1");
 export const H1 = styled(H1Text)`
   width: 100%;
   line-height: 1;
-  margin: 0 0 20px;
+  margin: 0;
   letter-spacing: -4px;
   font-weight: ${theme.font.weight.bold};
   font-size: ${theme.font.size.tera};
@@ -69,6 +69,10 @@ export const H1 = styled(H1Text)`
         : "none"
   })};
 
+  & + & {
+    margin: 20px 0 0;
+  }
+
   @media (max-height: ${theme.size.maxHeight}) {
     letter-spacing: -3px;
     font-size: calc(80px + 6 * ((100vw - 320px) / 680));
@@ -76,16 +80,19 @@ export const H1 = styled(H1Text)`
 
   @media (max-width: ${theme.size.desktop}) {
     letter-spacing: -3px;
+
     font-size: calc(80px + 6 * ((100vw - 320px) / 680));
   }
 
   @media (max-width: ${theme.size.tablet}) {
-    letter-spacing: -2px;
+    letter-spacing: -1px;
+    -webkit-text-stroke-width: 0.8px;
     font-size: calc(60px + 6 * ((100vw - 320px) / 680));
   }
 
   @media (max-width: ${theme.size.mobile}) {
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
+    -webkit-text-stroke-width: 0.7px;
     font-size: calc(50px + 6 * ((100vw - 320px) / 680));
   }
 

@@ -12,8 +12,13 @@ export const Image = styled(StyledImage)`
   object-position: center;
   transition: ${theme.transition};
 
-  @media (max-height: ${theme.size.maxHeight}) {
-    height: 350px;
+  @media (max-height: ${theme.size.maxHeight}),
+    (max-width: ${theme.size.tablet}) {
+    height: 300px;
+  }
+
+  @media (max-width: ${theme.size.mobile}) {
+    height: 200px;
   }
 `;
 
@@ -29,6 +34,15 @@ export const Wrapper = styled.div`
   width: calc(33.33% - 25px);
   cursor: pointer;
 
+  @media (max-width: ${theme.size.tablet}) {
+    width: 100%;
+    margin: 0 0 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &::before {
     content: "";
     width: 100%;
@@ -40,6 +54,10 @@ export const Wrapper = styled.div`
     position: absolute;
     transition: ${theme.transition};
     border: 1px solid ${props => (props.colors ? props.colors.dark : "black")};
+
+    @media (max-width: ${theme.size.tablet}) {
+      left: -15px;
+    }
   }
 
   &:hover {
@@ -71,7 +89,11 @@ export const Inner = styled.div`
   color: ${props => (props.colors ? props.colors.dark : "black")};
 
   @media (max-height: ${theme.size.maxHeight}) {
-    margin-top: 10px;
+    margin-top: 50px;
+  }
+
+  @media (max-width: ${theme.size.tablet}) {
+    margin-top: 15px;
   }
 `;
 
@@ -79,4 +101,8 @@ export const Heading = styled(H4)`
   margin: 30px 0 5px;
   font-size: ${theme.font.size.epsilon};
   font-weight: ${theme.font.weight.bold};
+
+  @media (max-width: ${theme.size.tablet}) {
+    margin: 15px 0 0;
+  }
 `;

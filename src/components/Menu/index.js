@@ -34,6 +34,7 @@ const Menu = ({ colors }) => {
             cover
             duration={0.6}
             to="work"
+            activeClassName="active"
             bg={colors ? darken(0.1, colors.dark) : "black"}
           >
             Work
@@ -42,6 +43,7 @@ const Menu = ({ colors }) => {
             cover
             duration={0.6}
             to="about"
+            activeClassName="active"
             bg={colors ? darken(0.1, colors.dark) : "black"}
           >
             About
@@ -50,6 +52,7 @@ const Menu = ({ colors }) => {
             cover
             duration={0.6}
             to="contact"
+            activeClassName="active"
             bg={colors ? darken(0.1, colors.dark) : "black"}
           >
             Contact

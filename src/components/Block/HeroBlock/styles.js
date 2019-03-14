@@ -5,6 +5,8 @@ import { darken } from "polished";
 
 import theme from "config/theme";
 
+import { Wrapper as Button } from "components/Button/styles";
+
 import { Wrapper as Block } from "../styles";
 
 export const Wrapper = styled.div`
@@ -55,13 +57,41 @@ export const Inner = styled.div`
   })};
 
   ${width};
-  ${maxWidth}
+  ${maxWidth};
+
+  ${Button} {
+    margin-top: 100px;
+
+    @media (max-height: ${theme.size.maxHeight}) {
+      margin-top: 80px;
+    }
+  }
 
   @media (max-width: ${theme.size.desktop}) {
     min-height: 0;
-    position: relative;
     max-width: 100%;
-    padding: 160px ${theme.gutter.medium} 80px;
+    position: relative;
+    padding: 180px ${theme.gutter.medium} 110px;
+
+    ${Button} {
+      margin-top: 80px;
+    }
+  }
+
+  @media (max-width: ${theme.size.tablet}) {
+    padding: 140px ${theme.gutter.small} 70px;
+
+    ${Button} {
+      margin-top: 60px;
+    }
+  }
+
+  @media (max-width: ${theme.size.mobile}) {
+    padding: 140px ${theme.gutter.tiny} 70px;
+
+    ${Button} {
+      margin-top: 40px;
+    }
   }
 `;
 

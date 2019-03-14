@@ -15,4 +15,14 @@ export const Inner = styled(Grid)`
   @media (max-height: ${theme.size.maxHeight}) {
     margin-top: 30px;
   }
+
+  @media (max-width: ${theme.size.desktop}) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: ${theme.size.tablet}) {
+    width: 100%;
+    padding: 0;
+    margin: 40px 0 0;
+  }
 `;

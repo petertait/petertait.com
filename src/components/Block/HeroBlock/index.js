@@ -32,7 +32,6 @@ const HeroBlock = ({ content, colors, width, maxWidth }) => {
         )}
         <Button
           cover
-          mt="90px"
           colors={colors}
           shade={content.shade}
           content={content.button}

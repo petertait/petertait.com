@@ -16,12 +16,12 @@ export const Grid = styled.div`
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  padding-left: ${theme.gutter};
-  padding-right: ${theme.gutter};
+  padding-left: ${theme.gutter.small};
+  padding-right: ${theme.gutter.small};
 
   @media (max-width: ${theme.size.tablet}) {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: ${theme.gutter.tiny};
+    padding-right: ${theme.gutter.tiny};
   }
 
   ${flex};

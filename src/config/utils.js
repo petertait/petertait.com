@@ -54,22 +54,23 @@ function throttle(func, wait, options) {
 }
 
 function useWindowScrollPosition(options = {}) {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
   const { throttleMs = 10 } = options;
-  const [scroll, setScroll] = React.useState({
-    x: window.pageXOffset
-  });
+
+  const [scroll, setScroll] = React.useState(window.pageXOffset);
 
   const handle = throttle(() => {
-    setScroll({
-      x: window.pageXOffset
-    });
+    setScroll(window.pageXOffset);
   }, throttleMs);
 
   useEffect(() => {
-    window.addEventListener("scroll", handle, { passive: true });
+    window.addEventListener("scroll", handle);
 
     return () => {
-      window.removeEventListener("scroll", handle, { passive: true });
+      window.removeEventListener("scroll", handle);
     };
   }, []);
 

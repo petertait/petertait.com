@@ -13,12 +13,13 @@ import { darken } from "polished";
 import theme from "config/theme";
 
 import StyledText, { H3 } from "components/Text";
+import { Wrapper as Button } from "components/Button/styles";
 
 export const Wrapper = styled.div`
   display: flex;
   z-index: 1;
-  height: 100vh;
   flex-shrink: 0;
+  min-height: 100vh;
   white-space: normal;
   position: relative;
 
@@ -50,17 +51,20 @@ export const Wrapper = styled.div`
     max-width: 100%;
     width: 100%;
   }
+
+  @media (max-width: ${theme.size.tablet}) {
+  }
 `;
 
 export const Inner = styled.div`
   top: 0;
   left: 0;
   display: flex;
+  min-height: 100vh;
   align-content: center;
   flex-direction: column;
   justify-content: center;
   padding: 110px 80px 20px;
-  height: 100vh;
   transform: translateZ(0);
 
   ${space};
@@ -89,11 +93,31 @@ export const Inner = styled.div`
 
     ${space};
   }
+
+  @media (max-width: ${theme.size.tablet}) {
+    padding: 60px ${theme.gutter.small};
+
+    ${space};
+  }
+
+  @media (max-width: ${theme.size.mobile}) {
+    padding: 50px ${theme.gutter.tiny};
+
+    ${space};
+  }
 `;
 
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: ${theme.size.tablet}) {
+    flex-direction: column;
+
+    ${Button} {
+      margin-top: 30px;
+    }
+  }
 `;
 
 export const Heading = styled(H3)`
@@ -106,7 +130,7 @@ export const Subheading = styled(StyledText)`
 `;
 
 export const Text = styled(StyledText)`
-  margin-top: 40px;
+  margin-top: 50px;
   column-fill: auto;
   columns: 2;
 

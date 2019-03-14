@@ -31,7 +31,7 @@ export const Wrapper = styled(AniLink)`
   })};
 
   padding: ${styledMap("size", {
-    small: "13px 18px",
+    small: "14px 17px",
     default: "18px 22px 16px"
   })};
 
@@ -46,6 +46,11 @@ export const Wrapper = styled(AniLink)`
     default: props =>
       transparentize(0.7, props.colors ? props.colors.dark : "black")
   })};
+
+  @media (max-width: ${theme.size.tablet}) {
+    padding: 14px 17px;
+    font-size: ${theme.font.size.zeta};
+  }
 
   &::before {
     content: "";

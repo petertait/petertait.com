@@ -11,12 +11,11 @@ import { Wrapper, Inner, Header, Heading, Subheading, Text } from "./styles";
 const Block = ({ width, colors, content, children, ...props }) => {
   const wrapper = useRef(null);
   const [ref, setRef] = useState(null);
-  const { x } = useWindowScrollPosition();
+  const x = useWindowScrollPosition();
 
   useMount(() => setRef(wrapper));
 
   const wrapperOffsetLeft = ref && ref.current.offsetLeft;
-  // const wrapperWidth = ref && ref.current.clientWidth;
   const isPinned = wrapperOffsetLeft < x;
 
   return (
