@@ -99,7 +99,6 @@ export const aboutPageQuery = graphql`
           }
         }
         cv {
-          shade
           heading
           subheading
           summary {
