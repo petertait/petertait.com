@@ -128,7 +128,7 @@ export const H2 = styled(H2Text)`
 const H3Text = Text.withComponent("h3");
 export const H3 = styled(H3Text)`
   width: 100%;
-  line-height: 1.1;
+  line-height: 1.3;
   margin: 0 0 10px;
   font-size: ${theme.font.size.theta};
   font-weight: ${theme.font.weight.bold};
@@ -146,10 +146,10 @@ export const H3 = styled(H3Text)`
 const H4Text = Text.withComponent("h4");
 export const H4 = styled(H4Text)`
   width: 100%;
-  line-height: 1.1;
+  line-height: 1.3;
   margin: 0 0 10px;
-  font-size: ${theme.font.size.upsilon};
-  font-weight: ${theme.font.weight.regular};
+  font-size: ${theme.font.size.delta};
+  font-weight: ${theme.font.weight.bold};
 
   ${color};
   ${space};

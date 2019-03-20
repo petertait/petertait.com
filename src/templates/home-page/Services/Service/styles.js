@@ -3,7 +3,7 @@ import styledMap from "styled-map";
 import { transparentize } from "polished";
 
 import theme from "config/theme";
-import StyledText, { H3 } from "components/Text";
+import StyledText, { H4 } from "components/Text";
 
 export const Wrapper = styled.div`
   padding: 50px 40px 40px;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
   })};
 
   @media (max-height: ${theme.size.maxHeight}) {
-    padding: 30px 40px;
+    padding: 25px 30px;
   }
 
   @media (max-width: ${theme.size.desktop}) {
@@ -53,8 +53,9 @@ export const Image = styled.img`
   }
 `;
 
-export const Heading = styled(H3)`
+export const Heading = styled(H4)`
   margin: 50px auto 20px;
+  font-size: ${theme.font.size.upsilon};
 
   @media (max-height: ${theme.size.maxHeight}),
     (max-width: ${theme.size.tablet}) {

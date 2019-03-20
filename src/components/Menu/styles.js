@@ -16,6 +16,10 @@ export const Logo = styled(AniLink)`
   background-color: ${props =>
     props.colors ? lighten(0.09, props.colors.dark) : "black"};
 
+  @media (max-width: ${theme.size.mobile}) {
+    padding: 16px 14px 17px;
+  }
+
   svg {
     height: 35px;
     width: auto;
@@ -23,10 +27,15 @@ export const Logo = styled(AniLink)`
     z-index: 3;
     display: block;
     overflow: none;
+    transition: ${theme.transition};
 
     path {
       transition: ${theme.transition};
       fill: ${props => (props.colors ? props.colors.light : "white")};
+    }
+
+    @media (max-width: ${theme.size.mobile}) {
+      height: 30px;
     }
   }
 
@@ -57,16 +66,20 @@ export const MenuIcon = styled.div`
     height: 2px;
     display: block;
     transform-origin: 4px;
-    background-color: white;
     transition: ${theme.transition};
+    background-color: ${props => (props.colors ? props.colors.light : "white")};
 
     transform: ${styledMap("isVisible", {
       false: "none",
       true: "rotate(45deg)"
     })};
 
+    @media (max-width: ${theme.size.mobile}) {
+      transform-origin: 0.5px;
+    }
+
     @media (max-width: 420px) {
-      transform-origin: 1.5px;
+      transform-origin: 1.2px;
     }
   }
 
@@ -92,9 +105,15 @@ export const MenuButton = styled.button`
   background-color: ${props =>
     lighten(0.05, props.colors ? props.colors.dark : "black")};
 
+  @media (max-width: ${theme.size.mobile}) {
+    height: 63px;
+    width: 63px;
+    padding: 20px;
+  }
+
   @media (max-width: 420px) {
-    width: 60px;
-    padding: 20px 17px
+    width: 55px;
+    padding: 20px 14px 20px 16px;
   }
 
   &:hover {
@@ -130,14 +149,12 @@ export const Wrapper = styled.header`
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
     transform: translateX(-105%);
     transition: ${theme.transition};
     background-color: ${props => (props.colors ? props.colors.light : "white")};
   }
 
   ${Logo}:hover::before, ${MenuButton}:hover::before {
-    opacity: 1;
     transform: none;
   }
 `;
@@ -146,6 +163,7 @@ export const Inner = styled.div`
   display: flex;
   align-items: center;
   padding-left: 103px;
+  max-width: 100%;
   transition: ${theme.transition};
   background-color: ${props =>
     lighten(0.05, props.colors ? props.colors.dark : "black")};
@@ -153,25 +171,35 @@ export const Inner = styled.div`
     ${props => transparentize(0.8, props.colors ? props.colors.dark : "black")};
 
   transform: ${styledMap("isVisible", {
-    false: "translateX(calc(-100% + 71px))",
+    false: "translateX(calc(-100% + 70px))",
     true: "translateX(-103px)"
   })};
 
-  @media (max-width: 420px) {
-    width: 100%;
+  @media (max-width: ${theme.size.mobile}) {
     padding-left: 0;
 
     transform: ${styledMap("isVisible", {
-      false: "translateX(calc(-100% + 60px))",
+      false: "translateX(calc(-100% + 59px))",
+      true: "translateX(0)"
+    })};
+  }
+
+  @media (max-width: 420px) {
+    transform: ${styledMap("isVisible", {
+      false: "translateX(calc(-100% + 54px))",
       true: "translateX(0)"
     })};
   }
 `;
 
 export const NavButton = styled(AniLink)`
-  font-size: 18px;
-  padding: 10px;
+  padding: 8px 10px;
   margin: 0 5px;
+  font-size: ${theme.font.size.epsilon};
+
+  @media (max-width: ${theme.size.mobile}) {
+    font-size: ${theme.font.size.zeta};
+  }
 
   @media (max-width: 450px) {
     margin: 0;
@@ -187,7 +215,6 @@ export const Nav = styled.nav`
 
   @media (max-width: 450px) {
     flex: 1;
-    padding: 0 10px;
     justify-content: space-between;
   }
 

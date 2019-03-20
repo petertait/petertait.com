@@ -4,7 +4,7 @@ import { darken } from "polished";
 import { Wrapper, Arrow } from "./styles";
 
 const Button = ({ as, content, colors, ...props }) => {
-  if (!content || !content.path || !content.text) {
+  if (!content || !content.text) {
     return null;
   }
 

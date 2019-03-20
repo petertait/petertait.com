@@ -9,7 +9,7 @@ import Works from "templates/home-page/Works";
 
 export const HomePageTemplate = ({ page }) => (
   <>
-    <HeroBlock colors={page.colors} content={page.hero} />
+    <HeroBlock content={page.hero} colors={page.colors} />
     <Block width="1200px" content={page.services} colors={page.colors}>
       <Services content={page.services} colors={page.colors} />
     </Block>
@@ -22,7 +22,7 @@ export const HomePageTemplate = ({ page }) => (
 const HomePage = ({ data }) => {
   const { frontmatter: page } = data.markdownRemark;
   return (
-    <Layout content={page} colors={page.colors}>
+    <Layout content={page}>
       <HomePageTemplate page={page} />
     </Layout>
   );
@@ -38,9 +38,7 @@ export const homePageQuery = graphql`
   query HomePage {
     markdownRemark(frontmatter: { templateKey: { eq: "home-page" } }) {
       frontmatter {
-        page {
-          title
-        }
+        title
         colors {
           light
           dark

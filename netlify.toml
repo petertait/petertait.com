@@ -4,3 +4,7 @@
 [build.environment]
   YARN_VERSION = "1.9.4"
   YARN_FLAGS = "--no-ignore-optional"
+[[redirects]]
+  from = "https://petertait.com/about/cv"
+  to = "https://petertait.com/about?cv"
+  force = true

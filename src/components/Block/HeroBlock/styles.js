@@ -87,7 +87,7 @@ export const Inner = styled.div`
   }
 
   @media (max-width: ${theme.size.mobile}) {
-    padding: 140px ${theme.gutter.tiny} 70px;
+    padding: 125px ${theme.gutter.tiny} 70px;
 
     ${Button} {
       margin-top: 40px;

@@ -8,6 +8,7 @@ import { HeroBlock } from "components/Block";
 export const ErrorPageTemplate = ({ page }) => (
   <>
     <HeroBlock
+      pt="0"
       width="100vw"
       maxWidth="100%"
       colors={page.colors}
@@ -19,7 +20,7 @@ export const ErrorPageTemplate = ({ page }) => (
 const ErrorPage = ({ data }) => {
   const { frontmatter: page } = data.markdownRemark;
   return (
-    <Layout content={page} colors={page.colors}>
+    <Layout content={page}>
       <ErrorPageTemplate page={page} />
     </Layout>
   );
@@ -35,9 +36,7 @@ export const errorPageQuery = graphql`
   query ErrorPage {
     markdownRemark(frontmatter: { templateKey: { eq: "error-page" } }) {
       frontmatter {
-        page {
-          title
-        }
+        title
         colors {
           light
           dark
@@ -46,8 +45,10 @@ export const errorPageQuery = graphql`
           shade
           heading
           subheading
-          buttonPath
-          buttonText
+          button {
+            path
+            text
+          }
         }
       }
     }

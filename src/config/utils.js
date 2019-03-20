@@ -1,10 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import remark from "remark";
 import recommended from "remark-preset-lint-recommended";
 import remarkHtml from "remark-html";
 
-export { markdownify, throttle, useOnScreen, useWindowScrollPosition };
+export {
+  markdownify,
+  throttle,
+  useWindowScrollPosition,
+  toggleScroll,
+  replaceVerticalScrollByHorizontal,
+  useOnClickOutside
+};
 
 function markdownify(text) {
   return remark()
@@ -60,7 +67,7 @@ function useWindowScrollPosition(options = {}) {
 
   const { throttleMs = 10 } = options;
 
-  const [scroll, setScroll] = React.useState(window.pageXOffset);
+  const [scroll, setScroll] = useState(window.pageXOffset);
 
   const handle = throttle(() => {
     setScroll(window.pageXOffset);
@@ -77,27 +84,82 @@ function useWindowScrollPosition(options = {}) {
   return scroll;
 }
 
-function useOnScreen(ref, rootMargin = "0px") {
-  // State and setter for storing whether element is visible
-  const [isIntersecting, setIntersecting] = useState(null);
+function toggleScroll(isScrollable, isDesktop) {
+  if (typeof window === "undefined") {
+    return null;
+  }
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Update our state when observer callback fires
-        setIntersecting(entry);
-      },
-      {
-        rootMargin
+  const wrapper = document.querySelector(".tl-edges");
+  const keys = [32, 33, 34, 35, 36, 37, 38, 39, 40];
+
+  const preventScrollDefault = event => {
+    event = event || window.event;
+
+    if (event.preventDefault) event.preventDefault();
+    event.returnValue = false;
+  };
+
+  const keydown = event => {
+    for (let index = keys.length; index--; ) {
+      if (event.keyCode === keys[index]) {
+        preventScrollDefault(event);
+        return;
       }
-    );
-    if (ref.current) {
-      observer.observe(ref.current);
     }
-    return () => {
-      observer.unobserve(ref.current);
-    };
-  }, []); // Empty array ensures that effect is only run on mount and unmount
+  };
 
-  return isIntersecting;
+  const wheel = event => {
+    preventScrollDefault(event);
+  };
+
+  if (isScrollable) {
+    // window.removeEventListener("DOMMouseScroll", wheel);
+    // window.onmousewheel = document.onmousewheel = document.onkeydown = null;
+    // document.removeEventListener("touchmove", preventScrollDefault);
+
+    isDesktop &&
+      wrapper.addEventListener("wheel", replaceVerticalScrollByHorizontal);
+  } else {
+    // window.addEventListener("DOMMouseScroll", wheel);
+    // window.onmousewheel = document.onmousewheel = wheel;
+    // document.onkeydown = keydown;
+    // document.addEventListener("touchmove", preventScrollDefault);
+
+    isDesktop &&
+      wrapper.removeEventListener("wheel", replaceVerticalScrollByHorizontal);
+  }
+}
+
+function replaceVerticalScrollByHorizontal(event) {
+  if (event.deltaY !== 0) {
+    window.scroll(window.scrollX + event.deltaY * 5, window.scrollY);
+    event.preventDefault();
+  }
+}
+
+function useOnClickOutside(ref, handler) {
+  if (!ref) {
+    return;
+  }
+
+  useEffect(
+    () => {
+      const listener = event => {
+        if (!ref.current || ref.current.contains(event.target)) {
+          return;
+        }
+
+        handler(event);
+      };
+
+      document.addEventListener("mousedown", listener);
+      document.addEventListener("touchstart", listener);
+
+      return () => {
+        document.removeEventListener("mousedown", listener);
+        document.removeEventListener("touchstart", listener);
+      };
+    },
+    [ref, handler]
+  );
 }

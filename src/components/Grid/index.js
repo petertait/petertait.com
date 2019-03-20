@@ -33,6 +33,18 @@ export const Grid = styled.div`
 
 export default Grid;
 
+export const Container = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: flex-start;
+
+  ${space};
+  ${width};
+  ${alignItems}
+`;
+
 export const Column = styled.div`
   width: 100%;
   display: flex;

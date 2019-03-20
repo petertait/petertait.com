@@ -1,8 +1,14 @@
 import styled from "styled-components";
 import { lighten, transparentize } from "polished";
 
+import theme from "config/theme";
+
 export const Wrapper = styled.div`
-  display: flex;
+  min-width: 100vw;
+
+  @media (min-width: ${theme.size.desktop}) {
+    display: flex;
+  }
 
   *::-moz-selection {
     background: ${props =>

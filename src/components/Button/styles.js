@@ -60,7 +60,6 @@ export const Wrapper = styled(AniLink)`
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 0;
     transform: translateX(-105%);
     transition: ${theme.transition};
 
@@ -94,7 +93,6 @@ export const Wrapper = styled(AniLink)`
 
     &::before {
       transform: none;
-      opacity: 1;
     }
 
     ${Arrow} {

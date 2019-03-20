@@ -46,13 +46,14 @@ export const Wrapper = styled.div`
       })};
   }
 
+  &:last-child {
+    flex: 1;
+  }
+
   @media (max-width: ${theme.size.desktop}) {
     min-height: 0;
     max-width: 100%;
     width: 100%;
-  }
-
-  @media (max-width: ${theme.size.tablet}) {
   }
 `;
 
@@ -78,11 +79,7 @@ export const Inner = styled.div`
   }
 
   @media (max-height: ${theme.size.maxHeight}) {
-    padding-top: 90px;
-  }
-
-  @media (max-height: 700px) {
-    justify-content: flex-start;
+    padding-top: 100px;
   }
 
   @media (max-width: ${theme.size.desktop}) {
@@ -130,9 +127,13 @@ export const Subheading = styled(StyledText)`
 `;
 
 export const Text = styled(StyledText)`
-  margin-top: 50px;
-  column-fill: auto;
-  columns: 2;
+  margin-top: 30px;
+
+  @media (min-width: ${theme.size.tablet}) {
+    margin-top: 40px;
+    column-fill: auto;
+    columns: 2;
+  }
 
   p {
     margin-bottom: 20px;

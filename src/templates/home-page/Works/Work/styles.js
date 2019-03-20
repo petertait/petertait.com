@@ -23,9 +23,9 @@ export const Image = styled(StyledImage)`
 `;
 
 export const Client = styled(Text)`
-  opacity: 0.3;
+  opacity: 0.5;
   transition: ${theme.transition};
-  font-size: ${theme.font.size.zeta};
+  font-size: ${theme.font.size.epsilon};
 `;
 
 export const Wrapper = styled.div`
@@ -88,10 +88,6 @@ export const Inner = styled.div`
   margin-top: 30px;
   color: ${props => (props.colors ? props.colors.dark : "black")};
 
-  @media (max-height: ${theme.size.maxHeight}) {
-    margin-top: 50px;
-  }
-
   @media (max-width: ${theme.size.tablet}) {
     margin-top: 15px;
   }
@@ -99,8 +95,6 @@ export const Inner = styled.div`
 
 export const Heading = styled(H4)`
   margin: 30px 0 5px;
-  font-size: ${theme.font.size.epsilon};
-  font-weight: ${theme.font.weight.bold};
 
   @media (max-width: ${theme.size.tablet}) {
     margin: 15px 0 0;

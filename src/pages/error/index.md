@@ -1,17 +1,14 @@
 ---
 templateKey: error-page
-
-page:
-  title: "Error"
-
+title: "Error"
 colors:
-  light: "white"
-  dark: "black"
-
+  dark: "#002AB1"
+  light: "#F1FAFF"
 hero:
   shade: "light"
   heading: "Page not found!"
   subheading: ""
-  buttonPath: "/"
-  buttonText: "Return Home"
+  button:
+    path: "/"
+    text: "Return Home"
 ---

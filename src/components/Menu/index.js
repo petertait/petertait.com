@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useToggle } from "react-use";
 import { darken } from "polished";
 
 import LogoIcon from "./logo.svg";
@@ -13,8 +14,7 @@ import {
 } from "./styles";
 
 const Menu = ({ colors }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const toggleVisiblity = () => setIsVisible(!isVisible);
+  const [isVisible, toggleVisiblity] = useToggle(false);
 
   return (
     <Wrapper role="navigation" colors={colors} aria-label="main-navigation">
@@ -58,7 +58,7 @@ const Menu = ({ colors }) => {
             Contact
           </NavButton>
         </Nav>
-        <MenuButton colors={colors} onClick={toggleVisiblity}>
+        <MenuButton colors={colors} onClick={() => toggleVisiblity()}>
           <MenuIcon isVisible={isVisible} colors={colors}>
             <span />
           </MenuIcon>

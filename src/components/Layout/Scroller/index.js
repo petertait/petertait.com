@@ -1,31 +1,45 @@
 import React from "react";
-import { useMount, useUnmount } from "react-use";
+import { useMedia, useMount } from "react-use";
+
+import theme from "config/theme";
+import { replaceVerticalScrollByHorizontal } from "config/utils";
 
 import { Wrapper } from "./styles";
 
-const Scroller = ({ colors, children }) => {
-  const replaceVerticalScrollByHorizontal = event => {
-    if (event.deltaY !== 0) {
-      window.scroll(window.scrollX + event.deltaY * 5, window.scrollY);
-      event.preventDefault();
-    }
-
-    return;
-  };
-
+const HorizontalLayout = ({ children }) => {
   useMount(() => {
     if (typeof window !== "undefined") {
-      window.addEventListener("wheel", replaceVerticalScrollByHorizontal);
+      const wrapper = document.querySelector(".tl-edges");
+      wrapper.addEventListener("wheel", replaceVerticalScrollByHorizontal);
     }
   });
 
-  useUnmount(() => {
+  return children;
+};
+
+const VerticalLayout = ({ children }) => {
+  useMount(() => {
     if (typeof window !== "undefined") {
-      window.removeEventListener("wheel", replaceVerticalScrollByHorizontal);
+      const wrapper = document.querySelector(".tl-edges");
+      wrapper.removeEventListener("wheel", replaceVerticalScrollByHorizontal);
     }
   });
 
-  return <Wrapper colors={colors}>{children}</Wrapper>;
+  return children;
+};
+
+const Scroller = ({ colors, children }) => {
+  const isDesktop = useMedia(`(min-width: ${theme.size.desktop})`);
+
+  return (
+    <Wrapper colors={colors}>
+      {isDesktop ? (
+        <HorizontalLayout>{children}</HorizontalLayout>
+      ) : (
+        <VerticalLayout>{children}</VerticalLayout>
+      )}
+    </Wrapper>
+  );
 };
 
 export default Scroller;

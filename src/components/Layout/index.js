@@ -1,10 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-import { useMedia } from "the-platform";
 
 import GlobalStyle from "config/global";
-import theme from "config/theme";
 
 import Menu from "components/Menu";
 
@@ -15,7 +13,6 @@ import favicon32 from "./favicon-32.png";
 import Scroller from "./Scroller";
 
 const Layout = ({ colors, content, children }) => {
-  const isDesktop = useMedia(`(min-width: ${theme.size.desktop})`);
   return (
     <StaticQuery
       query={graphql`
@@ -33,7 +30,7 @@ const Layout = ({ colors, content, children }) => {
           <Helmet>
             <html lang="en" />
             <title>
-              {content && content.page.title ? `${content.page.title} | ` : ""}
+              {content.title ? `${content.title} | ` : ""}
               {data.site.siteMetadata.title}
             </title>
             <meta
@@ -45,12 +42,8 @@ const Layout = ({ colors, content, children }) => {
             <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
           </Helmet>
           <GlobalStyle />
-          <Menu colors={colors} />
-          {isDesktop ? (
-            <Scroller colors={colors}>{children}</Scroller>
-          ) : (
-            children
-          )}
+          <Menu colors={content.colors} />
+          <Scroller colors={content.colors}>{children}</Scroller>
         </>
       )}
     />

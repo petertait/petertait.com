@@ -25,12 +25,7 @@ collections:
               widget: hidden,
               default: home-page,
             }
-          - {
-              label: Page,
-              name: page,
-              widget: object,
-              fields: [{ label: Title, name: title, widget: string }],
-            }
+          - { label: Title, name: title, widget: string }
           - {
               label: Colors,
               name: colors,
@@ -93,7 +88,7 @@ collections:
                     default: "dark",
                   },
                   { label: Heading, name: heading, widget: string },
-                  { label: Text, name: text, widget: string },
+                  { label: Subheading, name: subheading, widget: text },
                   {
                     label: Service,
                     name: service,
@@ -166,6 +161,242 @@ collections:
                 ],
             }
 
+      - file: src/pages/about/index.md
+        label: About
+        name: about
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: about-page,
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+              label: Colors,
+              name: colors,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Light,
+                    name: light,
+                    widget: string,
+                    default: "white",
+                  },
+                  { label: Dark, name: dark, widget: string, default: "black" },
+                ],
+            }
+          - {
+              label: Hero,
+              name: hero,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Shade",
+                    name: "shade",
+                    widget: "select",
+                    options: ["light", "dark"],
+                    default: "light",
+                  },
+                  { label: Background, name: background, widget: file },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Subheading, name: subheading, widget: string },
+                  {
+                    label: Button,
+                    name: button,
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: Text,
+                          name: text,
+                          widget: string,
+                          default: Learn more,
+                        },
+                        { label: Path, name: path, widget: string, default: / },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Bio,
+              name: bio,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Shade",
+                    name: "shade",
+                    widget: "select",
+                    options: ["light", "dark"],
+                    default: "light",
+                  },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Subheading, name: subheading, widget: text },
+                  { label: Text, name: text, widget: markdown },
+                  {
+                    label: Button,
+                    name: textButton,
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: Text,
+                          name: text,
+                          widget: string,
+                          default: Learn more,
+                        },
+                        {
+                          label: Path,
+                          name: navigate,
+                          widget: string,
+                          default: /,
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: CV,
+              name: cv,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Shade",
+                    name: "shade",
+                    widget: "select",
+                    options: ["light", "dark"],
+                    default: "dark",
+                  },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Subheading, name: subheading, widget: text },
+                  {
+                    label: Summary,
+                    name: summary,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Heading, name: heading, widget: string },
+                        { label: Text, name: text, widget: markdown },
+                        {
+                          label: Button,
+                          name: button,
+                          widget: object,
+                          fields:
+                            [
+                              {
+                                label: Text,
+                                name: text,
+                                widget: string,
+                                default: Download PDF,
+                              },
+                              { label: File, name: file, widget: file },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: Work,
+                    name: work,
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: Heading,
+                          name: heading,
+                          widget: string,
+                          default: "Work",
+                        },
+                        {
+                          label: Jobs,
+                          name: jobs,
+                          widget: list,
+                          fields:
+                            [
+                              { label: Company, name: company, widget: string },
+                              { label: Date, name: date, widget: string },
+                              { label: Role, name: role, widget: string },
+                              { label: Text, name: text, widget: markdown },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: Education,
+                    name: education,
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: Heading,
+                          name: heading,
+                          widget: string,
+                          default: "Education",
+                        },
+                        {
+                          label: qualifications,
+                          name: qualifications,
+                          widget: list,
+                          fields:
+                            [
+                              { label: School, name: school, widget: string },
+                              { label: Type, name: type, widget: string },
+                              { label: Role, name: role, widget: string },
+                              { label: Text, name: text, widget: markdown },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: Personal,
+                    name: personal,
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: Heading,
+                          name: heading,
+                          widget: string,
+                          default: "Personal",
+                        },
+                        {
+                          label: Skills,
+                          name: skills,
+                          widget: object,
+                          fields:
+                            [
+                              {
+                                label: Heading,
+                                name: heading,
+                                widget: string,
+                                default: "Skills",
+                              },
+                              { label: Text, name: text, widget: markdown },
+                            ],
+                        },
+                        {
+                          label: Passions,
+                          name: passions,
+                          widget: object,
+                          fields:
+                            [
+                              {
+                                label: Heading,
+                                name: heading,
+                                widget: string,
+                                default: "Passions",
+                              },
+                              { label: Text, name: text, widget: markdown },
+                            ],
+                        },
+                      ],
+                  },
+                ],
+            }
+
       - file: src/pages/error/index.md
         label: Error
         name: error
@@ -176,16 +407,7 @@ collections:
               widget: hidden,
               default: error-page,
             }
-          - {
-              label: Page,
-              name: page,
-              widget: object,
-              fields:
-                [
-                  { label: Title, name: title, widget: string },
-                  { label: Background, name: background, widget: image },
-                ],
-            }
+          - { label: Title, name: title, widget: string }
           - {
               label: Colors,
               name: colors,

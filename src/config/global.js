@@ -84,7 +84,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .tl-edges {
-      overflow-x: unset!important;
+      overflow-x: unset;
       max-width: none;
     }
 	}

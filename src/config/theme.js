@@ -10,7 +10,7 @@ const theme = {
       beta: "36px",
       cesar: "30px",
       gamma: "28px",
-      theta: "24px",
+      theta: "26px",
       upsilon: "22px",
       delta: "20px",
       epsilon: "18px",
@@ -37,7 +37,7 @@ const theme = {
     tiny: "25px"
   },
 
-  transition: "0.3s ease-in-out"
+  transition: "0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86)"
 };
 
 export default theme;
