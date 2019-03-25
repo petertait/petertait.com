@@ -1,6 +1,7 @@
-import React from "react";
-import { useToggle } from "react-use";
+import React, { useState, useRef } from "react";
 import { darken } from "polished";
+
+import { useOnClickOutside } from "config/utils";
 
 import LogoIcon from "./logo.svg";
 import {
@@ -14,10 +15,19 @@ import {
 } from "./styles";
 
 const Menu = ({ colors }) => {
-  const [isVisible, toggleVisiblity] = useToggle(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const toggleVisiblity = () => setIsVisible(!isVisible);
+
+  const ref = useRef();
+  useOnClickOutside(ref, () => setIsVisible(false));
 
   return (
-    <Wrapper role="navigation" colors={colors} aria-label="main-navigation">
+    <Wrapper
+      ref={ref}
+      role="navigation"
+      colors={colors}
+      aria-label="main-navigation"
+    >
       <Logo
         cover
         to="/"

@@ -45,7 +45,8 @@ export const Inner = styled.div`
   overflow: auto;
   display: flex;
   flex-direction: column;
-  padding: 100px ${theme.gutter.tiny};
+  -webkit-overflow-scrolling: touch;
+  padding: 100px 0;
   background-color: ${props => (props.colors ? props.colors.dark : "black")};
   box-shadow: 0 0 10px
       ${props =>
@@ -54,3 +55,9 @@ export const Inner = styled.div`
       ${props =>
         transparentize(0.4, props.colors ? props.colors.dark : "black")};
 `;
+
+export const Date = styled.div`
+  opacity: 0.5;
+`;
+
+export const Text = styled.div``;

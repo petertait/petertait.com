@@ -5,8 +5,8 @@ import theme from "config/theme";
 import { H2 } from "components/Text";
 
 export const Title = styled(H2)`
-  margin-bottom: 80px;
   letter-spacing: -1px;
+  margin: 20px auto 80px;
   font-size: ${theme.font.size.alpha};
 `;
 
@@ -16,8 +16,8 @@ export const CloseButton = styled.button`
   cursor: pointer;
   height: 41px;
   width: 41px;
-  top: -70px;
-  right: 10px;
+  top: -80px;
+  right: 20px;
   overflow: hidden;
   padding: 6.5px 7px 6.5px 11px;
   background-color: transparent;
@@ -85,10 +85,6 @@ export const CloseButton = styled.button`
         props.colors ? props.colors.dark : "black"};
     }
   }
-`;
-
-export const Date = styled.div`
-  opacity: 0.5;
 `;
 
 export const Text = styled.div``;

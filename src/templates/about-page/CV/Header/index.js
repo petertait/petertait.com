@@ -1,16 +1,22 @@
 import React from "react";
+import { transparentize } from "polished";
 
 import theme from "config/theme";
-import { H3, H4 } from "components/Text";
+import { H3 } from "components/Text";
 import Button from "components/Button";
 import Grid, { Container, Column } from "components/Grid";
 
-import { Title, CloseButton, Date, Text } from "./styles";
+import { Title, CloseButton, Text } from "./styles";
 
 const Header = ({ content, colors, onClose }) => {
   return (
     <>
-      <Grid>
+      <Grid
+        mb="80px"
+        pb="80px"
+        px={theme.gutter.medium}
+        borderBottom={`1px solid ${transparentize(0.9, colors.light)}`}
+      >
         <CloseButton onClick={onClose} colors={colors}>
           <span />
         </CloseButton>
@@ -36,21 +42,6 @@ const Header = ({ content, colors, onClose }) => {
             />
           </Column>
         </Container>
-      </Grid>
-      <Grid py="80px">
-        <H3>{content.work.heading}</H3>
-        {content.work.jobs.map((job, index) => (
-          <Container key={index}>
-            <Column width="40%">
-              <H4>{job.company}</H4>
-              <Date>{job.date}</Date>
-            </Column>
-            <Column width="60%">
-              <H4>{job.role}</H4>
-              <Text dangerouslySetInnerHTML={{ __html: job.text }} />
-            </Column>
-          </Container>
-        ))}
       </Grid>
     </>
   );

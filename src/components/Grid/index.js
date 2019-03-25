@@ -4,6 +4,7 @@ import {
   space,
   width,
   order,
+  borders,
   maxWidth,
   alignItems,
   justifyContent
@@ -14,6 +15,7 @@ import theme from "config/theme";
 export const Grid = styled.div`
   width: 100%;
   display: flex;
+  flex-shrink: 0;
   flex-wrap: wrap;
   position: relative;
   padding-left: ${theme.gutter.small};
@@ -27,6 +29,7 @@ export const Grid = styled.div`
   ${flex};
   ${space};
   ${width};
+  ${borders};
   ${maxWidth};
   ${alignItems}
 `;
