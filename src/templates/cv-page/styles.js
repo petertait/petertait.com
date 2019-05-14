@@ -11,31 +11,35 @@ export const Wrapper = styled.div`
   position: fixed;
   width: 1000px;
   max-width: 100vw;
-  transition: ${theme.transition} 0.5s;
+  transition: transform ${theme.transition};
   color: ${props => (props.colors ? props.colors.light : "white")};
-  transform: translateX(${props => (props.isVisible ? "0" : "120%")});
+  transform: translateX(${props => (props.isVisible ? "0" : "110%")});
 
-  &::before,
-  &::after {
-    content: "";
-    top: 0;
-    right: 0;
-    width: 100vw;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.15;
-    position: fixed;
-    transform: translateX(${props => (props.isVisible ? "0" : "120%")});
-    background-color: ${props =>
-      darken(0.2, props.colors ? props.colors.dark : "white")};
-  }
+  @media (min-width: ${theme.size.tablet}) {
+    transition: transform ${theme.transition} 0.5s;
 
-  &::before {
-    transition: 0.65s ease-in 0.2s;
-  }
+    &::before,
+    &::after {
+      content: "";
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.15;
+      position: fixed;
+      transform: translateX(${props => (props.isVisible ? "0" : "110%")});
+      background-color: ${props =>
+        darken(0.2, props.colors ? props.colors.dark : "white")};
+    }
 
-  &::after {
-    transition: 0.65s ease-in;
+    &::before {
+      transition: 0.65s ease-in 0.2s;
+    }
+
+    &::after {
+      transition: 0.65s ease-in;
+    }
   }
 `;
 
@@ -58,6 +62,14 @@ export const Inner = styled.div`
 
 export const Date = styled.div`
   opacity: 0.5;
+
+  @media (max-width: ${theme.size.tablet}) {
+    margin-bottom: 10px;
+  }
 `;
 
-export const Text = styled.div``;
+export const Text = styled.div`
+  @media (max-width: ${theme.size.tablet}) {
+    margin: 10px auto;
+  }
+`;

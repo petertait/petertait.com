@@ -12,7 +12,7 @@ import { darken } from "polished";
 
 import theme from "config/theme";
 
-import StyledText, { H3 } from "components/Text";
+import { Text as StyledText, H3 } from "components/Text";
 import { Wrapper as Button } from "components/Button/styles";
 
 export const Wrapper = styled.div`

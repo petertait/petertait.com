@@ -96,7 +96,7 @@ collections:
                     fields:
                       [
                         { label: Heading, name: heading, widget: string },
-                        { label: Text, name: text, widget: string },
+                        { label: { Text, name: text, widget: string },
                         {
                           label: Image,
                           name: image,
@@ -121,7 +121,7 @@ collections:
                     default: "light",
                   },
                   { label: Heading, name: heading, widget: string },
-                  { label: Text, name: text, widget: string },
+                  { label: { Text, name: text, widget: string },
                   {
                     label: Button,
                     name: button,
@@ -235,7 +235,7 @@ collections:
                   },
                   { label: Heading, name: heading, widget: string },
                   { label: Subheading, name: subheading, widget: text },
-                  { label: Text, name: text, widget: markdown },
+                  { label: { Text, name: text, widget: markdown },
                   {
                     label: Button,
                     name: textButton,
@@ -280,7 +280,7 @@ collections:
                     fields:
                       [
                         { label: Heading, name: heading, widget: string },
-                        { label: Text, name: text, widget: markdown },
+                        { label: { Text, name: text, widget: markdown },
                         {
                           label: Button,
                           name: button,
@@ -319,7 +319,7 @@ collections:
                               { label: Company, name: company, widget: string },
                               { label: Date, name: date, widget: string },
                               { label: Role, name: role, widget: string },
-                              { label: Text, name: text, widget: markdown },
+                              { label: { Text, name: text, widget: markdown },
                             ],
                         },
                       ],
@@ -345,7 +345,7 @@ collections:
                               { label: School, name: school, widget: string },
                               { label: Type, name: type, widget: string },
                               { label: Role, name: role, widget: string },
-                              { label: Text, name: text, widget: markdown },
+                              { label: { Text, name: text, widget: markdown },
                             ],
                         },
                       ],
@@ -374,7 +374,7 @@ collections:
                                 widget: string,
                                 default: "Skills",
                               },
-                              { label: Text, name: text, widget: markdown },
+                              { label: { Text, name: text, widget: markdown },
                             ],
                         },
                         {
@@ -389,7 +389,7 @@ collections:
                                 widget: string,
                                 default: "Passions",
                               },
-                              { label: Text, name: text, widget: markdown },
+                              { label: { Text, name: text, widget: markdown },
                             ],
                         },
                       ],
@@ -437,7 +437,7 @@ collections:
                     default: empty,
                   },
                   { label: Description, name: description, widget: string },
-                  { label: Button Text, name: buttonText, widget: string },
+                  { label: Button { Text, name: button{ Text, widget: string },
                   { label: Button Path, name: buttonPath, widget: string },
                   {
                     label: "Shade",
@@ -445,6 +445,161 @@ collections:
                     widget: "select",
                     options: ["light", "dark"],
                     default: "light",
+                  },
+                ],
+            }
+
+      - file: src/templates/cv-page/index.md
+        label: CV
+        name: cv
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: cv-page,
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+              label: Colors,
+              name: colors,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Light,
+                    name: light,
+                    widget: string,
+                    default: "white",
+                  },
+                  { label: Dark, name: dark, widget: string, default: "black" },
+                ],
+            }
+          - {
+              label: "Shade",
+              name: "shade",
+              widget: "select",
+              options: ["light", "dark"],
+              default: "dark",
+            },
+            {
+              label: Summary,
+              name: summary,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: { Text, name: text, widget: markdown },
+                  {
+                    label: Button,
+                    name: button,
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: Text,
+                          name: text,
+                          widget: string,
+                          default: Download PDF,
+                        },
+                        { label: File, name: file, widget: file },
+                      ],
+                  },
+                ],
+            },
+            {
+              label: Work,
+              name: work,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    default: "Work",
+                  },
+                  {
+                    label: Jobs,
+                    name: jobs,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Company, name: company, widget: string },
+                        { label: Date, name: date, widget: string },
+                        { label: Role, name: role, widget: string },
+                        { label: { Text, name: text, widget: markdown },
+                      ],
+                  },
+                ],
+            },
+            {
+              label: Education,
+              name: education,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    default: "Education",
+                  },
+                  {
+                    label: qualifications,
+                    name: qualifications,
+                    widget: list,
+                    fields:
+                      [
+                        { label: School, name: school, widget: string },
+                        { label: Type, name: type, widget: string },
+                        { label: Role, name: role, widget: string },
+                        { label: { Text, name: text, widget: markdown },
+                      ],
+                  },
+                ],
+            },
+            {
+              label: Personal,
+              name: personal,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Heading,
+                    name: heading,
+                    widget: string,
+                    default: "Personal",
+                  },
+                  {
+                    label: Skills,
+                    name: skills,
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: Heading,
+                          name: heading,
+                          widget: string,
+                          default: "Skills",
+                        },
+                        { label: { Text, name: text, widget: markdown },
+                      ],
+                  },
+                  {
+                    label: Passions,
+                    name: passions,
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: Heading,
+                          name: heading,
+                          widget: string,
+                          default: "Passions",
+                        },
+                        { label: { Text, name: text, widget: markdown },
+                      ],
                   },
                 ],
             }

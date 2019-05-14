@@ -7,16 +7,21 @@ import { H2 } from "components/Text";
 export const Title = styled(H2)`
   letter-spacing: -1px;
   margin: 20px auto 80px;
-  font-size: ${theme.font.size.alpha};
+  font-size: ${theme.font.size.mega};
+
+  @media (max-width: ${theme.size.tablet}) {
+    margin: 0 auto 50px;
+    font-size: ${theme.font.size.beta};
+  }
 `;
 
 export const CloseButton = styled.button`
   border: none;
-  position: absolute;
+  position: fixed;
   cursor: pointer;
   height: 41px;
   width: 41px;
-  top: -80px;
+  top: 20px;
   right: 20px;
   overflow: hidden;
   padding: 6.5px 7px 6.5px 11px;
@@ -51,14 +56,6 @@ export const CloseButton = styled.button`
     transform-origin: 4.5px;
     transition: ${theme.transition};
     background-color: ${props => (props.colors ? props.colors.light : "white")};
-
-    @media (max-width: ${theme.size.mobile}) {
-      transform-origin: 0.5px;
-    }
-
-    @media (max-width: 420px) {
-      transform-origin: 1.2px;
-    }
   }
 
   span::after {

@@ -3,7 +3,7 @@ import styledMap from "styled-map";
 import { transparentize } from "polished";
 
 import theme from "config/theme";
-import StyledText, { H4 } from "components/Text";
+import { Text as StyledText, H4 } from "components/Text";
 
 export const Wrapper = styled.div`
   padding: 50px 40px 40px;

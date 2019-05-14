@@ -16,7 +16,7 @@ import { transparentize } from "polished";
 
 import theme from "config/theme";
 
-const Text = styled.div`
+export const Text = styled.div`
   ${flex};
   ${color};
   ${space};
@@ -27,8 +27,6 @@ const Text = styled.div`
   ${fontWeight};
   ${letterSpacing};
 `;
-
-export default Text;
 
 const H1Text = Text.withComponent("h1");
 export const H1 = styled(H1Text)`

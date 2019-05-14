@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { transparentize, darken } from "polished";
 
 import theme from "config/theme";
-import Text, { H4 } from "components/Text";
+import { Text, H4 } from "components/Text";
 import StyledImage from "components/Image";
 
 export const Image = styled(StyledImage)`

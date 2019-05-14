@@ -84,7 +84,7 @@ function useWindowScrollPosition(options = {}) {
   return scroll;
 }
 
-function toggleScroll(isScrollable, isDesktop) {
+function toggleScroll(isScrollable) {
   if (typeof window === "undefined") {
     return null;
   }
@@ -113,20 +113,9 @@ function toggleScroll(isScrollable, isDesktop) {
   };
 
   if (isScrollable) {
-    // window.removeEventListener("DOMMouseScroll", wheel);
-    // window.onmousewheel = document.onmousewheel = document.onkeydown = null;
-    // document.removeEventListener("touchmove", preventScrollDefault);
-
-    isDesktop &&
-      wrapper.addEventListener("wheel", replaceVerticalScrollByHorizontal);
+    wrapper.addEventListener("wheel", replaceVerticalScrollByHorizontal);
   } else {
-    // window.addEventListener("DOMMouseScroll", wheel);
-    // window.onmousewheel = document.onmousewheel = wheel;
-    // document.onkeydown = keydown;
-    // document.addEventListener("touchmove", preventScrollDefault);
-
-    isDesktop &&
-      wrapper.removeEventListener("wheel", replaceVerticalScrollByHorizontal);
+    wrapper.removeEventListener("wheel", replaceVerticalScrollByHorizontal);
   }
 }
 

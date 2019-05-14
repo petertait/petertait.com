@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { navigate } from "@reach/router";
-import { useLocation, useMedia } from "react-use";
+import { useLocation, useMedia, useMount, useUnmount } from "react-use";
 
 import theme from "config/theme";
 import { toggleScroll } from "config/utils";
@@ -20,10 +20,12 @@ export const AboutPageTemplate = ({ page }) => {
   const toggleCV = () => {
     if (location.search === "?cv") {
       navigate(location.pathname);
-      toggleScroll(true, isDesktop);
+      isDesktop && toggleScroll(true);
+      isDesktop && document.body.classList.add("no-scroll");
     } else {
+      toggleScroll(false);
       navigate(`?${page.bio.textButton.navigate}`);
-      toggleScroll(false, isDesktop);
+      document.body.classList.remove("no-scroll");
     }
   };
 

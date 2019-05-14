@@ -1,14 +1,15 @@
-import React from "react";
-import { useMedia, useMount } from "react-use";
+import React, { useEffect } from "react";
+import { useMedia, useMount, useLocation } from "react-use";
 
 import theme from "config/theme";
 import { replaceVerticalScrollByHorizontal } from "config/utils";
 
 import { Wrapper } from "./styles";
 
-const HorizontalLayout = ({ children }) => {
+const HorizontalLayout = ({ location, children }) => {
   useMount(() => {
-    if (typeof window !== "undefined") {
+    console.log(location);
+    if (typeof window !== "undefined" && location.search !== "?cv") {
       const wrapper = document.querySelector(".tl-edges");
       wrapper.addEventListener("wheel", replaceVerticalScrollByHorizontal);
     }
@@ -29,12 +30,13 @@ const VerticalLayout = ({ children }) => {
 };
 
 const Scroller = ({ colors, children }) => {
+  const location = useLocation();
   const isDesktop = useMedia(`(min-width: ${theme.size.desktop})`);
 
   return (
     <Wrapper colors={colors}>
       {isDesktop ? (
-        <HorizontalLayout>{children}</HorizontalLayout>
+        <HorizontalLayout location={location}>{children}</HorizontalLayout>
       ) : (
         <VerticalLayout>{children}</VerticalLayout>
       )}

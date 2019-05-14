@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 
 import { useOnClickOutside } from "config/utils";
-import { H3, H4 } from "components/Text";
-import Grid, { Container, Column } from "components/Grid";
+import { H2, H3, H4 } from "components/Text";
+import { Grid, Container, Column } from "components/Grid";
 
 import Header from "./Header";
 
@@ -18,14 +18,14 @@ const CV = ({ content, colors, onClose, isVisible }) => {
         <Inner colors={colors} ref={ref}>
           <Header content={content} colors={colors} onClose={onClose} />
           <Grid>
-            <H3>{content.work.heading}</H3>
+            <H2>{content.work.heading}</H2>
             {content.work.jobs.map((job, index) => (
               <Container key={index} pt="50px">
-                <Column width="40%">
+                <Column width={["100%", "40%"]}>
                   <H4>{job.company}</H4>
                   <Date>{job.date}</Date>
                 </Column>
-                <Column width="60%">
+                <Column width={["100%", "60%"]}>
                   <H4>{job.role}</H4>
                   <Text dangerouslySetInnerHTML={{ __html: job.text }} />
                 </Column>

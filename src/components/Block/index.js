@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
-import { useMount } from "react-use";
+import { useMedia, useMount } from "react-use";
 
+import theme from "config/theme";
 import { markdownify, useWindowScrollPosition } from "config/utils";
 import { Column } from "components/Grid";
 import Button from "components/Button";
@@ -9,6 +10,7 @@ import HeroBlock from "./HeroBlock";
 import { Wrapper, Inner, Header, Heading, Subheading, Text } from "./styles";
 
 const Block = ({ width, colors, content, children, ...props }) => {
+  const isTablet = useMedia(`(min-width: ${theme.size.tablet})`);
   const wrapper = useRef(null);
   const [ref, setRef] = useState(null);
   const x = useWindowScrollPosition();
@@ -36,12 +38,14 @@ const Block = ({ width, colors, content, children, ...props }) => {
               )}
             </Column>
           )}
-          <Button
-            size="small"
-            colors={colors}
-            shade={content.shade}
-            content={content.button}
-          />
+          {isTablet && (
+            <Button
+              size="small"
+              colors={colors}
+              shade={content.shade}
+              content={content.button}
+            />
+          )}
         </Header>
         {content.text && (
           <Text
@@ -49,6 +53,15 @@ const Block = ({ width, colors, content, children, ...props }) => {
           />
         )}
         {children}
+        {!isTablet && (
+          <Button
+            mt="40px"
+            size="small"
+            colors={colors}
+            shade={content.shade}
+            content={content.button}
+          />
+        )}
       </Inner>
     </Wrapper>
   );

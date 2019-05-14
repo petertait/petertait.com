@@ -42,8 +42,8 @@ const Menu = ({ colors }) => {
         <Nav isVisible={isVisible}>
           <NavButton
             cover
-            duration={0.6}
             to="work"
+            duration={0.6}
             activeClassName="active"
             bg={colors ? darken(0.1, colors.dark) : "black"}
           >
@@ -51,8 +51,8 @@ const Menu = ({ colors }) => {
           </NavButton>
           <NavButton
             cover
-            duration={0.6}
             to="about"
+            duration={0.6}
             activeClassName="active"
             bg={colors ? darken(0.1, colors.dark) : "black"}
           >
@@ -60,8 +60,8 @@ const Menu = ({ colors }) => {
           </NavButton>
           <NavButton
             cover
-            duration={0.6}
             to="contact"
+            duration={0.6}
             activeClassName="active"
             bg={colors ? darken(0.1, colors.dark) : "black"}
           >
