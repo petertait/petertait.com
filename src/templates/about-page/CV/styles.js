@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { darken, transparentize } from "polished";
+import { space } from "styled-system";
 
 import theme from "config/theme";
+import { Grid } from "components/Grid";
+import { Text as StyledText, Markdown } from "components/Text";
 
 export const Wrapper = styled.div`
   top: 0;
@@ -50,7 +53,6 @@ export const Inner = styled.div`
   display: flex;
   flex-direction: column;
   -webkit-overflow-scrolling: touch;
-  padding: 100px 0;
   background-color: ${props => (props.colors ? props.colors.dark : "black")};
   box-shadow: 0 0 10px
       ${props =>
@@ -60,15 +62,26 @@ export const Inner = styled.div`
         transparentize(0.4, props.colors ? props.colors.dark : "black")};
 `;
 
-export const Date = styled.div`
+export const Section = styled(Grid)`
+  padding: 80px ${theme.gutter.medium};
+  border-top: 1px solid ${props => transparentize(0.9, props.colors.light)};
+`;
+
+export const Subtitle = styled(StyledText)`
   opacity: 0.5;
+  font-size: ${theme.font.size.zeta};
 
   @media (max-width: ${theme.size.tablet}) {
     margin-bottom: 10px;
+
+    ${space};
   }
 `;
 
-export const Text = styled.div`
+export const Text = styled(Markdown)`
+  opacity: 0.8;
+  font-size: ${theme.font.size.zeta};
+
   @media (max-width: ${theme.size.tablet}) {
     margin: 10px auto;
   }

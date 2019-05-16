@@ -8,7 +8,6 @@ import { Wrapper } from "./styles";
 
 const HorizontalLayout = ({ location, children }) => {
   useMount(() => {
-    console.log(location);
     if (typeof window !== "undefined" && location.search !== "?cv") {
       const wrapper = document.querySelector(".tl-edges");
       wrapper.addEventListener("wheel", replaceVerticalScrollByHorizontal);

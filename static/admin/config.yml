@@ -344,7 +344,7 @@ collections:
                             [
                               { label: School, name: school, widget: string },
                               { label: Type, name: type, widget: string },
-                              { label: Role, name: role, widget: string },
+                              { label: Date, name: date, widget: string },
                               { label: { Text, name: text, widget: markdown },
                             ],
                         },

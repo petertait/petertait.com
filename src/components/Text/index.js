@@ -1,3 +1,7 @@
+import React from "react";
+import remark from "remark";
+import recommended from "remark-preset-lint-recommended";
+import remarkHtml from "remark-html";
 import styled from "styled-components";
 import styledMap from "styled-map";
 import {
@@ -17,6 +21,8 @@ import { transparentize } from "polished";
 import theme from "config/theme";
 
 export const Text = styled.div`
+  width: 100%;
+
   ${flex};
   ${color};
   ${space};
@@ -27,6 +33,20 @@ export const Text = styled.div`
   ${fontWeight};
   ${letterSpacing};
 `;
+
+export const Markdown = ({ content, ...props }) => {
+  const text = remark()
+    .use(recommended)
+    .use(remarkHtml)
+    .processSync(content)
+    .toString();
+
+  return (
+    <Text {...props}>
+      <div dangerouslySetInnerHTML={{ __html: text }} />
+    </Text>
+  );
+};
 
 const H1Text = Text.withComponent("h1");
 export const H1 = styled(H1Text)`

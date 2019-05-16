@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { navigate } from "@reach/router";
-import { useLocation, useMedia, useMount, useUnmount } from "react-use";
+import { useLocation, useMedia } from "react-use";
 
 import theme from "config/theme";
 import { toggleScroll } from "config/utils";

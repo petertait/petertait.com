@@ -2,15 +2,24 @@ import styled from "styled-components";
 import { darken, transparentize } from "polished";
 
 import theme from "config/theme";
-import { H2 } from "components/Text";
+import { Grid } from "components/Grid";
+import { Markdown, H2 } from "components/Text";
+
+export const Wrapper = styled(Grid)`
+  padding: 100px ${theme.gutter.medium} 80px;
+`;
 
 export const Title = styled(H2)`
   letter-spacing: -1px;
-  margin: 20px auto 80px;
+  margin: 20px auto 60px;
   font-size: ${theme.font.size.mega};
 
   @media (max-width: ${theme.size.tablet}) {
     margin: 0 auto 50px;
+    font-size: ${theme.font.size.alpha};
+  }
+
+  @media (max-width: ${theme.size.mobile}) {
     font-size: ${theme.font.size.beta};
   }
 `;
@@ -84,4 +93,7 @@ export const CloseButton = styled.button`
   }
 `;
 
-export const Text = styled.div``;
+export const Text = styled(Markdown)`
+  opacity: 0.8;
+  font-size: ${theme.font.size.zeta};
+`;
