@@ -1,36 +1,23 @@
 import styled from "styled-components";
-import styledMap from "styled-map";
+import { transparentize } from "polished";
 
-import theme from "config/theme";
-import { H5 } from "components/Text";
 import { CarouselButton } from "components/Carousel";
 
 export const Wrapper = styled.div`
-  overflow: visible;
-  height: 100vh;
-  padding: 100px 0;
-  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  overflow: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 80px;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 `;
 
 export const Logo = styled.img`
   width: 100%;
-  height: 166px;
+  height: 170px;
   display: block;
   padding: 0 30px;
-
-  ${"" /* height: 16%;
-
-  @media (max-height: 1200px) {
-    height: 20%;
-  }
-
-  @media (max-height: 900px) {
-    height: 25%;
-  }
-
-  @media (max-height: 700px) {
-    height: 33%;
-  } */}
 `;
 
 export const Nav = styled.div`
@@ -42,6 +29,12 @@ export const Nav = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 100px 15px 15px;
+  background: ${props => `linear-gradient(
+    to bottom,
+    ${transparentize(1, props.colors ? props.colors.light : "white")} 0%,
+    ${props.colors ? props.colors.light : "white"} 85%
+  )`};
 `;
 
 export const NavButton = styled(CarouselButton)``;

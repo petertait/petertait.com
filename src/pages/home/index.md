@@ -38,10 +38,10 @@ clients:
   heading: Selected Clients
   subheading: ""
   client:
-    - name: Intel
-      logo: /media/intel.svg
     - name: HSBC
       logo: /media/hsbc.svg
+    - name: Intel
+      logo: /media/intel.svg
     - name: AstraZeneca
       logo: /media/astrazeneca.svg
     - name: National Grid

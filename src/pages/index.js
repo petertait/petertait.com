@@ -10,6 +10,10 @@ import Clients from "templates/home-page/Clients";
 
 export const HomePageTemplate = ({ page }) => (
   <>
+    <HeroBlock content={page.hero} colors={page.colors} />
+    <Block content={page.services} colors={page.colors}>
+      <Services content={page.services} colors={page.colors} />
+    </Block>
     <Block
       p="0"
       width="280px"
@@ -19,11 +23,6 @@ export const HomePageTemplate = ({ page }) => (
     >
       <Clients content={page.clients} colors={page.colors} />
     </Block>
-    <HeroBlock content={page.hero} colors={page.colors} />
-    <Block content={page.services} colors={page.colors}>
-      <Services content={page.services} colors={page.colors} />
-    </Block>
-
     <Block content={page.works} colors={page.colors}>
       <Works content={page.works} colors={page.colors} />
     </Block>
