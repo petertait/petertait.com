@@ -6,7 +6,8 @@ import {
   width,
   zIndex,
   maxWidth,
-  boxShadow
+  boxShadow,
+  justifyContent
 } from "styled-system";
 import { darken } from "polished";
 
@@ -78,6 +79,7 @@ export const Inner = styled.div`
 
   ${width};
   ${space};
+  ${justifyContent};
 
   &.pinned {
     position: fixed;
@@ -85,12 +87,15 @@ export const Inner = styled.div`
 
   @media (max-height: ${theme.size.maxHeight}) {
     padding-top: 100px;
+
+    ${space};
   }
 
   @media (max-width: ${theme.size.desktop}) {
     padding: 80px ${theme.gutter.medium};
     width: 100%;
     max-width: 100%;
+
     ${space};
   }
 

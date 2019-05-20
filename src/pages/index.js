@@ -10,13 +10,20 @@ import Clients from "templates/home-page/Clients";
 
 export const HomePageTemplate = ({ page }) => (
   <>
+    <Block
+      p="0"
+      width="280px"
+      justifyContent="flex-start"
+      colors={page.colors}
+      content={page.clients}
+    >
+      <Clients content={page.clients} colors={page.colors} />
+    </Block>
     <HeroBlock content={page.hero} colors={page.colors} />
     <Block content={page.services} colors={page.colors}>
       <Services content={page.services} colors={page.colors} />
     </Block>
-    <Block px="30px" width="280px" colors={page.colors} content={page.clients}>
-      <Clients content={page.clients} colors={page.colors} />
-    </Block>
+
     <Block content={page.works} colors={page.colors}>
       <Works content={page.works} colors={page.colors} />
     </Block>
