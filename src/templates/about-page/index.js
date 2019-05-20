@@ -6,10 +6,16 @@ import { useLocation, useMedia } from "react-use";
 
 import theme from "config/theme";
 import { toggleScroll } from "config/utils";
-
+import { Column } from "components/Grid";
 import Layout from "components/Layout";
 import Button from "components/Button";
-import Block, { HeroBlock } from "components/Block";
+import Block, {
+  HeroBlock,
+  Header,
+  Heading,
+  Subheading,
+  Text
+} from "components/Block";
 
 import CV from "./CV";
 
@@ -32,7 +38,18 @@ export const AboutPageTemplate = ({ page }) => {
   return (
     <>
       <HeroBlock colors={page.colors} content={page.hero} />
-      <Block width="1200px" content={page.bio} colors={page.colors}>
+      <Block content={page.bio} colors={page.colors}>
+        <Header>
+          {(page.bio.heading || page.bio.subheading) && (
+            <Column flex="1" width="auto" justifyContent="center">
+              {page.bio.heading && <Heading>{page.bio.heading}</Heading>}
+              {page.bio.subheading && (
+                <Subheading content={page.bio.subheading} />
+              )}
+            </Column>
+          )}
+        </Header>
+        {page.bio.text && <Text content={page.bio.text} />}
         {page.bio.textButton && (
           <Button
             cover

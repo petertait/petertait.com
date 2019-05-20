@@ -96,10 +96,42 @@ collections:
                     fields:
                       [
                         { label: Heading, name: heading, widget: string },
-                        { label: { Text, name: text, widget: string },
+                        { label: Text, name: text, widget: string },
                         {
                           label: Image,
                           name: image,
+                          widget: file,
+                          allow_multiple: false,
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Clients,
+              name: clients,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Shade",
+                    name: "shade",
+                    widget: "select",
+                    options: ["light", "dark"],
+                    default: "dark",
+                  },
+                  { label: Heading, name: heading, widget: string },
+                  { label: Subheading, name: subheading, widget: text },
+                  {
+                    label: Client,
+                    name: client,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Name, name: name, widget: string },
+                        {
+                          label: Logo,
+                          name: logo,
                           widget: file,
                           allow_multiple: false,
                         },
@@ -121,7 +153,7 @@ collections:
                     default: "light",
                   },
                   { label: Heading, name: heading, widget: string },
-                  { label: { Text, name: text, widget: string },
+                  { label: Text, name: text, widget: string },
                   {
                     label: Button,
                     name: button,
@@ -235,7 +267,7 @@ collections:
                   },
                   { label: Heading, name: heading, widget: string },
                   { label: Subheading, name: subheading, widget: text },
-                  { label: { Text, name: text, widget: markdown },
+                  { label: Text, name: text, widget: markdown },
                   {
                     label: Button,
                     name: textButton,
@@ -280,7 +312,7 @@ collections:
                     fields:
                       [
                         { label: Heading, name: heading, widget: string },
-                        { label: { Text, name: text, widget: markdown },
+                        { label: Text, name: text, widget: markdown },
                         {
                           label: Button,
                           name: button,
@@ -319,7 +351,7 @@ collections:
                               { label: Company, name: company, widget: string },
                               { label: Date, name: date, widget: string },
                               { label: Role, name: role, widget: string },
-                              { label: { Text, name: text, widget: markdown },
+                              { label: Text, name: text, widget: markdown },
                             ],
                         },
                       ],
@@ -345,7 +377,7 @@ collections:
                               { label: School, name: school, widget: string },
                               { label: Type, name: type, widget: string },
                               { label: Date, name: date, widget: string },
-                              { label: { Text, name: text, widget: markdown },
+                              { label: Text, name: text, widget: markdown },
                             ],
                         },
                       ],
@@ -374,7 +406,7 @@ collections:
                                 widget: string,
                                 default: "Skills",
                               },
-                              { label: { Text, name: text, widget: markdown },
+                              { label: Text, name: text, widget: markdown },
                             ],
                         },
                         {
@@ -389,7 +421,7 @@ collections:
                                 widget: string,
                                 default: "Passions",
                               },
-                              { label: { Text, name: text, widget: markdown },
+                              { label: Text, name: text, widget: markdown },
                             ],
                         },
                       ],
@@ -430,6 +462,13 @@ collections:
               fields:
                 [
                   {
+                    label: "Shade",
+                    name: "shade",
+                    widget: "select",
+                    options: ["light", "dark"],
+                    default: "light",
+                  },
+                  {
                     label: Heading,
                     name: heading,
                     widget: string,
@@ -437,14 +476,25 @@ collections:
                     default: empty,
                   },
                   { label: Description, name: description, widget: string },
-                  { label: Button { Text, name: button{ Text, widget: string },
-                  { label: Button Path, name: buttonPath, widget: string },
                   {
-                    label: "Shade",
-                    name: "shade",
-                    widget: "select",
-                    options: ["light", "dark"],
-                    default: "light",
+                    label: Button,
+                    name: button,
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: Text,
+                          name: text,
+                          widget: string,
+                          default: Return home,
+                        },
+                        {
+                          label: Path,
+                          name: navigate,
+                          widget: string,
+                          default: /,
+                        },
+                      ],
                   },
                 ],
             }

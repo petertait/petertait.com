@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useMedia, useMount, useLocation } from "react-use";
 
 import theme from "config/theme";

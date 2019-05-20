@@ -1,6 +1,8 @@
 import React from "react";
 import { darken } from "polished";
 
+import theme from "config/theme";
+
 import { Wrapper, Arrow } from "./styles";
 
 const Button = ({ as, content, colors, ...props }) => {
@@ -39,7 +41,7 @@ const Button = ({ as, content, colors, ...props }) => {
     <Wrapper
       as={as}
       colors={colors}
-      duration={0.6}
+      duration={theme.duration}
       to={content.path}
       href={as === "a" && content.path}
       bg={colors ? darken(0.1, colors.dark) : "black"}

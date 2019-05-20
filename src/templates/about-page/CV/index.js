@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 
 import { useOnClickOutside } from "config/utils";
 import { H3, H4 } from "components/Text";
-import { Grid, Container, Column } from "components/Grid";
+import { Container, Column } from "components/Grid";
 
 import Header from "./Header";
 

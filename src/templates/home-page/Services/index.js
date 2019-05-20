@@ -1,24 +1,33 @@
 import React from "react";
 
-import Service from "./Service";
+import { Column } from "components/Grid";
+import { Header, Heading, Subheading } from "components/Block";
 
-import { Wrapper, Inner } from "./styles";
+import Service from "./Service";
+import { Inner } from "./styles";
 
 const Services = ({ content, colors }) => {
-  const shade = content.shade;
   return (
-    <Wrapper>
+    <>
+      <Header>
+        {(content.heading || content.subheading) && (
+          <Column flex="1" width="auto" justifyContent="center">
+            {content.heading && <Heading>{content.heading}</Heading>}
+            {content.subheading && <Subheading content={content.subheading} />}
+          </Column>
+        )}
+      </Header>
       <Inner>
-        {content.service.map((content, index) => (
+        {content.service.map((service, index) => (
           <Service
-            content={content}
             key={index}
             colors={colors}
-            shade={shade}
+            content={service}
+            shade={content.shade}
           />
         ))}
       </Inner>
-    </Wrapper>
+    </>
   );
 };
 

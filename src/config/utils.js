@@ -90,27 +90,27 @@ function toggleScroll(isScrollable) {
   }
 
   const wrapper = document.querySelector(".tl-edges");
-  const keys = [32, 33, 34, 35, 36, 37, 38, 39, 40];
+  // const keys = [32, 33, 34, 35, 36, 37, 38, 39, 40];
 
-  const preventScrollDefault = event => {
-    event = event || window.event;
+  // const preventScrollDefault = event => {
+  //   event = event || window.event;
+  //
+  //   if (event.preventDefault) event.preventDefault();
+  //   event.returnValue = false;
+  // };
 
-    if (event.preventDefault) event.preventDefault();
-    event.returnValue = false;
-  };
-
-  const keydown = event => {
-    for (let index = keys.length; index--; ) {
-      if (event.keyCode === keys[index]) {
-        preventScrollDefault(event);
-        return;
-      }
-    }
-  };
-
-  const wheel = event => {
-    preventScrollDefault(event);
-  };
+  // const keydown = event => {
+  //   for (let index = keys.length; index--; ) {
+  //     if (event.keyCode === keys[index]) {
+  //       preventScrollDefault(event);
+  //       return;
+  //     }
+  //   }
+  // };
+  //
+  // const wheel = event => {
+  //   preventScrollDefault(event);
+  // };
 
   if (isScrollable) {
     wrapper.addEventListener("wheel", replaceVerticalScrollByHorizontal);

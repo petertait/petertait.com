@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { darken } from "polished";
 
+import theme from "config/theme";
 import { useOnClickOutside } from "config/utils";
 
 import LogoIcon from "./logo.svg";
@@ -33,7 +34,7 @@ const Menu = ({ colors }) => {
         to="/"
         title="Logo"
         colors={colors}
-        duration={0.6}
+        duration={theme.duration}
         bg={colors ? darken(0.1, colors.dark) : "black"}
       >
         <LogoIcon />
@@ -43,7 +44,7 @@ const Menu = ({ colors }) => {
           <NavButton
             cover
             to="work"
-            duration={0.6}
+            duration={theme.duration}
             activeClassName="active"
             bg={colors ? darken(0.1, colors.dark) : "black"}
           >
@@ -52,7 +53,7 @@ const Menu = ({ colors }) => {
           <NavButton
             cover
             to="about"
-            duration={0.6}
+            duration={theme.duration}
             activeClassName="active"
             bg={colors ? darken(0.1, colors.dark) : "black"}
           >
@@ -61,7 +62,7 @@ const Menu = ({ colors }) => {
           <NavButton
             cover
             to="contact"
-            duration={0.6}
+            duration={theme.duration}
             activeClassName="active"
             bg={colors ? darken(0.1, colors.dark) : "black"}
           >

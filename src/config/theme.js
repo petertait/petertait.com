@@ -37,7 +37,9 @@ const theme = {
     tiny: "25px"
   },
 
-  transition: "0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86)"
+  transition: "0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86)",
+
+  duration: 0.6
 };
 
 export default theme;

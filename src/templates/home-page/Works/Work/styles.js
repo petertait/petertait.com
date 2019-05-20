@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { transparentize, darken } from "polished";
 
 import theme from "config/theme";
-import { Text, H4 } from "components/Text";
+import { H4, H5 } from "components/Text";
 import StyledImage from "components/Image";
 
 export const Image = styled(StyledImage)`
@@ -22,10 +22,9 @@ export const Image = styled(StyledImage)`
   }
 `;
 
-export const Client = styled(Text)`
+export const Client = styled(H5)`
   opacity: 0.5;
   transition: ${theme.transition};
-  font-size: ${theme.font.size.epsilon};
 `;
 
 export const Wrapper = styled.div`

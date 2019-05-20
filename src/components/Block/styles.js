@@ -1,27 +1,29 @@
 import styled from "styled-components";
 import styledMap from "styled-map";
 import {
+  color,
   space,
   width,
   zIndex,
-  position,
   maxWidth,
-  justifyContent
+  boxShadow
 } from "styled-system";
 import { darken } from "polished";
 
 import theme from "config/theme";
-
-import { Text as StyledText, H3 } from "components/Text";
+import { Markdown, H3 } from "components/Text";
 import { Wrapper as Button } from "components/Button/styles";
 
 export const Wrapper = styled.div`
   display: flex;
   z-index: 1;
   flex-shrink: 0;
-  min-height: 100vh;
+  height: 100vh;
+  width: calc(100vw - 100px);
   white-space: normal;
   position: relative;
+  overflow: hidden;
+  max-width: 1300px;
 
   color: ${styledMap("shade", {
     dark: props => (props.colors ? props.colors.light : "white"),
@@ -33,18 +35,21 @@ export const Wrapper = styled.div`
     default: props => (props.colors ? props.colors.light : "white")
   })};
 
+  ${color};
   ${width};
   ${zIndex};
   ${maxWidth};
 
   & + & {
-    box-shadow: -100px 0 300px
+    box-shadow: 0 0 300px
       ${styledMap("shade", {
-        dark: props => darken(0.03, props.colors ? props.colors.dark : "black"),
+        dark: props => darken(0.08, props.colors ? props.colors.dark : "black"),
         default: props =>
-          darken(0.03, props.colors ? props.colors.light : "white")
+          darken(0.1, props.colors ? props.colors.light : "white")
       })};
   }
+
+  ${boxShadow};
 
   &:last-child {
     flex: 1;
@@ -61,18 +66,18 @@ export const Inner = styled.div`
   top: 0;
   left: 0;
   display: flex;
-  min-height: 100vh;
+  width: calc(100vw - 100px);
+  max-width: 1300px;
+  height: 100vh;
+  position: absolute;
   align-content: center;
   flex-direction: column;
   justify-content: center;
-  padding: 110px 80px 20px;
   transform: translateZ(0);
+  padding: 110px 80px 20px;
 
-  ${space};
   ${width};
-  ${maxWidth};
-  ${position};
-  ${justifyContent};
+  ${space};
 
   &.pinned {
     position: fixed;
@@ -83,11 +88,9 @@ export const Inner = styled.div`
   }
 
   @media (max-width: ${theme.size.desktop}) {
-    min-height: 0;
-    max-width: 100%;
-    width: 100%;
     padding: 80px ${theme.gutter.medium};
-
+    width: 100%;
+    max-width: 100%;
     ${space};
   }
 
@@ -121,12 +124,12 @@ export const Heading = styled(H3)`
   margin: 0;
 `;
 
-export const Subheading = styled(StyledText)`
+export const Subheading = styled(Markdown)`
   margin-top: 20px;
   font-size: ${theme.font.size.upsilon};
 `;
 
-export const Text = styled(StyledText)`
+export const Text = styled(Markdown)`
   margin-top: 30px;
 
   @media (min-width: ${theme.size.tablet}) {

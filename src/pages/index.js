@@ -6,14 +6,18 @@ import Layout from "components/Layout";
 import Block, { HeroBlock } from "components/Block";
 import Services from "templates/home-page/Services";
 import Works from "templates/home-page/Works";
+import Clients from "templates/home-page/Clients";
 
 export const HomePageTemplate = ({ page }) => (
   <>
     <HeroBlock content={page.hero} colors={page.colors} />
-    <Block width="1200px" content={page.services} colors={page.colors}>
+    <Block content={page.services} colors={page.colors}>
       <Services content={page.services} colors={page.colors} />
     </Block>
-    <Block width="1300px" content={page.works} colors={page.colors}>
+    <Block px="30px" width="280px" colors={page.colors} content={page.clients}>
+      <Clients content={page.clients} colors={page.colors} />
+    </Block>
+    <Block content={page.works} colors={page.colors}>
       <Works content={page.works} colors={page.colors} />
     </Block>
   </>
@@ -63,6 +67,17 @@ export const homePageQuery = graphql`
             heading
             text
             image {
+              relativePath
+            }
+          }
+        }
+        clients {
+          shade
+          heading
+          subheading
+          client {
+            name
+            logo {
               relativePath
             }
           }

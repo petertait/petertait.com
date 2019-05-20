@@ -5,20 +5,19 @@ import { H1 } from "components/Text";
 
 import { Wrapper, Inner } from "./styles";
 
-const HeroBlock = ({ content, colors, width, maxWidth }) => {
+const HeroBlock = ({ colors, content, width, maxWidth }) => {
   return (
     <Wrapper
-      width={width}
       colors={colors}
+      width={width}
       maxWidth={maxWidth}
       shade={content.shade}
     >
       <Inner
-        width={width}
         colors={colors}
+        width={width}
         maxWidth={maxWidth}
         shade={content.shade}
-        image={content.background && content.background.relativePath}
       >
         {content.heading && (
           <H1 colors={colors} shade={content.shade}>

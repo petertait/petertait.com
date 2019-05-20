@@ -5,7 +5,6 @@ colors:
   dark: "#002AB1"
   light: "#F1FAFF"
 hero:
-  background: /media/pattern-1.svg
   button:
     path: about
     text: Available for Freelance
@@ -34,6 +33,29 @@ services:
     Clients range from global corporations to startups. Services offered to
     these clients have included virtual reality experience design, branding,
     product design and development.
+clients:
+  shade: light
+  heading: Selected Clients
+  subheading: ""
+  client:
+    - name: Intel
+      logo: /media/intel.svg
+    - name: HSBC
+      logo: /media/hsbc.svg
+    - name: AstraZeneca
+      logo: /media/astrazeneca.svg
+    - name: National Grid
+      logo: /media/national-grid.svg
+    - name: Pearson
+      logo: /media/pearson.svg
+    - name: IUCN
+      logo: /media/iucn.svg
+    - name: Lloyds Banking
+      logo: /media/lloyds.svg
+    - name: National Express
+      logo: /media/national-express.svg
+    - name: World Bank
+      logo: /media/world-bank.svg
 works:
   heading: Selected Works
   shade: light

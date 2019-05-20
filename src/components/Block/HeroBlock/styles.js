@@ -23,11 +23,11 @@ export const Wrapper = styled.div`
   }
 
   & + ${Block} {
-    box-shadow: -100px 0 300px
+    box-shadow: -60px 0 300px
       ${styledMap("shade", {
         dark: props => darken(0.03, props.colors ? props.colors.dark : "black"),
         default: props =>
-          darken(0.03, props.colors ? props.colors.light : "white")
+          darken(0.05, props.colors ? props.colors.light : "white")
       })};
   }
 `;
