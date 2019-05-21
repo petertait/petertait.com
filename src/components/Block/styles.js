@@ -42,12 +42,15 @@ export const Wrapper = styled.div`
   ${maxWidth};
 
   & + & {
-    box-shadow: 0 0 300px
-      ${styledMap("shade", {
-        dark: props => darken(0.08, props.colors ? props.colors.dark : "black"),
-        default: props =>
-          darken(0.1, props.colors ? props.colors.light : "white")
-      })};
+    @media (min-width: ${theme.size.desktop}) {
+      box-shadow: 0 0 300px
+        ${styledMap("shade", {
+          dark: props =>
+            darken(0.1, props.colors ? props.colors.dark : "black"),
+          default: props =>
+            darken(0.1, props.colors ? props.colors.light : "white")
+        })};
+    }
   }
 
   ${boxShadow};
@@ -57,6 +60,7 @@ export const Wrapper = styled.div`
   }
 
   @media (max-width: ${theme.size.desktop}) {
+    height: auto;
     min-height: 0;
     max-width: 100%;
     width: 100%;
@@ -70,7 +74,7 @@ export const Inner = styled.div`
   width: calc(100vw - 100px);
   max-width: 1300px;
   height: 100vh;
-  position: absolute;
+  position: relative;
   align-content: center;
   flex-direction: column;
   justify-content: center;
@@ -95,6 +99,7 @@ export const Inner = styled.div`
     padding: 80px ${theme.gutter.medium};
     width: 100%;
     max-width: 100%;
+    height: auto;
 
     ${space};
   }

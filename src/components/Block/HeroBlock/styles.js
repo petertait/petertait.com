@@ -1,13 +1,24 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import styledMap from "styled-map";
 import { width, maxWidth } from "styled-system";
 import { darken } from "polished";
 
 import theme from "config/theme";
-
+import { H1 } from "components/Text";
 import { Wrapper as Button } from "components/Button/styles";
-
 import { Wrapper as Block } from "../styles";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+`;
 
 export const Wrapper = styled.div`
   position: relative;
@@ -29,6 +40,17 @@ export const Wrapper = styled.div`
         default: props =>
           darken(0.05, props.colors ? props.colors.light : "white")
       })};
+  }
+
+  ${H1}, ${Button} {
+    opacity: 0;
+    transform-origin: left;
+    animation: ${fadeIn} forwards ${theme.transition} 0.1s;
+    animation-iteration-count: 1;
+  }
+
+  ${Button} {
+    animation-delay: 0.2s;
   }
 `;
 

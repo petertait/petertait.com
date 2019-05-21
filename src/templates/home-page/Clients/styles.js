@@ -6,7 +6,7 @@ import { CarouselButton } from "components/Carousel";
 export const Wrapper = styled.div`
   overflow: auto;
   scroll-behavior: smooth;
-  padding-bottom: 80px;
+  padding: 30px 0 80px;
 
   &::-webkit-scrollbar {
     width: 0;

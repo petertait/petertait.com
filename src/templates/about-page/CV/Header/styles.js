@@ -28,6 +28,7 @@ export const CloseButton = styled.button`
   border: none;
   position: fixed;
   cursor: pointer;
+  z-index: 10;
   height: 41px;
   width: 41px;
   top: 20px;

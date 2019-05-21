@@ -54,12 +54,15 @@ export const Inner = styled.div`
   flex-direction: column;
   -webkit-overflow-scrolling: touch;
   background-color: ${props => (props.colors ? props.colors.dark : "black")};
-  box-shadow: 0 0 10px
-      ${props =>
-        transparentize(0.5, props.colors ? props.colors.dark : "black")},
-    0 0 300px
-      ${props =>
-        transparentize(0.4, props.colors ? props.colors.dark : "black")};
+
+  @media (min-width: ${theme.size.desktop}) {
+    box-shadow: 0 0 10px
+        ${props =>
+          transparentize(0.5, props.colors ? props.colors.dark : "black")},
+      0 0 300px
+        ${props =>
+          transparentize(0.4, props.colors ? props.colors.dark : "black")};
+  }
 `;
 
 export const Section = styled(Grid)`
