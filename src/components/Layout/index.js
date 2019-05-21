@@ -41,7 +41,7 @@ const Layout = ({ colors, content, children }) => {
             <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
             <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
           </Helmet>
-          <GlobalStyle />
+          <GlobalStyle colors={content.colors} />
           <Menu colors={content.colors} />
           <Scroller colors={content.colors}>{children}</Scroller>
         </>

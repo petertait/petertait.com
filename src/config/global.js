@@ -68,7 +68,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     width: 100%;
     min-height: 100%;
-    // will-change: transform;
+    background-color: ${props => props.colors.dark || "black"};
   }
 
 	body {

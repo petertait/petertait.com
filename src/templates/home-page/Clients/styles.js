@@ -1,15 +1,25 @@
 import styled from "styled-components";
 import { transparentize } from "polished";
 
+import theme from "config/theme";
 import { CarouselButton } from "components/Carousel";
 
 export const Wrapper = styled.div`
   overflow: auto;
   scroll-behavior: smooth;
   padding: 30px 0 80px;
+  position: relative;
 
-  &::-webkit-scrollbar {
-    width: 0;
+  @media (min-width: ${theme.size.desktop}) {
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
+
+  @media (max-width: ${theme.size.desktop}) {
+    display: flex;
+    align-items: center;
+    padding: 20px 60px;
   }
 `;
 
@@ -18,6 +28,17 @@ export const Logo = styled.img`
   height: 170px;
   display: block;
   padding: 0 30px;
+
+  @media (max-width: ${theme.size.desktop}) {
+    width: auto;
+    height: 130px;
+    padding: 0 10px;
+    align-self: center;
+
+    &:last-child {
+      padding-right: 80px;
+    }
+  }
 `;
 
 export const Nav = styled.div`
@@ -35,6 +56,25 @@ export const Nav = styled.div`
     ${transparentize(1, props.colors ? props.colors.light : "white")} 0%,
     ${props.colors ? props.colors.light : "white"} 85%
   )`};
-`;
 
-export const NavButton = styled(CarouselButton)``;
+  @media (max-width: ${theme.size.desktop}) {
+    height: 100%;
+    width: 100vw;
+    background: none;
+    padding: 0;
+
+    ${CarouselButton} {
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%);
+    }
+
+    ${CarouselButton}:first-child {
+      left: 10px;
+    }
+
+    ${CarouselButton}:last-child {
+      right: 10px;
+    }
+  }
+`;

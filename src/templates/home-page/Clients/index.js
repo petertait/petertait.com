@@ -1,9 +1,14 @@
 import React, { useRef } from "react";
+import { useMedia } from "react-use";
 
-import { Wrapper, Logo, Nav, NavButton } from "./styles";
+import theme from "config/theme";
+import { CarouselButton } from "components/Carousel";
+
+import { Wrapper, Logo, Nav } from "./styles";
 
 const Clients = ({ content, colors }) => {
   const wrapper = useRef(null);
+  const isDesktop = useMedia(`(min-width: ${theme.size.desktop})`);
 
   const handleScroll = direction => {
     if (!wrapper) return null;
@@ -15,6 +20,14 @@ const Clients = ({ content, colors }) => {
 
     if (direction === "down") {
       wrapper.current.scrollTop += distance;
+    }
+
+    if (direction === "left") {
+      wrapper.current.scrollLeft -= distance;
+    }
+
+    if (direction === "right") {
+      wrapper.current.scrollLeft += distance;
     }
   };
 
@@ -32,20 +45,41 @@ const Clients = ({ content, colors }) => {
         ))}
       </Wrapper>
       <Nav colors={colors}>
-        <NavButton
-          onClick={() => handleScroll("up")}
-          size="small"
-          colors={colors}
-        >
-          ↑
-        </NavButton>
-        <NavButton
-          onClick={() => handleScroll("down")}
-          size="small"
-          colors={colors}
-        >
-          ↓
-        </NavButton>
+        {isDesktop ? (
+          <>
+            <CarouselButton
+              onClick={() => handleScroll("up")}
+              size="small"
+              colors={colors}
+            >
+              ↑
+            </CarouselButton>
+            <CarouselButton
+              onClick={() => handleScroll("down")}
+              size="small"
+              colors={colors}
+            >
+              ↓
+            </CarouselButton>
+          </>
+        ) : (
+          <>
+            <CarouselButton
+              onClick={() => handleScroll("left")}
+              size="small"
+              colors={colors}
+            >
+              ←
+            </CarouselButton>
+            <CarouselButton
+              onClick={() => handleScroll("right")}
+              size="small"
+              colors={colors}
+            >
+              →
+            </CarouselButton>
+          </>
+        )}
       </Nav>
     </>
   );

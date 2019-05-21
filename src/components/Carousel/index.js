@@ -20,4 +20,9 @@ export const CarouselButton = styled(ButtonWrapper)`
   })};
 
   ${space};
+
+  @media (max-width: ${theme.size.tablet}) {
+    padding: 9px 10px 5px;
+    font-size: ${theme.font.size.upsilon};
+  }
 `;

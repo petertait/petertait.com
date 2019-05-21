@@ -35,7 +35,7 @@ export const Wrapper = styled.div`
 
   @media (max-width: ${theme.size.tablet}) {
     width: 100%;
-    margin: 0 0 30px;
+    margin: 0 0 40px;
 
     &:last-child {
       margin-bottom: 0;
