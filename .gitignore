@@ -5,6 +5,9 @@ build/scripts
 logs
 *.log
 .DS_Store
+.cache
+public
+
 
 # Dependency directory
 node_modules

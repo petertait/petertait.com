@@ -1,4 +1,4 @@
-I’m Peter, currently based in Bath working as a freelance multifunctional designer and frontend developer. Previously a Senior UI/UX Designer at pebble {code}.
+I’m Peter, currently based in Bath working as a freelance multifunctional designer and frontend developer. Previously a Senior Solutions Engineer at AstraZeneca and Senior UI/UX Designer at pebble {code}.
 
 Having gained a first-class honours degree in graphic design at the University of Southampton, I’ve established a focus on an interactive and refined process.
 
