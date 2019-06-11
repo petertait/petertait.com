@@ -4,6 +4,7 @@
   "version": "2.0.0",
   "author": "Peter Tait",
   "dependencies": {
+    "@xstyled/styled-components": "^1.0.1",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.66",
     "gatsby-image": "^2.0.23",

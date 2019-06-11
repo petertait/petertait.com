@@ -761,6 +761,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.4.4":
+  version "7.4.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.5.tgz#582bb531f5f9dc67d2fcb682979894f75e253f12"
+  integrity sha512-TuI4qpWZP6lGOGIuGWtp9sPluqYICmbk8T/1vpSysqJxRPkudh/ofFWyqdcMsDf2s7KvDL4/YHgKyvcS3g9CJQ==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/template@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0-beta.44.tgz#f8832f4fdcee5d59bf515e595fc5106c529b394f"
@@ -1212,6 +1219,22 @@
     "@webassemblyjs/ast" "1.7.11"
     "@webassemblyjs/wast-parser" "1.7.11"
     "@xtuc/long" "4.2.1"
+
+"@xstyled/styled-components@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@xstyled/styled-components/-/styled-components-1.0.1.tgz#a9cb59b8474ed409b28486f8b51aff16849b966a"
+  integrity sha512-f6S9b7ihpxQvpezu1jqA/cAtcVfX2YGGh2f6b7EIxPXCYAsEhrH+1AdtTTzu1KcMkXu1EgJkPphzHXRB6zv+/w==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@xstyled/system" "^1.0.1"
+
+"@xstyled/system@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@xstyled/system/-/system-1.0.1.tgz#d6327e5f8104e3803522e48f407daff7e2c6a051"
+  integrity sha512-1xdKHj0ZTq7q/3HMLszOCJNW8ZNiFo2hD08drl8SUpTi3v+nc/mS3xhrzv8fbyY90Yh4JSVu0lLdDZbM852qkA==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    deepmerge "^3.2.0"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -4415,6 +4438,11 @@ deepmerge@^2.0.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.2.1.tgz#5d3ff22a01c00f645405a2fbc17d0778a1801170"
   integrity sha512-R9hc1Xa/NOBi9WRVUWg19rl1UB7Tt4kuPd+thNJgFZoxXsTz7ncaPaeIm+40oSGuP33DfMb4sZt1QIGiJzC4EA==
+
+deepmerge@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.2.0.tgz#58ef463a57c08d376547f8869fdc5bcee957f44e"
+  integrity sha512-6+LuZGU7QCNUnAJyX8cIrlzoEgggTM6B7mm+znKOX4t5ltluT9KLjN6g61ECMS0LTsLW7yDpNoxhix5FZcrIow==
 
 default-gateway@^2.6.0:
   version "2.7.2"
