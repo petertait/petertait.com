@@ -2,12 +2,12 @@ import React, { Component, PropTypes } from "react";
 
 import { color } from "../../vars";
 
-import Hero from '../../components/Hero'
-import Container from '../../components/Container'
-import Column from '../../components/Column'
-import BlockFeature from '../../components/BlockFeature'
-import ListItem from '../../components/ListItem'
-import AnchorLink from '../../components/AnchorLink'
+import Hero from "../../components/Hero";
+import Container from "../../components/Container";
+import Column from "../../components/Column";
+import BlockFeature from "../../components/BlockFeature";
+import ListItem from "../../components/ListItem";
+import AnchorLink from "../../components/AnchorLink";
 
 class Home extends Component {
   componentWillMount() {
