@@ -14,8 +14,8 @@ class Home extends Component {
     this.state = {
       theme: {
         primary: color.blue,
-        secondary: color.white
-      }
+        secondary: color.white,
+      },
     };
     document.body.style.backgroundColor = this.state.theme.primary;
     document.body.style.color = this.state.theme.secondary;
@@ -25,9 +25,9 @@ class Home extends Component {
     return (
       <div>
         <Hero
-          headline="Multifunctional designer/developer based in Bath — a traditionally trained designer who codes."
+          headline="Award-winning multi-discipline designer and full-stack developer."
           link="/contact"
-          text="Available for freelance work"
+          text="Get in contact"
         />
         <hr />
         <Container>
