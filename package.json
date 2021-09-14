@@ -36,7 +36,7 @@
     "react-router-scroll": "^0.3.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^3.1.11"
   },
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --host 0.0.0.0 --hot --inline --progress",
