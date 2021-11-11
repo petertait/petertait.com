@@ -25,7 +25,7 @@ class Home extends Component {
     return (
       <div>
         <Hero
-          headline="Award-winning multi-discipline designer and full-stack developer."
+          headline="Award-winning multidisciplinary designer and developer."
           link="/contact"
           text="Get in contact"
         />
