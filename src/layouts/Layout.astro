@@ -61,27 +61,28 @@ const { title, description } = Astro.props;
     <p>Cutting-edge software dev, open to modern js tech stacks — ts, js, react, astro, and beyond into c#/unity.</p>
     <p>Collaborations include Intel, HSBC, Pearson, IUCN, Lloyds Banking Group, National Grid, EDF, the World Bank, National Express, ABinBev, and AstraZeneca.</p> 
 		<p>Available for select freelance projects only.</p>
-    <a href="mailto:contact@petertait.com">contact</a>
+    <a href="mailto:hi@tait.io">contact</a>
     <p class="legal">© Peter Tait Ltd.</p>
 	</main>
 	</body>
 </html>
 <style is:global>
-	:root {
-		--ink: 255, 255, 255;
-    --paper: 0,0,0;
-    --paper: 0, 50, 210;
-
-    @font-face {
+  @font-face {
       font-family: 'apercu';
       src: url('/apercu.woff2') format('woff2');
       font-weight: normal;
       font-style: normal;
       font-display: swap;
     }
+
+	:root {
+		--ink: 255, 255, 255;
+    --paper: 0, 50, 210;
+    --font: 'apercu', sans-serif;
 	}
+
 	html {
-		font-family: 'apercu', sans-serif;
+		font-family: var(--font);
 		background: rgb(var(--paper));
 	}
 
