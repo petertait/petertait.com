@@ -85,6 +85,10 @@ const { title, description } = Astro.props;
 		background: rgb(var(--paper));
 	}
 
+  body {
+    margin: 0;
+  }
+
   * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -103,8 +107,12 @@ const { title, description } = Astro.props;
     text-transform: lowercase;
     
     @media (max-width: 700px) {
-      padding: 2rem 1rem;
+      padding: 3rem 25px 1rem;
       font-size: 1.2rem;
+    }
+
+    @media (max-width: 500px) {
+      max-width: 100%;
     }
 	}
   
