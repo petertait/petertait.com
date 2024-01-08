@@ -1,0 +1,81 @@
+---
+import { SEO } from "astro-seo";
+
+interface Props {
+	title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title,
+          type: "website",
+          image: "https://petertait.com/opengraph.png",
+        }
+      }}
+      twitter={{
+        creator: "@petertait"
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "http://petertait.com/favicon.svg" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content: "http://petertait.com/twitter.png",
+          },
+          { name: "twitter:title", content: title },
+          { name: "twitter:description", content: description },
+        ],
+      }}
+    />
+    <script 
+      async 
+      src="https://www.googletagmanager.com/gtag/js?id=G-X94MH3Y2PX"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-X94MH3Y2PX');
+    </script>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--ink: 255, 255, 255;
+    --paper: 0,0,0;
+    --paper: 0, 50, 210;
+
+    @font-face {
+      font-family: 'apercu';
+      src: url('/apercu.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+	}
+	html {
+		font-family: 'apercu', sans-serif;
+		background: rgb(var(--paper));
+	}
+
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+</style>

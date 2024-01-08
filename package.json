@@ -1,47 +1,18 @@
 {
   "name": "petertait.com",
-  "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/petertait/petertait.com"
-  },
-  "author": {
-    "name": "Peter Tait",
-    "email": "contact@petertait.com",
-    "url": "https://petertait.com"
-  },
-  "license" : "MIT",
-  "dependencies": {
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0",
-    "react-router": "^2.4.1"
-  },
-  "devDependencies": {
-    "babel-core": "^6.9.1",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-react": "^6.5.0",
-    "babel-preset-react-hmre": "^1.1.1",
-    "babel-preset-stage-0": "^6.5.0",
-    "eslint": "^3.0.1",
-    "eslint-loader": "^1.3.0",
-    "eslint-plugin-react": "^6.1.2",
-    "html-loader": "^0.4.3",
-    "json-loader": "^0.5.4",
-    "markdown-loader": "^0.1.7",
-    "radium": "^0.18.1",
-    "react-inlinesvg": "^0.5.3",
-    "react-lazy-load": "^3.0.10",
-    "react-router-scroll": "^0.3.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
-  },
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "start": "webpack-dev-server --history-api-fallback --host 0.0.0.0 --hot --inline --progress",
-    "clean": "rm -rf build/scripts",
-    "build": "NODE_ENV=production webpack -p",
-    "deploy": "NODE_ENV=production webpack -p && netlify deploy"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.4",
+    "astro": "^4.1.1",
+    "astro-seo": "^0.8.0",
+    "typescript": "^5.3.3"
   }
 }

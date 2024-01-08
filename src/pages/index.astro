@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Peter Tait, award-winning product designer + developer." description="Co-founder and CPO at Earth Cubs. Bringing expertise in successfully delivering software throughout their lifecycle, from conception to consumer.">
+	<main>
+    <img class="logo" src="/logo.svg" alt="Peter Tait" />
+    <h1>An award-winning product designer + developer.</h1>
+		<p>Co-founder and CPO at <a href="https://earthcubs.com/" target="_blank">Earth Cubs</a> — helping build the most important education in the most engaging way.</p>
+    <p>Bringing expertise in successfully delivering products throughout their lifecycle, from conception to consumer.</p>
+    <p>A design skillset comprising of brand, print, and software. With extensive experience in vr, app, and web design, utilising Figma, Rive, and Adobe.</p>
+    <p>Cutting-edge software dev, open to any js techstack — ts, js, and ranging beyond into c# and unity.</p>
+    <p>Collaborations include Intel, HSBC, Pearson, IUCN, Lloyds Banking Group, National Grid, EDF, the World Bank, ABinBev and AstraZeneca.</p> 
+		<p>Available for select freelance projects only.</p>
+    <a href="mailto:contact@petertait.com">contact</a>
+    <p class="legal">© Peter Tait Ltd.</p>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 4rem 1rem;
+		width: 700px;
+		max-width: calc(100% - 2rem);
+		font-size: 2rem;
+		line-height: 1.6;
+    color: rgb(var(--ink));
+    text-transform: lowercase;
+    
+    @media (max-width: 700px) {
+      padding: 2rem 1rem;
+      font-size: 1.2rem;
+    }
+	}
+  
+	.logo {
+    width: 80px;
+    height: auto;
+    padding-bottom: 1rem;
+  }
+  
+	h1 {
+		font-size: 4rem;
+		font-weight: normal;
+		line-height: 1.2;
+		margin-bottom: 1em;
+
+    @media (max-width: 800px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 2rem;
+    }
+	}
+
+  a {
+    color: rgba(var(--ink), 1);
+
+    &:hover {
+      color: rgba(var(--ink), 0.7);
+    }
+  }
+
+
+  .legal {
+    padding-top: 4rem;
+    opacity: 0.2;
+  }
+</style>

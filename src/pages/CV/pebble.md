@@ -1,3 +1,0 @@
-Worked within a team of developers and designers, I was involved from initial ideas, workshops, prototyping, user flows and designing, through to the actual building and creating of the product itself – within a production environment. Clients included AstraZeneca, Pearson, National Express and Lloyds Banking Group.
-
-Hack days and workshops were a big part of the job, where innovative ideas were generated around a topic and selected ideas were then designed and built within a single day. This resulted in fully working prototypes that could test the validity of initial ideas – whilst also having fun through collaboration.
